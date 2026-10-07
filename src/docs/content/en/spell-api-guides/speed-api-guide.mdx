@@ -1,0 +1,31 @@
+export const meta = {
+	title: "Speed API Guide"
+};
+
+# The Speed API
+
+Need your spell to think faster, <PlayerName />? The **`"speed"`** module controls how quickly the spell interpreter executes your code. The export is a function.
+
+## Importing Speed
+
+<ExampleCode>
+
+	```javascript
+	const speed = require("speed");
+
+	speed(10);   // run the interpreter 10x faster
+	```
+
+</ExampleCode>
+
+Crank it up when you have a lot of code to chew through, or dial it down when you want to watch your spell unfold step by step.
+
+### Methods
+
+- **`speed(value)`** — sets the interpreter's execution speed. `value` is a `number` clamped between `0.001` and `100`; higher values run faster.
+
+<Callout type="tip">
+
+	Very high speeds can make a spell finish almost instantly, while very low speeds slow it to a crawl — handy for debugging when you want to follow each line as it runs.
+
+</Callout>

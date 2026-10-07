@@ -1,0 +1,53 @@
+export const meta = {
+	title: "Wait API Guide"
+};
+
+# The Wait API
+
+Timing is everything, <PlayerName />! The **`"wait"`** module pauses your spell for a moment **without freezing the game loop** around it. It's the key to pacing multi-step spells — fire something, pause, then fire something else. The export is a function.
+
+## Importing Wait
+
+<ExampleCode>
+
+	```javascript
+	const wait = require("wait");
+
+	console.log("step one");
+	wait(500);            // pause for half a second
+	console.log("step two");
+	```
+
+</ExampleCode>
+
+From your spell's point of view this is synchronous — no `await` needed — but the rest of the game keeps running smoothly while you wait.
+
+## Sequencing a Spell
+
+Use `wait(ms)` between actions to space them out:
+
+<ExampleCode>
+
+	```javascript
+	const wait = require("wait");
+	const Fire = require("fire");
+
+	new Fire();
+	wait(500);
+	new Fire();
+	wait(500);
+	new Fire();
+	```
+
+</ExampleCode>
+
+### Methods
+
+- **`wait(ms)`** — pauses the spell for `ms` milliseconds (defaults to `1000`) before continuing. Synchronous from the spell's perspective.
+- **`wait.async(ms)`** — a promise-based variant for use inside `async function` blocks when you need to coordinate concurrent work.
+
+<Callout type="important">
+
+	Top-level `await` is **not** supported in spells. For ordinary timing, prefer plain `wait(ms)` — only reach for `wait.async(ms)` inside an `async function` when juggling multiple things at once.
+
+</Callout>

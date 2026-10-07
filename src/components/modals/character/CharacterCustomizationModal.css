@@ -1,0 +1,34 @@
+.character-customization-modal-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Unlike the title screen, the modal is width-rich and height-poor: stack the
+   props into two columns so the whole form (and the apply button) fits inside
+   the 80%-height cap without scrolling. */
+.character-customization-modal-layout .character-customization {
+  width: 100%;
+  min-height: 0;
+}
+
+.character-customization-modal-layout .main-row {
+  gap: 2em;
+  align-items: center;
+}
+
+.character-customization-modal-layout .character-props {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1em 3em;
+  margin: 0;
+}
+
+.character-customization-modal-layout .visualizer-canvas-container {
+  height: 40vh;
+  max-height: 400px;
+}

@@ -1,0 +1,312 @@
+// @ts-nocheck
+import {
+  Collapse,
+  List,
+  ListItemButton,
+  ListItemText,
+  ThemeProvider,
+  createTheme
+} from "@mui/material";
+import cx from "classnames";
+import {
+  CSSProperties,
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from "react";
+import { useTranslation } from "react-i18next";
+
+import { DocsPage } from "src/api/docs";
+import { useDocsSearch } from "src/hooks/useDocsSearch";
+
+import { Icon } from "../ui/icons/Icon";
+import "./DocsIndex.less";
+
+const indexTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#E6D4B7",
+      contrastText: "#583f28"
+    },
+    secondary: {
+      main: "#583f28",
+      contrastText: "#E6D4B7"
+    },
+    text: {
+      primary: "#583f28"
+    },
+    action: {
+      selectedOpacity: 0.25
+    }
+  }
+});
+
+export enum DocsIndexPosition {
+  Left = "Left",
+  Right = "Right"
+}
+
+export type DocsIndexProps = {
+  className?: string;
+  style?: CSSProperties;
+  currentDocId?: string;
+  allPages?: DocsPage[];
+  onClickPage?: (pageId: string) => void;
+  position?: DocsIndexPosition;
+  collapsed?: boolean;
+  setCollapsed?: (collapsed: boolean) => void;
+};
+
+export function DocsIndex(props: DocsIndexProps) {
+  const {
+    className,
+    style,
+    allPages,
+    currentDocId,
+    onClickPage,
+    position: _position,
+    collapsed,
+    setCollapsed
+  } = props;
+  const { t } = useTranslation();
+
+  const { query, setQuery, results, suggestions } = useDocsSearch(
+    allPages ?? []
+  );
+
+  const currentDocsPath = useMemo(() => {
+    if (!allPages) return null;
+    function traverse(pages: DocsPage[], path: string[] = []): string[] | null {
+      for (const page of pages) {
+        if (page.id === currentDocId) return [...path, page.id];
+        if (page.subPages) {
+          const result = traverse(page.subPages, [...path, page.id]);
+          if (result) return result;
+        }
+      }
+      return null;
+    }
+    return traverse(allPages);
+  }, [allPages, currentDocId]);
+
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(
+    () => new Set()
+  );
+
+  const hasInitialized = useRef(false);
+
+  useEffect(() => {
+    if (!currentDocsPath?.length) return;
+    if (!hasInitialized.current) {
+      hasInitialized.current = true;
+      return;
+    }
+    const parentId = currentDocsPath[0];
+    if (!parentId) return;
+    setExpandedSections((prev) => {
+      if (prev.has(parentId)) return prev;
+      const next = new Set(prev);
+      next.add(parentId);
+      return next;
+    });
+  }, [currentDocsPath]);
+
+  const handlePrimaryClick = useCallback(
+    (docsPage: DocsPage) => {
+      setExpandedSections((prev) => {
+        const next = new Set(prev);
+        if (next.has(docsPage.id)) {
+          next.delete(docsPage.id);
+        } else {
+          next.add(docsPage.id);
+        }
+        return next;
+      });
+      onClickPage?.(docsPage.id);
+    },
+    [onClickPage]
+  );
+
+  const handleSubPageClick = useCallback(
+    (docsPage: DocsPage) => {
+      onClickPage?.(docsPage.id);
+    },
+    [onClickPage]
+  );
+
+  const handleClickCollapse = useCallback(
+    () => setCollapsed?.(!collapsed),
+    [setCollapsed, collapsed]
+  );
+
+  return (
+    <div
+      className={cx(
+        "docs-index-container",
+        collapsed && "collapsed",
+        className
+      )}
+      style={style}
+    >
+      <ThemeProvider theme={indexTheme}>
+        <div className="docs-index-toggle" onClick={handleClickCollapse}>
+          {collapsed ? (
+            <>
+              <div className="icon">
+                <Icon icon="arrowLeft" size="font" />
+              </div>
+              <div>{t("docs.index")}</div>
+            </>
+          ) : (
+            <>
+              <div>{t("docs.hideIndex")}</div>
+              <div className="icon">
+                <Icon icon="arrowRight" size="font" />
+              </div>
+            </>
+          )}
+        </div>
+        {collapsed ? null : (
+          <div className="docs-index-search">
+            <input
+              type="text"
+              className="docs-index-search-input"
+              placeholder={t("docs.searchPlaceholder", {
+                defaultValue: "Search docs..."
+              })}
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            {query ? (
+              <div className="docs-index-search-results">
+                {results.length ? (
+                  results.slice(0, 6).map((result) => (
+                    <button
+                      key={result.pageId}
+                      className="docs-index-search-result"
+                      onClick={() =>
+                        handleSubPageClick({
+                          id: result.pageId,
+                          name: result.title,
+                          content: "",
+                          subPages: undefined
+                        })
+                      }
+                    >
+                      <div className="title">{result.title}</div>
+                      {result.snippet ? (
+                        <div className="snippet">{result.snippet}</div>
+                      ) : null}
+                    </button>
+                  ))
+                ) : (
+                  <div className="docs-index-search-empty">
+                    {t("docs.searchEmpty", { defaultValue: "No matches" })}
+                  </div>
+                )}
+              </div>
+            ) : suggestions.length ? (
+              <div className="docs-index-search-results">
+                <div className="suggestions-label">
+                  {t("docs.suggestions", { defaultValue: "Try:" })}
+                </div>
+                {suggestions.map((suggestion) => (
+                  <button
+                    key={suggestion.pageId}
+                    className="docs-index-search-result"
+                    onClick={() =>
+                      handleSubPageClick({
+                        id: suggestion.pageId,
+                        name: suggestion.title,
+                        content: "",
+                        subPages: undefined
+                      })
+                    }
+                  >
+                    <div className="title">{suggestion.title}</div>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        )}
+        {collapsed ? null : (
+          <div className="docs-index">
+            <List sx={{ width: "100%" }} component="nav">
+              {allPages?.map((p) => (
+                <Fragment key={p.id}>
+                  <ListItemButton
+                    className="primary-item"
+                    selected={currentDocsPath?.[0] === p.id}
+                    onClick={() => handlePrimaryClick(p)}
+                  >
+                    <ListItemText>{p.name}</ListItemText>
+                    <Icon
+                      icon="chevronUp"
+                      className={cx(
+                        "icon",
+                        expandedSections.has(p.id) && "collapse-mode"
+                      )}
+                      size="font"
+                    />
+                  </ListItemButton>
+                  {p.subPages?.length ? (
+                    <Collapse
+                      in={expandedSections.has(p.id)}
+                      timeout="auto"
+                      unmountOnExit
+                    >
+                      <List component="div" disablePadding>
+                        {p.subPages.map((sp) => (
+                          <ListItemButton
+                            className="sub-item"
+                            selected={currentDocsPath?.[1] === sp.id}
+                            onClick={() => handleSubPageClick(sp)}
+                            key={sp.id}
+                            sx={{ pl: 4 }}
+                          >
+                            <ListItemText>{sp.name}</ListItemText>
+                          </ListItemButton>
+                        ))}
+                      </List>
+                    </Collapse>
+                  ) : null}
+                </Fragment>
+              ))}
+            </List>
+          </div>
+        )}
+      </ThemeProvider>
+    </div>
+  );
+}
+
+export type DocsIndexSubTreeProps = {
+  currentDocId?: string;
+  subPages?: DocsPage[];
+  onClickPage?: (pageId: string) => void;
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function DocsIndexSubTree(props: DocsIndexSubTreeProps) {
+  const { currentDocId, subPages, onClickPage } = props;
+  if (!subPages?.length) return null;
+  return (
+    <ul className="docs-index-list">
+      {subPages?.map((sp, i) => (
+        <li key={i}>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a
+            className={cx({ selected: currentDocId === sp.id })}
+            onClick={() => onClickPage?.(sp.name)}
+          >
+            {sp.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}

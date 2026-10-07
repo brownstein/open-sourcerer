@@ -1,0 +1,69 @@
+export const meta = {
+	title: "Read this First!"
+};
+
+# JavaScript and You
+
+### A preface by Adana
+
+Hello sourcerer. You've opened the Docs tab, which is great,
+because you're going to be spending a lot of time reading these. The ancient world
+produced a lot of concepts to understand - we called them "Computer Science" - that
+you'll need to learn to succeed in spellcraft. Let's get started.
+
+The scripting environment you've encountered uses a language called "JavaScript",
+which is an interpreted, object-oriented, programming language.
+
+Most programming languages, JavaScript included, are based on linear control flow; that means that, for each block of code
+in your program, the computer will execute the provided code in the provided order, line by line.
+
+But I digress. Let's awaken your power.
+
+## Hello World
+
+First off, tradition! We're going to want to print things to the screen a lot to help
+understand how code executes. Take the following statement, a grand tradition of my people:
+
+<ExampleCode>
+
+```javascript
+console.log("hello world");
+```
+
+</ExampleCode>
+
+This causes the computer to display "hello world" in the program's console output.
+
+## Breaking down what we just did.
+
+When the computer encounters this line of JavaScript, it is _evaluated_ progressively.
+
+First, the computer sees the `console` symbol. The JavaScript inerpreter looks that up from a table of
+known symbols, called a "scope" (in this case, the "global scope" - more on that later), and
+identifies `console` as an Object.
+
+As such, when it sees the next character, `.`, the language's logic dictates that we are requesting
+access to a _property_ of the `console` _Object_. _Objects_ are basically little tables _key-value pairs_.
+Each key-value pair combines a key, typically a word (which we refer to more formally as a "string"), and
+a value, which is any kind of data you wish to associate with it.
+
+As for our `console` object, its `log` property is what is called a `Function`. A Function is a
+reusable block of code that performs - you guessed it - a function. Functions can accept input,
+which we call "arguments", and produce results, which we call "returning" a value. The `console.log` function
+is a special function that accepts data and copies it into the program's output.
+
+Now that the computer knows it is calling a function, it needs to know what data is being passed in.
+In this case, it's going to be a _String_ with the data "hello world". We know it's a string because it is
+in quotes - if we left the quotes off, we'd be telling the computer to look up the "hello" symbol in
+the current scope and we'd get an error. More on that later. For now, we provide "hello world", an
+acceptable string, and can observe the function acting upon it.
+
+Finally, we include a semicolon at the end of the line to tell the language the line is a discrete statement.
+
+## Why log to the console?
+
+Logging to the console achieves three central purposes:
+- Gaining insight as to the current value of a piece of data.
+- Gaining insight as to what part of a program is running at what time.
+- Figuring our why your program crashed.
+- Informing the user of anything you want.

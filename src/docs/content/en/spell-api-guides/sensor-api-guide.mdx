@@ -1,0 +1,81 @@
+export const meta = {
+	title: "Sensor API Guide"
+};
+
+# The Sensor API
+
+Welcome back, <PlayerName />! The **`"sensor"`** spell creates a sensor that follows your caster and reports any entities within a radius. It can hand you the current list of nearby entities, and it can fire callbacks the moment something enters or leaves.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const Sensor = require("sensor");
+	const sensor = new Sensor();
+	```
+
+</ExampleCode>
+
+That single `new Sensor()` builds a sensor centered on your caster.
+
+## Configuring the Sensor
+
+The constructor takes an optional **configuration object** so you can tune the detection radius or attach the sensor to a [ManaSpark](spell-api-guides/spark-api-guide):
+
+<ExampleCode>
+
+	```javascript
+	const Sensor = require("sensor");
+	const sensor = new Sensor({ radius: 6 });
+
+	for (const entity of sensor.entities) {
+		console.log("nearby:", entity.type);
+	}
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Reading `sensor.entities` gives you a snapshot of everything currently inside the sensor — perfect for picking a target before casting another spell.
+
+</Callout>
+
+### Constructor options
+
+- **`radius`** — `number` — detection radius in world units.
+- **`spark`** — `{ id }` — a [ManaSpark](spell-api-guides/spark-api-guide) to attach the sensor to instead of the caster.
+
+## Reacting to Entities
+
+Instead of polling, you can react the instant an entity enters the sensor:
+
+<ExampleCode>
+
+	```javascript
+	const Sensor = require("sensor");
+	const sensor = new Sensor({ radius: 8 });
+
+	sensor.onEntityEnter(function (entity) {
+		console.log("entered:", entity.type);
+	});
+	```
+
+</ExampleCode>
+
+<Callout type="info">
+
+	The sensor follows your caster, so its `position` updates as you move. Check `sensor.ready` before relying on it, and `sensor.destroyed` to know when it's gone.
+
+</Callout>
+
+### Properties and methods
+
+- **`id`** — `string` — the sensor's handle id.
+- **`ready`** — `boolean` — whether the sensor is active and reporting.
+- **`position`** — `{ x, y }` — the sensor's current position.
+- **`destroyed`** — `boolean` — whether the sensor has been destroyed.
+- **`entities`** — `Entity[]` — the entities currently inside the sensor.
+- **`onEntityEnter(cb)`** — callback fired when an entity enters.
+- **`onEntityLeave(cb)`** — callback fired when an entity leaves.

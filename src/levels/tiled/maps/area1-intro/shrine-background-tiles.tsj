@@ -1,0 +1,14 @@
+{ "columns":12,
+ "image":"..\/..\/tilesets\/shrine\/shrine-background-tiles.png",
+ "imageheight":96,
+ "imagewidth":192,
+ "margin":0,
+ "name":"shrine-background-tiles",
+ "spacing":0,
+ "tilecount":72,
+ "tiledversion":"1.11.1",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.10"
+}

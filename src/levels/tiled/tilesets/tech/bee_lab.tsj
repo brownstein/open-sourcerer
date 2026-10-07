@@ -1,0 +1,177 @@
+{
+  "columns": 49,
+  "image": "bee_lab.png",
+  "imageheight": 1286,
+  "imagewidth": 784,
+  "margin": 0,
+  "name": "bee_lab",
+  "spacing": 0,
+  "tilecount": 3920,
+  "tiledversion": "1.11.0",
+  "tileheight": 16,
+  "tiles": [
+    {
+      "id": 149,
+      "type": "ground"
+    },
+    {
+      "id": 150,
+      "type": "ground"
+    },
+    {
+      "id": 151,
+      "type": "ground"
+    },
+    {
+      "id": 152,
+      "type": "ground"
+    },
+    {
+      "id": 153,
+      "type": "ground"
+    },
+    {
+      "id": 154,
+      "type": "ground"
+    },
+    {
+      "id": 155,
+      "type": "ground"
+    },
+    {
+      "id": 156,
+      "type": "ground"
+    },
+    {
+      "id": 157,
+      "type": "ground"
+    },
+    {
+      "id": 158,
+      "type": "ground"
+    },
+    {
+      "id": 159,
+      "type": "ground"
+    },
+    {
+      "id": 160,
+      "type": "ground"
+    },
+    {
+      "id": 161,
+      "type": "ground"
+    },
+    {
+      "id": 162,
+      "type": "ground"
+    },
+    {
+      "id": 163,
+      "type": "ground"
+    },
+    {
+      "id": 164,
+      "type": "ground"
+    },
+    {
+      "id": 165,
+      "type": "ground"
+    },
+    {
+      "id": 166,
+      "type": "ground"
+    },
+    {
+      "id": 167,
+      "type": "ground"
+    },
+    {
+      "id": 539,
+      "type": "ground"
+    },
+    {
+      "id": 540,
+      "type": "ground"
+    },
+    {
+      "id": 541,
+      "type": "ground"
+    },
+    {
+      "id": 542,
+      "type": "ground"
+    },
+    {
+      "id": 543,
+      "type": "ground"
+    },
+    {
+      "id": 544,
+      "type": "ground"
+    },
+    {
+      "id": 545,
+      "type": "ground"
+    },
+    {
+      "id": 546,
+      "type": "ground"
+    },
+    {
+      "id": 547,
+      "type": "ground"
+    },
+    {
+      "id": 548,
+      "type": "ground"
+    },
+    {
+      "id": 549,
+      "type": "ground"
+    },
+    {
+      "id": 550,
+      "type": "ground"
+    },
+    {
+      "id": 551,
+      "type": "ground"
+    },
+    {
+      "id": 552,
+      "type": "ground"
+    },
+    {
+      "id": 553,
+      "type": "ground"
+    },
+    {
+      "id": 554,
+      "type": "ground"
+    },
+    {
+      "id": 555,
+      "type": "ground"
+    },
+    {
+      "id": 556,
+      "type": "ground"
+    },
+    {
+      "id": 557,
+      "type": "ground"
+    },
+    {
+      "id": 3343,
+      "type": "ground"
+    },
+    {
+      "id": 3344,
+      "type": "ground"
+    }
+  ],
+  "tilewidth": 16,
+  "type": "tileset",
+  "version": "1.10"
+}

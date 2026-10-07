@@ -1,0 +1,252 @@
+@keyframes celebration-appear {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  8% {
+    transform: scale(1);
+  }
+  96% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.celebration-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 2001;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+@keyframes bg-slow-grow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  2% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  98% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.celebration-overlay .celebration-color-splash {
+  position: absolute;
+  background-image: url("../../shared-assets/ui/celebration/glow-effect.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: calc(min(110vw, 110vh));
+  aspect-ratio: 1;
+  z-index: 1;
+  animation: bg-slow-grow 5s ease;
+  animation-fill-mode: both;
+}
+
+.celebration-overlay .celebration-container {
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1;
+  width: calc(min(60vw, 60vh));
+  position: absolute;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: celebration-appear 5s linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  color: #ffffff;
+  pointer-events: auto;
+  padding: calc(min(3vw, 3vh));
+}
+
+.celebration-overlay .hex-bg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background: linear-gradient(-60deg, #835ae6, #aaffff 100%);
+  z-index: 1;
+}
+
+.celebration-overlay > .hex-bg {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes hex-flash-across {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 130%;
+  }
+}
+
+.celebration-overlay .hex-bg::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 10%;
+  background: #fff;
+  transform: rotate(-30deg);
+  animation-name: hex-flash-across;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.celebration-overlay .hex-bg::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 8px);
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+  background: linear-gradient(160deg, #253455, #0d1528 100%);
+  z-index: 2;
+}
+
+.celebration-overlay .celebration-container-inner-hex {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  z-index: 1;
+}
+
+.celebration-overlay .celebration-container-inner-hex .hex-bg {
+  background: #51bffe;
+}
+
+.celebration-overlay .celebration-container-inner-hex .hex-bg::before {
+  display: none;
+}
+
+.celebration-overlay .celebration-icon-container {
+  display: flex;
+  width: 30%;
+  aspect-ratio: 1.2;
+  color: #fff;
+  z-index: 2;
+  .svg-icon {
+    background: linear-gradient(-90deg, #af7cf2, #9db0f5 50%, #aaffff 100%);
+  }
+}
+
+.celebration-overlay .celebration-type {
+  z-index: 2;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: calc(min(6vw, 6vh));
+}
+
+.celebration-overlay .celebration-content {
+  z-index: 2;
+  color: #4eb7f9;
+  text-align: center;
+  font-size: calc(min(3.5vw, 3.5vh));
+}
+
+.celebration-overlay .celebration-checkbox-container {
+  flex-shrink: 0;
+  height: 25%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.celebration-overlay .celebration-checkbox-container::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 3px;
+  z-index: 1;
+  background: linear-gradient(
+    90deg, 
+    rgba(122, 100, 227, 0),
+    rgba(122, 100, 227, 1) 50%,
+    rgba(122, 100, 227, 0) 100%
+  );
+}
+
+.celebration-overlay .celebration-checkbox-container::after {
+  position: absolute;
+  content: "";
+  width: 12%;
+  aspect-ratio: 1;
+  z-index: 2;
+  transform: rotate(45deg);
+  background: #212c4a;
+  border: 2px rgba(122, 100, 227, 1) solid;
+  box-shadow: 0 0 5% #111930;
+}
+
+@keyframes slide-in-from-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.celebration-overlay .celebration-check {
+  display: flex;
+  position: absolute;
+  width: 40%;
+  aspect-ratio: 1.5;
+  mask-image: url("../../shared-assets/ui/celebration/checkmark.png");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  z-index: 3;
+  transform: translate(9%, -24%);
+}
+
+.celebration-overlay .celebration-check::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #6afefe;
+  animation: slide-in-from-left 0.5s ease;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}

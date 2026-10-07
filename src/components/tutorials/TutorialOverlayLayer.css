@@ -1,0 +1,224 @@
+@keyframes tutorial-overlay-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tutorial-overlay-centered {
+  position: fixed;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+
+  animation-name: tutorial-overlay-appear;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.tutorial-overlay-centered.disappearing {
+  animation-direction: reverse;
+}
+
+@property --TOHPadding {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 3pt;
+}
+
+@property --tutorial-completion-ratio {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+.tutorial-overlay-shadow-box {
+  position: fixed;
+  z-index: 99;
+  pointer-events: none;
+  clip-path: polygon(
+    evenodd,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 0,
+    -100vw -100vh,
+    100vw -100vh,
+    100vw 100vh,
+    -100vw 100vh,
+    -100vw -100vh
+  );
+  transition:
+    left 250ms ease,
+    top 250ms ease,
+    width 250ms ease,
+    height 250ms ease;
+}
+
+.tutorial-overlay-shadow-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -100vh;
+  left: -100vw;
+  width: 200vw;
+  height: 200vh;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.tutorial-overlay-highlight {
+  position: fixed;
+  z-index: 100;
+  opacity: 0.85;
+  background: linear-gradient(120deg, #f614e3, #4e0708 50%);
+  pointer-events: none;
+  clip-path: polygon(
+    evenodd,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 0,
+    var(--TOHPadding) var(--TOHPadding),
+    calc(100% - var(--TOHPadding)) var(--TOHPadding),
+    calc(100% - var(--TOHPadding)) calc(100% - var(--TOHPadding)),
+    var(--TOHPadding) calc(100% - var(--TOHPadding)),
+    var(--TOHPadding) var(--TOHPadding)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    left 250ms ease,
+    top 250ms ease,
+    width 250ms ease,
+    height 250ms ease;
+
+  animation-name: tutorial-overlay-appear;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.tutorial-overlay-highlight.disappearing {
+  animation-direction: reverse;
+}
+
+@keyframes tutorial-overlay-rect-flash-across {
+  0% {
+    top: -80%;
+    left: -80%;
+  }
+  100% {
+    top: 80%;
+    left: 80%;
+  }
+}
+
+.tutorial-overlay-highlight::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 40%;
+  transform: rotate(-30deg);
+  transform-origin: center;
+  background: #fff;
+  animation-name: tutorial-overlay-rect-flash-across;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.tutorial-overlay-content {
+  z-index: 50;
+  padding: 6pt;
+  pointer-events: all;
+  position: relative;
+  background: #000;
+  color: #fff;
+  border-radius: 4pt;
+  max-width: 400px;
+  min-width: 150px;
+  min-height: 64px;
+
+  animation-name: tutorial-overlay-appear;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorial-overlay-popover-arrow {
+  animation-name: tutorial-overlay-appear;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.tutorial-overlay-popover-arrow.disappearing {
+  animation-direction: reverse;
+}
+
+.tutorial-overlay-content::before {
+  content: "";
+  position: absolute;
+  z-index: -3;
+  background: linear-gradient(120deg, #f614e3, #4e0708 50%);
+  border-radius: 6pt;
+  top: -2pt;
+  bottom: -2pt;
+  left: -2pt;
+  right: -2pt;
+}
+
+.tutorial-overlay-content::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #000;
+  border-radius: 6pt;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.tutorial-overlay-content-actions {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tutorial-overlay-content.disappearing {
+  animation-direction: reverse;
+}
+
+.tutorial-step-progress {
+  position: absolute;
+  top: calc(var(--TOHPadding) * -1);
+  left: calc(var(--TOHPadding) * -1);
+  z-index: -2;
+  width: calc(100% * var(--tutorial-completion-ratio));
+  height: calc(100% + var(--TOHPadding) * 2);
+  background: #6af;
+  border-radius: 4pt;
+  transition: width 250ms linear;
+}

@@ -1,0 +1,44 @@
+export const meta = {
+	title: "Info API Guide"
+};
+
+# The Info API
+
+Curious what an API can do, <PlayerName />? The **`"info"`** module is a discovery helper — hand it a module or entity and it lists out the properties and methods available, right inside the editor. The export is a function.
+
+## Importing Info
+
+<ExampleCode>
+
+	```javascript
+	const info = require("info");
+
+	// Discover everything the Fire API offers.
+	console.log(info(require("fire")));
+	```
+
+</ExampleCode>
+
+## Inspecting the Caster
+
+Point `info` at any entity to see what it carries — including the caster from [Self](spell-api-guides/self-api-guide):
+
+<ExampleCode>
+
+	```javascript
+	const info = require("info");
+
+	console.log(info(require("self")));
+	```
+
+</ExampleCode>
+
+### Methods
+
+- **`info(target)`** — returns a description object listing the `target`'s properties and methods. `target` can be anything — a required module, an entity, and so on.
+
+<Callout type="tip">
+
+	`info` is a great way to explore an unfamiliar API without leaving the editor — require a module, pass it to `info`, and read what comes back.
+
+</Callout>

@@ -1,0 +1,35 @@
+# Ping
+
+Many entities can be accessed and modified with code directly. Of course, to adjust
+an entity's properties or call one of its methods, we need a reference to that
+entity as an Object.
+
+To facilitate this, we introduce a "ping" spell module which can be accessed
+using the standard `require` mechanism, as such:
+
+<ExampleCode>
+```javascript
+const ping = require("ping");
+```
+</ExampleCode>
+
+`ping` will find nearby entities, and in addition to *providing them as an array
+as its return value*, will label them within the level and expose them as local
+variables for easy reference.
+
+Each entity exposed by `ping` has some standard data (id, position, and type), as
+well as entity-specific properties and methods. You can list these properties and methods
+using the `info` dependency to resolve an array of strings describing each property.
+
+<ExampleCode>
+```javascript
+const ping = require("ping");
+const info = require("info");
+const entities = ping();
+for (const entity of entities) {
+  console.log(info(entity));
+}
+```
+</ExampleCode>
+
+In this way, we can learn about the specific methods and properties for entities.

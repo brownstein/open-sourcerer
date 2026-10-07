@@ -1,0 +1,81 @@
+@keyframes fadeConvoOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -1em);
+  }
+}
+
+.popover-conversation {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  width: 300px;
+  transform: translate(-50%, 0);
+
+  &.going-away {
+    animation-name: fadeConvoOut;
+    animation-duration: 250ms;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+
+  .continue-interact-prompt {
+    position: absolute;
+    right: 12px;
+    bottom: -20px;
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+}
+
+@keyframes fadeConvoStepIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 1em);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeConvoStepOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -1em);
+  }
+}
+
+.popover-conversation-step {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0.6em;
+  padding: 0.6em;
+  width: max-content;
+  max-width: calc(100% - 44px);
+  position: relative;
+
+  animation-name: fadeConvoStepIn;
+  animation-duration: 250ms;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+
+  &.right-aligned {
+    align-self: flex-end;
+  }
+
+  &.fading-out {
+    animation-name: fadeConvoStepOut;
+    animation-duration: 250ms;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+}

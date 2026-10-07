@@ -1,0 +1,8337 @@
+{
+ "columns": 50,
+ "image": "dev-tiles.png",
+ "imageheight": 336,
+ "imagewidth": 800,
+ "margin": 0,
+ "name": "dev-tiles",
+ "spacing": 0,
+ "tilecount": 1050,
+ "tiledversion": "1.11.2",
+ "tileheight": 16,
+ "tiles": [
+  {
+   "id": 58,
+   "type": "decal"
+  },
+  {
+   "id": 59,
+   "type": "decal"
+  },
+  {
+   "id": 70,
+   "type": "decal"
+  },
+  {
+   "id": 71,
+   "type": "decal"
+  },
+  {
+   "id": 82,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 83,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 94,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 95,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 102,
+   "type": "decal"
+  },
+  {
+   "id": 103,
+   "type": "decal"
+  },
+  {
+   "id": 104,
+   "type": "decal"
+  },
+  {
+   "id": 105,
+   "type": "decal"
+  },
+  {
+   "id": 106,
+   "type": "decal"
+  },
+  {
+   "id": 107,
+   "type": "decal"
+  },
+  {
+   "id": 108,
+   "type": "decal"
+  },
+  {
+   "id": 109,
+   "type": "decal"
+  },
+  {
+   "id": 110,
+   "type": "decal"
+  },
+  {
+   "id": 111,
+   "type": "decal"
+  },
+  {
+   "id": 114,
+   "type": "decal"
+  },
+  {
+   "id": 115,
+   "type": "decal"
+  },
+  {
+   "id": 116,
+   "type": "decal"
+  },
+  {
+   "id": 117,
+   "type": "decal"
+  },
+  {
+   "id": 118,
+   "type": "decal"
+  },
+  {
+   "id": 119,
+   "type": "decal"
+  },
+  {
+   "id": 120,
+   "type": "decal"
+  },
+  {
+   "id": 121,
+   "type": "decal"
+  },
+  {
+   "id": 122,
+   "type": "decal"
+  },
+  {
+   "id": 123,
+   "type": "decal"
+  },
+  {
+   "id": 126,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 127,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 128,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 129,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 130,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 131,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 132,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 133,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 134,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 135,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 138,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 139,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 140,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 141,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 142,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 143,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 144,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 145,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 146,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 147,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 151,
+   "type": "decal"
+  },
+  {
+   "id": 152,
+   "type": "decal"
+  },
+  {
+   "id": 153,
+   "type": "decal"
+  },
+  {
+   "id": 154,
+   "type": "decal"
+  },
+  {
+   "id": 155,
+   "type": "decal"
+  },
+  {
+   "id": 156,
+   "type": "decal"
+  },
+  {
+   "id": 157,
+   "type": "decal"
+  },
+  {
+   "id": 158,
+   "type": "decal"
+  },
+  {
+   "id": 159,
+   "type": "decal"
+  },
+  {
+   "id": 160,
+   "type": "decal"
+  },
+  {
+   "id": 161,
+   "type": "decal"
+  },
+  {
+   "id": 163,
+   "type": "decal"
+  },
+  {
+   "id": 164,
+   "type": "decal"
+  },
+  {
+   "id": 165,
+   "type": "decal"
+  },
+  {
+   "id": 166,
+   "type": "decal"
+  },
+  {
+   "id": 167,
+   "type": "decal"
+  },
+  {
+   "id": 168,
+   "type": "decal"
+  },
+  {
+   "id": 169,
+   "type": "decal"
+  },
+  {
+   "id": 170,
+   "type": "decal"
+  },
+  {
+   "id": 171,
+   "type": "decal"
+  },
+  {
+   "id": 172,
+   "type": "decal"
+  },
+  {
+   "id": 173,
+   "type": "decal"
+  },
+  {
+   "id": 175,
+   "type": "ground"
+  },
+  {
+   "id": 176,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 177,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 178,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 179,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 180,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 181,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 182,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 183,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -7,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 184,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 185,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 187,
+   "type": "ground"
+  },
+  {
+   "id": 188,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 189,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 190,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 191,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 192,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 193,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 194,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 195,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -7,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 196,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 197,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 208,
+   "type": "decal"
+  },
+  {
+   "id": 209,
+   "type": "decal"
+  },
+  {
+   "id": 220,
+   "type": "decal"
+  },
+  {
+   "id": 221,
+   "type": "decal"
+  },
+  {
+   "id": 232,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 8,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 233,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 9,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -9,
+        "y": 16
+       },
+       {
+        "x": -9,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 244,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 8,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 245,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 9,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -9,
+        "y": 16
+       },
+       {
+        "x": -9,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 308,
+   "type": "decal"
+  },
+  {
+   "id": 309,
+   "type": "decal"
+  },
+  {
+   "id": 320,
+   "type": "decal"
+  },
+  {
+   "id": 321,
+   "type": "decal"
+  },
+  {
+   "id": 332,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 333,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 344,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 345,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 352,
+   "type": "decal"
+  },
+  {
+   "id": 353,
+   "type": "decal"
+  },
+  {
+   "id": 354,
+   "type": "decal"
+  },
+  {
+   "id": 355,
+   "type": "decal"
+  },
+  {
+   "id": 356,
+   "type": "decal"
+  },
+  {
+   "id": 357,
+   "type": "decal"
+  },
+  {
+   "id": 358,
+   "type": "decal"
+  },
+  {
+   "id": 359,
+   "type": "decal"
+  },
+  {
+   "id": 360,
+   "type": "decal"
+  },
+  {
+   "id": 361,
+   "type": "decal"
+  },
+  {
+   "id": 364,
+   "type": "decal"
+  },
+  {
+   "id": 365,
+   "type": "decal"
+  },
+  {
+   "id": 366,
+   "type": "decal"
+  },
+  {
+   "id": 367,
+   "type": "decal"
+  },
+  {
+   "id": 368,
+   "type": "decal"
+  },
+  {
+   "id": 369,
+   "type": "decal"
+  },
+  {
+   "id": 370,
+   "type": "decal"
+  },
+  {
+   "id": 371,
+   "type": "decal"
+  },
+  {
+   "id": 372,
+   "type": "decal"
+  },
+  {
+   "id": 373,
+   "type": "decal"
+  },
+  {
+   "id": 376,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 377,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 378,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 379,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 380,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 381,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 382,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 383,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 384,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 385,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 388,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 389,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 390,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 391,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 392,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 393,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 394,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 395,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 396,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 397,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 401,
+   "type": "decal"
+  },
+  {
+   "id": 402,
+   "type": "decal"
+  },
+  {
+   "id": 403,
+   "type": "decal"
+  },
+  {
+   "id": 404,
+   "type": "decal"
+  },
+  {
+   "id": 405,
+   "type": "decal"
+  },
+  {
+   "id": 406,
+   "type": "decal"
+  },
+  {
+   "id": 407,
+   "type": "decal"
+  },
+  {
+   "id": 408,
+   "type": "decal"
+  },
+  {
+   "id": 409,
+   "type": "decal"
+  },
+  {
+   "id": 410,
+   "type": "decal"
+  },
+  {
+   "id": 411,
+   "type": "decal"
+  },
+  {
+   "id": 413,
+   "type": "decal"
+  },
+  {
+   "id": 414,
+   "type": "decal"
+  },
+  {
+   "id": 415,
+   "type": "decal"
+  },
+  {
+   "id": 416,
+   "type": "decal"
+  },
+  {
+   "id": 417,
+   "type": "decal"
+  },
+  {
+   "id": 418,
+   "type": "decal"
+  },
+  {
+   "id": 419,
+   "type": "decal"
+  },
+  {
+   "id": 420,
+   "type": "decal"
+  },
+  {
+   "id": 421,
+   "type": "decal"
+  },
+  {
+   "id": 422,
+   "type": "decal"
+  },
+  {
+   "id": 423,
+   "type": "decal"
+  },
+  {
+   "id": 425,
+   "type": "ground"
+  },
+  {
+   "id": 426,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 427,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 428,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 429,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 430,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 431,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 432,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 433,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -7,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 434,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 435,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 437,
+   "type": "ground"
+  },
+  {
+   "id": 438,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 439,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 440,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 441,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 442,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 443,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 444,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 445,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -7,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 446,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 447,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 458,
+   "type": "decal"
+  },
+  {
+   "id": 459,
+   "type": "decal"
+  },
+  {
+   "id": 470,
+   "type": "decal"
+  },
+  {
+   "id": 471,
+   "type": "decal"
+  },
+  {
+   "id": 482,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 8,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 483,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 9,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -9,
+        "y": 16
+       },
+       {
+        "x": -9,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 494,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 8,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 495,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 9,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -9,
+        "y": 16
+       },
+       {
+        "x": -9,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 558,
+   "type": "decal"
+  },
+  {
+   "id": 559,
+   "type": "decal"
+  },
+  {
+   "id": 570,
+   "type": "decal"
+  },
+  {
+   "id": 571,
+   "type": "decal"
+  },
+  {
+   "id": 582,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 583,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 594,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 595,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 602,
+   "type": "decal"
+  },
+  {
+   "id": 603,
+   "type": "decal"
+  },
+  {
+   "id": 604,
+   "type": "decal"
+  },
+  {
+   "id": 605,
+   "type": "decal"
+  },
+  {
+   "id": 606,
+   "type": "decal"
+  },
+  {
+   "id": 607,
+   "type": "decal"
+  },
+  {
+   "id": 608,
+   "type": "decal"
+  },
+  {
+   "id": 609,
+   "type": "decal"
+  },
+  {
+   "id": 610,
+   "type": "decal"
+  },
+  {
+   "id": 611,
+   "type": "decal"
+  },
+  {
+   "id": 614,
+   "type": "decal"
+  },
+  {
+   "id": 615,
+   "type": "decal"
+  },
+  {
+   "id": 616,
+   "type": "decal"
+  },
+  {
+   "id": 617,
+   "type": "decal"
+  },
+  {
+   "id": 618,
+   "type": "decal"
+  },
+  {
+   "id": 619,
+   "type": "decal"
+  },
+  {
+   "id": 620,
+   "type": "decal"
+  },
+  {
+   "id": 621,
+   "type": "decal"
+  },
+  {
+   "id": 622,
+   "type": "decal"
+  },
+  {
+   "id": 623,
+   "type": "decal"
+  },
+  {
+   "id": 626,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 627,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 628,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 629,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 630,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 631,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 632,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 633,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 634,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 635,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 638,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 639,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 640,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 641,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 642,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 643,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 644,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 645,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 646,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 647,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 651,
+   "type": "decal"
+  },
+  {
+   "id": 652,
+   "type": "decal"
+  },
+  {
+   "id": 653,
+   "type": "decal"
+  },
+  {
+   "id": 654,
+   "type": "decal"
+  },
+  {
+   "id": 655,
+   "type": "decal"
+  },
+  {
+   "id": 656,
+   "type": "decal"
+  },
+  {
+   "id": 657,
+   "type": "decal"
+  },
+  {
+   "id": 658,
+   "type": "decal"
+  },
+  {
+   "id": 659,
+   "type": "decal"
+  },
+  {
+   "id": 660,
+   "type": "decal"
+  },
+  {
+   "id": 661,
+   "type": "decal"
+  },
+  {
+   "id": 663,
+   "type": "decal"
+  },
+  {
+   "id": 664,
+   "type": "decal"
+  },
+  {
+   "id": 665,
+   "type": "decal"
+  },
+  {
+   "id": 666,
+   "type": "decal"
+  },
+  {
+   "id": 667,
+   "type": "decal"
+  },
+  {
+   "id": 668,
+   "type": "decal"
+  },
+  {
+   "id": 669,
+   "type": "decal"
+  },
+  {
+   "id": 670,
+   "type": "decal"
+  },
+  {
+   "id": 671,
+   "type": "decal"
+  },
+  {
+   "id": 672,
+   "type": "decal"
+  },
+  {
+   "id": 673,
+   "type": "decal"
+  },
+  {
+   "id": 675,
+   "type": "ground"
+  },
+  {
+   "id": 676,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 677,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 678,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 679,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 680,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 681,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 682,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 683,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -7,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 684,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 685,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 687,
+   "type": "ground"
+  },
+  {
+   "id": 688,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 689,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 690,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 691,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 692,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 693,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 694,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 695,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -7,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 696,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 697,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 708,
+   "type": "decal"
+  },
+  {
+   "id": 709,
+   "type": "decal"
+  },
+  {
+   "id": 720,
+   "type": "decal"
+  },
+  {
+   "id": 721,
+   "type": "decal"
+  },
+  {
+   "id": 732,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 8,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 733,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 9,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -9,
+        "y": 16
+       },
+       {
+        "x": -9,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 744,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 8,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 745,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 9,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -9,
+        "y": 16
+       },
+       {
+        "x": -9,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 808,
+   "type": "decal"
+  },
+  {
+   "id": 809,
+   "type": "decal"
+  },
+  {
+   "id": 820,
+   "type": "decal"
+  },
+  {
+   "id": 821,
+   "type": "decal"
+  },
+  {
+   "id": 832,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 833,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 844,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 845,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 852,
+   "type": "decal"
+  },
+  {
+   "id": 853,
+   "type": "decal"
+  },
+  {
+   "id": 854,
+   "type": "decal"
+  },
+  {
+   "id": 855,
+   "type": "decal"
+  },
+  {
+   "id": 856,
+   "type": "decal"
+  },
+  {
+   "id": 857,
+   "type": "decal"
+  },
+  {
+   "id": 858,
+   "type": "decal"
+  },
+  {
+   "id": 859,
+   "type": "decal"
+  },
+  {
+   "id": 860,
+   "type": "decal"
+  },
+  {
+   "id": 861,
+   "type": "decal"
+  },
+  {
+   "id": 864,
+   "type": "decal"
+  },
+  {
+   "id": 865,
+   "type": "decal"
+  },
+  {
+   "id": 866,
+   "type": "decal"
+  },
+  {
+   "id": 867,
+   "type": "decal"
+  },
+  {
+   "id": 868,
+   "type": "decal"
+  },
+  {
+   "id": 869,
+   "type": "decal"
+  },
+  {
+   "id": 870,
+   "type": "decal"
+  },
+  {
+   "id": 871,
+   "type": "decal"
+  },
+  {
+   "id": 872,
+   "type": "decal"
+  },
+  {
+   "id": 873,
+   "type": "decal"
+  },
+  {
+   "id": 876,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 877,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 878,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 879,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 880,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 881,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 882,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 883,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 884,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 885,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 888,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 889,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 890,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 891,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 892,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 893,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 8,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 894,
+   "type": "slopediagleft",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -8,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 895,
+   "type": "slopediagright",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 9,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 896,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 897,
+   "type": "platform",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 8,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 16,
+      "x": 0,
+      "y": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": 901,
+   "type": "decal"
+  },
+  {
+   "id": 902,
+   "type": "decal"
+  },
+  {
+   "id": 903,
+   "type": "decal"
+  },
+  {
+   "id": 904,
+   "type": "decal"
+  },
+  {
+   "id": 905,
+   "type": "decal"
+  },
+  {
+   "id": 906,
+   "type": "decal"
+  },
+  {
+   "id": 907,
+   "type": "decal"
+  },
+  {
+   "id": 908,
+   "type": "decal"
+  },
+  {
+   "id": 909,
+   "type": "decal"
+  },
+  {
+   "id": 910,
+   "type": "decal"
+  },
+  {
+   "id": 911,
+   "type": "decal"
+  },
+  {
+   "id": 913,
+   "type": "decal"
+  },
+  {
+   "id": 914,
+   "type": "decal"
+  },
+  {
+   "id": 915,
+   "type": "decal"
+  },
+  {
+   "id": 916,
+   "type": "decal"
+  },
+  {
+   "id": 917,
+   "type": "decal"
+  },
+  {
+   "id": 918,
+   "type": "decal"
+  },
+  {
+   "id": 919,
+   "type": "decal"
+  },
+  {
+   "id": 920,
+   "type": "decal"
+  },
+  {
+   "id": 921,
+   "type": "decal"
+  },
+  {
+   "id": 922,
+   "type": "decal"
+  },
+  {
+   "id": 923,
+   "type": "decal"
+  },
+  {
+   "id": 925,
+   "type": "ground"
+  },
+  {
+   "id": 926,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 927,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 928,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 929,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 930,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 931,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 932,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 933,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -7,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 934,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 935,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 937,
+   "type": "ground"
+  },
+  {
+   "id": 938,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 939,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 940,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 941,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 942,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 0,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 943,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -16,
+        "y": 8
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 944,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 0
+       },
+       {
+        "x": 16,
+        "y": 16
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 945,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 16,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -7,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 16
+       },
+       {
+        "x": -16,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 946,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 0,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 947,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 16,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 8,
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": 958,
+   "type": "decal"
+  },
+  {
+   "id": 959,
+   "type": "decal"
+  },
+  {
+   "id": 970,
+   "type": "decal"
+  },
+  {
+   "id": 971,
+   "type": "decal"
+  },
+  {
+   "id": 982,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 8,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 983,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 9,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -9,
+        "y": 16
+       },
+       {
+        "x": -9,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 994,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 8,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 0
+       },
+       {
+        "x": 8,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 995,
+   "type": "ground",
+   "objectgroup": {
+    "draworder": "index",
+    "name": "",
+    "opacity": 1,
+    "type": "objectgroup",
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "objects": [
+     {
+      "height": 0,
+      "id": 1,
+      "name": "",
+      "rotation": 0,
+      "type": "",
+      "visible": true,
+      "width": 0,
+      "x": 9,
+      "y": 0,
+      "polygon": [
+       {
+        "x": 0,
+        "y": 0
+       },
+       {
+        "x": -9,
+        "y": 16
+       },
+       {
+        "x": -9,
+        "y": 0
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "tilewidth": 16,
+ "type": "tileset",
+ "version": "1.10"
+}

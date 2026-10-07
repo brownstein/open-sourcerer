@@ -1,0 +1,37 @@
+.opponent-bars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2pt;
+  margin-top: 3pt;
+}
+
+/* Bar first so it sits flush with the main bars' left edge; name after. */
+.opponent-bar-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6pt;
+}
+
+.opponent-bar-name {
+  font-size: 8pt;
+  font-weight: bold;
+  max-width: 100pt;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+  text-align: left;
+}
+
+/* Between the main health bar (0.4/400pt) and mana bar (0.25/250pt). */
+.hex-opponent-bar.hex-bar-container {
+  --sbar-color: #d33;
+  --sbar-color-falling: #e75;
+  --sbar-height: 8pt;
+  --sbar-width: calc(min(var(--sr-width) * 0.3, 300pt));
+  width: calc(min(var(--sr-width) * 0.3, 300pt));
+  height: 8pt;
+}

@@ -1,0 +1,40 @@
+.viewport-renderer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #123;
+  overflow: hidden;
+
+  .viewport-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    image-rendering: pixelated;
+
+    &.no-cursor {
+      cursor: none;
+    }
+  }
+
+  .temp-controls {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    z-index: 2;
+  }
+}
+
+.viewport-item-toast {
+  background-color: #ccffcc;
+  border-color: #448844;
+}
+
+.viewport-item-toast-icon {
+  display: flex;
+  width: 64px;
+  aspect-ratio: 1;
+}

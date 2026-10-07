@@ -1,0 +1,56 @@
+export const meta = {
+	title: "Get Entities API Guide"
+};
+
+# The Get Entities API
+
+Welcome back, <PlayerName />! The **`"getEntities"`** spell lists every entity currently in the level. Unlike most spells, the export is a **function** — call it directly to get an array describing everything around you.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const getEntities = require("getEntities");
+	const entities = getEntities();
+	```
+
+</ExampleCode>
+
+`getEntities()` returns an array of `{ id, type, position }` objects — one for every entity in the level, where `position` is `{ x, y }`.
+
+## Filtering by Type
+
+Because it's just an array, you can use ordinary array methods to find what you care about:
+
+<ExampleCode>
+
+	```javascript
+	const getEntities = require("getEntities");
+
+	const slimes = getEntities().filter(e => e.type === "Slime");
+	for (const slime of slimes) {
+		console.log(slime.id + " is at " + slime.position.x + ", " + slime.position.y);
+	}
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Read each entry's `position` (`{ x, y }`) to decide where to aim a spell, or pass its `id` to another spell that targets a specific entity.
+
+</Callout>
+
+### Return value
+
+- **`getEntities()`** — returns `{ id, type, position }[]` — one entry per entity in the level.
+- **`id`** — `string` — the entity's handle id.
+- **`type`** — `string` — the entity type string (e.g. `"Slime"`).
+- **`position`** — `{ x, y }` — the entity's current world position.
+
+<Callout type="info">
+
+	`getEntities` lists everything at once. If you instead want radius-based detection around a point, reach for the [Ping](spell-api-guides/ping-api-guide) and [Sensor](spell-api-guides/sensor-api-guide) APIs.
+
+</Callout>

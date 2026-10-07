@@ -1,0 +1,49 @@
+.ui-button-d {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-text);
+  border-radius: 3px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: var(--color-base);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5em;
+
+  &.button-size-sm {
+    padding: 2px;
+  }
+  &.button-size-md {
+    padding: 4px;
+  }
+  &.button-size-lg {
+    padding: 6px;
+  }
+
+  &.button-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.button-size-sm {
+      width: 24px;
+      height: 24px;
+    }
+    &.button-size-md {
+      width: 32px;
+      height: 32px;
+    }
+    &.button-size-lg {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+.button-tooltip {
+  background: #000000;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 3px;
+}

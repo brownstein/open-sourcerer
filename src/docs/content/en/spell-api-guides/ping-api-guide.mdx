@@ -1,0 +1,50 @@
+export const meta = {
+	title: "Ping API Guide"
+};
+
+# The Ping API
+
+Welcome back, <PlayerName />! The **`"ping"`** spell sends out a single pulse from your caster and tells you which entities it found nearby. It's a quick, one-shot way to scan your surroundings before deciding what to do next.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const ping = require("ping");
+	const found = ping();
+	```
+
+</ExampleCode>
+
+`ping` is a **function**, not a class — call it directly to emit a ping. It resolves to an array of the entities it detected (`Entity[]`).
+
+## Reading the Results
+
+Each detected entity carries its `id`, `type`, and `position`, so you can loop over them and act:
+
+<ExampleCode>
+
+	```javascript
+	const ping = require("ping");
+	const found = ping();
+
+	for (const entity of found) {
+		console.log(entity.type, "at", entity.position.x, entity.position.y);
+	}
+	```
+
+</ExampleCode>
+
+<Callout type="info">
+
+	`ping` is a one-shot detection: it captures whatever is around you at the moment you call it. If you need to keep watching an area over time, reach for the [Sensor](spell-api-guides/sensor-api-guide) API instead, which continuously tracks entities and fires enter/leave callbacks.
+
+</Callout>
+
+### Return value
+
+- **`ping()`** — emits a ping from the caster and resolves to an `Entity[]` of the entities it detected. Each entity has:
+	- **`id`** — `string` — the entity's id.
+	- **`type`** — `string` — the entity's type name.
+	- **`position`** — `{ x, y }` — the entity's current position.

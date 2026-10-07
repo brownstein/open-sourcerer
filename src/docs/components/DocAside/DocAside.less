@@ -1,0 +1,57 @@
+@import (reference) "../../../components/docs/DocsEntry/DocsEntry.less";
+
+.docs-entry > .doc-aside {
+	position: relative;
+	height: 0;
+	overflow: visible;
+
+	> .doc-aside-content {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		max-width: var(--docs-aside-max-width);
+	}
+}
+
+.docs-entry > .doc-aside-left > .doc-aside-content {
+	right: 0;
+}
+
+.docs-entry > .doc-aside-right > .doc-aside-content {
+	left: 0;
+}
+
+.doc-aside-sticky-range-left > .doc-aside,
+.doc-aside-sticky-range-right > .doc-aside {
+	width: 100%;
+	max-width: var(--docs-aside-max-width);
+}
+
+.doc-aside-sticky-range-left > .doc-aside-sticky,
+.doc-aside-sticky-range-right > .doc-aside-sticky {
+	position: sticky;
+	top: var(--docs-aside-sticky-top);
+}
+
+@container (max-width: @docs-collapse-width) {
+	.docs-entry > .doc-aside-collapse-inline {
+		position: static;
+		height: auto;
+
+		> .doc-aside-content {
+			position: static;
+			max-width: none;
+			margin: 0.5rem 0;
+		}
+	}
+
+	.doc-aside-sticky-range-left > .doc-aside,
+	.doc-aside-sticky-range-right > .doc-aside {
+		max-width: none;
+	}
+
+	.doc-aside-sticky-range-left > .doc-aside-sticky,
+	.doc-aside-sticky-range-right > .doc-aside-sticky {
+		position: static;
+	}
+}

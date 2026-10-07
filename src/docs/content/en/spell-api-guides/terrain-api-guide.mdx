@@ -1,0 +1,76 @@
+export const meta = {
+	title: "Terrain API Guide"
+};
+
+# The Terrain API
+
+Welcome back, <PlayerName />! The **`"terrain"`** spell lets you query the world around you — checking whether terrain blocks a line of sight, and sampling the navigation grid over a region. The export is an **object of functions**.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const Terrain = require("terrain");
+	```
+
+</ExampleCode>
+
+## Checking Line of Sight
+
+`checkLineOfSight` tells you whether terrain blocks the straight line between two points — great for deciding if a target is exposed before you cast:
+
+<ExampleCode>
+
+	```javascript
+	const Terrain = require("terrain");
+	const self = require("self");
+
+	const blocked = Terrain.checkLineOfSight({
+		from: self.position,
+		to: { x: 14, y: 6 }
+	});
+
+	if (!blocked) {
+		console.log("Clear shot!");
+	}
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Set `ignoreEntities: true` to test only against solid terrain, ignoring other entities that might be standing in the way.
+
+</Callout>
+
+## Sampling the Nav Grid
+
+`queryGrid` samples the navigation grid over a region and returns a 2D grid of block values, along with the sample resolution:
+
+<ExampleCode>
+
+	```javascript
+	const Terrain = require("terrain");
+
+	const result = Terrain.queryGrid({
+		min: { x: 0, y: 0 },
+		max: { x: 10, y: 6 }
+	});
+
+	console.log("Resolution: " + result.resolution);
+	console.log(result.grid);
+	```
+
+</ExampleCode>
+
+### Methods
+
+- **`checkLineOfSight(opts)`** — returns whether terrain blocks the line between two points. `opts` is `{ from, to, ignoreEntities? }`, where `from`/`to` are `{ x, y }` and `ignoreEntities` is a `boolean`. Returns `boolean`.
+- **`queryGrid(opts)`** — samples the nav-grid over a region, returning a 2D block grid. `opts` is `{ min, max, relative? }`, where `min`/`max` are `{ x, y }` and `relative` is a `boolean`. Returns `{ grid, resolution }` — `grid` is `number[][]` and `resolution` is a `number`.
+
+<Callout type="info">
+
+	Pass `relative: true` to `queryGrid` to sample the region relative to your caster's position instead of in absolute world coordinates.
+
+</Callout>

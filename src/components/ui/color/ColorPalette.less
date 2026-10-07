@@ -1,0 +1,37 @@
+.color-palette {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  .color-square {
+    background: #fff;
+    width: var(--ui-scale-px);
+    aspect-ratio: 1;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &.custom-color {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
+      --text-color: #fff;
+
+      &.is-light {
+        color: #000;
+        --text-color: #000;
+      }
+    }
+  }
+}
+
+.color-picker-popover {
+  border-radius: 4px;
+  padding: 4px;
+  background: #000000;
+  display: flex;
+}

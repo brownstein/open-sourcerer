@@ -1,0 +1,31 @@
+ul.ui-elements-list {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #fff;
+  gap: 0.5em;
+
+  li {
+    display: flex;
+    gap: 0.1em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 4em;
+    border: 1px solid #444;
+    background: #222;
+    input {
+      aspect-ratio: 1;
+      height: 1.6em;
+    }
+
+    label {
+      font-size: 1.2em;
+      margin: 0 1em;
+    }
+  }
+}

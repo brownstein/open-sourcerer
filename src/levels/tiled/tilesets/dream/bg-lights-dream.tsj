@@ -1,0 +1,97 @@
+{
+ "columns": 5,
+ "image": "bg-lights-dream.png",
+ "imageheight": 112,
+ "imagewidth": 80,
+ "margin": 0,
+ "name": "bg-lights-dream",
+ "spacing": 0,
+ "tilecount": 35,
+ "tiledversion": "1.11.0",
+ "tileheight": 16,
+ "tilewidth": 16,
+ "type": "tileset",
+ "version": "1.10",
+ "tiles": [
+  {
+   "id": 1,
+   "type": "decal"
+  },
+  {
+   "id": 2,
+   "type": "decal"
+  },
+  {
+   "id": 3,
+   "type": "decal"
+  },
+  {
+   "id": 10,
+   "type": "decal"
+  },
+  {
+   "id": 11,
+   "type": "decal"
+  },
+  {
+   "id": 12,
+   "type": "decal"
+  },
+  {
+   "id": 13,
+   "type": "decal"
+  },
+  {
+   "id": 14,
+   "type": "decal"
+  },
+  {
+   "id": 16,
+   "type": "decal"
+  },
+  {
+   "id": 17,
+   "type": "decal"
+  },
+  {
+   "id": 18,
+   "type": "decal"
+  },
+  {
+   "id": 21,
+   "type": "decal"
+  },
+  {
+   "id": 22,
+   "type": "decal"
+  },
+  {
+   "id": 23,
+   "type": "decal"
+  },
+  {
+   "id": 26,
+   "type": "decal"
+  },
+  {
+   "id": 27,
+   "type": "decal"
+  },
+  {
+   "id": 28,
+   "type": "decal"
+  },
+  {
+   "id": 31,
+   "type": "decal"
+  },
+  {
+   "id": 32,
+   "type": "decal"
+  },
+  {
+   "id": 33,
+   "type": "decal"
+  }
+ ]
+}

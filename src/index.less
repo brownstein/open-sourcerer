@@ -1,0 +1,172 @@
+@include "src/fonts/roboto/roboto-v20-lastin-regular.woff";
+@include "src/fonts/roboto/roboto-v20-lastin-regular.woff2";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/roboto-v20-latin-regular.eot");
+  src: url("fonts/roboto/roboto-v20-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/roboto/roboto-v20-latin-regular.woff") format("woff"),
+    url("fonts/roboto/roboto-v20-latin-regular.ttf") format("truetype"),
+    url("fonts/roboto/roboto-v20-latin-regular.svg#Roboto") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geo";
+  src: url("fonts/geo/geo-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MssnMadoka";
+  src: url("fonts/mssn/mssn-madoka.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Troll";
+  src: url("fonts/troll//troll-12-src.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12;
+}
+
+@font-face {
+  font-family: "Highbirth";
+  src: url("fonts/highbirth/highbirth.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12;
+}
+
+@font-face {
+  font-family: "FontFantasy";
+  src: url("fonts/font-fantasy/font_fantasy_m.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12;
+}
+
+@font-face {
+  font-family: "FelixTitling";
+  src: url("fonts/felix-titling/felixtitlingmt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #111111;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.outer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hbox {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-basis: 50%;
+  border: 1px solid #fff;
+}
+
+.vbox {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 50%;
+  border: 1px solid #fff;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+@keyframes fadeInKeyframe {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.text-white {
+  --color-text: #ffffff;
+  color: var(--color-text);
+}
+
+.text-black {
+  --color-text: #000000;
+  color: var(--color-text);
+}
+
+.react-tiny-popover-container {
+  z-index: 9999999;
+}
+
+body {
+  --ui-scale-px: 40px;
+}
+
+// Global dark/light theme variables
+body.dark {
+  --theme-bg: #1D263D;
+  --theme-surface: #333;
+  --theme-surface-alt: #444;
+  --theme-text: #ddd;
+  --theme-text-heading: #aaccee;
+  --theme-text-muted: #999;
+  --theme-border: #444;
+  --theme-accent: #44ccff;
+  --theme-input-bg: rgba(255, 255, 255, 0.1);
+  --theme-error: #f66;
+  --theme-console-bg: #1a2233;
+  --theme-console-header: #1a3a5a;
+  --theme-controls-bg: #444;
+}
+
+body.light {
+  --theme-bg: #fff;
+  --theme-surface: #eee;
+  --theme-surface-alt: #ddd;
+  --theme-text: #222;
+  --theme-text-heading: #002244;
+  --theme-text-muted: #666;
+  --theme-border: #ccc;
+  --theme-accent: #4488ff;
+  --theme-input-bg: rgba(0, 0, 0, 0.05);
+  --theme-error: #aa0000;
+  --theme-console-bg: #aaccff;
+  --theme-console-header: #4488bb;
+  --theme-controls-bg: #888;
+}

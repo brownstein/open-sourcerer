@@ -1,0 +1,63 @@
+export const meta = {
+	title: "Vector API Guide"
+};
+
+# The Vector API
+
+Math time, <PlayerName />! The **`"vector"`** module gives you a 2D vector with a stack of chainable helpers. It's the workhorse behind positions, directions, and velocities all across the spell APIs.
+
+## Importing Vector
+
+<ExampleCode>
+
+	```javascript
+	const Vector = require("vector");
+
+	const a = new Vector(3, 4);
+	console.log(a.x, a.y);        // 3 4
+	console.log(a.length());      // 5
+	```
+
+</ExampleCode>
+
+The constructor is flexible — it accepts `(x, y)`, an `[x, y]` array, or a `{ x, y }` object.
+
+## Chaining Math
+
+Most methods return a new `Vector`, so you can chain operations to build exactly the direction or velocity you need:
+
+<ExampleCode>
+
+	```javascript
+	const Vector = require("vector");
+
+	// Build a direction pointing up-right, normalize it, then scale to speed 8.
+	const velocity = new Vector(1, 1).normalize().scale(8);
+
+	console.log(velocity.x, velocity.y);
+	console.log(velocity.length());   // 8
+	```
+
+</ExampleCode>
+
+### Constructor
+
+- **`new Vector(xOrObj?, y?)`** — accepts `(x, y)`, an `[x, y]` array, or a `{ x, y }` object.
+
+### Properties
+
+- **`x`** — `number` — the horizontal component.
+- **`y`** — `number` — the vertical component.
+
+### Methods
+
+- **`clone()`** — returns a `Vector` copy.
+- **`add(other)`** — returns a `Vector`; `other` is `{ x, y }`.
+- **`sub(other)`** — returns a `Vector`; `other` is `{ x, y }`.
+- **`scale(scale)`** — returns a `Vector`; `scale` is a `number`.
+- **`rotate(rotation)`** — returns a `Vector`; `rotation` is a `number` in radians.
+- **`normalize()`** — returns a unit-length `Vector`.
+- **`round(radix?)`** — returns a `Vector` with rounded components.
+- **`length()`** — returns a `number`, the vector's magnitude.
+- **`dot(other)`** — returns a `number`, the dot product; `other` is `{ x, y }`.
+- **`angle()`** — returns a `number`, the vector's angle in radians.

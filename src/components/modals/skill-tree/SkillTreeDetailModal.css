@@ -1,0 +1,64 @@
+.skill-tree-detail-modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 1em;
+  box-sizing: border-box;
+  color: var(--theme-text, inherit);
+}
+
+.skill-tree-detail-description {
+  flex: 1 1 auto;
+  margin: 0;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+.skill-tree-detail-docs {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.skill-tree-detail-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  flex-shrink: 0;
+}
+
+.skill-tree-detail-hint {
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+.skill-tree-detail-learn-button {
+  font-family: "Troll", inherit;
+  font-size: 1.1em;
+  padding: 0.4em 1.5em;
+  cursor: pointer;
+  color: var(--theme-text-heading, #002244);
+  background: var(--theme-surface-alt, #aa8866);
+  border: 2px solid var(--theme-text-heading, #002244);
+  border-radius: 4px;
+}
+
+.skill-tree-detail-learn-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.skill-tree-detail-learn-button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.skill-tree-detail-learned {
+  font-family: "Troll", inherit;
+  font-size: 1.1em;
+  padding: 0.4em 1.5em;
+  color: var(--theme-text-heading, #002244);
+  opacity: 0.7;
+}

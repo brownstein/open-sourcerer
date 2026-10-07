@@ -1,0 +1,14 @@
+{ "columns":48,
+ "image":"..\/..\/tilesets\/general\/Adanas_tile_set.png",
+ "imageheight":368,
+ "imagewidth":768,
+ "margin":0,
+ "name":"Adanas_tile_set",
+ "spacing":0,
+ "tilecount":1104,
+ "tiledversion":"1.11.1",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.10"
+}

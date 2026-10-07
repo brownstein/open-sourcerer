@@ -1,0 +1,278 @@
+@property --modal-border-width {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 2pt;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.modal-container-border {
+  position: absolute;
+  top: calc(var(--modal-border-width) * -1);
+  bottom: calc(var(--modal-border-width) * -1);
+  left: calc(var(--modal-border-width) * -1);
+  right: calc(var(--modal-border-width) * -1);
+  z-index: -2;
+  background: linear-gradient(120deg, #44bbf5, #9858f5 50%);
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
+}
+
+.modal-container-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.modal-container-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../shared-assets/backgrounds/granite.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.modal-container-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(7, 21, 34, 0.9);
+  z-index: -1;
+}
+
+body.light .modal-container-bg::after {
+  background: rgba(200, 220, 255, 0.8);
+}
+
+body.dark .modal-container {
+  color: var(--theme-text);
+}
+
+.modal-container.modal-large {
+  width: 1024px;
+  height: 1024px;
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.modal-container.modal-medium {
+  width: 720px;
+  height: 720px;
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.modal-container.modal-small {
+  width: 480px;
+  height: 480px;
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.modal-close-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -1em;
+  right: -1em;
+  width: 2em;
+  height: 2em;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+  padding: 0.5em;
+  box-sizing: border-box;
+  z-index: 4;
+}
+
+.modal-close-button::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--modal-border-width) * -1);
+  bottom: calc(var(--modal-border-width) * -1);
+  left: calc(var(--modal-border-width) * -1);
+  right: calc(var(--modal-border-width) * -1);
+  z-index: -2;
+  background-image: linear-gradient(120deg, #44bbf5, #9858f5 50%);
+}
+
+.modal-close-button:hover::before {
+  background: #fff;
+}
+
+body.light .modal-close-button::after {
+  background: #f44;
+}
+
+.modal-close-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #191f37;
+  z-index: -1;
+}
+
+.modal-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  height: 8pt;
+  margin-bottom: 20pt;
+  line-height: 16pt;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 2pt solid #6a5593;
+  background: #191f37;
+  position: relative;
+  z-index: 2;
+}
+
+body.light .modal-title {
+  background: #c7cee9;
+}
+
+.modal-title h2 {
+  position: relative;
+  display: flex;
+  text-align: left;
+  background-clip: text;
+  background-image: radial-gradient(circle at top left, #daeff8, #e0d4f6 100%);
+  color: transparent;
+  font-family: "Troll";
+  font-size: 15pt;
+  padding: 0;
+  margin: 0;
+}
+
+body.light .modal-title h2 {
+  background-image: radial-gradient(circle at top left, #195168, #160731 100%);
+}
+
+.modal-title h2::before {
+  content: "";
+  position: absolute;
+  left: calc(-10pt - var(--modal-border-width));
+  top: calc(-10pt - var(--modal-border-width));
+  right: calc(-28pt - var(--modal-border-width));
+  bottom: calc(-10pt - var(--modal-border-width));
+  display: flex;
+  text-align: left;
+  background: linear-gradient(120deg, #44bbf5, #9858f5 50%);
+  clip-path: polygon(
+    0 -4pt,
+    4pt 0,
+    calc(100% - 8pt) 0,
+    100% 8pt,
+    calc(100% - 16pt) 8pt,
+    calc(100% - 16pt) 100%,
+    8pt 100%,
+    0 calc(100% - 8pt)
+  );
+  z-index: -1;
+}
+
+.modal-title h2::after {
+  content: "";
+  position: absolute;
+  left: -10pt;
+  top: -10pt;
+  right: -28pt;
+  bottom: -10pt;
+  display: flex;
+  text-align: left;
+  background: #191f37;
+  clip-path: polygon(
+    0 -4pt,
+    4pt 0,
+    calc(100% - 8pt) 0,
+    100% 8pt,
+    calc(100% - 16pt) 8pt,
+    calc(100% - 16pt) 100%,
+    8pt 100%,
+    0 calc(100% - 8pt)
+  );
+  z-index: -1;
+}
+
+body.light .modal-title h2::after {
+  background: #c7cee9;
+}
+
+.modal-content {
+  padding: 16px;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@keyframes modal-fancy-appear {
+  0% {
+    transform: scale(0) translateY(20vh);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-fancy-disappear {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) translateY(20vh);
+    opacity: 0;
+  }
+}
+
+.modal-container.opening {
+  animation-name: modal-fancy-appear;
+  animation-timing-function: ease;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+.modal-container.closing {
+  animation-name: modal-fancy-disappear;
+  animation-timing-function: ease;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+.modal-container.modal-fit-content,
+.modal-container.modal-fit-content .modal-content {
+  height: auto;
+}

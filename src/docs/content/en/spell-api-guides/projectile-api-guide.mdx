@@ -1,0 +1,238 @@
+import { useCurrentTutorialEquals } from "src/docs/components/hooks/useCurrentTutorialEquals";
+import banner from "src/docs/media/en/spell-api-guides/projectile-api-guide/banner.png";
+import strongProjectileVideo from "src/docs/media/en/spell-api-guides/projectile-api-guide/example-strong-projectile.webm";
+import weakProjectileVideo from "src/docs/media/en/spell-api-guides/projectile-api-guide/example-weak-projectile.webm";
+import firstProjectileVideo from "src/docs/media/en/spell-api-guides/projectile-api-guide/first-projectile.webm";
+import advancedProjectileVideo from "src/docs/media/en/spell-api-guides/projectile-api-guide/further-configured-projectile.webm";
+import aimedProjectileVideo from "src/docs/media/en/spell-api-guides/projectile-api-guide/aimed-projectile.webm";
+import { useHasCompletedTutorial } from "src/docs/components/hooks/useHasCompletedTutorial";
+
+export const meta = {
+  title: "Projectile API Guide",
+  bannerImage: banner,
+	devNotes: "Yo this technology is crazy. Crazy looking document."
+};
+
+# Casting Your First Projectile
+
+<DocIf condition={useHasCompletedTutorial("T000AimSpell")}>
+	<DocThen>
+
+		<Callout type="tip">
+
+			If you have not done so already: start your journey into the world of <Definition term="javascript">JavaScript</Definition> with [JavaScript: Beginnings](javascript/index)
+
+		</Callout>
+
+	</DocThen>
+</DocIf>
+
+Welcome, <PlayerName />! It is time to pick up the keyboard and dive into using your first [JavaScript Spell API](TODO).
+
+We will learn specifically what we mean by **_"API"_** at a later point in time. For now, let's write a few lines of JavaScript to make your own offensive projectile spell from scratch.
+
+<Callout type="info" title="Creating The Projectile">
+
+	<ExampleCode>
+
+		```javascript
+		const Projectile = require("projectile");
+		new Projectile();
+		```
+
+	</ExampleCode>
+
+	Try executing the above code yourself!
+
+</Callout>
+
+<DocVideo src={firstProjectileVideo} />
+
+**Congratulations!** With just two lines of JavaScript, we have already casted a basic projectile. Try to familiarize yourself with this syntax, since you will almost always revisit this pattern as you continue to master spell writing throughout your journey!
+
+---
+
+```javascript
+const Projectile = require("projectile");
+```
+
+This is a key line that brings in the power of the **`"projectile"`** spell for your use in spell writing. This basic **`"projectile"`** is but one spell of many you will master throughout your journey, and they are all "_imported_" in via a similar **`require`** statement:
+
+- `const Fire = require("fire");`
+- `const Ice = require("ice");`
+- and more...
+
+<Callout type="important">
+
+	We will delve into the inner workings of this line later in your journey. But, think of it as telling your code editor: "I **require** the **"projectile"** spell, and store that spell in the **`Projectile`** variable."
+
+	<DocIf condition={useHasCompletedTutorial("T000AimSpell")}>
+		<DocThen>
+
+			If you have not read about **variables** yet, you may learn about them and what they mean in code at [JavaScript: Variables](TODO).
+
+		</DocThen>
+	</DocIf>
+
+</Callout>
+
+---
+
+In the previous line of code, we created the **`Projectile`** variable which stores a way for us to create instances of ==new== projectiles.
+
+Using this variable, we create ==new== projectiles literally by writing the word, **"new"**, followed by the **variable name** and a set of parenthesis **"()"**. This combination of words tells your code editor: "I want to create a ==new== projectile," which it fulfills the moment your code is **executed**.
+
+> What is with the ending set of parenthesis, you may say?
+
+You will understand the answer to this question more deeply once we learn about JavaScript **[functions](TODO) and [classes](TODO)**, two very important topics. But for now, the point of these parenthesis is to give you a space to **provide configurations to your created projectile**.
+
+<DocConditionalWrapper
+	condition={useCurrentTutorialEquals("T000AimSpell")}
+	thenWrapper={(children) => (
+		<DocSolidColorBackground bgColor="success.main">
+			<Callout type="important" title="Solution to the Aimed Spell Tutorial">
+
+				Below, we will introduce **configuring** your Projectile spell to give it **aiming** capabilities. Learn this knowledge to help you escape this chamber!
+
+			</Callout>
+			{children}
+			<Callout type="info" title='Can You Use the "Aim" Property to Hit the Switch?' />
+		</DocSolidColorBackground>
+	)}
+>
+
+	## Configuring Your Projectile
+	Previously, we created a new projectile with nothing between the `()` parenthesis. This simply means the created projectile, the one seen in the above example, has a **default configuration**. To configure and tailor the **parameters** of the created projectile to your liking, we can make the following modification:
+
+	<ExampleCode>
+
+		```javascript
+		const Projectile = require("projectile");
+		new Projectile({ aim: true });
+		```
+
+	</ExampleCode>
+
+	<DocVideo src={aimedProjectileVideo} />
+
+	We have configured the **`aim`** parameter of the projectile, and set it to a value of **`true`**. This *augments* your projectile spell to allow you to influence the trajectory of the projectile by **aiming and clicking with your mouse**. Previously under the **default configuration**, this parameter is set to **`false`**. By setting your own `aim: true` configuration, you have now essentially **overridden** that default value.
+
+	<DocIf condition={useHasCompletedTutorial("T000AimSpell")}>
+		<DocThen>
+
+			<Callout type="important">
+
+				Take note that the aim configuration is between a set of curly brackets **"\{\}"**. You will later learn these curly brackets are apart of a very important JavaScript concept: [Objects](/ZaY3m4GrTxmCnB2D96x6NQ).
+
+			</Callout>
+
+		</DocThen>
+	</DocIf>
+
+</DocConditionalWrapper>
+
+<DocIf condition={useHasCompletedTutorial("T000AimSpell")}>
+	<DocThen>
+
+		The configuration possibilities do not stop there: The [**Projectile API**](TODO) offers a suite of parameters you can tune to your liking. For example, we can configure the **`strength`** of the projectile:
+
+		<ExampleCode>
+
+			```javascript
+			const Projectile = require("projectile");
+			new Projectile({ strength: 50 });
+			```
+
+		</ExampleCode>
+
+		<DocWidth size="wide">
+			<DocGrid maxPerRow={2}>
+				<DocVideo src={weakProjectileVideo} label="Weak projectile (default)" />
+				<DocVideo src={strongProjectileVideo} label="Strong projectile (strength: 50)" />
+			</DocGrid>
+		</DocWidth>
+
+		We have configured the **`strength`** parameter of the projectile to a value of **50**, which by default is set to a value of **15**. This allows us to eliminate a [Wall Crawler](TODO) with a single projectile, but at the expense of **additional mana cost**. The balance between **power** and **mana cost** can be tuned to your liking.
+
+		---
+
+		<DocConditionalWrapper
+			condition={useCurrentTutorialEquals("T000_5SpellGravity")}
+			thenWrapper={(children) => (
+				<DocSolidColorBackground bgColor="success.main">
+					<Callout type="important" title="Solution to the Gravity Spell Tutorial">
+
+						Below, we will describe the `gravity` parameter of the Projectile. This will be your key to solving this problem!
+
+					</Callout>
+					{children}
+					<Callout type="info" title='Can You Use Both "Aim" and "Gravity" Properties to Hit the Switch?' />
+				</DocSolidColorBackground>
+			)}
+		>
+
+			As you can see, we have covered two possible configurations to our Projectile. But so far, we have only done those configurations in isolation. If you want to pass **multiple configurations** to the projectile, we can type up the following:
+
+			<Callout type="info" title="A Strong, Aimed, Straight Line Projectile">
+
+				<ExampleCode>
+
+					```javascript
+					const Projectile = require("projectile");
+					new Projectile({ strength: 50, aim: true, gravity: 0 });
+					```
+
+				</ExampleCode>
+
+				Take note of the comma **`,`** used to separate each configuration we add to our projectile. We will explain the new parameter `gravity` below.
+
+			</Callout>
+
+			<DocVideo src={advancedProjectileVideo} />
+
+			Before we go any further, let's **format** our JavaScipt into something easier to read:
+
+			```javascript
+			new Projectile({
+				strength: 50,
+				aim: true,
+				gravity: 0
+			});
+			```
+
+			<Callout type="tip">
+
+				Spacing out your code on **new lines** is *almost always* valid JavaScript and can make your code easier to read!
+
+			</Callout>
+
+			<Callout type="tip">
+
+				As you can see, we are simply writing what appears to be a **list** of configuration options, each with their own **"key"** or name followed by the value to set. Think going through the settings menu of a program or application.
+
+			</Callout>
+
+			We introduce the **`gravity` property** of the projectile, which is a configuration option that determines how much gravity will **pull down the projectile**. By setting this property to a value of `0`, we state that our created projectile **should not be affected by gravity whatsoever**, allowing it to travel in a direct, straight line.
+
+		</DocConditionalWrapper>
+
+	</DocThen>
+</DocIf>
+
+<DocIf condition={[useHasCompletedTutorial("T000AimSpell"), useHasCompletedTutorial("T000_5SpellGravity")].every(Boolean)}>
+	<DocThen>
+
+		<Callout type="important" title="Data Types">
+
+			As shown above, some properties take in different **types** of values. Some properties, such as `strength` and `gravity`, are configured with any number, while other properties like `aim` are configured with either **`false` or `true`**.
+
+			This would be known as these properties having different expected **data types**, and can be read about more in [JavaScript: Data Types](/sHNpW-SPSoaCFziYYc8Btw).
+
+		</Callout>
+
+		---
+
+		WRITE AN ENDING RECAP AND REDIRECT TO THE API SPECIFICATION PLUS OTHER JAVASCRIPT CONCEPTS.
+
+	</DocThen>
+</DocIf>

@@ -1,0 +1,164 @@
+@import (reference) "./Inventory.less";
+
+@spell-list-item-height: 80px;
+
+.spell-list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+
+.spell-list-search {
+  margin-bottom: 8px;
+}
+
+.spell-list-list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding-right: 16px;
+}
+
+.spell-list-list {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  box-sizing: border-box;
+}
+
+.spell-list-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  height: @spell-list-item-height;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: #ffffff0a;
+
+  body.light & {
+    border-color: #ccc;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  .inventory-glow-transition();
+
+  &:hover {
+    background-color: #ffffff1a;
+    border-color: fade(@inventory-glow, 35%);
+    body.light & {
+      background-color: rgba(0, 0, 0, 0.08);
+      border-color: fade(@inventory-glow-light, 30%);
+    }
+  }
+
+  &.selected {
+    background-color: fade(@inventory-glow, 10%);
+    border-color: fade(@inventory-glow, 55%);
+    box-shadow: inset 3px 0 0 @inventory-glow;
+    .spell-list-item-name { color: rgba(255, 255, 255, 0.92); }
+    body.light & {
+      background-color: fade(@inventory-glow-light, 10%);
+      border-color: fade(@inventory-glow-light, 50%);
+      box-shadow: inset 3px 0 0 @inventory-glow-light;
+      .spell-list-item-name { color: #001a33; }
+    }
+  }
+
+  .draggable-item-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: grab;
+    overflow: hidden;
+  }
+
+  .spell-list-item-preview {
+    width: @spell-list-item-height;
+    height: @spell-list-item-height;
+    margin: 0 10px;
+  }
+
+  .spell-list-item-name {
+    flex: 1;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    user-select: none;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.69);
+
+    body.light & {
+      color: #222;
+    }
+  }
+
+  .spell-list-item-actions {
+    display: none;
+    justify-self: flex-end;
+  }
+
+  &:hover .spell-list-item-actions {
+    display: flex;
+  }
+
+  button.spell-list-item-action {
+    margin-right: 10px;
+    cursor: pointer;
+    min-width: unset;
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    margin-left: 4px;
+    color: rgba(255, 255, 255, 0.69);
+    &:hover {
+	background-color: #ffffff1a;
+	color: rgba(255, 255, 255, 1);
+    }
+
+    body.light & {
+      color: #666;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+        color: #222;
+      }
+    }
+
+    &.edit-code {
+      width: auto;
+      min-width: 64px;
+      height: auto;
+      padding: 4px 12px;
+      background-color: #4f9995;
+      color: white;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+	background-color: #12a9a2;
+      }
+    }
+  }
+  .svg-icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    background: currentColor;
+  }
+}

@@ -1,0 +1,104 @@
+.code-editor-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4pt;
+  width: calc(100% - 6pt);
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 3pt;
+  position: relative;
+}
+
+.code-editor-toolbar-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  width: calc(100% - 32pt);
+  overflow: hidden;
+  flex-shrink: 1;
+}
+
+.code-editor-toolbar-hamburger {
+  width: 30pt;
+  height: 26pt;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.code-editor-toolbar-section {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 1;
+}
+
+.code-editor-toolbar-section.align-right {
+  justify-self: flex-end;
+  margin-left: auto;
+}
+
+.code-editor-toolbar-section.contents-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.code-editor-toolbar .MuiButtonGroup-grouped.really-small-dropdown {
+  width: 18pt;
+  min-width: 18pt;
+}
+
+.code-editor-toolbar-current-spell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  max-width: calc(100% - 86pt);
+}
+
+.code-editor-toolbar-current-spell .current-spell-item-preview {
+  flex-shrink: 0;
+  width: 26pt;
+  height: 26pt;
+}
+
+.code-editor-toolbar-current-spell .current-spell-name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.code-editor-buttons-primary {
+  position: relative;
+  width: 60pt;
+  flex-shrink: 0;
+}
+
+.code-editor-buttons-primary .buttons-group {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 2pt;
+}
+
+.code-editor-buttons-primary .buttons-group {
+  transition: left 300ms ease, opacity 300ms ease;
+  left: 0;
+  opacity: 1;
+}
+
+.code-editor-buttons-primary .buttons-group.hidden {
+  left: -100%;
+  opacity: 0;
+}

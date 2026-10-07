@@ -1,0 +1,2 @@
+export type sprite_layers = "main" | "black" | "light_right" | "light_left" | "base" | "doors" | "frame" | "dust" | "fx_lights" | "r_fx_red_light_right" | "r_red_light_right" | "r_red_cross_right" | "r_red_circle_right" | "r_fx_red_light_left" | "r_red_light_left" | "r_red_cross_left" | "r_red_circle_left";
+export type sprite_animations = "closed" | "opened" | "open_full" | "open_full_loop" | "open_full_loop_end" | "open_broken" | "open_broken_loop" | "close_broken";

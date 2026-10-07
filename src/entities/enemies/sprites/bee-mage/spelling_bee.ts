@@ -1,0 +1,2 @@
+export type sprite_layers = "bottle" | "body" | "weapon" | "goop_02" | "hat" | "antenas" | "smear" | "effect_01" | "goop_01";
+export type sprite_animations = "walk" | "fly" | "idle" | "spell" | "cast" | "attack" | "hit_frame" | "death";

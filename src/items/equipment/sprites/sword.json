@@ -1,0 +1,119 @@
+{ "frames": {
+   "(sword) 0": {
+    "frame": { "x": 2, "y": 2, "w": 11, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 19, "y": 10, "w": 11, "h": 32 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   "(sword) 1": {
+    "frame": { "x": 16, "y": 2, "w": 14, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 16, "y": 10, "w": 14, "h": 32 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   "(sword) 3": {
+    "frame": { "x": 33, "y": 2, "w": 11, "h": 33 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 19, "y": 6, "w": 11, "h": 33 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 80
+   },
+   "(sword) 4": {
+    "frame": { "x": 47, "y": 2, "w": 15, "h": 34 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 17, "y": 5, "w": 15, "h": 34 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 80
+   },
+   "(sword) 5": {
+    "frame": { "x": 65, "y": 2, "w": 17, "h": 35 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 16, "y": 4, "w": 17, "h": 35 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 80
+   },
+   "(sword) 7": {
+    "frame": { "x": 85, "y": 2, "w": 10, "h": 38 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 21, "y": 6, "w": 10, "h": 38 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   "(align_hand) 0": {
+    "frame": { "x": 2, "y": 43, "w": 1, "h": 1 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 24, "y": 34, "w": 1, "h": 1 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   "(align_hand) 1": {
+    "frame": { "x": 2, "y": 43, "w": 1, "h": 1 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 24, "y": 34, "w": 1, "h": 1 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   "(align_hand) 3": {
+    "frame": { "x": 2, "y": 43, "w": 1, "h": 1 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 24, "y": 34, "w": 1, "h": 1 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 80
+   },
+   "(align_hand) 4": {
+    "frame": { "x": 2, "y": 43, "w": 1, "h": 1 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 24, "y": 34, "w": 1, "h": 1 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 80
+   },
+   "(align_hand) 5": {
+    "frame": { "x": 2, "y": 43, "w": 1, "h": 1 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 24, "y": 34, "w": 1, "h": 1 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 80
+   },
+   "(align_hand) 7": {
+    "frame": { "x": 2, "y": 43, "w": 1, "h": 1 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 24, "y": 34, "w": 1, "h": 1 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.13-arm64",
+  "image": "sword.png",
+  "format": "RGBA8888",
+  "size": { "w": 97, "h": 46 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "iron_sword", "from": 0, "to": 0, "direction": "forward", "color": "#000000ff" },
+   { "name": "iron_sword_swing", "from": 1, "to": 1, "direction": "forward", "color": "#000000ff" },
+   { "name": "beam_saber", "from": 3, "to": 5, "direction": "forward", "color": "#000000ff" },
+   { "name": "khopesh", "from": 7, "to": 7, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "sword", "opacity": 255, "blendMode": "normal" },
+   { "name": "align_hand", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

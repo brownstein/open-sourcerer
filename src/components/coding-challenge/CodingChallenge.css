@@ -1,0 +1,692 @@
+@property --cc-margin {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 1pt;
+}
+
+@property --cc-gradient-scale {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 1pt;
+}
+
+.coding-challenge-tab-container {
+  flex-grow: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #1e293b;
+  overflow: hidden;
+
+  --cc-margin: 0.5em;
+  --cc-gradient-scale: 2em;
+}
+
+h3.coding-challenge-header {
+  flex-shrink: 0;
+  margin: 1.25em 1em 0.5em 1em;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+body.light h3.coding-challenge-header {
+  color: #222222;
+}
+
+/* Viewport that clips the sliding segments */
+.coding-challenge-segment-viewport {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Each segment fills the viewport and scrolls internally */
+.coding-challenge-segment {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #64748b transparent;
+  scrollbar-gutter: stable;
+  padding: 0 1em 1em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+/* Slide-in animations */
+@keyframes cc-slide-in-from-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes cc-slide-in-from-left {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+.coding-challenge-segment.slide-from-right {
+  animation: cc-slide-in-from-right 280ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.coding-challenge-segment.slide-from-left {
+  animation: cc-slide-in-from-left 280ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Footer nav — lives at the bottom, always visible */
+.coding-challenge-footer-nav {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6em 1em;
+  border-top: 1px solid #e2e8f0;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  box-sizing: border-box;
+  gap: 1em;
+}
+
+.coding-challenge-nav-button {
+  appearance: none;
+  border: 1px solid #8ec9ef;
+  border-radius: 0.5em;
+  padding: 0.4em 0.9em;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1d5d87;
+  font-weight: 600;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    background 120ms ease;
+}
+
+.coding-challenge-nav-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgb(17 122 183 / 18%);
+  background: #f2f9ff;
+}
+
+.coding-challenge-nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.coding-challenge-nav-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.coding-challenge-nav-dot {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  line-height: 1;
+  color: #94a3b8;
+  padding: 0.2em;
+  transition: color 120ms ease, transform 120ms ease;
+}
+
+.coding-challenge-nav-dot.filled {
+  color: #2b82c2;
+}
+
+.coding-challenge-nav-dot:hover {
+  transform: scale(1.25);
+}
+
+.coding-challenge-segment-type {
+  align-self: flex-end;
+  margin: 0;
+  font-style: italic;
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.4em;
+  padding: 0.2em 0.55em;
+  flex-shrink: 0;
+}
+
+.coding-challenge-segment-body-container {
+  flex-shrink: 0;
+  border-radius: 1em;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  box-shadow:
+    0 1px 3px rgb(0 0 0 / 0.06),
+    0 4px 12px rgb(0 0 0 / 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+@keyframes cc-shift-background-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(var(--cc-gradient-scale) * sqrt(2) * -1);
+  }
+}
+
+.coding-challenge-segment-body-container::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + var(--cc-gradient-scale) * sqrt(2));
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.5;
+  transition:
+    opacity 1s linear,
+    background 1s linear;
+  background: repeating-linear-gradient(
+    45deg,
+    #aaa,
+    #999 calc(var(--cc-gradient-scale) * 0.5),
+    #ccc calc(var(--cc-gradient-scale) * 0.51),
+    #bbb var(--cc-gradient-scale)
+  );
+}
+
+.coding-challenge-segment-body-container.active {
+  box-shadow:
+    0 2px 6px rgb(0 0 0 / 0.08),
+    0 8px 24px rgb(59 130 246 / 0.12);
+}
+
+.coding-challenge-segment-body-container.active::before {
+  opacity: 1;
+  background: repeating-linear-gradient(
+    45deg,
+    #49b,
+    #38a calc(var(--cc-gradient-scale) * 0.5),
+    #5bd calc(var(--cc-gradient-scale) * 0.51),
+    #4ac var(--cc-gradient-scale)
+  );
+  animation-name: cc-shift-background-left;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.coding-challenge-segment-body-container.complete {
+  box-shadow:
+    0 2px 6px rgb(0 0 0 / 0.06),
+    0 8px 24px rgb(34 197 94 / 0.1);
+}
+
+.coding-challenge-segment-body-container.complete::before {
+  opacity: 1;
+    background: repeating-linear-gradient(
+    45deg,
+    #9b4,
+    #8a3 calc(var(--cc-gradient-scale) * 0.5),
+    #bd5 calc(var(--cc-gradient-scale) * 0.51),
+    #ac4 var(--cc-gradient-scale)
+  );
+  animation-name: cc-shift-background-left;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.coding-challenge-segment-body-inner,
+.coding-challenge-segment-body-results {
+  margin: var(--cc-margin);
+  padding: calc(1.25em - var(--cc-margin));
+  background: var(--color-background);
+  color: var(--color-text);
+  border-radius: 0.6em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1em;
+  line-height: 1.6;
+}
+
+.coding-challenge-segment-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  max-width: 100%;
+}
+
+.coding-challenge-quiz-questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.25em;
+}
+
+.coding-challenge-quiz-question {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.4em;
+  opacity: 0.75;
+}
+
+.coding-challenge-quiz-question-locked {
+  font-size: 0.85em;
+  color: #94a3b8;
+  margin-bottom: 0.25em;
+}
+
+.coding-challenge-quiz-question-answers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  list-style-type: upper-alpha;
+  gap: 0.25em;
+  margin: 0;
+  padding-left: 1.75em;
+}
+
+.coding-challenge-quiz-question.active {
+  opacity: 1;
+}
+
+.coding-challenge-quiz-question.active .coding-challenge-quiz-question-answer {
+  cursor: pointer;
+}
+
+.coding-challenge-quiz-question-answer {
+  padding: 0.3em 0.6em;
+  border-radius: 0.4em;
+  border: 1px solid transparent;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+  font-size: 0.92em;
+}
+
+.coding-challenge-quiz-question.active .coding-challenge-quiz-question-answer:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.coding-challenge-quiz-question-answer.active {
+  font-weight: 600;
+  background: #e0f2fe;
+  border-color: #7dd3fc;
+}
+
+.coding-challenge-quiz-question.correct .coding-challenge-quiz-question-answer.active {
+  background: #082c15;
+  border-color: #86efac;
+}
+
+.coding-challenge-quiz-question.incorrect .coding-challenge-quiz-question-answer.active {
+  background: #2c0808;
+  border-color: #fca5a5;
+}
+
+.coding-challenge-question-correct {
+  margin-top: 0.25em;
+  padding: 0.3em 0.65em;
+  background: #dcfce7;
+  color: #166534;
+  border-radius: 0.4em;
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+.coding-challenge-question-incorrect {
+  margin-top: 0.25em;
+  padding: 0.3em 0.65em;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 0.4em;
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+.coding-challenge-segment-content code.inline,
+.coding-challenge-segment-content pre.inline {
+  font-size: 12pt;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 14pt;
+  margin: 0;
+  padding: 0;
+}
+
+h4.coding-challenge-test-results-header {
+  margin: 0;
+  padding: 0;
+}
+
+.coding-challenge-test-results {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.coding-challenge-test-result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5em 0;
+}
+
+.coding-challenge-test-status {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 2em;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.coding-challenge-test-status.in-progress::after {
+  content: "...";
+}
+
+.coding-challenge-test-status.success::after {
+  content: "";
+  mask-image: url("../ui/icons/check-fill.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background: #4c4;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.coding-challenge-test-status.fail::after {
+  content: "";
+  mask-image: url("../ui/icons/close-fill.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background: #c44;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.coding-challenge-test-name-and-status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.coding-challenge-path-helper {
+  width: 100%;
+  border: 1px solid #bae6fd;
+  border-radius: 0.75em;
+  padding: 1em 1.25em;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top right, #e0f2fe 0%, transparent 60%),
+    linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  box-shadow:
+    0 1px 2px rgb(14 165 233 / 0.06),
+    inset 0 1px 0 rgb(255 255 255 / 0.8);
+}
+
+.coding-challenge-path-helper-title {
+  font-weight: 700;
+  font-size: 1.05em;
+  margin-bottom: 0.4em;
+  color: #0369a1;
+}
+
+.coding-challenge-path-helper p {
+  margin: 0 0 0.8em 0;
+}
+
+.coding-challenge-path-helper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.coding-challenge-path-helper-button {
+  appearance: none;
+  border: 1px solid #8ec9ef;
+  border-radius: 999px;
+  padding: 0.35em 0.85em;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1d5d87;
+  font-weight: 600;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    background 120ms ease;
+}
+
+.coding-challenge-path-helper-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgb(17 122 183 / 18%);
+  background: #f2f9ff;
+}
+
+.coding-challenge-path-helper-button.primary {
+  background: linear-gradient(135deg, #3aa3e3 0%, #2b82c2 100%);
+  border-color: #2d84c3;
+  color: #ffffff;
+}
+
+.coding-challenge-path-helper-button.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #47a9e6 0%, #2f8acc 100%);
+}
+
+.coding-challenge-path-helper-button.primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── Inline code chips inside challenge content ─────────────────────────── */
+.coding-challenge-segment-content p,
+.coding-challenge-segment-content li {
+  margin: 0;
+}
+
+.coding-challenge-segment-content p code,
+.coding-challenge-segment-content li code {
+  display: inline-block;
+  background: #f0f7ff;
+  border: 1px solid #bae6fd;
+  border-radius: 0.3em;
+  padding: 0.05em 0.35em;
+  font-size: 0.88em;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  font-weight: 600;
+  color: #0369a1;
+  line-height: 1.4;
+}
+
+/* ── Challenge content utility classes (.cc-*) ──────────────────────────── */
+
+/* Goal banner — prominent colored strip at the top of a segment */
+.cc-goal-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.6em;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #fcd34d;
+  border-radius: 0.6em;
+  padding: 0.75em 1em;
+  font-size: 0.95em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cc-goal-icon {
+  font-size: 1.3em;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.cc-goal-banner strong {
+  color: #92400e;
+}
+
+/* Section block — titled content group */
+.cc-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.cc-section-label {
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2b82c2;
+  border-bottom: 2px solid #bae6fd;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.1em;
+}
+
+/* Command reference grid — icon-cmd + description pairs */
+.cc-command-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.3em 0.75em;
+  align-items: center;
+}
+
+.cc-cmd {
+  background: #f0f7ff;
+  border: 1px solid #bae6fd;
+  border-radius: 0.3em;
+  padding: 0.15em 0.45em;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #0369a1;
+  white-space: nowrap;
+}
+
+.cc-cmd-desc {
+  font-size: 0.88em;
+  color: #475569;
+}
+
+/* Tip / callout box */
+.cc-tip {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.5em;
+  padding: 0.55em 0.9em;
+  font-size: 0.88em;
+  color: #166534;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cc-tip strong {
+  color: #14532d;
+}
+
+/* Dark code example block (like a mini code editor) */
+.cc-example-block {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-radius: 0.5em;
+  padding: 0.65em 1em;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.7;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.cc-cmt {
+  color: #64748b;
+  font-weight: 400;
+}
+
+/* Velocity reference grid — code value + description */
+.cc-velocity-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25em 0.75em;
+  align-items: center;
+  font-size: 0.88em;
+}
+
+.cc-velocity-grid code {
+  background: #1e293b;
+  color: #7dd3fc;
+  border-radius: 0.3em;
+  padding: 0.1em 0.4em;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  font-size: 1em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ── Per-question hint button ───────────────────────────────────────────── */
+.cc-quiz-hint-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  margin-top: 0.1em;
+}
+
+.cc-quiz-hint-button {
+  appearance: none;
+  background: none;
+  border: 1px solid #fcd34d;
+  border-radius: 0.4em;
+  color: #92400e;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.25em 0.6em;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.cc-quiz-hint-button:hover {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+.cc-quiz-hint-text {
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 0.4em;
+  padding: 0.45em 0.8em;
+  font-size: 0.85em;
+  color: #78350f;
+  line-height: 1.5;
+}

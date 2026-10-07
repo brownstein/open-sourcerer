@@ -1,0 +1,25 @@
+export type MimicLayer =
+  | "bottom_back_leg"
+  | "bottom_front_leg"
+  | "bottom-back-mouth"
+  | "body-face"
+  | "Tongue"
+  | "back-front-leg"
+  | "front-leg"
+  | "top-back-mouth"
+  | "bottom-front-mouth"
+  | "chest-cover"
+  | "chest-top"
+  | "top-front-mouth"
+  | "run"
+  | "Layer 1"
+  | "Layer 2"
+  | "Layer 3";
+export type MimicAnimation =
+  | "transfromation_to_mimic"
+  | "walk"
+  | "Run"
+  | "Loop"
+  | "attack"
+  | "idle"
+  | "transfromation_to_chess";

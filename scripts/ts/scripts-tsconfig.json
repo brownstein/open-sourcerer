@@ -1,0 +1,32 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": [
+    "./*.ts",
+    "../../src/levels/tiled/tiled-declarations.d.ts",
+    "../../src/scripting/core/computeImports.ts",
+    "../../src/scripting/core/spellApiManifests.ts"
+  ],
+  "exclude": [],
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": [
+      "es2022",
+      "dom"
+    ],
+    "noEmit": false,
+    "module": "nodenext",
+    "moduleResolution":"nodenext",
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "../../node_modules/@types",
+      "../../src/levels/tiled/tiled-declarations.d.ts"
+    ],
+    "paths": {
+      "src/*": [
+        "../../src/*"
+      ]
+    }
+  }
+}

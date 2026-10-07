@@ -1,0 +1,38 @@
+.debug-script-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 128px);
+  gap: 8px;
+
+  .tile {
+    width: 128px;
+    aspect-ratio: 1;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #444;
+    }
+
+    .script-icon {
+      flex-grow: 1;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .script-title {
+      font-size: 0.85rem;
+      text-align: center;
+      color: #ddd;
+      margin-bottom: 0.5em;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+// below this container width, asides fold inline with the main content.
+@docs-collapse-width: 140ch;
+
+.docs-entry {
+	--docs-content-width: 72ch;
+	--docs-wide-extension: 12ch;
+	--docs-aside-max-width: 48ch;
+	--docs-aside-content-gap: 10ch;
+	--docs-edge-padding: 1rem;
+	--docs-vertical-padding: 1.25rem;
+	--docs-aside-sticky-top: 1rem;
+
+	padding: var(--docs-vertical-padding) var(--docs-edge-padding);
+	line-height: 1.6;
+
+	display: grid;
+	grid-template-columns:
+		[full-start aside-left-start] minmax(0, 1fr)
+		[wide-start] minmax(0, var(--docs-wide-extension))
+		[aside-left-end] var(--docs-aside-content-gap)
+		[content-start] min(
+			var(--docs-content-width),
+			calc(100% - 2 * var(--docs-aside-content-gap))
+		) [content-end]
+		var(--docs-aside-content-gap) [aside-right-start]
+		minmax(0, var(--docs-wide-extension)) [wide-end]
+		minmax(0, 1fr) [aside-right-end full-end];
+
+	> * {
+		grid-column: content;
+		min-width: 0;
+	}
+
+	> .doc-width-default {
+		grid-column: content;
+		max-width: none;
+	}
+
+	> .doc-width-wide {
+		grid-column: wide;
+		max-width: none;
+	}
+
+	> .doc-width-full {
+		grid-column: full;
+		margin-inline: calc(-1 * var(--docs-edge-padding));
+		max-width: none;
+	}
+
+	> .doc-aside-left {
+		grid-column: aside-left;
+	}
+
+	> .doc-aside-right {
+		grid-column: aside-right;
+	}
+
+	> .doc-aside-sticky-range {
+		grid-column: full;
+	}
+
+	> :first-child {
+		margin-top: 0;
+	}
+
+	> .doc-width-full:first-child {
+		margin-top: calc(-1 * var(--docs-vertical-padding));
+	}
+
+	ul,
+	ol {
+		margin: 0.5em 0;
+		padding-left: 1.75rem;
+	}
+
+	li {
+		margin: 0.25em 0;
+	}
+
+	> pre {
+		margin: 1rem 0;
+		padding: 0.75rem 1rem;
+		overflow-x: auto;
+		border-radius: 4px;
+	}
+
+	code {
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.9em;
+	}
+
+	:not(pre) > code {
+		padding: 0.15em 0.4em;
+		border-radius: 3px;
+	}
+
+	blockquote {
+		margin: 1rem 0;
+		padding-left: 1rem;
+		border-left: 3px solid;
+	}
+}
+
+@container (max-width: @docs-collapse-width) {
+	.docs-entry {
+		--docs-aside-content-gap: 0px;
+	}
+
+	.docs-entry > .doc-aside-collapse-hide {
+		display: none;
+	}
+
+	.docs-entry > .doc-aside-collapse-inline {
+		grid-column: content;
+	}
+
+	.docs-entry > .doc-aside-sticky-range {
+		grid-column: content;
+	}
+}
+
+// shimmy in nested doc-width fallback. lower specificity than .docs-entry > .doc-width-*,
+// so top-level placement wins and these only apply when nested
+.doc-width-default {
+	max-width: var(--docs-content-width);
+	margin-inline: auto;
+}
+
+.doc-width-wide {
+	max-width: calc(var(--docs-content-width) + 2 * (var(--docs-wide-extension) + var(--docs-aside-content-gap)));
+	margin-inline: auto;
+}
+
+.docs-entry-missing {
+	padding: 1rem;
+}
+
+::highlight(docs-entry-highlight) {
+	background-color: var(--mui-palette-warning-light);
+	color: var(--mui-palette-warning-contrastText);
+}
+
+::highlight(docs-entry-focused-highlight) {
+	background-color: var(--mui-palette-error-light);
+	color: var(--mui-palette-error-contrastText);
+}
+
+.docs-entry .doc-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.docs-entry .doc-title h2 {
+	padding: 0;
+	margin: 0;
+	color: #6df;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.docs-entry .doc-title h2 .title-icon {
+	margin-right: 0.3em;
+	font-size: 1.4em;
+}
+
+.docs-entry .doc-title .subtitle {
+	margin: 0;
+}

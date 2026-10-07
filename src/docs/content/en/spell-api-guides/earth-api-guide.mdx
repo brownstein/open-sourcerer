@@ -1,0 +1,110 @@
+export const meta = {
+	title: "Earth API Guide"
+};
+
+# The Earth API
+
+Welcome back, <PlayerName />! The **`"earth"`** spell conjures a solid **stone block** from a shape. Hand it a polygon, a rectangle, a circle, or let the player draw the outline by hand — the block springs into the world, ready to support, block, or bury. It pairs beautifully with the [Shapes](spell-api-guides/shapes-api-guide) API for building reusable outlines.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const Earth = require("earth");
+	new Earth();
+	```
+
+</ExampleCode>
+
+That single `new Earth()` raises a default stone block in front of your caster.
+
+## Shaping the Block
+
+The constructor takes an optional **configuration object** so you can decide exactly what gets conjured:
+
+<ExampleCode>
+
+	```javascript
+	const Earth = require("earth");
+	new Earth({
+		rect: { width: 3, height: 1 },
+		angle: 0,
+		offset: { x: 0, y: 2 }
+	});
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Use `drawShape: true` to let the player sketch the block's outline with the cursor — perfect for improvising a bridge or a wall on the fly.
+
+</Callout>
+
+You can also build a custom polygon, optionally with holes cut through it:
+
+<ExampleCode>
+
+	```javascript
+	const Earth = require("earth");
+	new Earth({
+		shape: [
+			{ x: 0, y: 0 },
+			{ x: 4, y: 0 },
+			{ x: 4, y: 2 },
+			{ x: 0, y: 2 }
+		],
+		holes: [
+			[
+				{ x: 1, y: 0.5 },
+				{ x: 3, y: 0.5 },
+				{ x: 3, y: 1.5 },
+				{ x: 1, y: 1.5 }
+			]
+		]
+	});
+	```
+
+</ExampleCode>
+
+### Constructor options
+
+- **`shape`** — `({ x, y } | [number, number])[]` — a custom polygon outline.
+- **`holes`** — `({ x, y } | [number, number])[][]` — polygon holes cut out of the shape.
+- **`rect`** — `{ width, height }` — build the block as a rectangle.
+- **`circle`** — `{ radius }` — build the block as a circle.
+- **`angle`** — `number` — rotation of the block.
+- **`offset`** — `{ x, y } | [number, number]` — position offset from the caster.
+- **`drawShape`** — `boolean` — let the player draw the shape with the cursor.
+- **`spark`** — `{ id }` — cast the block from a [ManaSpark](spell-api-guides/spark-api-guide) instead of the caster.
+
+## Controlling a Block
+
+`new Earth(...)` hands you back the block so you can keep working with it:
+
+<ExampleCode>
+
+	```javascript
+	const Earth = require("earth");
+	const block = new Earth({ rect: { width: 2, height: 2 } });
+
+	block.detachFromTerrain();
+	block.destroy();
+	```
+
+</ExampleCode>
+
+### Properties and methods
+
+- **`id`** — `string` — the block's handle id.
+- **`position`** — `{ x, y }` — its current position.
+- **`destroyed`** — `boolean` — whether it has been destroyed.
+- **`destroy()`** — shatters the earth block (returns void).
+- **`detachFromTerrain()`** — `boolean` — detaches the block from the terrain so it can move freely.
+
+<Callout type="important">
+
+	By default a conjured block locks into the terrain. Call `detachFromTerrain()` first if you want to nudge it around or drop it on something below!
+
+</Callout>

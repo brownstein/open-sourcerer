@@ -1,0 +1,213 @@
+{
+  "gameTitle": "Open Sourcerer",
+  "componentNames": {
+    "viewport": "Game",
+    "editor": "Code Editor",
+    "console": "Console",
+    "inventory": "Inventory",
+    "levelSelector": "Level Select",
+    "debug": "Debug",
+    "missingConfiguration": "Missing component configuration.",
+    "missingComponent": "Missing component {{componentName}}.",
+    "docs": "Docs",
+    "settings": "Settings",
+    "tutorials": "Tutorials",
+    "demoMode": "Demo Mode Controls",
+    "entityVisualizer":"Entity Visualizer",
+    "skillTree": "Skill Tree",
+    "skillDetails": "Skill Details",
+    "codingChallenge": "Coding Challenge",
+    "componentDebug": "Component Debug",
+    "questLog": "Quest Log",
+    "developer": "Developer"
+  },
+  "codeEditor": {
+    "newSpell": "new spell",
+    "run": "Run",
+    "terminate": "Terminate",
+    "pause": "Pause",
+    "resume": "Resume",
+    "step": "Step",
+    "saveSpell": "Save",
+    "saveSpellAs": "Save As",
+    "loadSpell": "Load",
+    "format": "Format Code",
+    "ping": "Ping",
+    "fontSize": "Font Size"
+  },
+  "console": {
+    "spellName": "Spell Output - {{name}}",
+    "spellNameUnknown": "Spell Output"
+  },
+  "levelSelector": {
+    "selectLevel": "Select Level",
+    "go": "Go"
+  },
+  "mobile": {},
+  "modals": {
+    "saveSpell": {
+      "title": "Save Spell",
+      "nameField": "Spell Name",
+      "nameMissing": "Your spell needs a name.",
+      "nameLength": "Your spell name needs to be between 1 and 128 characters",
+      "saveButton": "Save Spell",
+      "copyOf": "Copy of {{name}}",
+      "customize": "Customize your spell's icon",
+      "randomize": "Randomize spell icon"
+    },
+    "loadSpell": {
+      "title": "Load Spell",
+      "selectASpell": "(select a spell)",
+      "loadButton": "Load Spell"
+    },
+    "editSpell": {
+      "title": "Edit Spell",
+      "nameField": "Spell Name",
+      "saveButton": "Save Spell"
+    },
+    "deleteSpell": {
+      "title": "Delete Spell: {{ name }}",
+      "areYouSure": "Are you sure you want to delete the spell \"{{ name }}\"?",
+      "deleteButton": "Delete Spell"
+    },
+    "entityCode": {
+      "title": "Hacking",
+      "titleWithConstant": "Specify a Constant",
+      "titleWithOperator": "Choose an Operator",
+      "titleWithDataType": "Choose a Data Type",
+      "titleWithDivisor": "Choose a Divisor"
+    },
+    "inventory": {
+      "title": "Inventory"
+    }
+  },
+  "spellAspect": {
+    "Normal": "Normal",
+    "Fire": "Fire"
+  },
+  "spellList": {
+    "search": "Search Spells"
+  },
+  "tutorial": {
+    "Dream_0":{
+      "diag_01": "Hello, Sourcerer.",
+      "diag_02": "Let's see if your consciousness is working right;",
+      "diag_03": "Try moving with the [ A ] and [ D ] keys...",
+      "diag_04": "Press [ Space ] to jump.",
+      "diag_05": "Press [ Space ] and [ A ] or [ D ] to jump forwards.",
+      "diag_06": "Press [ S ] to drop down through a platform.",
+      "diag_07": "Press [ A ] to move backwards,",
+      "diag_08": "then,",
+      "diag_09": "press [ S ] to drop down through the next platform.",
+      "diag_10": "You see that sword?",
+      "diag_11": "Pick it up and practice hitting the test dummies that appear.",
+      "diag_12": "Click [ LMB ] to swing your sword and attack the test dummy.",
+      "diag_13": "On to spells.",
+      "diag_14": "Pick up the book and click [ LMB ] on the enemy.",
+      "diag_15": "Well done {{playerName}}.",
+      "diag_16": "Now, let's review the process of modifying your spells.",
+      "diag_17": "No, that's not right...",
+      "diag_18": "You should alrady have access to...",
+      "diag_19": "Hold on...",
+      "editSpell": "Edit Your First Spell"
+    }
+  },
+  "inventory": {
+    "spells": "Spells",
+    "items": "Items",
+    "inventoryPopover": "Inventory",
+    "takeAll": "Take All"
+  },
+  "docs": {
+    "indexTitle": "Documentation Index",
+    "index": "Index",
+    "showIndex": "Show Index",
+    "hideIndex": "Hide Index"
+  },
+  "deathScreen": {
+    "title": "You Died.",
+    "flavorText1": "You should try to avoid doing that.",
+    "flavorText2": "You should try to get better at the game.",
+    "loadSaveGame": "load from last save",
+    "restartLevel": "restart level"
+  },
+  "settings": {
+    "fps": "Target FPS (Frames Per Second)"
+  },
+  "pauseScreen": {
+    "paused": "Paused."
+  },
+  "focusLost": {
+    "tapText": "Tap to refocus"
+  },
+  "toast": {
+    "gotItem_one": "Obtained {{itemName}}!",
+    "gotItem_other": "Obtained {{count}} {{itemName}}s!",
+    "gotCurrency": "Obtained ${{count}} in crystals!"
+  },
+  "tutorials": {
+    "tutorialPrefix": "Tutorial:",
+    "tutorialCompleted": "Tutorial Completed"
+  },
+  "iconCustomizer": {
+    "layers": "Layers",
+    "layerIcon": "Layer Icon",
+    "addLayer": "Add layer",
+    "deleteLayer": "Delete layer",
+    "background": "Background",
+    "backgroundColor": "Background Color",
+    "backgroundVisible": "Show Background",
+    "layerIndex": "Layer {{ layerIndex }}",
+    "layerIconColor": "Icon Color",
+    "layerIconPosition": "Icon Position",
+    "layerIconPositionX": "X",
+    "layerIconPositionY": "Y",
+    "layerIconScale": "Scale",
+    "layerIconAngle": "Angle"
+  },
+  "items": {
+    "Default": "Item",
+    "Spell": "Spell",
+    "Potion__Health": "Health Potion",
+    "Potion__Mana": "Mana Potion",
+    "Log": "Log",
+    "Book": "Spell Book",
+    "Currency__BronzeCoin": "Coin",
+    "Currency__SilverCoin": "Coin",
+    "Currency__GoldCoin": "Coin",
+    "Currency__EmeraldGem": "Coin",
+    "Currency__SapphireGem": "Coin",
+    "Currency__AmathystGem": "Coin",
+    "Sword": "Sword",
+    "Bow": "Bow"
+  },
+  "skills":{
+    "skillName": "Skill Name",
+    "skillDescription": "Skill Description",
+    "name": {
+      "IceAuraSelf": "Ice Aura Self"
+    },
+    "desc": {
+      "IceAuraSelf": "Creates an ice aura around player."
+    }
+  },
+  "challenges": {
+    "prefix": "Coding Challenge: ",
+    "segmentType": {
+      "quiz": "Quiz",
+      "text": "Reading",
+      "coding": "Coding"
+    },
+    "names": {
+      "helloWorld": "Hello World",
+      "variables": "Variables",
+      "conditionals": "If / Then",
+      "projectile": "Projectiles",
+      "spark": "Sparks"
+    },
+    "hall1": "Hall of Coding Challenges"
+  },
+  "questLog": {
+    "title": "Quests"
+  }
+}

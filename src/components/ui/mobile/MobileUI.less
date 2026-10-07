@@ -1,0 +1,121 @@
+.mobile-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #000011;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.mobile-content {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-explanation {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.mobile-game-title {
+  font-family: "Highbirth";
+  font-size: 14pt;
+  letter-spacing: .15em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin: 0;
+}
+
+.sourcerer-js-logo-mobile {
+  margin-top: 20px;
+  width: 50%;
+  aspect-ratio: 1.2;
+  image-rendering: pixelated;
+  mask-image: url("../../title/logo-game.png");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background: linear-gradient(to bottom, #eee 30%, #fff 70%);
+}
+
+.mobile-scroll-prompt {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 80%;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 100%;
+    transform: translateY(-0.5em);
+  }
+  100% {
+    opacity: 80%;
+    transform: translateY(0);
+  }
+}
+
+.scroll-down-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 0.5em;
+  color: #44aaff;
+  animation: blink 1s linear infinite;
+}
+
+.mobile-component-wrapper {
+  margin-top: 10px;
+  width: 366px;
+  height: 300px;
+  flex: 0 0 1;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  position: relative;
+}
+
+.mobile-component-wrapper.codeEditor {
+  height: 340px;
+}
+
+.mobile-run-button {
+  width: 366px;
+  margin-top: 12px;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #22aa44;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+
+  .svg-icon {
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+  }
+
+  &:active {
+    background: #1a8835;
+  }
+}

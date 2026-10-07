@@ -1,0 +1,27 @@
+export type BeanBotLayer =
+  | "Back arm"
+  | "Body"
+  | "Eye"
+  | "Pupil"
+  | "Eye_lids"
+  | "Arm"
+  | "dock_beanbot"
+  | "dock_fx"
+  | "Tracking_pixel_eye_";
+export type BeanBotAnimation =
+  | "idle"
+  | "move_forward"
+  | "move_forward_start"
+  | "move_forward_sustain"
+  | "move_up"
+  | "move_up_start"
+  | "move_up_sustain"
+  | "move_up_finish"
+  | "turn"
+  | "move_down"
+  | "move_down_start"
+  | "move_down_sustain"
+  | "move_down_finish"
+  | "dock_start"
+  | "docked"
+  | "dock_loop";

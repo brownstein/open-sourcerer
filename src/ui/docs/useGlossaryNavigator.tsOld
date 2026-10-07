@@ -1,0 +1,61 @@
+// @ts-nocheck
+import { nanoid } from "@reduxjs/toolkit";
+import { useCallback } from "react";
+
+import { setPendingDocsNav } from "src/redux/docsNav/slice";
+import { useAppDispatch, useAppSelector } from "src/redux/hooks";
+import { openTab } from "src/redux/shared/actions";
+import { selectComponentConfigsByComponentName } from "src/redux/ui/selectors";
+
+import { GLOSSARY_ANCHORS, slugifyToAnchor } from "./glossaryIndex";
+
+export type GlossaryNavigateOptions = {
+  highlight?: boolean;
+  behavior?: ScrollBehavior; // reserved for future use
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function genCommandId() {
+  return Math.random().toString(36).slice(2);
+}
+
+export function useGlossaryNavigator() {
+  const dispatch = useAppDispatch();
+  const configsByName = useAppSelector(selectComponentConfigsByComponentName);
+
+  const goToGlossaryTerm = useCallback(
+    (rawTerm: string, opts: GlossaryNavigateOptions = {}) => {
+      const term = rawTerm.trim();
+      if (!term) return;
+      const anchor =
+        GLOSSARY_ANCHORS[term.toLowerCase()] ?? slugifyToAnchor(term);
+
+      const commandId = nanoid();
+      const existingDocs = configsByName["docs"] ?? [];
+      if (existingDocs.length === 0) {
+        dispatch(
+          openTab({
+            nextToTabId: "viewport",
+            componentName: "docs",
+            slideIn: true,
+            duration: 500,
+            componentConfig: {
+              initialDocPageId: "reference-and-glossary"
+            } as any
+          })
+        );
+      }
+      dispatch(
+        setPendingDocsNav({
+          pageId: "keyword-glossary",
+          anchor,
+          highlight: opts.highlight ?? true,
+          commandId
+        })
+      );
+    },
+    [dispatch, configsByName]
+  );
+
+  return { goToGlossaryTerm };
+}

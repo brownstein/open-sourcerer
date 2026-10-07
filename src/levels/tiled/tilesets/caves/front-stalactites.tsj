@@ -1,0 +1,14 @@
+{ "columns":59,
+ "image":"front-stalactites.png",
+ "imageheight":521,
+ "imagewidth":959,
+ "margin":0,
+ "name":"front-stalactites",
+ "spacing":0,
+ "tilecount":1888,
+ "tiledversion":"1.11.2",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.10"
+}

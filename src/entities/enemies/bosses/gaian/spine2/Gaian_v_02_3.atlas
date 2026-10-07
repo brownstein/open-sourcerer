@@ -1,0 +1,123 @@
+Gaian_v_02_3.png
+size:1043,523
+filter:Linear,Linear
+pma:true
+Arm_leght/Sprite-0005
+bounds:791,271,248,248
+Body/hip1
+bounds:397,125,104,44
+Body/robot_chest
+bounds:791,185,123,82
+offsets:0,1,123,83
+Body/robot_head
+bounds:918,193,74,86
+offsets:5,0,79,86
+rotate:90
+Body/robot_neck
+bounds:978,69,42,46
+offsets:0,0,42,47
+Left arm/left_arm_1
+bounds:505,126,86,43
+offsets:57,18,143,62
+Left arm/left_arm_2
+bounds:791,137,76,44
+offsets:53,18,143,62
+Left arm/left_arm_3
+bounds:871,134,69,47
+offsets:0,0,143,62
+Left arm/left_arm_4
+bounds:505,56,66,45
+rotate:90
+Left arm/left_elbow
+bounds:1008,244,21,23
+Left arm/left_forearm_1
+bounds:944,119,63,70
+offsets:63,22,126,92
+Left arm/left_forearm_2
+bounds:593,13,70,67
+offsets:42,21,126,92
+Left arm/left_forearm_3
+bounds:235,16,47,77
+offsets:0,0,126,92
+rotate:90
+Left arm/left_forearm_4
+bounds:397,72,84,49
+offsets:0,43,126,92
+Left arm/left_forearm_5
+bounds:682,126,80,43
+offsets:25,21,126,92
+Left arm/left_forearm_6
+bounds:863,86,57,44
+offsets:48,20,126,92
+Left arm/left_forearm_7
+bounds:801,39,55,43
+offsets:50,21,126,92
+Left arm/left_hand_1
+bounds:917,27,47,43
+offsets:26,2,74,47
+Left arm/left_hand_2
+bounds:801,86,58,47
+offsets:16,0,74,47
+Left arm/left_hand_3
+bounds:316,16,74,47
+Left arm/left_hand_4
+bounds:742,9,55,40
+offsets:19,0,74,47
+Left arm/left_hand_5
+bounds:595,84,74,40
+offsets:0,0,74,47
+Left arm/left_shoulder
+bounds:673,56,74,66
+Left arm/left_wrist
+bounds:766,126,15,43
+Piston/Big_piston
+bounds:4,43,174,20
+Piston/Small_piston
+bounds:4,25,165,14
+Right Arm/right_arm_1
+bounds:751,53,46,69
+Right Arm/right_arm_2
+bounds:595,128,83,41
+Right Arm/right_elbow
+bounds:394,4,23,19
+Right Arm/right_forearm_1
+bounds:667,12,40,71
+offsets:3,0,75,71
+rotate:90
+Right Arm/right_forearm_2
+bounds:397,27,75,41
+offsets:0,30,75,71
+Right Arm/right_forearm_3
+bounds:546,4,48,43
+offsets:0,28,75,71
+rotate:90
+Right Arm/right_hand_1
+bounds:924,74,50,41
+offsets:16,5,66,47
+Right Arm/right_hand_2
+bounds:182,4,59,49
+offsets:7,0,66,49
+rotate:90
+Right Arm/right_hand_3
+bounds:476,4,66,48
+offsets:0,0,66,49
+Right Arm/right_hand_4
+bounds:968,23,46,42
+offsets:20,2,66,49
+Right Arm/right_shoulder
+bounds:860,39,43,53
+rotate:90
+Right Arm/right_wrist_side
+bounds:4,6,15,43
+rotate:90
+robot_trunk_1
+bounds:4,242,390,277
+robot_trunk_2
+bounds:4,67,389,171
+offsets:0,106,390,277
+robot_trunk_3
+bounds:398,348,389,171
+offsets:0,106,390,277
+robot_trunk_4
+bounds:398,173,389,171
+offsets:0,106,390,277

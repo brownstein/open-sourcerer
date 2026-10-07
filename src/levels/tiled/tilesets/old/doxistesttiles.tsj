@@ -1,0 +1,23 @@
+{ "columns":27,
+ "image":"doxistesttiles.png",
+ "imageheight":448,
+ "imagewidth":432,
+ "margin":0,
+ "name":"doxistesttiles",
+ "spacing":0,
+ "tilecount":756,
+ "tiledversion":"1.11.1",
+ "tileheight":16,
+ "tiles":[
+        {
+         "id":198,
+         "type":"ground"
+        }, 
+        {
+         "id":199,
+         "type":"ground"
+        }],
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.10"
+}

@@ -1,0 +1,289 @@
+// Multiplayer flow screens: styled as siblings of the title screen.
+.mp-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 8vh;
+  gap: 1.2rem;
+  background-color: black;
+  color: #fff;
+  position: relative;
+  overflow-y: auto;
+
+  h1 {
+    font-family: "Highbirth";
+    letter-spacing: 0.12em;
+    font-size: calc(min(28pt, 4vw));
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  h2 {
+    font-family: "Highbirth";
+    font-size: 14pt;
+    margin: 0;
+    color: #aac6e8;
+  }
+
+  button {
+    font-family: "Highbirth";
+    padding: 8px 16px;
+    font-size: 13pt;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    &.mp-primary {
+      background: linear-gradient(130deg, rgba(77, 159, 241, 0.5), rgba(82, 26, 112, 0.6));
+      border-color: rgba(140, 190, 255, 0.6);
+    }
+  }
+
+  .mp-panel {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 16px 20px;
+    min-width: 420px;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mp-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mp-spread {
+    justify-content: space-between;
+  }
+
+  .mp-back {
+    position: absolute;
+    top: 18px;
+    left: 22px;
+  }
+
+  input[type="text"] {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: #fff;
+    font-family: monospace;
+    font-size: 13pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    width: 11ch;
+  }
+
+  select {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12pt;
+    padding: 5px 8px;
+  }
+
+  .mp-lobby-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 34vh;
+    overflow-y: auto;
+  }
+
+  .mp-lobby-entry {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+
+    .mp-lobby-host {
+      font-weight: bold;
+      flex: 1;
+      text-align: left;
+    }
+
+    .mp-lobby-meta {
+      color: #9db4cc;
+      font-size: 11pt;
+    }
+  }
+
+  .mp-empty {
+    color: #8899aa;
+    font-style: italic;
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  .mp-member {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+
+    .mp-member-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .mp-member-name {
+      flex: 1;
+      text-align: left;
+    }
+
+    .mp-member-status {
+      font-size: 11pt;
+      color: #9db4cc;
+
+      &.ready {
+        color: #6fdd8b;
+      }
+
+      &.incompatible {
+        color: #e5484d;
+      }
+    }
+  }
+
+  .mp-code {
+    font-family: monospace;
+    font-size: 20pt;
+    letter-spacing: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 8px 18px;
+    user-select: all;
+  }
+
+  .mp-error {
+    color: #ff8888;
+    max-width: 480px;
+    text-align: center;
+  }
+
+  .mp-hint {
+    color: #8899aa;
+    font-size: 11pt;
+  }
+}
+
+// In-game results overlay.
+.mp-results {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  pointer-events: auto;
+
+  h1 {
+    font-family: "Highbirth";
+    font-size: 42pt;
+    margin: 0;
+    letter-spacing: 0.1em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+
+    &.victory {
+      color: #ffd76b;
+    }
+
+    &.defeat {
+      color: #9db4cc;
+    }
+  }
+
+  .mp-results-table {
+    border-collapse: collapse;
+    min-width: 380px;
+
+    th,
+    td {
+      padding: 8px 18px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    th {
+      color: #9db4cc;
+      font-size: 11pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .mp-results-winner td {
+      color: #ffd76b;
+      font-weight: bold;
+    }
+  }
+
+  .mp-results-duration {
+    color: #9db4cc;
+  }
+
+  .mp-results-buttons {
+    display: flex;
+    gap: 14px;
+
+    button {
+      font-family: "Highbirth";
+      font-size: 14pt;
+      padding: 10px 26px;
+      cursor: pointer;
+      border-radius: 6px;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.08);
+
+      &:hover:not(:disabled) {
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+
+      &.mp-primary {
+        background: linear-gradient(130deg, rgba(77, 159, 241, 0.55), rgba(82, 26, 112, 0.65));
+        border-color: rgba(140, 190, 255, 0.6);
+      }
+    }
+  }
+
+  .mp-results-waiting {
+    color: #9db4cc;
+    font-size: 11pt;
+  }
+}

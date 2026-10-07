@@ -1,0 +1,79 @@
+export const meta = {
+	title: "Player Inventory API Guide"
+};
+
+# The Player Inventory API
+
+Welcome back, <PlayerName />! The **`"playerInventory"`** spell module lets a spell read and manipulate your inventory and hotkeys. You can check your equipped weapon, count your coins, inspect your consumables, switch hotkey rows, and trigger hotkeys — all from script.
+
+## Importing the Module
+
+<ExampleCode>
+
+	```javascript
+	const PlayerInventory = require("playerInventory");
+	console.log("Coins:", PlayerInventory.getCoins());
+	```
+
+</ExampleCode>
+
+## Reading the Inventory
+
+The query functions let your spell react to what you're carrying:
+
+<ExampleCode>
+
+	```javascript
+	const PlayerInventory = require("playerInventory");
+
+	if (PlayerInventory.hasSword()) {
+		console.log("Sword ready! Coins: " + PlayerInventory.getCoins());
+	} else {
+		console.log("No sword equipped.");
+	}
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	`getEquippedWeapon()` returns `null` when nothing is equipped, so check for that before using the result.
+
+</Callout>
+
+## Commanding the Inventory
+
+You can also change hotkey rows and fire hotkeys from a spell:
+
+<ExampleCode>
+
+	```javascript
+	const PlayerInventory = require("playerInventory");
+
+	PlayerInventory.setHotKeyCurrentRow(0);
+	PlayerInventory.activateHotKey("1");
+	```
+
+</ExampleCode>
+
+### Query methods
+
+- **`getEquippedWeapon()`** — `string | null` — the equipped weapon, or `null` if none.
+- **`getHotKeyMap()`** — `object` — the current hotkey assignments.
+- **`getHotKeyCurrentRow()`** — `number` — the active hotkey row.
+- **`getConsumables()`** — `object` — your consumable items.
+- **`getQuestItems()`** — `object` — your quest items.
+- **`hasSword()`** — `boolean` — whether you have a sword.
+- **`getCoins()`** — `number` — how many coins you have.
+
+### Command methods
+
+- **`setHotKeyCurrentRow(row)`** — `row` is a `number` — switch to the given hotkey row.
+- **`assignHotKey(hotKey, assignment)`** — `hotKey` is a `string`, `assignment` is an `object` or `null` — assign (or clear) a hotkey.
+- **`activateHotKey(hotKey)`** — `hotKey` is a `string` — trigger the given hotkey.
+
+<Callout type="important">
+
+	Passing `null` as the `assignment` to `assignHotKey` clears that hotkey slot.
+
+</Callout>

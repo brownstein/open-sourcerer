@@ -1,0 +1,379 @@
+
+@property --sbar-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #888;
+}
+
+@property --sbar-color-falling {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #666;
+}
+
+@property --sbar-border-width {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 3pt;
+}
+
+@property --sbar-height {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 16pt;
+}
+
+@property --sbar-width {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 400px;
+}
+
+@property --sbar-segment-offset {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --sbar-segment-width {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+
+@property --sbar-segment-frac {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+
+.bars-and-status .bars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.25em;
+}
+
+.hex-health-bar.hex-bar-container {
+  --sbar-color: #d33;
+  --sbar-color-falling: #e75;
+  --sbar-height: 16pt;
+  --sbar-width: calc(min(var(--sr-width) * 0.4, 400pt));
+  width: calc(min(var(--sr-width) * 0.4, 400pt));
+  height: 16pt;
+}
+
+.hex-mana-bar.hex-bar-container {
+  --sbar-color: #39c;
+  --sbar-color-falling: #6ad;
+  --sbar-height: 10pt;
+  --sbar-width: calc(min(var(--sr-width) * 0.25, 250pt));
+  width: calc(min(var(--sr-width) * 0.25, 250pt));
+  height: 10pt;
+}
+
+.hex-bar-container {
+  width: var(--sbar-width);
+  height: var(--sbar-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: calc(var(--sbar-border-width) * 2);
+  z-index: 1;
+}
+
+.hex-bar-container::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--sbar-border-width) * -2);
+  right: calc(var(--sbar-border-width) * -2);
+  top: calc(var(--sbar-border-width) * -2);
+  bottom: calc(var(--sbar-border-width) * -2);
+  background: color-mix(var(--sbar-color), #000 20%);
+  clip-path: polygon(
+    calc(var(--sbar-height) * 0.5 + var(--sbar-border-width) * 2) 0,
+    calc(100% - (var(--sbar-height) * 0.5 + var(--sbar-border-width) * 2)) 0,
+    100% 50%,
+    calc(100% - (var(--sbar-height) * 0.5 + var(--sbar-border-width) * 2)) 100%,
+    calc(var(--sbar-height) * 0.5 + var(--sbar-border-width) * 2) 100%,
+    0 50%
+  );
+  z-index: -2;
+}
+
+.hex-bar-container-bg {
+  position: absolute;
+  left: calc(var(--sbar-border-width) * -1);
+  right: calc(var(--sbar-border-width) * -1);
+  top: calc(var(--sbar-border-width) * -1);
+  bottom: calc(var(--sbar-border-width) * -1);
+  background: #080e1e;
+  clip-path: polygon(
+    calc(var(--sbar-height) * 0.5 + var(--sbar-border-width)) 0,
+    calc(100% - (var(--sbar-height) * 0.5 + var(--sbar-border-width))) 0,
+    100% 50%,
+    calc(100% - (var(--sbar-height) * 0.5 + var(--sbar-border-width))) 100%,
+    calc(var(--sbar-height) * 0.5 + var(--sbar-border-width)) 100%,
+    0 50%
+  );
+  z-index: -1;
+}
+
+.hex-bar-container-bg::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--sbar-border-width) * 0.5);
+  right: calc(var(--sbar-border-width) * 0.5);
+  top: calc(var(--sbar-border-width) * 0.5);
+  bottom: calc(var(--sbar-border-width) * 0.5);
+  background: #292938;
+  clip-path: polygon(
+    calc(var(--sbar-height) * 0.5 + var(--sbar-border-width) * 0.5) 0,
+    calc(100% - (var(--sbar-height) * 0.5 + var(--sbar-border-width) * 0.5)) 0,
+    100% 50%,
+    calc(100% - (var(--sbar-height) * 0.5 + var(--sbar-border-width) * 0.5))
+      100%,
+    calc(var(--sbar-height) * 0.5 + var(--sbar-border-width) * 0.5) 100%,
+    0 50%
+  );
+  z-index: 1;
+}
+
+.hex-bar-container-bg::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--sbar-border-width));
+  right: calc(var(--sbar-border-width));
+  top: calc(var(--sbar-border-width));
+  bottom: calc(var(--sbar-border-width));
+  background: #080e1e;
+  clip-path: polygon(
+    calc(var(--sbar-height) * 0.5) 0,
+    calc(100% - var(--sbar-height) * 0.5) 0,
+    100% 50%,
+    calc(100% - var(--sbar-height) * 0.5) 100%,
+    calc(var(--sbar-height) * 0.5) 100%,
+    0 50%
+  );
+  z-index: 2;
+}
+
+.hex-bar {
+  width: var(--sbar-width);
+  height: var(--sbar-height);
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.hex-bar-segment {
+  width: calc(var(--sbar-width) * var(--sbar-segment-width));
+  height: var(--sbar-height);
+  position: absolute;
+  z-index: 2;
+}
+
+.hex-bar-segment-hex-clip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  clip-path: polygon(
+    calc(var(--sbar-height) * 0.5) 0,
+    calc(var(--sbar-width) - var(--sbar-height) * 0.5) 0,
+    calc(var(--sbar-width)) 50%,
+    calc(var(--sbar-width) - var(--sbar-height) * 0.5) 100%,
+    calc(var(--sbar-height) * 0.5) 100%,
+    0 50%
+  );
+  z-index: 2;
+}
+
+.hex-bar-segment-inner {
+  position: absolute;
+  left: calc(
+    var(--sbar-width) * var(--sbar-segment-offset) - var(--sbar-height) * 0.5
+  );
+  width: calc(
+    var(--sbar-width) * var(--sbar-segment-width) + var(--sbar-height)
+  );
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  overflow: hidden;
+  background: linear-gradient(
+    color-mix(var(--sbar-color), #fff 10%),
+    color-mix(var(--sbar-color), #000 10%) 100%
+  );
+  clip-path: polygon(
+    calc(var(--sbar-height)) 0,
+    100% 0,
+    calc(100% - var(--sbar-height)) 100%,
+    0 100%
+  );
+}
+
+.hex-bar-segment-border {
+  left: calc(var(--sbar-border-width) * -0.5);
+  width: calc(
+    var(--sbar-width) * var(--sbar-segment-width) + var(--sbar-border-width)
+  );
+  height: calc(var(--sbar-height) + var(--sbar-border-width) * 0.5);
+  position: absolute;
+  z-index: 1;
+}
+
+.hex-bar-segment-border-hex-clip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  clip-path: polygon(
+    calc(var(--sbar-height) * 0.5 + var(--sbar-border-width) * 0.5) 0,
+    calc(
+        var(--sbar-width) - var(--sbar-height) * 0.5 + var(--sbar-border-width) *
+          0.5
+      )
+      0,
+    calc(var(--sbar-width) + var(--sbar-border-width)) 50%,
+    calc(
+        var(--sbar-width) - var(--sbar-height) * 0.5 + var(--sbar-border-width) *
+          0.5
+      )
+      100%,
+    calc(var(--sbar-height) * 0.5 + var(--sbar-border-width) * 0.5) 100%,
+    0 50%
+  );
+  z-index: 2;
+}
+
+.hex-bar-segment-border-inner {
+  position: absolute;
+  left: calc(
+    var(--sbar-width) * var(--sbar-segment-offset) - var(--sbar-height) * 0.5
+  );
+  width: calc(
+    var(--sbar-width) * var(--sbar-segment-width) + var(--sbar-height) +
+      var(--sbar-border-width)
+  );
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  overflow: hidden;
+  background: linear-gradient(90deg, color-mix(var(--sbar-color), #fff 25%), #fff 100%);
+  clip-path: polygon(
+    calc(var(--sbar-height)) 0,
+    100% 0,
+    calc(100% - var(--sbar-height) - var(--sbar-border-width) * 0.5) 100%,
+    0 100%
+  );
+}
+
+.hex-bar-subsegment {
+  flex-shrink: 0;
+  width: calc(var(--sbar-width) * var(--sbar-segment-frac));
+  height: var(--sbar-height);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex-bar-subsegment::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - var(--sbar-border-width));
+  height: 100%;
+  border-style: solid;
+  border-width: 0;
+  border-left-width: calc(var(--sbar-border-width) * 0.5);
+  border-right-width: calc(var(--sbar-border-width) * 0.5);
+  border-left-color: color-mix(var(--sbar-color), #fff 10%);
+  border-right-color: color-mix(var(--sbar-color), #000 20%);
+  z-index: 1;
+}
+
+@keyframes hex-bar-subsegment-flash-appear {
+  0% {
+    background: linear-gradient(
+      color-mix(var(--sbar-color), #fff 10%),
+      color-mix(var(--sbar-color), #000 10%) 100%
+    );
+  }
+  50% {
+    background: linear-gradient(
+      color-mix(var(--sbar-color), #fff 30%),
+      color-mix(var(--sbar-color), #000 5%) 100%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      color-mix(var(--sbar-color), #fff 10%),
+      color-mix(var(--sbar-color), #000 10%) 100%
+    );
+  }
+}
+
+.hex-bar-subsegment::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - var(--sbar-border-width));
+  height: calc(100%);
+  background: linear-gradient(
+    color-mix(var(--sbar-color), #fff 10%),
+    color-mix(var(--sbar-color), #000 10%) 100%
+  );
+  animation-name: hex-bar-subsegment-flash-appear;
+  animation-duration: 0.5s;
+  animation-iteration-count: 4;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+@keyframes hex-segment-fall {
+  0% {
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+  10% {
+    transform: rotate(0) translateY(-25%);
+  }
+  100% {
+    transform: rotate(5deg) translateY(var(--sbar-height));
+    opacity: 0;
+  }
+}
+
+.hex-segment-falling {
+  --sbar-color: var(--sbar-color-falling);
+  animation-name: hex-segment-fall;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  z-index: 1;
+  transform-origin: calc(var(--sbar-width) * var(--sbar-segment-offset)) 100%;
+}
+
+.hex-segment-falling .hex-bar-subsegment::after {
+  animation: none;
+}

@@ -1,0 +1,110 @@
+.title-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 1rem;
+  background-color: black;  // Set the background color to black
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.title-and-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+
+  .logo {
+    display: flex;
+    image-rendering: pixelated;
+    height: 40vh;
+    aspect-ratio: 1.2;
+    mask-image: url("./logo-game.png");
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background: linear-gradient(130deg, rgb(77, 159, 241) 30%, #521a70 70%);
+  }
+
+  h1 {
+    font-family: "Highbirth";
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    font-size: calc(min(32pt, 4vw));
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.title-screen .buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.title-screen button {
+  font-family: "Highbirth";
+  padding: 8px 16px;
+  font-size: 14pt;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+  }
+
+  &:active {
+    background-color: #004088;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+  }
+
+  &:disabled {
+    color: #888888;
+    background: none;
+    box-shadow: none;
+  }
+}
+.chrome-warning {
+  opacity: 0.5;
+}
+
+.title-screen.customize {
+  .logo {
+    height: 10vh;
+  }
+  h1 {
+    font-size: calc(min(12pt, 2vw));
+  }
+}
+
+.title-screen .customizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.title-screen .language-changer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  button{
+    font-size: 45px;
+    text-align: center;
+    width:100px;
+    height:100px;
+  }
+}

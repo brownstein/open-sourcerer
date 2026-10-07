@@ -1,0 +1,64 @@
+@keyframes intro-seq-appearing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes intro-seq-disappearing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.intro-sequence-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  
+  &.disappearing {
+    animation: intro-seq-disappearing 2s ease forwards;
+  }
+
+  .logo-and-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+
+    animation: intro-seq-appearing 1s ease forwards;
+
+    h1 {
+      font-family: "Troll";
+      font-size: calc(var(--sr-width) * 0.05);
+    }
+  }
+
+  .game-logo {
+    mask: url("../../../../components/title/os-logo-plain.svg");
+    mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background: #ffffff;
+    aspect-ratio: 1;
+    height: calc(min(var(--sr-width), var(--sr-height)) * 0.5);
+    margin-bottom: -10%;
+  }
+}

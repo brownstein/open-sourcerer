@@ -1,0 +1,304 @@
+@property --conversation-height {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --convo-border-width {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 2pt;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.conversation-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.conversation-overlay .conversation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  overflow: hidden;
+  transition: height 250ms ease;
+  margin-bottom: 0.5em;
+  z-index: 2;
+}
+
+.conversation-overlay .conversation-internal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.conversation-overlay .conversation-bg {
+  z-index: -2;
+  pointer-events: none;
+  user-select: none;
+  box-sizing: border-box;
+  position: absolute;
+  left: 8pt;
+  bottom: 0;
+  width: calc(100% - 16pt);
+  height: calc(100% - 8pt);
+
+  &::before,
+  &::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &::before {
+    z-index: 1;
+    background: rgba(20, 50, 80, 0.8);
+  }
+
+  &::after {
+    z-index: 2;
+    opacity: 50%;
+    background-image: url("../../shared-assets/backgrounds/granite.jpg");
+    background-size: cover;
+    mix-blend-mode: multiply;
+  }
+}
+
+.conversation-overlay .conversation-borders {
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+  box-sizing: border-box;
+  position: absolute;
+  left: 8pt;
+  bottom: 0;
+  width: calc(100% - 16pt);
+  height: calc(100% - 8pt);
+}
+
+.conversation-overlay .border-ring {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  clip-path: polygon(
+    evenodd,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 0,
+    var(--convo-border-width) var(--convo-border-width),
+    calc(100% - var(--convo-border-width)) var(--convo-border-width),
+    calc(100% - var(--convo-border-width)) calc(100% - var(--convo-border-width)),
+    var(--convo-border-width) calc(100% - var(--convo-border-width)),
+    var(--convo-border-width) var(--convo-border-width)
+  );
+  background: linear-gradient(120deg, #44bbf5, #9858f5 50%);
+}
+
+.conversation-overlay .border-ring.border-inner {
+  position: absolute;
+  top: calc(4 * var(--convo-border-width));
+  bottom: calc(4 * var(--convo-border-width));
+  left: calc(4 * var(--convo-border-width));
+  right: calc(4 * var(--convo-border-width));
+  clip-path: polygon(
+    evenodd,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 0,
+    var(--convo-border-width) var(--convo-border-width),
+    calc(100% - var(--convo-border-width)) var(--convo-border-width),
+    calc(100% - var(--convo-border-width)) calc(100% - var(--convo-border-width)),
+    var(--convo-border-width) calc(100% - var(--convo-border-width)),
+    var(--convo-border-width) var(--convo-border-width)
+  );
+  background: linear-gradient(120deg, #44bbf5, #9858f5 50%);
+}
+
+.conversation-overlay .conversation-speaker-name {
+  display: flex;
+  flex-shrink: 0;
+  font-size: 28pt;
+  position: absolute;
+  top: calc(10pt + var(--convo-border-width));
+  left: calc(10pt + var(--convo-border-width));
+  min-width: 100pt;
+  height: 32pt;
+  text-align: center;
+  line-height: 32pt;
+  margin: 0;
+  padding: 0 40pt 0 18pt;
+  font-family: "FelixTitling";
+  font-weight: bold;
+  color: transparent;
+  background: radial-gradient(
+    circle at 50%,
+    #aaeeff,
+    #88eeff 25%,
+    #1177cc 80%
+  );
+  background-clip: text;
+}
+
+.conversation-overlay .conversation-speaker-name::before {
+  content: "";
+  position: absolute;
+  left: calc(-10pt - var(--convo-border-width));
+  top: calc(-10pt - var(--convo-border-width));
+  right: calc(-28pt - var(--convo-border-width));
+  bottom: calc(-10pt - var(--convo-border-width));
+  display: flex;
+  text-align: left;
+  background: linear-gradient(120deg, #44bbf5, #9858f5 50%);
+  clip-path: polygon(
+    0 16pt,
+    16pt 0,
+    calc(100% - 8pt) 0,
+    100% 8pt,
+    100% calc(8pt + var(--convo-border-width) * 2),
+    calc(100% - 16pt) calc(8pt + var(--convo-border-width) * 2),
+    calc(100% - 16pt) calc(100% - 32pt),
+    calc(100% - 48pt) 100%,
+    0 100%
+  );
+  z-index: -1;
+}
+
+.conversation-overlay .conversation-speaker-name::after {
+  content: "";
+  position: absolute;
+  left: -10pt;
+  top: -10pt;
+  right: -28pt;
+  bottom: -10pt;
+  display: flex;
+  text-align: left;
+  background: #191f37;
+  clip-path: polygon(
+    0 16pt,
+    16pt 0,
+    calc(100% - 8pt) 0,
+    100% 8pt,
+    calc(100% - 16pt) 8pt,
+    calc(100% - 16pt) calc(100% - 32pt),
+    calc(100% - 48pt) 100%,
+    0 100%
+  );
+  z-index: -1;
+}
+
+.conversation-overlay {
+  .conversation-content {
+    pointer-events: all;
+    margin: 76px 32px 20px 32px;
+    color: #fff;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    min-height: 128px;
+
+    &.font-large {
+      font-size: 20pt;
+    }
+
+    &.font-normal {
+      font-size: 16pt;
+    }
+
+    &.font-small {
+      font-size: 12pt;
+    }
+  }
+
+  .conversation-next-step-prompt {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+    &.clickable {
+      pointer-events: auto;
+      cursor: pointer;
+    }
+  }
+
+  .conversation-response-options {
+    margin-top: 0.5em;
+    line-height: 1.5em;
+    position: relative;
+    .option-select {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 4px;
+    }
+    .option-content {
+      margin-left: 70px;
+    }
+  }
+}
+
+.conversation-overlay .conversation-characters {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.conversation-overlay .conversation-characters .character-bust {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  bottom: var(--conversation-height);
+  display: flex;
+  width: 40%;
+  max-width: 50%;
+  aspect-ratio: 1;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.conversation-overlay .conversation-characters .character-bust img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.adana-recolor {
+  filter: grayscale(0.5);
+}

@@ -1,0 +1,72 @@
+{ "frames": {
+   "(Layer 1) 0.aseprite": {
+    "frame": { "x": 2, "y": 2, "w": 12, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 10, "y": 6, "w": 12, "h": 20 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "(Layer 1) 1.aseprite": {
+    "frame": { "x": 16, "y": 2, "w": 12, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 10, "y": 6, "w": 12, "h": 20 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "(Layer 1) 2.aseprite": {
+    "frame": { "x": 30, "y": 2, "w": 12, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 10, "y": 6, "w": 12, "h": 20 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "(Layer 1) 3.aseprite": {
+    "frame": { "x": 44, "y": 2, "w": 12, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 10, "y": 6, "w": 12, "h": 20 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "(Layer 1) 4.aseprite": {
+    "frame": { "x": 58, "y": 2, "w": 12, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 10, "y": 6, "w": 12, "h": 20 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "(Layer 1) 5.aseprite": {
+    "frame": { "x": 72, "y": 2, "w": 12, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 10, "y": 6, "w": 12, "h": 20 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.3.13-dev",
+  "image": "currency.png",
+  "format": "RGBA8888",
+  "size": { "w": 128, "h": 24 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "BronzeCoin", "from": 0, "to": 0, "direction": "forward", "color": "#000000ff" },
+   { "name": "SilverCoin", "from": 1, "to": 1, "direction": "forward", "color": "#000000ff" },
+   { "name": "GoldCoin", "from": 2, "to": 2, "direction": "forward", "color": "#000000ff" },
+   { "name": "EmeraldGem", "from": 3, "to": 3, "direction": "forward", "color": "#000000ff" },
+   { "name": "SapphireGem", "from": 4, "to": 4, "direction": "forward", "color": "#000000ff" },
+   { "name": "AmathystGem", "from": 5, "to": 5, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

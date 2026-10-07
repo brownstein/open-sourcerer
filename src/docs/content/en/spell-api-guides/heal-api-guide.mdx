@@ -1,0 +1,67 @@
+export const meta = {
+	title: "Heal API Guide"
+};
+
+# The Heal API
+
+Welcome back, <PlayerName />! The **`"heal"`** spell is nature magic — it restores health, either all at once or steadily over a few seconds. Patch yourself up mid-battle or keep a steady regeneration going while you focus on the fight.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const Heal = require("heal");
+	Heal.instant();
+	```
+
+</ExampleCode>
+
+The easiest way to heal is through the two **static spells**, `Heal.instant` and `Heal.overTime`.
+
+## Instant Healing
+
+`Heal.instant` restores health immediately. Pass a `strength` to control how much:
+
+<ExampleCode>
+
+	```javascript
+	const Heal = require("heal");
+	Heal.instant({ strength: 30 });
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Reach for `Heal.instant` when you're in a pinch and need health right now — like just before a big hit lands.
+
+</Callout>
+
+## Healing Over Time
+
+`Heal.overTime` spreads the healing across several seconds, which is gentler on your mana and great for sustained fights:
+
+<ExampleCode>
+
+	```javascript
+	const Heal = require("heal");
+	Heal.overTime({ strength: 50 });
+	```
+
+</ExampleCode>
+
+You can also cast healing from a [ManaSpark](spell-api-guides/spark-api-guide) using its `spark.cast`, letting the spark do the work for you.
+
+### Static methods
+
+- **`Heal.instant(opts)`** — instantly heals the target, or the caster if none is given.
+	- **`strength`** — `number` — how much health to restore.
+- **`Heal.overTime(opts)`** — heals the target gradually over several seconds.
+	- **`strength`** — `number` — the total amount of health to restore.
+
+<Callout type="important">
+
+	A `new Heal(...)` constructor exists with options `{ targetId, strength }`, but it has no instance properties to work with. Stick to the static `Heal.instant` and `Heal.overTime` spells — they're the friendly, supported way to heal.
+
+</Callout>

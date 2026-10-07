@@ -1,0 +1,491 @@
+// @ts-nocheck
+import { Button } from "@mui/material";
+import {
+  CSSProperties,
+  ReactNode,
+  isValidElement,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from "react";
+import { useTranslation } from "react-i18next";
+import ReactMarkdown from "react-markdown";
+import { mergeRefs } from "react-merge-refs";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
+import { vs } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import useMeasure from "react-use-measure";
+import remarkGfm from "remark-gfm";
+
+import { DocsPage, SupportedLanguage } from "src/api/docs";
+import { BaseComponentConfigType } from "src/components/ui/config/types";
+import { allDocs as allDocsByLanguage } from "src/docs/allDocs";
+import {
+  clearPendingDocsNav,
+  setPendingDocsNav
+} from "src/redux/docsNav/slice";
+import { useAppDispatch } from "src/redux/hooks";
+import { useAppSelector } from "src/redux/hooks";
+import { openCodeEditor } from "src/redux/shared/actions";
+
+import { UIComponentProps } from "../context/UIRenderingContext";
+import "./Docs.less";
+import { DocsIndex } from "./DocsIndex";
+
+const allDocs = allDocsByLanguage[SupportedLanguage.en];
+
+function findPage(id: string, arr = allDocs): DocsPage | null {
+  for (const page of arr) {
+    if (page.id === id) return page;
+    if (!page.subPages) continue;
+    const match = findPage(id, page.subPages);
+    if (match) return match;
+  }
+  return null;
+}
+
+type DocsNavigateCommand = {
+  pageId: string;
+  anchor?: string;
+  highlight?: boolean;
+  commandId: string; // unique token so effects re-run on subsequent calls
+};
+
+export type DocsComponentConfig = BaseComponentConfigType & {
+  initialDocPageId?: string;
+  navigateTo?: DocsNavigateCommand;
+};
+
+export type DocsContentProps = {
+  onOpenCodeEditor?: (contents: string) => void;
+  config?: DocsComponentConfig;
+};
+
+// Removed globals; navigation is coordinated via Redux docsNav slice.
+
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+function extractText(node: ReactNode | ReactNode[]): string {
+  if (Array.isArray(node)) return node.map(extractText).join("");
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (isValidElement(node)) return extractText(node.props?.children);
+  return "";
+}
+
+function isElementActuallyVisible(el: HTMLElement | null): boolean {
+  if (!el) return false;
+  if (!el.isConnected) return false;
+  const hasLayout =
+    el.offsetParent !== null || getComputedStyle(el).position === "fixed";
+  const style = window.getComputedStyle(el);
+  if (style.display === "none" || style.visibility === "hidden") return false;
+  const rect = el.getBoundingClientRect();
+  return hasLayout && rect.width > 0 && rect.height > 0;
+}
+
+function waitForVisible(
+  getter: () => HTMLElement | null,
+  timeoutMs = 6000
+): Promise<void> {
+  return new Promise((resolve) => {
+    const start = performance.now();
+    const tick = () => {
+      const el = getter();
+      if (isElementActuallyVisible(el)) {
+        resolve();
+        return;
+      }
+      if (performance.now() - start > timeoutMs) {
+        resolve();
+        return;
+      }
+      requestAnimationFrame(tick);
+    };
+    tick();
+  });
+}
+
+function onVisibleResize(el: HTMLElement, cb: () => void): () => void {
+  if (!("ResizeObserver" in window)) {
+    requestAnimationFrame(cb);
+    return () => {};
+  }
+  const ro = new ResizeObserver((entries) => {
+    const entry = entries[0];
+    if (entry && entry.contentRect.width > 0 && entry.contentRect.height > 0) {
+      cb();
+    }
+  });
+  ro.observe(el);
+  return () => ro.disconnect();
+}
+
+export function DocsContent(props: DocsContentProps) {
+  const { onOpenCodeEditor, config } = props;
+  const { t: _t } = useTranslation();
+  const dispatch = useAppDispatch();
+  const pending = useAppSelector((s) => (s as any).docsNav?.pending ?? null);
+  const [currentPageId, setCurrentPageId] = useState(
+    config?.initialDocPageId ?? allDocs[0]?.id ?? ""
+  );
+  const [indexCollapsed, setIndexCollapsed] = useState(false);
+
+  const page = useMemo(() => findPage(currentPageId), [currentPageId]);
+
+  const renderers = useMemo(
+    () => ({
+      code: ({ language, value }: { language: string; value: string }) => {
+        return (
+          <div className="docs-code-block">
+            <SyntaxHighlighter
+              style={vs}
+              language={language}
+              children={value}
+              useInlineStyles={false}
+            />
+            {onOpenCodeEditor && (
+              <div className="open-code-editor-line">
+                <Button
+                  className="open-code-editor-button"
+                  variant="contained"
+                  onClick={() => onOpenCodeEditor(value)}
+                >
+                  Try in code editor
+                </Button>
+              </div>
+            )}
+          </div>
+        );
+      },
+      link: ({ href, children }: { href: string; children: ReactNode }) => {
+        const tryLocalScrollToAnchor = (anchorLabelRaw: string): boolean => {
+          const container = contentScrollRef.current;
+          if (!container) return false;
+          const label = (anchorLabelRaw || "").trim();
+          // Simple aliases so visible labels can differ from headers
+          const labelToHeader: Record<string, string> = {
+            Statements: "Statements",
+            Expressions: "Expressions",
+            Variables: "Declaring Variables",
+            Blocks: "Blocks",
+            Comments: "Comments",
+            // Data Types & Collections summary links
+            Strings: "Strings: Text and Identifiers",
+            Numbers: "Numbers: Calculations and Measurements",
+            Booleans: "Booleans: Logic and State",
+            Objects: "Objects: Structured Data",
+            Arrays: "Arrays: Ordered Collections",
+            "Special Values": "Special Values: null, undefined, and NaN",
+            "Type Checking": "Type Checking and Validation",
+            "Collection Patterns": "Collection Patterns for Spells",
+            Performance: "Performance Considerations"
+          };
+          const headerText = labelToHeader[label] ?? label;
+          let el: HTMLElement | null = null;
+          const headings = container.querySelectorAll<HTMLElement>(
+            "h1, h2, h3, h4, h5, h6"
+          );
+          for (const h of Array.from(headings)) {
+            const text = (h.innerText || h.textContent || "").trim();
+            if (text === headerText) {
+              el = h;
+              break;
+            }
+          }
+          if (!el) return false;
+          const cRect = container.getBoundingClientRect();
+          const eRect = el.getBoundingClientRect();
+          const targetTop = container.scrollTop + (eRect.top - cRect.top) - 12;
+          container.scrollTo({
+            top: Math.max(0, targetTop),
+            behavior: "smooth"
+          });
+          el.classList.add("glossary-hit");
+          setTimeout(() => el.classList.remove("glossary-hit"), 1200);
+          return true;
+        };
+
+        const _dispatchScrollToAnchor = (anchorIdRaw: string) => {
+          const anchor = (anchorIdRaw || "").trim();
+          const commandId = `${Date.now().toString(36)}-${Math.random()
+            .toString(36)
+            .slice(2)}`;
+          dispatch(
+            setPendingDocsNav({
+              pageId: currentPageId,
+              anchor,
+              highlight: true,
+              commandId
+            })
+          );
+        };
+
+        const hrefStr = String(href ?? "");
+
+        // #anchor → in-page scroll within current doc
+        if (hrefStr.startsWith("#")) {
+          const anchor = decodeURIComponent(hrefStr.slice(1));
+          return (
+            <button
+              type="button"
+              className="conversation-hyperlink docs-link"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                // For simple, robust behavior: only do local scroll
+                tryLocalScrollToAnchor(anchor);
+              }}
+            >
+              {children}
+            </button>
+          );
+        }
+
+        // External/regular link
+        return (
+          <a
+            href={hrefStr || "#"}
+            target={hrefStr ? "_blank" : undefined}
+            rel="noreferrer"
+            className="conversation-hyperlink docs-link"
+          >
+            {children}
+          </a>
+        );
+      },
+      heading: ({
+        level,
+        children
+      }: {
+        level: number;
+        children: ReactNode[];
+      }) => {
+        // Compute text content and slug for id (supports nested strong/emphasis)
+        const text = extractText(children);
+        const id = slugify(text);
+        const Tag =
+          `h${Math.min(Math.max(level, 1), 6)}` as keyof JSX.IntrinsicElements;
+        return <Tag id={id}>{children}</Tag>;
+      }
+    }),
+    [onOpenCodeEditor, currentPageId, dispatch]
+  );
+
+  const [containerRef, containerRect] = useMeasure();
+  const [contentRef, contentRect] = useMeasure();
+  const contentScrollRef = useRef<HTMLDivElement | null>(null);
+  const lastNavigateCommandIdRef = useRef<string | undefined>(undefined);
+
+  // Always reset scroll to top when switching to a different docs page
+  useEffect(() => {
+    const container = contentScrollRef.current;
+    if (container) container.scrollTo({ top: 0 });
+  }, [currentPageId]);
+
+  // Navigation is driven by Redux; no imperative handlers needed here.
+
+  // If config provides navigateTo, route it into Redux pending so a single effect owns scrolling
+  useEffect(() => {
+    if (!config?.navigateTo) return;
+    dispatch(setPendingDocsNav(config.navigateTo));
+  }, [config?.navigateTo, dispatch]);
+
+  // Respond to deep-link navigation commands via Redux pending
+  useEffect(() => {
+    const cmd = pending;
+    if (!cmd) return;
+
+    if (cmd.pageId && cmd.pageId !== currentPageId)
+      setCurrentPageId(cmd.pageId);
+
+    const getContainer = () => contentScrollRef.current;
+    const anchorId = cmd.anchor;
+
+    const findAnchorElement = (): HTMLElement | null => {
+      if (!anchorId) return null;
+      const direct = document.getElementById(anchorId);
+      if (direct) return direct as HTMLElement;
+      const container = getContainer();
+      if (!container) return null;
+      const headings = container.querySelectorAll("h1, h2, h3, h4, h5, h6");
+      for (const h of Array.from(headings)) {
+        const text =
+          (h as HTMLElement).innerText || (h as HTMLElement).textContent || "";
+        const slug = slugify(text);
+        if (slug === anchorId) return h as HTMLElement;
+      }
+      return null;
+    };
+
+    const doScroll = (finalize: boolean): boolean => {
+      if (!anchorId) return false;
+      const el = findAnchorElement();
+      if (!el) return false;
+
+      const container = getContainer();
+      if (container) {
+        if (!isElementActuallyVisible(container)) return false;
+        const cRect = container.getBoundingClientRect();
+        const eRect = el.getBoundingClientRect();
+        const targetTop = container.scrollTop + (eRect.top - cRect.top) - 12;
+        container.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+      } else {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      if (finalize && cmd.highlight) {
+        el.classList.add("glossary-hit");
+        setTimeout(() => el.classList.remove("glossary-hit"), 1200);
+      }
+      return true;
+    };
+
+    let cancelled = false;
+    let stopResizeObserver: (() => void) | null = null;
+
+    const attempt = () => {
+      if (cancelled) return;
+      let tries = 0;
+      const max = 80;
+      let lastTop = Number.NaN;
+      let lastLeft = Number.NaN;
+      let stableCount = 0;
+      const handle = setInterval(() => {
+        if (cancelled) {
+          clearInterval(handle);
+          return;
+        }
+        const container = getContainer();
+        if (!isElementActuallyVisible(container)) return;
+        const rect = container!.getBoundingClientRect();
+        const stableNow =
+          Math.abs(rect.top - lastTop) < 0.5 &&
+          Math.abs(rect.left - lastLeft) < 0.5;
+        if (stableNow) stableCount++;
+        else stableCount = 0;
+        lastTop = rect.top;
+        lastLeft = rect.left;
+
+        // Always keep scrolling during animation, but only finalize once stable
+        const scrolled = doScroll(false);
+        if ((scrolled && stableCount >= 3) || ++tries >= max) {
+          if (scrolled) {
+            doScroll(true);
+            dispatch(clearPendingDocsNav({ commandId: cmd.commandId }));
+            lastNavigateCommandIdRef.current = cmd.commandId;
+          }
+          clearInterval(handle);
+        }
+      }, 50);
+
+      requestAnimationFrame(() => {
+        if (!cancelled) doScroll(false);
+      });
+
+      const container = getContainer();
+      if (container) {
+        stopResizeObserver = onVisibleResize(container, () => {
+          if (!cancelled) doScroll(false);
+        });
+      }
+    };
+
+    Promise.resolve()
+      .then(() => waitForVisible(getContainer, 6000))
+      .then(() => {
+        if (!cancelled) attempt();
+      });
+
+    return () => {
+      cancelled = true;
+      if (stopResizeObserver) stopResizeObserver();
+    };
+  }, [pending, currentPageId, page, dispatch]);
+
+  // No window globals or events; navigation is Redux-driven.
+
+  const indexWidth = indexCollapsed ? 80 : 220;
+  const frameWidth = 8;
+
+  let indexClassName: string | undefined;
+  let indexStyle: CSSProperties = {
+    width: indexWidth,
+    top: containerRect.y + 100
+  };
+  const positionInside = containerRect.width > contentRect.width + 400;
+  if (positionInside) {
+    indexClassName = "inside";
+    indexStyle.left =
+      containerRect.x +
+      (containerRect.width - contentRect.width) * 0.5 -
+      indexWidth;
+    indexStyle.maxHeight = containerRect.height - containerRect.y - 100;
+    if (indexStyle.maxHeight && indexStyle.maxHeight < 100) {
+      indexStyle.visibility = "hidden";
+    }
+  } else {
+    indexClassName = "outside left";
+    indexStyle.left = containerRect.x - indexWidth - frameWidth;
+  }
+
+  return (
+    <div
+      className="docs-container"
+      ref={mergeRefs([containerRef, contentScrollRef])}
+    >
+      <DocsIndex
+        allPages={allDocs}
+        currentDocId={currentPageId}
+        onClickPage={setCurrentPageId}
+        collapsed={indexCollapsed}
+        setCollapsed={setIndexCollapsed}
+        className={indexClassName}
+        style={indexStyle}
+      />
+      <div className="docs-content" ref={contentRef}>
+        <div className="docs-content-inner">
+          {page?.contentComponent ? (
+            <page.contentComponent navigate={setCurrentPageId} />
+          ) : (
+            <ReactMarkdown renderers={renderers} plugins={[remarkGfm]}>
+              {page?.content ?? "(missing page)"}
+            </ReactMarkdown>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export type DocsTabProps = UIComponentProps;
+
+export function DocsTab(props: DocsTabProps) {
+  const { nodeId, config } = props;
+  const dispatch = useAppDispatch();
+  const onOpenCodeEditor = useCallback(
+    (code: string) => {
+      dispatch(
+        openCodeEditor({
+          nextToTabId: nodeId,
+          code
+        })
+      );
+    },
+    [dispatch, nodeId]
+  );
+  return (
+    <div className="docs-tab-container">
+      <DocsContent
+        onOpenCodeEditor={onOpenCodeEditor}
+        config={config as DocsComponentConfig}
+      />
+    </div>
+  );
+}

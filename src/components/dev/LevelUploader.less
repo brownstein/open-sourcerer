@@ -1,0 +1,77 @@
+.level-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5em;
+
+  .drop-files-here {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    aspect-ratio: 1;
+    border: 1px dashed #000000;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+
+    &.can-drop {
+      border-width: 2px;
+      background: rgba(255, 255, 255, 0.5);
+      font-weight: bold;
+    }
+  }
+
+  .files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    .display-file {
+      width: ~"calc(var(--sr-width) * 0.8)";
+      height: 64px;
+      border: 1px dashed #000000;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2px;
+      position: relative;
+
+      .status {
+        display: flex;
+        width: 64px;
+        height: 48px;
+        box-sizing: border-box;
+        position: relative;
+      }
+      .extension {
+        display: flex;
+        width: 40px;
+        font-weight: bold;
+      }
+      .name {
+        display: flex;
+        flex-grow: 1;
+      }
+      .remove {
+        cursor: pointer;
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        width: 24px;
+        height: 24px;
+        .svg-icon {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          background: #a00;
+        }
+      }
+    }
+  }
+}

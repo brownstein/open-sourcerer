@@ -1,0 +1,248 @@
+@import (reference) "./Inventory.less";
+
+.item-browser {
+	width: calc(100% - 48px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.item-browser-tabs {
+	width: calc(100% - 48px);
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-height: 56px;
+
+  .MuiToggleButtonGroup-root.item-browser-tabs-buttons {
+    gap: 8px;
+    flex: 0 4 360px;
+    display: flex;
+
+    .MuiToggleButton-root {
+      border: 2px solid #8a8b86;
+      border-radius: 16px;
+      background-color: #646464;
+      --text-color: @inventory-glow;
+      color: var(--text-color);
+      padding: 6px;
+      flex: 1 1 90px;
+      .inventory-glow-transition();
+
+      &:hover {
+        .inventory-glow-hover();
+        transform: translateY(-1px);
+      }
+      &.Mui-selected {
+        .inventory-glow-selected();
+        --text-color: #ffffff;
+        body.light & { --text-color: #001a33; }
+      }
+      &.Mui-selected:hover {
+        background-color: fade(@inventory-glow, 28%);
+        transform: translateY(-1px);
+        body.light & { background-color: fade(@inventory-glow-light, 25%); }
+      }
+      body.light & {
+        background-color: #ddd;
+        border-color: #aaa;
+        --text-color: #002244;
+      }
+    }
+
+    .svg-icon {
+      font-size: 32px;
+      background: linear-gradient(
+        120deg,
+        white 5%,
+        var(--text-color) 10%,
+        var(--text-color) 90%,
+        black 100%
+      );
+      .inventory-glow-icon-transition();
+    }
+
+    .MuiToggleButton-root:hover .svg-icon { .inventory-glow-icon-hover(); }
+    .MuiToggleButton-root.Mui-selected .svg-icon { .inventory-glow-icon-selected(); }
+  }
+
+  .MuiFormControl-root.item-browser-tabs-dropdown {
+    display: flex;
+    height: 32px;
+    flex-direction: row;
+    flex: 0 1 128px;
+    min-width: 90px;
+
+    .order-select {
+      min-width: 0px;
+      flex: 1 0 0;
+      overflow: hidden;
+    }
+
+    .search-box {
+      flex: 0 0 40px;
+      transition: flex-basis 0.2s ease-in-out;
+
+      &:has(.Mui-focused) {
+        flex-basis: 100%;
+        transition: flex-basis 0.2s ease-in-out;
+      }
+    }
+
+    button {
+      background: black;
+      border-top: 2px solid #8a8b86;
+      border-bottom: 2px solid #8a8b86;
+      border-left: none;
+      border-right: none;
+      color: white;
+
+      body.light & {
+        background: #ddd;
+        border-color: #aaa;
+        color: #222;
+      }
+    }
+
+    .svg-icon {
+      background-color: white;
+      padding-right: 2px;
+
+      body.light & {
+        background-color: #222;
+      }
+    }
+
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      &.svg-icon {
+        background-color: blue;
+      }
+
+      body.light & {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    .MuiOutlinedInput-root {
+      background-color: black;
+      border-radius: 0px;
+      color: rgba(255, 255, 255, 0.7);
+      padding-right: 0px;
+      height: 100%;
+      transition: background-color 0.2s ease;
+
+      body.light & {
+        background-color: #fff;
+        color: #222;
+      }
+
+      & .MuiOutlinedInput-notchedOutline {
+        border: 2px solid #8a8b86;
+
+        body.light & {
+          border-color: #aaa;
+        }
+      }
+
+      &:hover .MuiOutlinedInput-notchedOutline {
+        border: 2px solid #8a8b86;
+
+        body.light & {
+          border-color: #888;
+        }
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+
+        body.light & {
+          background-color: rgba(0, 0, 0, 0.03);
+        }
+      }
+
+      &:hover .MuiSelect-icon {
+        color: #8ce7e3;
+
+        body.light & {
+          color: #4488bb;
+        }
+      }
+      &:hover .MuiInputAdornment-root .svg-icon {
+        color: #8ce7e3;
+
+        body.light & {
+          color: #4488bb;
+        }
+      }
+
+      &.Mui-focused {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: #8ce7e3;
+
+          body.light & {
+            border-color: #4488bb;
+          }
+        }
+        .MuiSelect-icon {
+          color: #8ce7e3;
+
+          body.light & {
+            color: #4488bb;
+          }
+        }
+      }
+    }
+  }
+}
+
+.MuiList-root {
+  background-color: black;
+  padding: 0;
+  border: 2px solid #8a8b86;
+
+  body.light & {
+    background-color: #fff;
+    border-color: #aaa;
+  }
+}
+.MuiButtonBase-root.MuiMenuItem-root {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+
+  body.light & {
+    color: #222;
+  }
+}
+
+.MuiButtonBase-root.MuiMenuItem-root:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  body.light & {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.MuiButtonBase-root.MuiMenuItem-root.Mui-selected {
+  color: #8ce7e3;
+
+  body.light & {
+    color: #4488bb;
+  }
+}
+
+.item-browser-item-grid {
+	flex-shrink: 1;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}

@@ -1,0 +1,51 @@
+export const meta = {
+	title: "Self API Guide"
+};
+
+# The Self API
+
+Hey there, <PlayerName />! The **`"self"`** module is simply the entity that is casting the current spell — that's usually you. Unlike most spell APIs, the export is a plain **value** (an `Entity`), not a function or class. Read its fields to find out where the caster is, what type it is, and more.
+
+## Importing Self
+
+<ExampleCode>
+
+	```javascript
+	const self = require("self");
+
+	console.log(self.type);       // e.g. "Player"
+	console.log(self.id);         // the caster's unique id
+	console.log(self.position);   // { x, y }
+	```
+
+</ExampleCode>
+
+Because `self` is already the entity, there's nothing to construct — just read from it.
+
+## Using Self with Other Entities
+
+`self` is most useful when paired with the entity-finding APIs. The [Sensor](spell-api-guides/sensor-api-guide) and [Get Entities](spell-api-guides/get-entities-api-guide) APIs hand you back lists of entities, and you'll often want to compare those against the caster — for example, to skip yourself when targeting:
+
+<ExampleCode>
+
+	```javascript
+	const self = require("self");
+	const sensor = require("sensor");
+
+	const others = sensor.entities().filter((e) => e.id !== self.id);
+	const myX = self.position.x;
+	```
+
+</ExampleCode>
+
+### Properties
+
+- **`id`** — `string` — the caster's unique entity id.
+- **`type`** — `string` — the caster's entity type (for example, `"Player"`).
+- **`position`** — `{ x, y }` — the caster's current world position.
+
+<Callout type="info">
+
+	`self` carries additional entity fields beyond these, but `id`, `type`, and `position` are the ones you'll reach for most. Use the [Info](spell-api-guides/info-api-guide) API to inspect everything it offers.
+
+</Callout>

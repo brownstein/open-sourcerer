@@ -1,0 +1,54 @@
+{ "frames": {
+   "0": {
+    "frame": { "x": 2, "y": 2, "w": 14, "h": 19 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 9, "y": 6, "w": 14, "h": 19 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "1": {
+    "frame": { "x": 19, "y": 2, "w": 14, "h": 19 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 9, "y": 6, "w": 14, "h": 19 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "2": {
+    "frame": { "x": 36, "y": 2, "w": 11, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 10, "y": 3, "w": 11, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "3": {
+    "frame": { "x": 2, "y": 30, "w": 23, "h": 21 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 6, "y": 6, "w": 23, "h": 21 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.7-arm64",
+  "image": "consumables.png",
+  "format": "RGBA8888",
+  "size": { "w": 64, "h": 53 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "HealthPotion", "from": 0, "to": 0, "direction": "forward", "color": "#000000ff" },
+   { "name": "ManaPotion", "from": 1, "to": 1, "direction": "forward", "color": "#000000ff" },
+   { "name": "Quiver", "from": 2, "to": 2, "direction": "forward", "color": "#000000ff" },
+   { "name": "Scroll", "from": 3, "to": 3, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "Sprite Sheet", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

@@ -1,0 +1,536 @@
+@icon-bag: url("./bag.svg");
+@icon-bookends: url("./bookends.svg");
+@icon-cursor: url("./cursor.svg");
+@icon-diamond: url("./diamond.svg");
+@icon-docs: url("./docs.svg");
+@icon-exclamation: url("./exclamation.svg");
+@icon-skill-tree: url("./skill-tree.svg");
+@icon-tome: url("./tome.svg");
+@icon-insight-symbol: url("./insight-symbol.svg");
+@icon-world-map: url("./icon-world-map-placeholder.svg");
+@icon-sen-v4: url("./sen-v4-icon-large.png");
+
+.page-icon {
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  // Page icons
+  &.icon-Viewport {
+    mask-image: @icon-sen-v4;
+  }
+  &.icon-Console {
+    mask-image: @icon-diamond;
+  }
+  &.icon-Editor {
+    mask-image: @icon-cursor;
+  }
+  &.icon-DocsIndex {
+    mask-image: @icon-bookends;
+  }
+  &.icon-DocsDisplay {
+    mask-image: @icon-docs;
+  }
+  &.icon-NewDocumentation {
+    mask-image: @icon-docs;
+  }
+  &.icon-Tutorials {
+    mask-image: @icon-exclamation;
+  }
+  &.icon-SpellInventory {
+    mask-image: @icon-tome;
+  }
+  &.icon-ItemInventory {
+    mask-image: @icon-bag;
+  }
+  &.icon-WorldMap {
+    mask-image: @icon-world-map;
+  }
+  &.icon-Settings {
+    mask-image: @icon-exclamation;
+  }
+  &.icon-SpellGraph {
+    mask-image: @icon-skill-tree;
+  }
+}
+
+.svg-icon {
+  background: currentColor;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  // Sizing
+  &.icon-size-32 {
+    width: 32px;
+    height: 32px;
+  }
+  // In-game symbols
+  &.icon-Insight {
+    mask-image: @icon-insight-symbol;
+  }
+  // UI
+  &.icon-add-tab {
+    mask-image: url("./add-tab.svg");
+  }
+  &.icon-bag {
+    mask-image: url("./bag.svg");
+  }
+  &.icon-bag-cloth {
+    mask-image: url("./bag-cloth.svg");
+  }
+  &.icon-potion {
+    mask-image: url("./potion.svg");
+  }
+  &.icon-key {
+    mask-image: url("./key.svg");
+  }
+  &.icon-bag-cloth {
+    mask-image: url("./bag-cloth.svg");
+  }
+  &.icon-bookends {
+    mask-image: url("./bookends.svg");
+  }
+  &.icon-close-window {
+    mask-image: url("./close-window.svg");
+  }
+  &.icon-console {
+    mask-image: url("./console.svg");
+  }
+  &.icon-cursor {
+    mask-image: url("./cursor.svg");
+  }
+  &.icon-diamond {
+    mask-image: url("./diamond.svg");
+  }
+  &.icon-docs-screen-arrow-left {
+    mask-image: url("./docs-screen-arrow-left.svg");
+  }
+  &.icon-docs-screen-arrow-right {
+    mask-image: url("./docs-screen-arrow-right.svg");
+  }
+  &.icon-docs-screen-icon-01 {
+    mask-image: url("./docs-screen-icon-01.svg");
+  }
+  &.icon-docs-screen-icon-02 {
+    mask-image: url("./docs-screen-icon-02.svg");
+  }
+  &.icon-docs-screen-icon-03 {
+    mask-image: url("./docs-screen-icon-03.svg");
+  }
+  &.icon-docs-screen-progress-slider-01 {
+    mask-image: url("./docs-screen-progress-slider-01.svg");
+  }
+  &.icon-docs-screen-progress-slider-02 {
+    mask-image: url("./docs-screen-progress-slider-02.svg");
+  }
+  &.icon-docs-screen-tab-icon-01 {
+    mask-image: url("./docs-screen-tab-icon-01.svg");
+  }
+  &.icon-docs-screen-tab-icon-02 {
+    mask-image: url("./docs-screen-tab-icon-02.svg");
+  }
+  &.icon-docs-screen-tab-icon-03 {
+    mask-image: url("./docs-screen-tab-icon-03.svg");
+  }
+  &.icon-docs {
+    mask-image: url("./docs.svg");
+  }
+  &.icon-editor {
+    mask-image: url("./editor.svg");
+  }
+  &.icon-exclamation {
+    mask-image: url("./exclamation.svg");
+  }
+  &.icon-format {
+    mask-image: url("./format.svg");
+  }
+  &.icon-insight-symbol {
+    mask-image: url("./insight-symbol.svg");
+  }
+  &.icon-inventory {
+    mask-image: url("./inventory.svg");
+  }
+  &.icon-load {
+    mask-image: url("./load.svg");
+  }
+  &.icon-map {
+    mask-image: url("./map.svg");
+  }
+  &.icon-new {
+    mask-image: url("./new.svg");
+  }
+  &.icon-quest {
+    mask-image: url("./quest.svg");
+  }
+  &.icon-run {
+    mask-image: url("./run.svg");
+  }
+  &.icon-save {
+    mask-image: url("./save.svg");
+  }
+  &.icon-settings {
+    mask-image: url("./settings.svg");
+  }
+  &.icon-skill-fire {
+    mask-image: url("./skill-fire.svg");
+  }
+  &.icon-skill-gravity {
+    mask-image: url("./skill-gravity.svg");
+  }
+  &.icon-skill-ice {
+    mask-image: url("./skill-ice.svg");
+  }
+  &.icon-skill-tree {
+    mask-image: url("./skill-tree.svg");
+  }
+  &.icon-speed {
+    mask-image: url("./speed.svg");
+  }
+  &.icon-spell-deck-screen-icon-01 {
+    mask-image: url("./spell-deck-screen-icon-01.svg");
+  }
+  &.icon-spell-deck-screen-icon-02-currency {
+    mask-image: url("./spell-deck-screen-icon-02-currency.svg");
+  }
+  &.icon-spell-deck {
+    mask-image: url("./spell-deck.svg");
+  }
+  &.icon-tome {
+    mask-image: url("./tome.svg");
+  }
+  &.icon-player {
+    mask-image: url("./player.svg");
+  }
+  &.icon-wolf {
+    mask-image: url("./wolf.svg");
+  }
+  &.icon-sword {
+    mask-image: url("./sword.svg");
+  }
+  &.icon-armor {
+    mask-image: url("./armor.svg");
+  }
+  &.icon-misc-item {
+    mask-image: url("./misc-item.svg");
+  }
+  &.icon-triangle-up {
+    mask-image: url("./triangle-up.svg");
+  }
+  &.icon-triangle-down {
+    mask-image: url("./triangle-down.svg");
+  }
+  // Updated MLC icons.
+  &.mlc-icon-code-editor {
+    mask-image: url("./mlc-icon-code-editor.svg");
+  }
+  &.mlc-icon-docs {
+    mask-image: url("./mlc-icon-docs.svg");
+  }
+  &.mlc-icon-inventory {
+    mask-image: url("./mlc-icon-inventory.svg");
+  }
+  &.mlc-icon-settings {
+    mask-image: url("./mlc-icon-settings.svg");
+  }
+  &.mlc-icon-script {
+    mask-image: url("./mlc-icon-script.svg");
+  }
+  &.mlc-icon-dice {
+    mask-image: url("./mlc-icon-dice.svg");
+  }
+  &.add-tab-fill {
+    mask-image: url("./add-tab-fill.svg");
+  }
+  &.add-tab-stroke {
+    mask-image: url("./add-tab-stroke.svg");
+  }
+  &.address-book-fill {
+    mask-image: url("./address-book-fill.svg");
+  }
+  &.address-book-stroke {
+    mask-image: url("./address-book-stroke.svg");
+  }
+  &.air {
+    mask-image: url("./air.svg");
+  }
+  &.align-left-fill {
+    mask-image: url("./align-left-fill.svg");
+  }
+  &.align-left-stroke {
+    mask-image: url("./align-left-stroke.svg");
+  }
+  &.arrow-down-fill {
+    mask-image: url("./arrow-down-fill.svg");
+  }
+  &.arrow-down-stroke {
+    mask-image: url("./arrow-down-stroke.svg");
+  }
+  &.arrow-left-fill {
+    mask-image: url("./arrow-left-fill.svg");
+  }
+  &.arrow-left-stroke {
+    mask-image: url("./arrow-left-stroke.svg");
+  }
+  &.arrow-play-fill {
+    mask-image: url("./arrow-play-fill.svg");
+  }
+  &.arrow-play-stroke {
+    mask-image: url("./arrow-play-stroke.svg");
+  }
+  &.arrow-right-fill {
+    mask-image: url("./arrow-right-fill.svg");
+  }
+  &.arrow-right-stroke {
+    mask-image: url("./arrow-right-stroke.svg");
+  }
+  &.arrow-stop-fill {
+    mask-image: url("./arrow-stop-fill.svg");
+  }
+  &.arrow-stop-stroke {
+    mask-image: url("./arrow-stop-stroke.svg");
+  }
+  &.arrow-up-fill {
+    mask-image: url("./arrow-up-fill.svg");
+  }
+  &.arrow-up-stroke {
+    mask-image: url("./arrow-up-stroke.svg");
+  }
+  &.block-fill {
+    mask-image: url("./block-fill.svg");
+  }
+  &.block-in-block {
+    mask-image: url("./block-in-block.svg");
+  }
+  &.book-fill {
+    mask-image: url("./book-fill.svg");
+  }
+  &.book-half-fill {
+    mask-image: url("./book-half-fill.svg");
+  }
+  &.book-stroke {
+    mask-image: url("./book-stroke.svg");
+  }
+  &.bug-fill {
+    mask-image: url("./bug-fill.svg");
+  }
+  &.bug-stroke {
+    mask-image: url("./bug-stroke.svg");
+  }
+  &.check-fill {
+    mask-image: url("./check-fill.svg");
+  }
+  &.check-stroke {
+    mask-image: url("./check-stroke.svg");
+  }
+  &.chevron-up-fill {
+    mask-image: url("./chevron-up-fill.svg");
+  }
+  &.chevron-up-stroke {
+    mask-image: url("./chevron-up-stroke.svg");
+  }
+  &.clock-fill {
+    mask-image: url("./clock-fill.svg");
+  }
+  &.clock-stroke {
+    mask-image: url("./clock-stroke.svg");
+  }
+  &.close-fill {
+    mask-image: url("./close-fill.svg");
+  }
+  &.close-stroke {
+    mask-image: url("./close-stroke.svg");
+  }
+  &.coding-fill {
+    mask-image: url("./coding-fill.svg");
+  }
+  &.coding-stroke {
+    mask-image: url("./coding-stroke.svg");
+  }
+  &.control {
+    mask-image: url("./control.svg");
+  }
+  &.currency-a {
+    mask-image: url("./currency-a.svg");
+  }
+  &.currency-b {
+    mask-image: url("./currency-b.svg");
+  }
+  &.currency-c {
+    mask-image: url("./currency-c.svg");
+  }
+  &.currency-d {
+    mask-image: url("./currency-d.svg");
+  }
+  &.double-arrow-fill {
+    mask-image: url("./double-arrow-fill.svg");
+  }
+  &.double-arrow-stroke {
+    mask-image: url("./double-arrow-stroke.svg");
+  }
+  &.exclamation-fill {
+    mask-image: url("./exclamation-fill.svg");
+  }
+  &.exclamation-stroke {
+    mask-image: url("./exclamation-stroke.svg");
+  }
+  &.file-fill {
+    mask-image: url("./file-fill.svg");
+  }
+  &.file-stroke {
+    mask-image: url("./file-stroke.svg");
+  }
+  &.globe-fill {
+    mask-image: url("./globe-fill.svg");
+  }
+  &.globe-stroke {
+    mask-image: url("./globe-stroke.svg");
+  }
+  &.game-logo {
+    mask-image: url("./os-logo-white.png");
+  }
+  &.grid-fill {
+    mask-image: url("./grid-fill.svg");
+  }
+  &.grid-stroke {
+    mask-image: url("./grid-stroke.svg");
+  }
+  &.healing {
+    mask-image: url("./healing.svg");
+  }
+  &.ice {
+    mask-image: url("./ice.svg");
+  }
+  &.inventory-fill {
+    mask-image: url("./inventory-fill.svg");
+  }
+  &.inventory-stroke {
+    mask-image: url("./inventory-stroke.svg");
+  }
+  &.keyboard-fill {
+    mask-image: url("./keyboard-fill.svg");
+  }
+  &.keyboard-stroke {
+    mask-image: url("./keyboard-stroke.svg");
+  }
+  &.level-select-fill {
+    mask-image: url("./level-select-fill.svg");
+  }
+  &.level-select-stroke {
+    mask-image: url("./level-select-stroke.svg");
+  }
+  &.lightning {
+    mask-image: url("./lightning.svg");
+  }
+  &.list-view-fill {
+    mask-image: url("./list-view-fill.svg");
+  }
+  &.list-view-stroke {
+    mask-image: url("./list-view-stroke.svg");
+  }
+  &.load-spell-fill {
+    mask-image: url("./load-spell-fill.svg");
+  }
+  &.load-spell-stroke {
+    mask-image: url("./load-spell-stroke.svg");
+  }
+  &.location-search-fill {
+    mask-image: url("./location-search-fill.svg");
+  }
+  &.location-search-stroke {
+    mask-image: url("./location-search-stroke.svg");
+  }
+  &.new-spell-page-fill {
+    mask-image: url("./new-spell-page-fill.svg");
+  }
+  &.new-spell-page-stroke {
+    mask-image: url("./new-spell-page-stroke.svg");
+  }
+  &.pause-fill {
+    mask-image: url("./pause-fill.svg");
+  }
+  &.pause-stroke {
+    mask-image: url("./pause-stroke.svg");
+  }
+  &.pen-fill {
+    mask-image: url("./pen-fill.svg");
+  }
+  &.pen-stroke {
+    mask-image: url("./pen-stroke.svg");
+  }
+  &.question-fill {
+    mask-image: url("./question-fill.svg");
+  }
+  &.question-stroke {
+    mask-image: url("./question-stroke.svg");
+  }
+  &.redo-fill {
+    mask-image: url("./redo-fill.svg");
+  }
+  &.redo-stroke {
+    mask-image: url("./redo-stroke.svg");
+  }
+  &.save-spell-fill {
+    mask-image: url("./save-spell-fill.svg");
+  }
+  &.save-spell-stroke {
+    mask-image: url("./save-spell-stroke.svg");
+  }
+  &.search-fill {
+    mask-image: url("./search-fill.svg");
+  }
+  &.search-stroke {
+    mask-image: url("./search-stroke.svg");
+  }
+  &.settings-fill {
+    mask-image: url("./settings-fill.svg");
+  }
+  &.settings-stroke {
+    mask-image: url("./settings-stroke.svg");
+  }
+  &.skills-fill {
+    mask-image: url("./skills-fill.svg");
+  }
+  &.skills-stroke {
+    mask-image: url("./skills-stroke.svg");
+  }
+  &.speed-fill {
+    mask-image: url("./speed-fill.svg");
+  }
+  &.speed-stroke {
+    mask-image: url("./speed-stroke.svg");
+  }
+  &.stone {
+    mask-image: url("./stone.svg");
+  }
+  &.sync-fill {
+    mask-image: url("./sync-fill.svg");
+  }
+  &.sync-stroke {
+    mask-image: url("./sync-stroke.svg");
+  }
+  &.terminal-fill {
+    mask-image: url("./terminal-fill.svg");
+  }
+  &.terminal-stroke {
+    mask-image: url("./terminal-stroke.svg");
+  }
+  &.trash-fill {
+    mask-image: url("./trash-fill.svg");
+  }
+  &.trash-stroke {
+    mask-image: url("./trash-stroke.svg");
+  }
+  &.water {
+    mask-image: url("./water.svg");
+  }
+}
+
+.icon-size-font {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.icon-size-fill {
+  width: 100%;
+  height: 100%;
+}

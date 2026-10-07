@@ -1,0 +1,3 @@
+build
+src/docs/indexedDocs/docTypes.ts
+src/scripting/generated/spellTypes.d.ts

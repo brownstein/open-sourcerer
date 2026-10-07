@@ -1,0 +1,41 @@
+import { Icon } from "src/components/ui/icons/Icon";
+import banner from "src/docs/media/en/index/banner.jpg";
+
+export const meta = {
+	title: "Documentation Hub",
+	subtitle: "Your gateway to knowledge. Learn, explore, master the art of code.",
+	iconName: "fileFilled",
+	bannerImage: banner
+};
+
+<Box className="doc-width-full">
+<DocNavTileGrid>
+	<DocNavTile docId="tutorials/index" icon={<Icon icon="wolf" />} >
+		<h3>Tutorials</h3>
+		Step-by-step lessons to build your JavaScript skills.
+	</DocNavTile>
+	<DocNavTile docId="javascript/index" icon={<Icon icon="fileLines" />} >
+		<h3>JavaScript Language Reference</h3>
+		JavaScript skills for the battle to come.
+	</DocNavTile>
+	<DocNavTile docId="spell-api-guides/index" icon={<Icon icon="wizardHat" />} >
+		<h3>Spell APIs</h3>
+		Reference all components, functions, and properties.
+	</DocNavTile>
+	{/* <DocNavTile docId="beastiary/index" icon={<Icon icon="bugs" />} >
+		<h3>Beastiary</h3>
+		Review 
+	</DocNavTile>
+	<DocNavTile docId="mechanics/index" icon={<Icon icon="wolf" />} >
+		<h3>Mechanics</h3>
+		Step-by-step lessons to build your JavaScript skills.
+	</DocNavTile>
+	<DocNavTile docId="lore/index" icon={<Icon icon="wolf" />} >
+		<h3>Lore</h3>
+		Step-by-step lessons to build your JavaScript skills.
+	</DocNavTile> */}
+	<DocNavList />
+	<DocNavList />
+	<DocNavList />
+</DocNavTileGrid>
+</Box>

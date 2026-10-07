@@ -1,0 +1,104 @@
+.entity-code-modal-layout {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4pt;
+}
+
+.entity-code-modal-preface {
+  width: 100%;
+  height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.entity-code-modal-preface-inner {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8pt;
+}
+
+.entity-code-modal-preface-inner > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4pt;
+}
+
+.entity-code-modal-prompt {
+  white-space: pre-wrap;
+}
+
+.entity-code-modal-text-editor {
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.entity-code-modal-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.entity-code-modal-variables {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2em;
+}
+
+.entity-code-modal-variables > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+
+.entity-code-modal-variables h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.entity-code-modal-variables ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+.entity-code-modal-variables ul > li {
+  font-weight: bold;
+}
+
+.entity-code-modal-layout .operator-override {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

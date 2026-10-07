@@ -1,0 +1,164 @@
+{ "frames": {
+   "(aura) 0": {
+    "frame": { "x": 2, "y": 2, "w": 55, "h": 46 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 7, "y": 2, "w": 55, "h": 46 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 1": {
+    "frame": { "x": 61, "y": 2, "w": 61, "h": 52 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 0, "w": 61, "h": 52 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 2": {
+    "frame": { "x": 126, "y": 2, "w": 58, "h": 51 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 6, "y": 1, "w": 58, "h": 51 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 3": {
+    "frame": { "x": 188, "y": 2, "w": 54, "h": 53 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 8, "y": 3, "w": 54, "h": 53 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 4": {
+    "frame": { "x": 2, "y": 59, "w": 50, "h": 52 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 11, "y": 5, "w": 50, "h": 52 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 5": {
+    "frame": { "x": 56, "y": 59, "w": 30, "h": 42 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 14, "y": 12, "w": 30, "h": 42 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 6": {
+    "frame": { "x": 90, "y": 59, "w": 19, "h": 16 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 22, "y": 23, "w": 19, "h": 16 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 7": {
+    "frame": { "x": 113, "y": 59, "w": 20, "h": 21 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 22, "y": 22, "w": 20, "h": 21 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 8": {
+    "frame": { "x": 137, "y": 59, "w": 28, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 18, "w": 28, "h": 28 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 9": {
+    "frame": { "x": 169, "y": 59, "w": 41, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 9, "y": 10, "w": 41, "h": 48 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 10": {
+    "frame": { "x": 2, "y": 115, "w": 54, "h": 61 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 1, "w": 54, "h": 61 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 11": {
+    "frame": { "x": 60, "y": 115, "w": 61, "h": 63 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 61, "h": 63 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 12": {
+    "frame": { "x": 125, "y": 115, "w": 40, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 12, "y": 3, "w": 40, "h": 48 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 13": {
+    "frame": { "x": 169, "y": 115, "w": 42, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 11, "y": 3, "w": 42, "h": 49 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 14": {
+    "frame": { "x": 2, "y": 182, "w": 40, "h": 43 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 12, "y": 10, "w": 40, "h": 43 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 15": {
+    "frame": { "x": 46, "y": 182, "w": 40, "h": 43 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 12, "y": 10, "w": 40, "h": 43 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 16": {
+    "frame": { "x": 90, "y": 182, "w": 36, "h": 45 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 14, "y": 8, "w": 36, "h": 45 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   },
+   "(aura) 17": {
+    "frame": { "x": 130, "y": 182, "w": 38, "h": 47 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 5, "w": 38, "h": 47 },
+    "sourceSize": { "w": 64, "h": 64 },
+    "duration": 70
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.7-arm64",
+  "image": "manaball.png",
+  "format": "RGBA8888",
+  "size": { "w": 256, "h": 231 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Form", "from": 0, "to": 11, "direction": "forward", "color": "#000000ff" },
+   { "name": "Loop", "from": 12, "to": 17, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "aura", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

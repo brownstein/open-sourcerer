@@ -1,0 +1,337 @@
+skeleton.png
+size:1044,142
+filter:Linear,Linear
+pma:true
+Images/Arm8_1
+bounds:1019,22,8,22
+rotate:90
+Images/Arm8_2
+bounds:1009,7,7,23
+Images/Arm8_3
+bounds:399,73,5,20
+rotate:90
+Images/Bottom_body_2
+bounds:131,3,67,64
+Images/Bottom_body_3
+bounds:89,70,69,66
+rotate:90
+Images/Bottom_body_Cannon_2back
+bounds:286,3,66,62
+offsets:0,2,67,64
+rotate:90
+Images/Bottom_body_Cannon_2front
+bounds:652,93,42,46
+offsets:25,0,67,64
+Images/Bottom_body_cannon_1
+bounds:971,4,26,23
+offsets:17,0,43,45
+rotate:90
+Images/Bottom_body_cannon_11
+bounds:465,30,42,44
+offsets:1,1,43,45
+Images/Bottom_body_cannon_3back
+bounds:158,71,68,66
+offsets:0,0,69,66
+rotate:90
+Images/Bottom_body_cannon_3front
+bounds:201,4,35,64
+offsets:34,0,69,66
+Images/Cannons/Big cannon shoot/Cannon_shoot_big_000
+bounds:13,65,74,35
+rotate:90
+Images/Cannons/Big cannon shoot/Cannon_shoot_big_008
+bounds:13,65,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_008
+bounds:13,65,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_009
+bounds:13,65,74,35
+rotate:90
+Images/Cannons/Big cannon shoot/Cannon_shoot_big_001
+bounds:496,87,52,35
+offsets:22,0,74,35
+rotate:90
+Images/Cannons/Big cannon shoot/Cannon_shoot_big_005
+bounds:496,87,52,35
+offsets:22,0,74,35
+rotate:90
+Images/Cannons/Big cannon shoot/Cannon_shoot_big_002
+bounds:614,91,48,35
+offsets:26,0,74,35
+rotate:90
+Images/Cannons/Big cannon shoot/Cannon_shoot_big_003
+bounds:737,93,46,35
+offsets:28,0,74,35
+rotate:90
+Images/Cannons/Big cannon shoot/Cannon_shoot_big_004
+bounds:576,89,50,35
+offsets:24,0,74,35
+rotate:90
+Images/Cannons/Big cannon shoot/Cannon_shoot_big_006
+bounds:404,82,57,35
+offsets:17,0,74,35
+rotate:90
+Images/Cannons/Big cannon shoot/Cannon_shoot_big_007
+bounds:351,7,63,35
+offsets:11,0,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_000
+bounds:748,40,38,35
+offsets:36,0,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_001
+bounds:786,40,38,35
+offsets:36,0,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_002
+bounds:815,101,38,35
+offsets:36,0,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_003
+bounds:633,31,43,35
+offsets:31,0,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_004
+bounds:458,86,53,35
+offsets:21,0,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_005
+bounds:427,15,55,35
+offsets:19,0,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_006
+bounds:389,7,63,35
+offsets:11,0,74,35
+rotate:90
+Images/Cannons/Big cannon/Cannon_out_big_007
+bounds:51,67,72,35
+offsets:2,0,74,35
+rotate:90
+Images/Cannons/Small cannon shoot/Cannon_small_shoot_000
+bounds:697,93,46,37
+offsets:0,0,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_028
+bounds:697,93,46,37
+offsets:0,0,48,37
+rotate:90
+Images/Cannons/Small cannon shoot/Cannon_small_shoot_001
+bounds:553,30,44,37
+offsets:2,0,48,37
+rotate:90
+Images/Cannons/Small cannon shoot/Cannon_small_shoot_002
+bounds:46,3,43,37
+offsets:3,0,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_000
+bounds:537,3,24,20
+offsets:22,9,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_001
+bounds:670,3,25,21
+offsets:21,8,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_002
+bounds:1010,62,27,22
+offsets:20,7,48,37
+Images/Cannons/Small cannon/Cannon_small_003
+bounds:578,4,28,23
+offsets:19,7,48,37
+Images/Cannons/Small cannon/Cannon_small_004
+bounds:473,3,29,24
+offsets:19,7,48,37
+Images/Cannons/Small cannon/Cannon_small_005
+bounds:505,3,29,24
+offsets:19,7,48,37
+Images/Cannons/Small cannon/Cannon_small_006
+bounds:1012,87,28,23
+offsets:20,7,48,37
+Images/Cannons/Small cannon/Cannon_small_007
+bounds:913,10,28,26
+offsets:19,6,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_008
+bounds:640,3,25,27
+offsets:20,6,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_009
+bounds:984,71,23,28
+offsets:21,5,48,37
+Images/Cannons/Small cannon/Cannon_small_010
+bounds:984,71,23,28
+offsets:21,5,48,37
+Images/Cannons/Small cannon/Cannon_small_011
+bounds:609,3,25,28
+offsets:20,5,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_012
+bounds:1012,113,26,28
+offsets:20,5,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_013
+bounds:734,6,26,30
+offsets:20,4,48,37
+Images/Cannons/Small cannon/Cannon_small_014
+bounds:801,3,26,34
+offsets:20,2,48,37
+Images/Cannons/Small cannon/Cannon_small_015
+bounds:933,42,26,37
+offsets:20,0,48,37
+Images/Cannons/Small cannon/Cannon_small_016
+bounds:954,102,26,37
+offsets:20,0,48,37
+Images/Cannons/Small cannon/Cannon_small_017
+bounds:983,102,26,37
+offsets:20,0,48,37
+Images/Cannons/Small cannon/Cannon_small_018
+bounds:962,42,26,37
+offsets:20,0,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_019
+bounds:1002,33,26,37
+offsets:20,0,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_020
+bounds:923,102,28,37
+offsets:18,0,48,37
+Images/Cannons/Small cannon/Cannon_small_021
+bounds:891,102,29,37
+offsets:17,0,48,37
+Images/Cannons/Small cannon/Cannon_small_022
+bounds:873,9,29,37
+offsets:17,0,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_023
+bounds:901,41,29,37
+offsets:17,0,48,37
+Images/Cannons/Small cannon/Cannon_small_024
+bounds:694,3,30,37
+offsets:16,0,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_025
+bounds:862,41,36,37
+offsets:10,0,48,37
+Images/Cannons/Small cannon/Cannon_small_026
+bounds:593,31,43,37
+offsets:3,0,48,37
+rotate:90
+Images/Cannons/Small cannon/Cannon_small_027
+bounds:775,94,45,37
+offsets:1,0,48,37
+rotate:90
+Images/Eye_big
+bounds:422,73,6,11
+rotate:90
+Images/Eyes_sockets
+bounds:942,4,26,26
+Images/Eyes_sockets_bottom
+bounds:1019,8,11,20
+rotate:90
+Images/Gear
+bounds:70,49,15,13
+rotate:90
+Images/Inner_canon
+bounds:824,40,38,35
+rotate:90
+Images/Inner_canon1
+bounds:853,101,38,35
+rotate:90
+Images/Leg1_1
+bounds:427,3,9,43
+rotate:90
+Images/Leg1_2
+bounds:13,49,13,54
+rotate:90
+Images/Leg1_3
+bounds:724,39,9,39
+Images/Leg_1
+bounds:671,31,9,43
+Images/Leg_2
+bounds:442,85,13,54
+Images/Leg_3
+bounds:736,39,9,39
+Images/Neck
+bounds:819,81,17,23
+rotate:90
+Images/Upper_body_1
+bounds:510,30,44,40
+rotate:90
+Images/Upper_body_2
+bounds:227,71,68,56
+rotate:90
+Images/Upper_body_3
+bounds:239,5,63,44
+rotate:90
+Images/Upper_body_cannon_1
+bounds:3,3,43,40
+offsets:1,0,44,40
+rotate:90
+Images/Upper_body_cannon_1_back
+bounds:683,36,42,38
+offsets:0,0,44,40
+rotate:90
+Images/Upper_body_cannon_2
+bounds:286,72,67,53
+offsets:1,3,68,56
+rotate:90
+Images/Upper_body_cannon_2_back
+bounds:342,73,66,54
+offsets:0,0,68,56
+rotate:90
+Images/Upper_body_cannon_3
+bounds:534,89,50,39
+offsets:13,5,63,44
+rotate:90
+Images/Upper_body_cannon_3_back
+bounds:86,3,61,42
+offsets:0,0,63,44
+rotate:90
+Images/Wire_large1
+bounds:3,49,90,2
+rotate:90
+Images/Wire_large2
+bounds:8,50,89,2
+rotate:90
+Images/Wire_normal1
+bounds:399,81,58,2
+rotate:90
+Images/Wire_vary_large1
+bounds:496,82,144,2
+Images/Wire_vary_large2
+bounds:643,86,144,2
+Images/Wire_vary_large3
+bounds:672,81,144,2
+Images/Wire_very_very_large1
+bounds:436,77,233,2
+Images/Wires_head
+bounds:763,3,35,34
+Images/base_head
+bounds:830,3,34,19
+rotate:90
+Images/base_head_bottom
+bounds:852,3,34,18
+rotate:90
+Images/modem1_bottom
+bounds:934,83,16,16
+Images/modem1_midle
+bounds:892,81,18,20
+rotate:90
+Images/modem1_up
+bounds:915,82,17,16
+rotate:90
+Images/modem2_bottom
+bounds:845,81,17,23
+rotate:90
+Images/modem2_up
+bounds:560,3,24,15
+rotate:90
+Images/modem3_bottom
+bounds:953,84,15,28
+rotate:90
+Images/modem3_midle
+bounds:871,81,17,18
+rotate:90
+Images/modem3_up
+bounds:997,7,23,9
+rotate:90

@@ -1,0 +1,19 @@
+.code-editor-options-menu {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+  --text-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.code-editor-font-size-options {
+  display: flex;
+  & > * {
+    margin-right: 8px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

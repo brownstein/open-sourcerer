@@ -1,0 +1,81 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+package-lock.json
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.eslintcache
+tsconfig.tsbuildinfo
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# vim
+*.swp
+## ctags
+tags
+
+.vscode/launch.json
+*.tiled-session
+*.tiled-project
+
+.history
+*.orig
+
+# Cursor IDE
+.cursor/
+.cursor/**
+
+# Claude
+.claude/
+.claude-code-mcp.log
+
+# Screenshots
+screenshots/
+
+# Playwright MCP
+.playwright-mcp/
+
+# Vite
+.vite/
+
+# Compiled TypeScript artifacts
+# scripts/ts/*.js — compiled by `npm run scripts:compile`, regenerate from .ts sources
+# src/**/*.js (excluding .raw.js) — stale tsc output; Vite builds from .ts directly
+scripts/ts/*.js
+src/api/data.js
+src/api/docs.js
+src/api/skillNode.js
+src/components/skill-tree/SkillTreeParser.js
+src/components/skill-tree/data/skill-list.js
+src/docs/indexedDocs/docTypes.js
+src/engine/level/tiled/tiledJson.js
+src/entities/metadata/metadataTypes.js
+src/scripting/core/computeImports.js
+src/scripting/core/apiManifest.js
+src/scripting/core/spellApiManifests.js
+
+# Electron (forge output + compiled main/preload)
+out/
+.webpack/
+electron-dist/
+
+# Steam SDK
+steampipe/sdk/
+steampipe/content/
+steampipe/output

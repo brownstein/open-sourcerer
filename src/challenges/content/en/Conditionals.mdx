@@ -1,0 +1,83 @@
+# Conditionals in JavaScript
+Conditionals, also known as if/then statements, are a basic logical building block
+of complex code. They consist of a condition, or logical statement, followed by a
+code block or subsequent statement. If, (condition), then (do something), except
+we don't use "then", we use a series of parenthesis and curly braces.
+
+Let's look at an example:
+
+<ExampleCode>
+```javascript
+var something = true;
+if (something) {
+  console.log("Something was truthy.");
+}
+
+var somethingElse = false;
+if (!somethingElse) {
+  console.log("Something else was falsy.");
+}
+```
+</ExampleCode>
+
+
+In this example, we're hard-coding values, but we hold on, we're building a basic
+understanding here. Let's look at another simple example with some math.
+
+<ExampleCode>
+```javascript
+var x = 5;
+var y = x + 2;
+if (y > 6) {
+  console.log("Y is greater than 6");
+}
+```
+</ExampleCode>
+
+## If/Else
+
+You can also execute logic if a given condition is false. Let's take a look at an example:
+
+<ExampleCode>
+```javascript
+var falsey = false;
+if (falsey) {
+  console.log("Falsy was truthy.");
+} else {
+  console.log("Falsy was falsy.");
+}
+```
+</ExampleCode>
+
+You can also add conditions for else blocks with the `else if` construct, as in this example:
+
+<ExampleCode>
+```javascript
+var one = 1;
+if (1 === 2) {
+  // won't run
+  console.log("One is 2.");
+} else if (1 === 1) {
+  // Will run.
+  console.log("One is 1.");
+} else {
+  // won't run
+  console.log("One is not 1 or 2.");
+}
+```
+</ExampleCode>
+
+Whoah, that was easy, right? Good! Let's do a quick quiz so we can move on to loops!
+
+<Question id="whatsIf">
+  What's an "if statement"?
+  <Answer correct>
+    A mechanism to conditionally execute a code block.
+  </Answer>
+  <Answer>
+    A mechanism that will always execute a code block.
+  </Answer>
+</Question>
+
+I'm also going to need you to test a conditional in the code editor to verify you know
+how to type an if statement.

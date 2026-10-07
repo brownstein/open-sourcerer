@@ -1,0 +1,81 @@
+.ui-bar-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.ui-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ui-bar-filled-bg-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2.5px;
+  box-sizing: border-box;
+}
+
+.ui-bar-filled-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ui-bar-filled {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: width 200ms ease-out;
+}
+
+.ui-bar-filled-chunk {
+  position: absolute;
+  height: 100%;
+}
+
+.ui-bar-tint {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 2.5px;
+  box-sizing: border-box;
+  animation-name: ui-bar-tint-flash;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+@keyframes ui-bar-tint-flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ui-bar-numeric-value {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}

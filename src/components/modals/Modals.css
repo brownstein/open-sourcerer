@@ -1,0 +1,64 @@
+.modal-overlays {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.modal-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay .modal-overlay-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  animation-timing-function: ease;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  pointer-events: auto;
+}
+
+.modal-overlay.opening .modal-overlay-bg {
+  animation-name: fade-in;
+}
+
+.modal-overlay.closing .modal-overlay-bg {
+  animation-name: fade-out;
+}
+

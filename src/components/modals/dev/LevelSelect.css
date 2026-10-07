@@ -1,0 +1,110 @@
+.level-select-modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: monospace;
+  font-size: 12px;
+  color: #e0e0e0;
+  gap: 6px;
+  overflow: hidden;
+}
+
+/*
+ * The LevelLoadList renders bare .level-load-picker-search and
+ * .level-load-picker-list children. Inside the modal we want the list to
+ * fill all remaining space rather than the popover's fixed 360px panel.
+ */
+.level-select-modal .level-load-picker-search {
+  background: #0f1626;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+  padding: 6px 8px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 13px;
+  outline: none;
+}
+
+.level-select-modal .level-load-picker-search:focus {
+  border-color: #e94560;
+}
+
+.level-select-modal .level-load-picker-list {
+  overflow: auto;
+  background: #0f1626;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.level-select-modal .level-load-picker-empty {
+  padding: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.level-select-modal .level-load-picker-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  font-family: monospace;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.level-select-modal .level-load-picker-row:hover {
+  background: rgba(233, 69, 96, 0.18);
+}
+
+.level-select-modal .level-load-picker-thumb {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level-select-modal .level-load-picker-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.level-select-modal .level-load-picker-thumb-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 28px;
+}
+
+.level-select-modal .level-load-picker-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.level-select-modal .level-load-picker-id {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.level-select-modal .level-load-picker-name {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

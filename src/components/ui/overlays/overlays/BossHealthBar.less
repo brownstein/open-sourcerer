@@ -1,0 +1,36 @@
+.boss-health-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  width: 100%;
+}
+
+.boss-health-bar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -40px;
+  width: 80%;
+  opacity: 0;
+  align-items: center;
+  
+  transition: bottom 1000ms linear, opacity 1000ms linear;
+
+  &.initialized {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .boss-health-bar-name {
+    font-family: "Geo";
+    font-size: 32px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}

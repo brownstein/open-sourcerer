@@ -1,0 +1,2221 @@
+{
+"skeleton": {
+	"hash": "NWmRO9daHvc",
+	"spine": "4.2.43",
+	"x": -183.31,
+	"y": -166.94,
+	"width": 461.7,
+	"height": 318.31,
+	"images": "./Spine/Pieces/",
+	"audio": "./audio"
+},
+"bones": [
+	{ "name": "root" },
+	{
+		"name": "Abdomen",
+		"parent": "root",
+		"length": 31.76,
+		"rotation": 95.43,
+		"x": 0.05,
+		"y": 1.73,
+		"color": "f3ff00ff"
+	},
+	{
+		"name": "Chest",
+		"parent": "Abdomen",
+		"length": 20.54,
+		"rotation": -6.36,
+		"x": 32.31,
+		"y": 0.67,
+		"color": "fff602ff"
+	},
+	{
+		"name": "robot_neck",
+		"parent": "Chest",
+		"length": 28.51,
+		"rotation": 9.58,
+		"x": 30.78,
+		"y": -11.93,
+		"color": "fff602ff"
+	},
+	{
+		"name": "robot_head",
+		"parent": "robot_neck",
+		"length": 44.98,
+		"rotation": -10.67,
+		"x": 31.17,
+		"y": -4.45,
+		"color": "fff602ff"
+	},
+	{
+		"name": "L_IK_shoulder",
+		"parent": "Chest",
+		"rotation": -9.68,
+		"x": 15.4,
+		"y": -67.5,
+		"color": "004effff",
+		"icon": "ik"
+	},
+	{
+		"name": "left_arm",
+		"parent": "L_IK_shoulder",
+		"length": 65.89,
+		"rotation": -178.55,
+		"x": -0.27,
+		"y": 0.04,
+		"color": "004effff"
+	},
+	{
+		"name": "left_forearm_1",
+		"parent": "left_arm",
+		"length": 79.85,
+		"rotation": -75.73,
+		"x": 65.47,
+		"y": 0.02,
+		"inherit": "noScale",
+		"color": "004effff",
+		"icon": "ik"
+	},
+	{
+		"name": "L_IK_target",
+		"parent": "root",
+		"rotation": -174.89,
+		"x": -5.22,
+		"y": -16.54,
+		"color": "06ffddff",
+		"icon": "crosshair"
+	},
+	{
+		"name": "L_IK_hand",
+		"parent": "L_IK_target",
+		"rotation": -15.98,
+		"x": 0.01,
+		"y": -3.5,
+		"color": "1205ffff",
+		"icon": "ik"
+	},
+	{
+		"name": "left_hand",
+		"parent": "L_IK_hand",
+		"length": 34.84,
+		"rotation": 6.93,
+		"x": -3.84,
+		"y": -0.06,
+		"color": "004effff"
+	},
+	{
+		"name": "R_IK_shoulder",
+		"parent": "Chest",
+		"rotation": -9.68,
+		"x": 30.66,
+		"y": 32.81,
+		"color": "ff0000ff",
+		"icon": "ik"
+	},
+	{ "name": "R_arm_1", "parent": "R_IK_shoulder", "length": 57.91, "rotation": 89.58, "x": -0.01, "color": "ff0000ff" },
+	{
+		"name": "R_forearm",
+		"parent": "R_arm_1",
+		"length": 57.56,
+		"rotation": -1.37,
+		"x": 57.79,
+		"y": -0.1,
+		"inherit": "noScale",
+		"color": "ff0000ff"
+	},
+	{
+		"name": "R_Arm_target",
+		"parent": "root",
+		"rotation": 167.59,
+		"x": -125.12,
+		"y": 19.54,
+		"color": "06ffddff",
+		"icon": "crosshair"
+	},
+	{
+		"name": "R_IK_hand",
+		"parent": "R_Arm_target",
+		"rotation": -0.82,
+		"x": 1.4,
+		"y": 1.21,
+		"color": "ff0000ff",
+		"icon": "ik"
+	},
+	{
+		"name": "right_hand",
+		"parent": "R_IK_hand",
+		"length": 39.08,
+		"rotation": 3.69,
+		"x": -5.4,
+		"y": -1,
+		"inherit": "noScale",
+		"color": "ff0000ff"
+	},
+	{
+		"name": "R_IK_elbow",
+		"parent": "root",
+		"rotation": 178.64,
+		"x": 81.91,
+		"y": -197.91,
+		"color": "ff0000ff",
+		"icon": "ik"
+	},
+	{
+		"name": "R_shoulder2",
+		"parent": "R_IK_shoulder",
+		"length": 58.87,
+		"rotation": 71.85,
+		"x": 1.38,
+		"y": 1.33,
+		"color": "ff0000ff"
+	},
+	{
+		"name": "R_shoulder3",
+		"parent": "R_shoulder2",
+		"length": 60.89,
+		"rotation": 34.88,
+		"x": 59.54,
+		"y": 0.74,
+		"color": "ff0000ff"
+	},
+	{
+		"name": "Big_piston",
+		"parent": "R_Arm_target",
+		"length": 162.5,
+		"rotation": 0.14,
+		"x": -0.06,
+		"y": -0.52,
+		"color": "ff0000ff"
+	},
+	{
+		"name": "Big_piston2",
+		"parent": "Big_piston",
+		"length": 163.2,
+		"rotation": -0.96,
+		"x": 162.07,
+		"y": -0.16,
+		"color": "ff0000ff"
+	},
+	{
+		"name": "bone6",
+		"parent": "R_Arm_target",
+		"length": 324.58,
+		"rotation": -0.38,
+		"x": 0.31,
+		"y": -0.19,
+		"color": "ff0000ff"
+	},
+	{
+		"name": "R_Piston_midle",
+		"parent": "bone6",
+		"rotation": 0.57,
+		"x": 162.12,
+		"y": 1.28,
+		"color": "24ff00ff",
+		"icon": "ik"
+	},
+	{ "name": "right_elbow", "parent": "R_forearm", "x": -0.27, "y": 11.72, "color": "ff0000ff" },
+	{
+		"name": "L_IK_elbow",
+		"parent": "root",
+		"rotation": -89.58,
+		"x": 74.26,
+		"y": 1.33,
+		"color": "ff0000ff",
+		"icon": "ik"
+	},
+	{
+		"name": "L_shoulder2",
+		"parent": "L_IK_shoulder",
+		"length": 61.02,
+		"rotation": 161.23,
+		"x": 0.22,
+		"y": 0.5,
+		"color": "004effff"
+	},
+	{ "name": "L_shoulder3", "parent": "L_shoulder2", "length": 62.26, "rotation": -42.6, "x": 61.02, "color": "004effff" },
+	{
+		"name": "Big_piston_L",
+		"parent": "L_IK_target",
+		"length": 133.67,
+		"rotation": -16.31,
+		"x": -0.06,
+		"y": 0.03,
+		"color": "1205ffff"
+	},
+	{
+		"name": "Small_piston_L",
+		"parent": "Big_piston_L",
+		"length": 161.72,
+		"rotation": 0.33,
+		"x": 132.93,
+		"y": -0.15,
+		"color": "1205ffff"
+	},
+	{
+		"name": "L_hand_taget_bone",
+		"parent": "L_IK_target",
+		"length": 294.75,
+		"rotation": -15.94,
+		"x": 0.4,
+		"y": -1.41,
+		"color": "0524ffff"
+	},
+	{
+		"name": "L_Piston_midle",
+		"parent": "L_hand_taget_bone",
+		"rotation": -0.36,
+		"x": 132.83,
+		"y": 0.22,
+		"color": "04ff2dff",
+		"icon": "ik"
+	},
+	{ "name": "Eye", "parent": "robot_head", "x": -0.79, "y": 34.15, "color": "fff602ff" },
+	{ "name": "Shoulder_controller", "parent": "Chest", "rotation": -0.52, "x": 19.14, "y": 0.12, "color": "fff602ff" },
+	{
+		"name": "bone2",
+		"parent": "Shoulder_controller",
+		"length": 67.71,
+		"rotation": -94.4,
+		"x": 0.09,
+		"y": -0.05,
+		"color": "fff602ff"
+	},
+	{
+		"name": "bone3",
+		"parent": "Shoulder_controller",
+		"length": 34.12,
+		"rotation": 61.83,
+		"x": 0.08,
+		"y": -0.04,
+		"color": "fff602ff"
+	}
+],
+"slots": [
+	{ "name": "R_arm_1", "bone": "R_arm_1", "attachment": "Right Arm/right_arm_1" },
+	{ "name": "right_hand", "bone": "right_hand", "attachment": "Right Arm/right_hand_1" },
+	{ "name": "R_forearm", "bone": "R_forearm", "attachment": "Right Arm/right_forearm_1" },
+	{ "name": "right_elbow", "bone": "right_elbow", "attachment": "Right Arm/right_elbow" },
+	{ "name": "right_wrist_side", "bone": "R_forearm", "attachment": "Right Arm/right_wrist_side" },
+	{ "name": "robot_trunk_1", "bone": "root", "attachment": "robot_trunk_4" },
+	{ "name": "Big_piston_R", "bone": "Big_piston", "attachment": "Piston/Big_piston" },
+	{ "name": "Big_piston_L", "bone": "Big_piston_L", "attachment": "Piston/Big_piston" },
+	{ "name": "Small_piston_R", "bone": "Big_piston2", "attachment": "Piston/Small_piston" },
+	{ "name": "Small_piston_L", "bone": "Small_piston_L", "attachment": "Piston/Small_piston" },
+	{ "name": "hip1", "bone": "root", "attachment": "Body/hip1" },
+	{ "name": "robot_chest", "bone": "Chest", "attachment": "Body/robot_chest" },
+	{ "name": "right_shoulder", "bone": "R_IK_shoulder", "attachment": "Right Arm/right_shoulder" },
+	{ "name": "robot_neck", "bone": "robot_neck", "attachment": "Body/robot_neck" },
+	{ "name": "robot_head", "bone": "robot_head", "attachment": "Body/robot_head" },
+	{ "name": "right_wrist_front", "bone": "root" },
+	{ "name": "left_arm", "bone": "left_arm", "attachment": "Left arm/left_arm_4" },
+	{ "name": "left_shoulder", "bone": "L_IK_shoulder", "attachment": "Left arm/left_shoulder" },
+	{ "name": "left_hand", "bone": "left_hand", "attachment": "Left arm/left_hand_1" },
+	{ "name": "left_forearm_1", "bone": "left_forearm_1", "attachment": "Left arm/left_forearm_5" },
+	{ "name": "left_elbow", "bone": "left_forearm_1", "attachment": "Left arm/left_elbow" },
+	{ "name": "left_wrist", "bone": "left_forearm_1", "attachment": "Left arm/left_wrist" },
+	{ "name": "Sprite-0005", "bone": "root" }
+],
+"ik": [
+	{
+		"name": "Ik_limiter_R",
+		"order": 6,
+		"bones": [ "bone6" ],
+		"target": "R_IK_hand",
+		"compress": true,
+		"stretch": true
+	},
+	{
+		"name": "IK_limiter_R",
+		"order": 15,
+		"bones": [ "L_hand_taget_bone" ],
+		"target": "L_IK_hand",
+		"compress": true,
+		"stretch": true
+	},
+	{
+		"name": "IK_L_arm",
+		"order": 12,
+		"bones": [ "left_arm" ],
+		"target": "L_IK_elbow",
+		"compress": true,
+		"stretch": true
+	},
+	{
+		"name": "Ik_L_arm_respaldo",
+		"order": 10,
+		"bones": [ "L_shoulder2", "L_shoulder3" ],
+		"target": "L_IK_target",
+		"bendPositive": false,
+		"stretch": true
+	},
+	{
+		"name": "IK_L_B_piston",
+		"order": 16,
+		"bones": [ "Big_piston_L" ],
+		"target": "L_Piston_midle",
+		"compress": true,
+		"stretch": true
+	},
+	{
+		"name": "IK_L_forearm",
+		"order": 13,
+		"bones": [ "left_forearm_1" ],
+		"target": "L_IK_target"
+	},
+	{
+		"name": "IK_L_shoulder",
+		"order": 19,
+		"bones": [ "bone2" ],
+		"target": "L_IK_shoulder"
+	},
+	{
+		"name": "IK_L_S_piston",
+		"order": 17,
+		"bones": [ "Small_piston_L" ],
+		"target": "L_IK_hand",
+		"compress": true,
+		"stretch": true
+	},
+	{
+		"name": "Ik_R_arm",
+		"order": 3,
+		"bones": [ "R_arm_1" ],
+		"target": "R_IK_elbow",
+		"compress": true,
+		"stretch": true
+	},
+	{
+		"name": "Ik_R_arm_respaldo",
+		"order": 1,
+		"bones": [ "R_shoulder2", "R_shoulder3" ],
+		"target": "R_Arm_target"
+	},
+	{
+		"name": "IK_R_B_piston",
+		"order": 7,
+		"bones": [ "Big_piston" ],
+		"target": "R_Piston_midle",
+		"compress": true,
+		"stretch": true
+	},
+	{
+		"name": "IK_R_forearm",
+		"order": 4,
+		"bones": [ "R_forearm" ],
+		"target": "R_Arm_target"
+	},
+	{
+		"name": "IK_R_s_piston",
+		"order": 8,
+		"bones": [ "Big_piston2" ],
+		"target": "R_IK_hand",
+		"compress": true,
+		"stretch": true
+	},
+	{
+		"name": "R_shoulder",
+		"order": 18,
+		"bones": [ "bone3" ],
+		"target": "R_IK_shoulder"
+	}
+],
+"transform": [
+	{
+		"name": "C_shoulder",
+		"order": 9,
+		"bones": [ "L_IK_shoulder" ],
+		"target": "Shoulder_controller",
+		"y": -64.81,
+		"mixRotate": 0.5,
+		"mixX": 0.5,
+		"mixScaleX": 0.5,
+		"mixShearY": 0.5
+	},
+	{
+		"name": "left_forearm_1",
+		"order": 14,
+		"bones": [ "L_IK_target" ],
+		"target": "left_forearm_1",
+		"mixX": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "right_forearm",
+		"order": 5,
+		"bones": [ "R_Arm_target" ],
+		"target": "R_forearm",
+		"mixX": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "T_L_arm",
+		"order": 11,
+		"bones": [ "L_IK_elbow" ],
+		"target": "L_shoulder3",
+		"mixRotate": 0.8,
+		"mixX": 0.8,
+		"mixScaleX": 0,
+		"mixScaleY": -1.7126,
+		"mixShearY": 0
+	},
+	{
+		"name": "T_L_shoulder",
+		"bones": [ "R_IK_shoulder" ],
+		"target": "Shoulder_controller",
+		"x": 5.14,
+		"y": 35.6,
+		"mixRotate": 0.5,
+		"mixX": 0.5,
+		"mixScaleX": 0.5,
+		"mixShearY": 0.5
+	},
+	{
+		"name": "T_R_arm",
+		"order": 2,
+		"bones": [ "R_IK_elbow" ],
+		"target": "R_shoulder3",
+		"mixRotate": 0.8,
+		"mixX": 0.8,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	}
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Big_piston_L": {
+				"Piston/Big_piston": { "x": 51.07, "y": 0.63, "rotation": -179.43, "width": 174, "height": 20 }
+			},
+			"Big_piston_R": {
+				"Piston/Big_piston": { "x": 80.96, "y": 1.13, "rotation": 179.23, "width": 174, "height": 20 }
+			},
+			"hip1": {
+				"Body/hip1": { "x": 10.74, "y": 7.67, "width": 104, "height": 44 },
+				"Body/hip2": { "path": "Body/hip1", "x": -16.08, "y": 60.42, "width": 104, "height": 44 }
+			},
+			"left_arm": {
+				"Left arm/left_arm_1": { "x": -60.05, "y": -11.7, "rotation": 100.71, "width": 143, "height": 62 },
+				"Left arm/left_arm_2": { "x": -55.94, "y": -6.71, "rotation": 100.71, "width": 143, "height": 62 },
+				"Left arm/left_arm_3": { "x": -59.19, "y": 8.27, "rotation": 100.71, "width": 143, "height": 62 },
+				"Left arm/left_arm_4": { "x": 34.8, "y": -0.01, "rotation": 168.25, "width": 66, "height": 45 }
+			},
+			"left_elbow": {
+				"Left arm/left_elbow": { "x": -5.37, "y": 4.56, "rotation": 172.46, "width": 21, "height": 23 }
+			},
+			"left_forearm_1": {
+				"Left arm/left_forearm_1": { "x": 44.46, "y": -8.39, "rotation": 172.46, "width": 126, "height": 92 },
+				"Left arm/left_forearm_2": { "x": 44.46, "y": -8.39, "rotation": 172.46, "width": 126, "height": 92 },
+				"Left arm/left_forearm_3": { "x": 44.46, "y": -8.39, "rotation": 172.46, "width": 126, "height": 92 },
+				"Left arm/left_forearm_4": { "x": -0.52, "y": -60.93, "rotation": 173.11, "width": 126, "height": 92 },
+				"Left arm/left_forearm_5": { "x": 37.79, "y": -5.99, "rotation": 172.46, "width": 126, "height": 92 },
+				"Left arm/left_forearm_6": { "x": 44.46, "y": -8.39, "rotation": 172.46, "width": 126, "height": 92 },
+				"Left arm/left_forearm_7": { "x": 44.46, "y": -8.39, "rotation": 172.46, "width": 126, "height": 92 }
+			},
+			"left_hand": {
+				"Left arm/left_hand_1": { "x": 34.18, "y": -5.42, "rotation": 173.86, "width": 74, "height": 47 },
+				"Left arm/left_hand_2": { "x": -34.82, "y": -9.41, "rotation": 173.86, "width": 74, "height": 47 },
+				"Left arm/left_hand_3": { "x": -34.82, "y": -9.41, "rotation": 173.86, "width": 74, "height": 47 },
+				"Left arm/left_hand_4": { "x": -34.82, "y": -9.41, "rotation": 173.86, "width": 74, "height": 47 },
+				"Left arm/left_hand_5": { "x": -34.82, "y": -9.41, "rotation": 173.86, "width": 74, "height": 47 }
+			},
+			"left_shoulder": {
+				"Left arm/left_shoulder": { "x": 8.66, "y": 10.59, "rotation": -92.43, "width": 74, "height": 66 }
+			},
+			"left_wrist": {
+				"Left arm/left_wrist": { "x": 73.09, "y": -2.49, "rotation": 163.34, "width": 15, "height": 43 }
+			},
+			"right_elbow": {
+				"Right Arm/right_elbow": { "x": -0.4, "y": 1.25, "rotation": 141.49, "width": 23, "height": 19 }
+			},
+			"right_hand": {
+				"Right Arm/right_hand_1": { "x": 26.58, "y": -0.79, "rotation": -175.86, "width": 66, "height": 47 },
+				"Right Arm/right_hand_2": { "x": 31.04, "y": -1.79, "rotation": 178.48, "width": 66, "height": 49 },
+				"Right Arm/right_hand_3": { "x": 33, "y": -1.81, "rotation": -161.37, "width": 66, "height": 49 },
+				"Right Arm/right_hand_4": { "x": 20.66, "y": -4.88, "rotation": 92.27, "width": 66, "height": 49 }
+			},
+			"right_shoulder": {
+				"Arm_leght/Sprite-0005": { "x": -0.1, "y": -0.02, "rotation": -83.97, "width": 248, "height": 248 },
+				"Right Arm/right_shoulder": {
+					"x": 5.39,
+					"y": 4.55,
+					"scaleX": 0.9946,
+					"scaleY": 0.9946,
+					"rotation": -92.43,
+					"width": 43,
+					"height": 53
+				}
+			},
+			"right_wrist_side": {
+				"Right Arm/right_wrist_side": { "x": 55.63, "y": 1.15, "rotation": 175.47, "width": 15, "height": 43 }
+			},
+			"robot_chest": {
+				"Body/robot_chest": {
+					"type": "mesh",
+					"uvs": [ 0.44771, 0.03554, 0.30124, 0.06802, 0.13584, 0.15957, 0.05314, 0.26293, 0.00309, 0.40468, 0.01229, 0.49476, 0.05114, 0.57449, 0.12787, 0.70443, 0.15776, 0.76497, 0.20459, 0.85357, 0.24843, 0.93626, 0.29725, 0.98794, 0.35803, 0.94069, 0.47162, 0.8831, 0.51945, 0.87867, 0.59318, 0.92592, 0.65795, 0.96431, 0.77254, 0.97317, 0.84228, 0.86686, 0.88214, 0.76645, 0.90406, 0.63651, 0.93594, 0.49181, 0.97181, 0.34415, 0.98477, 0.25998, 1, 0.13152, 0.96185, 0.07541, 0.90406, 0.04735, 0.82136, 0.01782, 0.7277, 0.01044, 0.63802, 0.02373, 0.54934, 0.02225 ],
+					"triangles": [ 23, 25, 24, 23, 26, 25, 26, 22, 27, 23, 22, 26, 22, 21, 27, 21, 28, 27, 20, 28, 21, 20, 29, 28, 20, 14, 29, 14, 20, 15, 15, 20, 19, 13, 0, 14, 18, 15, 19, 13, 12, 9, 16, 15, 18, 17, 16, 18, 12, 10, 9, 11, 10, 12, 8, 13, 9, 14, 0, 30, 0, 13, 1, 30, 29, 14, 6, 5, 4, 3, 6, 4, 2, 6, 3, 7, 6, 2, 1, 7, 2, 13, 8, 7, 7, 1, 13 ],
+					"vertices": [ 2, 3, 19.17, -2.24, 0.99672, 34, 10.62, 30.87, 0.00328, 3, 35, 14.83, -28.28, 0.42618, 3, 21.89, 15.77, 0.57078, 34, -7.6, 31.01, 0.00304, 2, 35, 34.45, -18.95, 0.89977, 3, 20.61, 37.45, 0.10023, 2, 35, 43.84, -9.53, 0.98753, 3, 15.4, 49.69, 0.01247, 2, 35, 48.96, 2.73, 0.99381, 2, 33.74, 47.58, 0.00619, 2, 35, 47.18, 10.08, 0.96852, 2, 26.19, 48.04, 0.03148, 2, 35, 41.85, 16.26, 0.89251, 2, 18.72, 44.76, 0.10749, 3, 35, 31.52, 26.19, 0.60338, 2, 6.19, 37.79, 0.39566, 1, 42.66, 37.55, 9.6E-4, 3, 35, 27.42, 30.88, 0.45527, 2, 0.51, 35.25, 0.5348, 1, 36.73, 35.65, 0.00993, 3, 35, 21.05, 37.7, 0.26951, 2, -7.89, 31.16, 0.67098, 1, 27.93, 32.52, 0.05951, 3, 35, 15.08, 44.08, 0.07981, 2, -15.73, 27.33, 0.35, 1, 19.71, 29.58, 0.57019, 1, 1, 13.74, 25.24, 1, 1, 1, 15.09, 16.91, 1, 1, 1, 15.2, 2.14, 1, 2, 1, 13.68, -3.56, 0.96285, 34, 8.42, -39.63, 0.03715, 2, 1, 7.09, -10.92, 0.82818, 34, 16.77, -44.92, 0.17182, 2, 1, 1.54, -17.46, 0.74518, 34, 24.14, -49.31, 0.25482, 2, 1, -3.62, -30.6, 0.64202, 34, 37.95, -52.23, 0.35798, 2, 1, 2.03, -41.53, 0.53972, 34, 47.8, -44.85, 0.46028, 2, 1, 8.38, -48.82, 0.4298, 34, 53.94, -37.39, 0.5702, 2, 1, 17.76, -54.79, 0.26954, 34, 58.28, -27.15, 0.73046, 2, 1, 27.91, -62.32, 0.0879, 34, 64.03, -15.9, 0.9121, 2, 1, 38.13, -70.39, 0.00407, 34, 70.3, -4.48, 0.99593, 1, 34, 72.96, 2.17, 1, 2, 3, -8.4, -64.84, 8.0E-4, 34, 76.47, 12.41, 0.9992, 2, 3, -2.57, -61.72, 0.00521, 34, 72.57, 17.74, 0.99479, 2, 3, 1.74, -55.61, 0.02201, 34, 65.91, 21.15, 0.97799, 2, 3, 7.07, -46.61, 0.08237, 34, 56.24, 25.15, 0.91763, 2, 3, 11.05, -35.77, 0.22775, 34, 44.96, 27.56, 0.77225, 2, 3, 13.23, -24.91, 0.49739, 34, 33.89, 28.19, 0.50261, 2, 3, 16.55, -14.52, 0.8273, 34, 23.14, 30.01, 0.1727 ],
+					"hull": 31,
+					"edges": [ 0, 2, 2, 4, 4, 6, 6, 8, 8, 10, 10, 12, 12, 14, 14, 16, 16, 18, 18, 20, 20, 22, 22, 24, 24, 26, 26, 28, 28, 30, 30, 32, 32, 34, 34, 36, 36, 38, 38, 40, 40, 42, 42, 44, 44, 46, 46, 48, 48, 50, 50, 52, 52, 54, 54, 56, 56, 58, 58, 60, 0, 60 ],
+					"width": 123,
+					"height": 83
+				}
+			},
+			"robot_head": {
+				"Body/robot_head": { "x": 9.05, "y": 11.24, "rotation": -92.59, "width": 79, "height": 86 }
+			},
+			"robot_neck": {
+				"Body/robot_neck": { "x": 14.03, "y": 3.4, "rotation": -110.88, "width": 42, "height": 47 }
+			},
+			"robot_trunk_1": {
+				"robot_trunk_1": { "x": 56, "y": 130.5, "width": 390, "height": 277 },
+				"robot_trunk_2": { "width": 390, "height": 277 },
+				"robot_trunk_3": { "width": 390, "height": 277 },
+				"robot_trunk_4": { "x": 82.93, "y": -27.79, "rotation": -0.19, "width": 390, "height": 277 }
+			},
+			"R_arm_1": {
+				"Right Arm/right_arm_1": { "x": 28.43, "y": 2.31, "rotation": 109.1, "width": 46, "height": 69 },
+				"Right Arm/right_arm_2": {
+					"x": 31.96,
+					"y": 2.71,
+					"scaleX": 0.9946,
+					"scaleY": 0.9946,
+					"rotation": 179.79,
+					"width": 83,
+					"height": 41
+				}
+			},
+			"R_forearm": {
+				"Right Arm/right_forearm_1": { "x": 24.52, "y": 17.32, "rotation": 96.97, "width": 75, "height": 71 },
+				"Right Arm/right_forearm_2": { "x": 27.41, "y": 13.87, "rotation": 175.47, "width": 75, "height": 71 },
+				"Right Arm/right_forearm_3": { "x": -18.96, "y": -58.38, "rotation": 175.47, "width": 75, "height": 71 }
+			},
+			"Small_piston_L": {
+				"Piston/Small_piston": { "x": 82.2, "y": 0.47, "rotation": 179.68, "width": 165, "height": 14 }
+			},
+			"Small_piston_R": {
+				"Piston/Small_piston": { "x": 82.42, "y": 0.14, "rotation": -179.81, "width": 165, "height": 14 }
+			}
+		}
+	}
+],
+"animations": {
+	"Idle": {
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 20.26, "y": -15.61 },
+					{ "time": 0.6667, "x": 34.81, "y": -59.74, "curve": "stepped" },
+					{ "time": 0.8333, "x": 34.81, "y": -59.74 },
+					{ "time": 1.5667, "x": 20.26, "y": -15.61 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 5.19, "y": -19.03 },
+					{ "time": 0.6667, "x": 4.07, "y": -9.59, "curve": "stepped" },
+					{ "time": 0.8333, "x": 4.07, "y": -9.59 },
+					{ "time": 1.5667, "x": 5.19, "y": -19.03 }
+				]
+			},
+			"R_Arm_target": {
+				"rotate": [
+					{ "value": -345.62, "curve": "stepped" },
+					{
+						"time": 0.0667,
+						"value": -345.62,
+						"curve": [ 0.267, -345.62, 0.667, 1851.01 ]
+					},
+					{
+						"time": 0.6667,
+						"value": 2.68,
+						"curve": [ 0.667, -461.77, 0.778, 2.68 ]
+					},
+					{
+						"time": 0.8333,
+						"value": 2.68,
+						"curve": [ 1.056, 2.68, 1.278, -345.62 ]
+					},
+					{ "time": 1.5, "value": -345.62 }
+				],
+				"translate": [
+					{ "x": 12.06, "y": -6.61, "curve": "stepped" },
+					{ "time": 0.0667, "x": 12.06, "y": -6.61 },
+					{ "time": 0.6667, "x": 20.12, "y": 6.22, "curve": "stepped" },
+					{ "time": 0.8333, "x": 20.12, "y": 6.22 },
+					{ "time": 1.5, "x": 12.06, "y": -6.61 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": 4.65 },
+					{ "time": 0.6667, "value": 2.64, "curve": "stepped" },
+					{ "time": 0.8333, "value": 2.64 },
+					{ "time": 1.5667, "value": 4.65 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{},
+					{ "time": 0.7333, "value": -6.73 },
+					{ "time": 1.5667 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "value": 3.56, "curve": "stepped" },
+					{ "time": 0.8333, "value": 3.56 },
+					{ "time": 1.5667 }
+				]
+			},
+			"Shoulder_controller": {
+				"translate": [
+					{ "x": -6.65, "y": 0.06 },
+					{ "time": 0.6667, "x": -3.13, "y": 0.03, "curve": "stepped" },
+					{ "time": 0.8333, "x": -3.13, "y": 0.03 },
+					{ "time": 1.5667, "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "value": -1.9, "curve": "stepped" },
+					{ "time": 0.8333, "value": -1.9 },
+					{ "time": 1.5667 }
+				]
+			},
+			"right_elbow": {
+				"rotate": [
+					{ "time": 0.0333 },
+					{ "time": 0.6667, "value": 38.38, "curve": "stepped" },
+					{ "time": 0.8, "value": 38.38 },
+					{ "time": 1.5333 }
+				]
+			}
+		}
+	},
+	"Laser": {
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 20.26, "y": -15.61 },
+					{ "time": 0.1, "x": -98.04, "y": -167.92 },
+					{ "time": 0.1667, "x": -243.75, "y": -214.72 },
+					{ "time": 0.3333, "x": -369.44, "y": 106.6, "curve": "stepped" },
+					{ "time": 0.5, "x": -369.44, "y": 106.6 },
+					{ "time": 0.6, "x": 20.26, "y": -15.61 },
+					{ "time": 0.7, "x": 244.52, "y": 434.68 },
+					{ "time": 0.8333, "x": 235.72, "y": 486.78 },
+					{ "time": 0.9667, "x": 244.52, "y": 434.68 },
+					{ "time": 1.1, "x": 235.72, "y": 486.78 },
+					{ "time": 1.2333, "x": 244.52, "y": 434.68 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 5.19, "y": -19.03 },
+					{ "time": 0.3333, "x": -13.45, "y": 149.6, "curve": "stepped" },
+					{ "time": 0.5, "x": -13.45, "y": 149.6 },
+					{ "time": 0.6, "x": 5.19, "y": -19.03 },
+					{ "time": 0.7, "x": 98.13, "y": 4.91 },
+					{ "time": 0.8333, "x": 102.35, "y": 17.23 },
+					{ "time": 0.9667, "x": 98.13, "y": 4.91 },
+					{ "time": 1.1, "x": 102.35, "y": 17.23 },
+					{ "time": 1.2333, "x": 98.13, "y": 4.91 }
+				]
+			},
+			"R_Arm_target": {
+				"rotate": [
+					{ "value": -345.62 }
+				],
+				"translate": [
+					{ "x": 12.06, "y": -6.61 },
+					{ "time": 0.3333, "x": 57.22, "y": 120.34, "curve": "stepped" },
+					{ "time": 0.5, "x": 57.22, "y": 120.34 },
+					{ "time": 0.6, "x": 12.06, "y": -6.61 },
+					{ "time": 0.7, "x": 130.7, "y": -34.42 },
+					{ "time": 0.8333, "x": 140.91, "y": -21.4 },
+					{ "time": 0.9667, "x": 130.7, "y": -34.42 },
+					{ "time": 1.1, "x": 140.91, "y": -21.4 },
+					{ "time": 1.2333, "x": 130.7, "y": -34.42 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": 4.65 },
+					{ "time": 0.3333, "value": 19.32, "curve": "stepped" },
+					{ "time": 0.4333, "value": 19.32 },
+					{ "time": 0.5, "value": 25.84 },
+					{ "time": 0.6, "value": 4.65 },
+					{ "time": 0.7, "value": -15.05 },
+					{ "time": 0.8333, "value": -9.51 },
+					{ "time": 0.9667, "value": -15.05 },
+					{ "time": 1.1, "value": -9.51 },
+					{ "time": 1.2333, "value": -15.05 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -6.25, "curve": "stepped" },
+					{ "time": 0.4333, "value": -6.25 },
+					{ "time": 0.5, "value": -19.42 },
+					{ "time": 0.6, "curve": "stepped" },
+					{ "time": 0.7 },
+					{ "time": 0.8333, "value": 4.77 },
+					{ "time": 0.9667 },
+					{ "time": 1.1, "value": 4.77 },
+					{ "time": 1.2333 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 23.34, "curve": "stepped" },
+					{ "time": 0.5, "value": 23.34 },
+					{ "time": 0.6 },
+					{ "time": 0.7, "value": -15.46 },
+					{ "time": 0.8333, "value": -9.03 },
+					{ "time": 0.9667, "value": -15.46 },
+					{ "time": 1.1, "value": -9.03 },
+					{ "time": 1.2333, "value": -15.46 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{},
+					{ "time": 0.7, "value": 19.18 },
+					{ "time": 0.8333, "value": 25.19 },
+					{ "time": 0.9667, "value": 19.18 },
+					{ "time": 1.1, "value": 25.19 },
+					{ "time": 1.2333, "value": 19.18 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 },
+					{ "time": 0.3333, "x": -3.71, "y": -12.69, "curve": "stepped" },
+					{ "time": 0.5, "x": -3.71, "y": -12.69 },
+					{ "time": 0.6, "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -40.53, "curve": "stepped" },
+					{ "time": 0.4333, "value": -40.53 },
+					{ "time": 0.5, "value": -29.59 },
+					{ "time": 0.6 },
+					{ "time": 0.7, "value": 25.61 },
+					{ "time": 0.8333, "value": 29.59 },
+					{ "time": 0.9667, "value": 25.61 },
+					{ "time": 1.1, "value": 29.59 },
+					{ "time": 1.2333, "value": 25.61 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": -25.58, "y": -66.32 },
+					{ "time": 0.3333, "x": -272.85, "y": -108.95, "curve": "stepped" },
+					{ "time": 0.5, "x": -272.85, "y": -108.95 },
+					{ "time": 0.6 }
+				]
+			},
+			"L_IK_hand": {
+				"translate": [
+					{ "time": 0.6333, "x": 24.28, "y": 0.81 }
+				]
+			}
+		}
+	},
+	"R_cover_face": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "time": 0.3333, "name": "Right Arm/right_hand_3" },
+					{ "time": 0.9, "name": "Right Arm/right_hand_2" },
+					{ "time": 1.3333, "name": "Right Arm/right_hand_3" },
+					{ "time": 2.3333, "name": "Right Arm/right_hand_2" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -298.04 },
+					{ "time": 0.8333 },
+					{ "time": 1.3333, "value": -298.04 },
+					{ "time": 1.8333 },
+					{ "time": 2.3333, "value": -298.04 }
+				],
+				"translate": [
+					{ "x": -161.23, "y": 270.63 },
+					{ "time": 0.1667, "x": -200.07, "y": 99.76 },
+					{ "time": 0.2, "x": -216.71, "y": 109.3 },
+					{ "time": 0.2333, "x": -228.5, "y": 97.59 },
+					{ "time": 0.2667, "x": -241.79, "y": 107.3 },
+					{ "time": 0.3, "x": -209.34, "y": 118.03 },
+					{ "time": 0.3333, "x": -211.18, "y": 153.95 },
+					{ "time": 0.5667, "x": -316.59, "y": 152.37 },
+					{ "time": 0.8333, "x": -409.93, "y": 187.26 },
+					{ "time": 1.1, "x": -304.64, "y": 151.5 },
+					{ "time": 1.3333, "x": -211.18, "y": 153.95 },
+					{ "time": 1.5667, "x": -316.59, "y": 152.37 },
+					{ "time": 1.8333, "x": -409.93, "y": 187.26 },
+					{ "time": 2.1333, "x": -304.64, "y": 151.5 },
+					{ "time": 2.3333, "x": -211.18, "y": 153.95 }
+				]
+			},
+			"L_IK_target": {
+				"rotate": [
+					{ "time": 1.8333, "value": 52.76 }
+				],
+				"translate": [
+					{ "x": 5.19, "y": -19.03 },
+					{ "time": 0.3333, "x": 53.07, "y": -14.16 },
+					{ "time": 0.8333, "x": 86.06, "y": -7.48 },
+					{ "time": 1.3333, "x": 53.07, "y": -14.16 },
+					{ "time": 1.8333, "x": 86.06, "y": -7.48 },
+					{ "time": 2.3333, "x": 53.07, "y": -14.16 }
+				]
+			},
+			"R_Arm_target": {
+				"rotate": [
+					{ "value": -345.62, "curve": "stepped" },
+					{
+						"time": 0.0667,
+						"value": -345.62,
+						"curve": [ 0.302, -345.62, 0.532, 2.68 ]
+					},
+					{ "time": 0.8333, "value": 2.68 }
+				],
+				"translate": [
+					{ "x": 12.06, "y": -6.61, "curve": "stepped" },
+					{ "time": 0.0667, "x": 12.06, "y": -6.61 },
+					{ "time": 0.3333, "x": 32.18, "y": 36.56 },
+					{ "time": 0.8333, "x": 62.08, "y": 36.13 },
+					{ "time": 1.3333, "x": 32.18, "y": 36.56 },
+					{ "time": 1.8333, "x": 62.08, "y": 36.13 },
+					{ "time": 2.3333, "x": 32.18, "y": 36.56 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": 4.65 },
+					{ "time": 0.3333, "value": 2.64 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -6.12 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 3.56 }
+				]
+			},
+			"Shoulder_controller": {
+				"translate": [
+					{ "x": -6.65, "y": 0.06 },
+					{ "time": 0.8333, "x": -3.13, "y": 0.03 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "value": -1.9 }
+				]
+			},
+			"right_elbow": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 38.38 }
+				]
+			},
+			"L_IK_shoulder": {
+				"rotate": [
+					{ "time": 0.3333, "value": 4.58, "curve": "stepped" },
+					{ "time": 1.3333, "value": 4.58 },
+					{ "time": 1.8333, "value": 6.87 },
+					{ "time": 2.3333, "value": 4.58 }
+				],
+				"translate": [
+					{ "time": 0.3333, "x": 0.01, "y": 1.42, "curve": "stepped" },
+					{ "time": 1.3333, "x": 0.01, "y": 1.42 },
+					{ "time": 1.8333, "x": 0.02, "y": 2.13 },
+					{ "time": 2.3333, "x": 0.01, "y": 1.42 }
+				]
+			},
+			"left_arm": {
+				"rotate": [
+					{ "time": 0.3333, "value": 0.32, "curve": "stepped" },
+					{ "time": 1.3333, "value": 0.32 },
+					{ "time": 1.8333, "value": 35.57 },
+					{ "time": 2.3333, "value": 0.32 }
+				],
+				"scale": [
+					{ "time": 0.3333, "x": 0.877, "curve": "stepped" },
+					{ "time": 1.3333, "x": 0.877 },
+					{ "time": 1.8333, "x": 0.83 },
+					{ "time": 2.3333, "x": 0.877 }
+				]
+			},
+			"left_forearm_1": {
+				"rotate": [
+					{ "time": 0.3333, "value": 8.26, "curve": "stepped" },
+					{ "time": 1.3333, "value": 8.26 },
+					{ "time": 1.8333, "value": -14.56 },
+					{ "time": 2.3333, "value": 8.26 }
+				]
+			},
+			"R_IK_shoulder": {
+				"rotate": [
+					{ "time": 0.3333, "value": 4.58, "curve": "stepped" },
+					{ "time": 1.3333, "value": 4.58 },
+					{ "time": 1.8333, "value": 6.87 },
+					{ "time": 2.3333, "value": 4.58 }
+				],
+				"translate": [
+					{ "time": 0.3333, "x": -4.59, "y": 1.45, "curve": "stepped" },
+					{ "time": 1.3333, "x": -4.59, "y": 1.45 },
+					{ "time": 1.8333, "x": -6.89, "y": 2.17 },
+					{ "time": 2.3333, "x": -4.59, "y": 1.45 }
+				]
+			},
+			"R_arm_1": {
+				"rotate": [
+					{ "time": 0.3333, "value": 69.31, "curve": "stepped" },
+					{ "time": 1.3333, "value": 69.31 },
+					{ "time": 1.8333, "value": 61.09 },
+					{ "time": 2.3333, "value": 69.31 }
+				],
+				"scale": [
+					{ "time": 0.3333, "x": 0.821, "curve": "stepped" },
+					{ "time": 1.3333, "x": 0.821 },
+					{ "time": 1.8333, "x": 1.459 },
+					{ "time": 2.3333, "x": 0.821 }
+				]
+			},
+			"R_forearm": {
+				"rotate": [
+					{ "time": 0.3333, "value": -127.25, "curve": "stepped" },
+					{ "time": 1.3333, "value": -127.25 },
+					{ "time": 1.8333, "value": -125.39 },
+					{ "time": 2.3333, "value": -127.25 }
+				]
+			},
+			"Big_piston_L": {
+				"rotate": [
+					{ "time": 0.3333, "value": -61.89 }
+				],
+				"scale": [
+					{ "time": 0.3333, "x": 0.019 }
+				]
+			},
+			"Small_piston_L": {
+				"rotate": [
+					{ "time": 0.3333, "value": -0.86 }
+				],
+				"scale": [
+					{ "time": 0.3333, "x": 0.338 }
+				]
+			},
+			"Big_piston": {
+				"rotate": [
+					{ "time": 0.3333, "value": 92.99 }
+				],
+				"scale": [
+					{ "time": 0.3333, "x": 0.011 }
+				]
+			},
+			"Big_piston2": {
+				"rotate": [
+					{ "time": 0.3333, "value": -173.57 }
+				],
+				"scale": [
+					{ "time": 0.3333, "x": 0.089 }
+				]
+			},
+			"R_shoulder2": {
+				"rotate": [
+					{ "time": 1.8333, "value": 106.77 }
+				]
+			},
+			"R_shoulder3": {
+				"rotate": [
+					{ "time": 1.8333, "value": 168.8 }
+				]
+			},
+			"bone6": {
+				"rotate": [
+					{ "time": 1.8333, "value": 52.61 }
+				],
+				"scale": [
+					{ "time": 1.8333, "x": 0.005 }
+				]
+			},
+			"L_IK_elbow": {
+				"rotate": [
+					{ "time": 1.8333, "value": -30.12 }
+				],
+				"translate": [
+					{ "time": 1.8333, "x": 35.39, "y": 19.38 }
+				]
+			},
+			"L_shoulder2": {
+				"rotate": [
+					{ "time": 1.8333, "value": 87.84 }
+				]
+			},
+			"L_shoulder3": {
+				"rotate": [
+					{ "time": 1.8333, "value": -61.53 }
+				]
+			},
+			"L_hand_taget_bone": {
+				"rotate": [
+					{ "time": 1.8333, "value": -84.53 }
+				],
+				"scale": [
+					{ "time": 1.8333, "x": 0.007 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 1.8333, "value": 4.32 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{ "time": 1.8333, "value": 18.19 }
+				]
+			}
+		},
+		"ik": {
+			"Ik_R_arm_respaldo": [
+				{ "bendPositive": false }
+			]
+		},
+		"drawOrder": [
+			{
+				"time": 0.3333,
+				"offsets": [
+					{ "slot": "right_elbow", "offset": 8 },
+					{ "slot": "robot_trunk_1", "offset": -5 },
+					{ "slot": "hip1", "offset": -9 },
+					{ "slot": "robot_chest", "offset": -9 }
+				]
+			},
+			{
+				"time": 0.5667,
+				"offsets": [
+					{ "slot": "R_arm_1", "offset": 7 },
+					{ "slot": "right_hand", "offset": 10 },
+					{ "slot": "R_forearm", "offset": 10 },
+					{ "slot": "right_elbow", "offset": 11 },
+					{ "slot": "right_wrist_side", "offset": 9 }
+				]
+			},
+			{
+				"time": 1.3333,
+				"offsets": [
+					{ "slot": "right_elbow", "offset": 8 },
+					{ "slot": "robot_trunk_1", "offset": -5 },
+					{ "slot": "hip1", "offset": -9 },
+					{ "slot": "robot_chest", "offset": -9 }
+				]
+			},
+			{
+				"time": 1.5667,
+				"offsets": [
+					{ "slot": "R_arm_1", "offset": 7 },
+					{ "slot": "right_hand", "offset": 10 },
+					{ "slot": "R_forearm", "offset": 10 },
+					{ "slot": "right_elbow", "offset": 11 },
+					{ "slot": "right_wrist_side", "offset": 9 }
+				]
+			},
+			{
+				"time": 2.3333,
+				"offsets": [
+					{ "slot": "right_elbow", "offset": 8 },
+					{ "slot": "robot_trunk_1", "offset": -5 },
+					{ "slot": "hip1", "offset": -9 },
+					{ "slot": "robot_chest", "offset": -9 }
+				]
+			}
+		]
+	},
+	"R_Punch_anticipation": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "time": 0.2, "name": "Right Arm/right_hand_4" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 20.26, "y": -15.61 },
+					{ "time": 0.2667, "x": 19.28, "y": 21.96 },
+					{ "time": 0.6, "x": 172.21, "y": 46.15 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 5.19, "y": -19.03 },
+					{ "time": 0.1, "x": 5.19, "y": -18.5 },
+					{ "time": 0.2667, "x": 5.19, "y": -19.03 },
+					{ "time": 0.6, "x": 1.34, "y": -23.48 }
+				]
+			},
+			"R_Arm_target": {
+				"rotate": [
+					{ "value": -345.62, "curve": "stepped" },
+					{ "time": 0.2667, "value": -345.62 },
+					{ "time": 0.6, "value": -343.13 },
+					{ "time": 0.8, "value": -345.62 }
+				],
+				"translate": [
+					{ "x": 12.06, "y": -6.61 },
+					{ "time": 0.2667, "x": 20.88, "y": 21.82 },
+					{ "time": 0.6, "x": 81.2, "y": 47.84 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": 4.65, "curve": "stepped" },
+					{ "time": 0.2667, "value": 4.65 },
+					{ "time": 0.6, "value": -3.27 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{ "time": 0.2667 },
+					{ "time": 0.6, "value": -11.54 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{ "time": 0.2667 },
+					{ "time": 0.6, "value": 17.39 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{ "time": 0.6, "value": -6.38 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{},
+					{ "time": 0.6, "value": -12.1 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{ "y": 0.47 },
+					{ "time": 0.6, "x": 29.85, "y": -62.1 }
+				]
+			}
+		}
+	},
+	"R_Punch_down_no_IKtarget": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "name": "Right Arm/right_hand_4" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 172.21, "y": 46.15 },
+					{ "time": 0.1, "x": -137.83, "y": 166.21, "curve": "stepped" },
+					{ "time": 0.3333, "x": -137.83, "y": 166.21 },
+					{ "time": 0.8, "x": 172.21, "y": 46.15 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 1.34, "y": -23.48 },
+					{ "time": 0.1, "x": 53.25, "y": -28.43, "curve": "stepped" },
+					{ "time": 0.3333, "x": 53.25, "y": -28.43 },
+					{ "time": 0.8, "x": 1.34, "y": -23.48 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": -3.27 },
+					{ "time": 0.1, "value": 5.04, "curve": "stepped" },
+					{ "time": 0.3333, "value": 5.04 },
+					{ "time": 0.8, "value": -3.27 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{ "value": -11.54 },
+					{ "time": 0.1, "value": -6.22, "curve": "stepped" },
+					{ "time": 0.3333, "value": -6.22 },
+					{ "time": 0.8, "value": -11.54 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{ "value": 17.39 },
+					{ "time": 0.1, "value": 1.12, "curve": "stepped" },
+					{ "time": 0.3333, "value": 1.12 },
+					{ "time": 0.8, "value": 17.39 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{ "value": -6.38 },
+					{ "time": 0.1, "value": 18.49, "curve": "stepped" },
+					{ "time": 0.3333, "value": 18.49 },
+					{ "time": 0.8, "value": -6.38 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{ "value": -12.1 },
+					{ "time": 0.1, "value": 10.64, "curve": "stepped" },
+					{ "time": 0.3333, "value": 10.64 },
+					{ "time": 0.8, "value": -12.1 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{ "x": 29.85, "y": -62.1 }
+				]
+			},
+			"L_IK_hand": {
+				"translate": [
+					{},
+					{ "time": 0.1, "x": 14.53, "y": 3.26, "curve": "stepped" },
+					{ "time": 0.3333, "x": 14.53, "y": 3.26 },
+					{ "time": 0.8 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"offsets": [
+					{ "slot": "robot_trunk_1", "offset": -4 }
+				]
+			}
+		]
+	},
+	"R_Punch_down_with_IKtarget": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "name": "Right Arm/right_hand_4" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 172.21, "y": 46.15 },
+					{ "time": 0.1, "x": -137.83, "y": 166.21, "curve": "stepped" },
+					{ "time": 0.3333, "x": -137.83, "y": 166.21 },
+					{ "time": 0.8, "x": 172.21, "y": 46.15 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 1.34, "y": -23.48 },
+					{ "time": 0.1, "x": 53.25, "y": -28.43, "curve": "stepped" },
+					{ "time": 0.3333, "x": 53.25, "y": -28.43 },
+					{ "time": 0.8, "x": 1.34, "y": -23.48 }
+				]
+			},
+			"R_Arm_target": {
+				"rotate": [
+					{ "value": -343.13, "curve": "stepped" },
+					{ "time": 0.3333, "value": -343.13 },
+					{ "time": 0.8, "value": -345.62 }
+				],
+				"translate": [
+					{ "x": 81.2, "y": 47.84 },
+					{ "time": 0.1, "x": 48.56, "y": -96.73, "curve": "stepped" },
+					{ "time": 0.3333, "x": 48.56, "y": -96.73 },
+					{ "time": 0.8, "x": 81.2, "y": 47.84 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": -3.27 },
+					{ "time": 0.1, "value": 5.04, "curve": "stepped" },
+					{ "time": 0.3333, "value": 5.04 },
+					{ "time": 0.8, "value": -3.27 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{ "value": -11.54 },
+					{ "time": 0.1, "value": -6.22, "curve": "stepped" },
+					{ "time": 0.3333, "value": -6.22 },
+					{ "time": 0.8, "value": -11.54 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{ "value": 17.39 },
+					{ "time": 0.1, "value": 1.12, "curve": "stepped" },
+					{ "time": 0.3333, "value": 1.12 },
+					{ "time": 0.8, "value": 17.39 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{ "value": -6.38 },
+					{ "time": 0.1, "value": 18.49, "curve": "stepped" },
+					{ "time": 0.3333, "value": 18.49 },
+					{ "time": 0.8, "value": -6.38 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{ "value": -12.1 },
+					{ "time": 0.1, "value": 10.64, "curve": "stepped" },
+					{ "time": 0.3333, "value": 10.64 },
+					{ "time": 0.8, "value": -12.1 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{ "x": 29.85, "y": -62.1 }
+				]
+			},
+			"L_IK_hand": {
+				"translate": [
+					{},
+					{ "time": 0.1, "x": 14.53, "y": 3.26, "curve": "stepped" },
+					{ "time": 0.3333, "x": 14.53, "y": 3.26 },
+					{ "time": 0.8 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"offsets": [
+					{ "slot": "robot_trunk_1", "offset": -4 }
+				]
+			}
+		]
+	},
+	"R_Punch_front_no_IK_target": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "name": "Right Arm/right_hand_4" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 172.21, "y": 46.15 },
+					{ "time": 0.1, "x": -209.34, "y": 264.1, "curve": "stepped" },
+					{ "time": 0.3333, "x": -209.34, "y": 264.1 },
+					{ "time": 0.8, "x": 172.21, "y": 46.15 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 1.34, "y": -23.48 },
+					{ "time": 0.1, "x": 53.25, "y": -28.43, "curve": "stepped" },
+					{ "time": 0.3333, "x": 53.25, "y": -28.43 },
+					{ "time": 0.8, "x": 1.34, "y": -23.48 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": -3.27 },
+					{ "time": 0.1, "value": 5.04, "curve": "stepped" },
+					{ "time": 0.3333, "value": 5.04 },
+					{ "time": 0.8, "value": -3.27 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{ "value": -11.54 },
+					{ "time": 0.1, "value": -6.22, "curve": "stepped" },
+					{ "time": 0.3333, "value": -6.22 },
+					{ "time": 0.8, "value": -11.54 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{ "value": 17.39 },
+					{ "time": 0.1, "value": 1.12, "curve": "stepped" },
+					{ "time": 0.3333, "value": 1.12 },
+					{ "time": 0.8, "value": 17.39 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{ "value": -6.38 },
+					{ "time": 0.1, "value": 6.17, "curve": "stepped" },
+					{ "time": 0.3333, "value": 6.17 },
+					{ "time": 0.8, "value": -6.38 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{ "value": -12.1 },
+					{ "time": 0.1, "value": 10.64, "curve": "stepped" },
+					{ "time": 0.3333, "value": 10.64 },
+					{ "time": 0.8, "value": -12.1 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{ "x": 29.85, "y": -62.1 }
+				]
+			},
+			"L_IK_hand": {
+				"translate": [
+					{},
+					{ "time": 0.1, "x": 14.53, "y": 3.26, "curve": "stepped" },
+					{ "time": 0.3333, "x": 14.53, "y": 3.26 },
+					{ "time": 0.8 }
+				]
+			}
+		}
+	},
+	"R_Punch_front_with_IKtarget": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "name": "Right Arm/right_hand_4" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 172.21, "y": 46.15 },
+					{ "time": 0.1, "x": -209.34, "y": 264.1, "curve": "stepped" },
+					{ "time": 0.3333, "x": -209.34, "y": 264.1 },
+					{ "time": 0.8, "x": 172.21, "y": 46.15 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 1.34, "y": -23.48 },
+					{ "time": 0.1, "x": 53.25, "y": -28.43, "curve": "stepped" },
+					{ "time": 0.3333, "x": 53.25, "y": -28.43 },
+					{ "time": 0.8, "x": 1.34, "y": -23.48 }
+				]
+			},
+			"R_Arm_target": {
+				"rotate": [
+					{ "value": -343.13, "curve": "stepped" },
+					{ "time": 0.3333, "value": -343.13 },
+					{ "time": 0.8, "value": -345.62 }
+				],
+				"translate": [
+					{ "x": 81.2, "y": 47.84 },
+					{ "time": 0.1, "x": -47.02, "y": 31.65, "curve": "stepped" },
+					{ "time": 0.3333, "x": -47.02, "y": 31.65 },
+					{ "time": 0.8, "x": 81.2, "y": 47.84 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": -3.27 },
+					{ "time": 0.1, "value": 5.04, "curve": "stepped" },
+					{ "time": 0.3333, "value": 5.04 },
+					{ "time": 0.8, "value": -3.27 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{ "value": -11.54 },
+					{ "time": 0.1, "value": -6.22, "curve": "stepped" },
+					{ "time": 0.3333, "value": -6.22 },
+					{ "time": 0.8, "value": -11.54 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{ "value": 17.39 },
+					{ "time": 0.1, "value": 1.12, "curve": "stepped" },
+					{ "time": 0.3333, "value": 1.12 },
+					{ "time": 0.8, "value": 17.39 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{ "value": -6.38 },
+					{ "time": 0.1, "value": 6.17, "curve": "stepped" },
+					{ "time": 0.3333, "value": 6.17 },
+					{ "time": 0.8, "value": -6.38 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{ "value": -12.1 },
+					{ "time": 0.1, "value": 10.64, "curve": "stepped" },
+					{ "time": 0.3333, "value": 10.64 },
+					{ "time": 0.8, "value": -12.1 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{ "x": 29.85, "y": -62.1 }
+				]
+			},
+			"L_IK_hand": {
+				"translate": [
+					{},
+					{ "time": 0.1, "x": 14.53, "y": 3.26, "curve": "stepped" },
+					{ "time": 0.3333, "x": 14.53, "y": 3.26 },
+					{ "time": 0.8 }
+				]
+			}
+		}
+	},
+	"R_Punch_middown_no_IKtarget": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "name": "Right Arm/right_hand_4" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 172.21, "y": 46.15 },
+					{ "time": 0.1, "x": -208.93, "y": 204.37, "curve": "stepped" },
+					{ "time": 0.3333, "x": -208.93, "y": 204.37 },
+					{ "time": 0.8, "x": 172.21, "y": 46.15 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 1.34, "y": -23.48 },
+					{ "time": 0.1, "x": 53.25, "y": -28.43, "curve": "stepped" },
+					{ "time": 0.3333, "x": 53.25, "y": -28.43 },
+					{ "time": 0.8, "x": 1.34, "y": -23.48 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": -3.27 },
+					{ "time": 0.1, "value": 5.04, "curve": "stepped" },
+					{ "time": 0.3333, "value": 5.04 },
+					{ "time": 0.8, "value": -3.27 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{ "value": -11.54 },
+					{ "time": 0.1, "value": -6.22, "curve": "stepped" },
+					{ "time": 0.3333, "value": -6.22 },
+					{ "time": 0.8, "value": -11.54 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{ "value": 17.39 },
+					{ "time": 0.1, "value": 1.12, "curve": "stepped" },
+					{ "time": 0.3333, "value": 1.12 },
+					{ "time": 0.8, "value": 17.39 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{ "value": -6.38 },
+					{ "time": 0.1, "value": 17.7, "curve": "stepped" },
+					{ "time": 0.3333, "value": 17.7 },
+					{ "time": 0.8, "value": -6.38 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 },
+					{ "time": 0.1, "x": -5.8, "y": 2.47, "curve": "stepped" },
+					{ "time": 0.3333, "x": -5.8, "y": 2.47 },
+					{ "time": 0.8, "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{ "value": -12.1 },
+					{ "time": 0.1, "value": 10.64, "curve": "stepped" },
+					{ "time": 0.3333, "value": 10.64 },
+					{ "time": 0.8, "value": -12.1 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{ "x": 29.85, "y": -62.1 }
+				]
+			},
+			"L_IK_hand": {
+				"translate": [
+					{},
+					{ "time": 0.1, "x": 14.53, "y": 3.26, "curve": "stepped" },
+					{ "time": 0.3333, "x": 14.53, "y": 3.26 },
+					{ "time": 0.8 }
+				]
+			}
+		}
+	},
+	"R_Punch_middown_with_IKtarget": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "name": "Right Arm/right_hand_4" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 172.21, "y": 46.15 },
+					{ "time": 0.1, "x": -208.93, "y": 204.37, "curve": "stepped" },
+					{ "time": 0.3333, "x": -208.93, "y": 204.37 },
+					{ "time": 0.8, "x": 172.21, "y": 46.15 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 1.34, "y": -23.48 },
+					{ "time": 0.1, "x": 53.25, "y": -28.43, "curve": "stepped" },
+					{ "time": 0.3333, "x": 53.25, "y": -28.43 },
+					{ "time": 0.8, "x": 1.34, "y": -23.48 }
+				]
+			},
+			"R_Arm_target": {
+				"rotate": [
+					{ "value": -343.13, "curve": "stepped" },
+					{ "time": 0.3333, "value": -343.13 },
+					{ "time": 0.8, "value": -345.62 }
+				],
+				"translate": [
+					{ "x": 81.2, "y": 47.84 },
+					{ "time": 0.1, "x": -32.99, "y": -32.33, "curve": "stepped" },
+					{ "time": 0.3333, "x": -32.99, "y": -32.33 },
+					{ "time": 0.8, "x": 81.2, "y": 47.84 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": -3.27 },
+					{ "time": 0.1, "value": 5.04, "curve": "stepped" },
+					{ "time": 0.3333, "value": 5.04 },
+					{ "time": 0.8, "value": -3.27 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{ "value": -11.54 },
+					{ "time": 0.1, "value": -6.22, "curve": "stepped" },
+					{ "time": 0.3333, "value": -6.22 },
+					{ "time": 0.8, "value": -11.54 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{ "value": 17.39 },
+					{ "time": 0.1, "value": 1.12, "curve": "stepped" },
+					{ "time": 0.3333, "value": 1.12 },
+					{ "time": 0.8, "value": 17.39 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{ "value": -6.38 },
+					{ "time": 0.1, "value": 17.7, "curve": "stepped" },
+					{ "time": 0.3333, "value": 17.7 },
+					{ "time": 0.8, "value": -6.38 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 },
+					{ "time": 0.1, "x": -5.8, "y": 2.47, "curve": "stepped" },
+					{ "time": 0.3333, "x": -5.8, "y": 2.47 },
+					{ "time": 0.8, "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{ "value": -12.1 },
+					{ "time": 0.1, "value": 10.64, "curve": "stepped" },
+					{ "time": 0.3333, "value": 10.64 },
+					{ "time": 0.8, "value": -12.1 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{ "x": 29.85, "y": -62.1 }
+				]
+			},
+			"L_IK_hand": {
+				"translate": [
+					{},
+					{ "time": 0.1, "x": 14.53, "y": 3.26, "curve": "stepped" },
+					{ "time": 0.3333, "x": 14.53, "y": 3.26 },
+					{ "time": 0.8 }
+				]
+			}
+		}
+	},
+	"R_Punch_up_no_IKtarget": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "name": "Right Arm/right_hand_4" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 172.21, "y": 46.15 },
+					{ "time": 0.1, "x": -207.4, "y": 272.94, "curve": "stepped" },
+					{ "time": 0.3333, "x": -207.4, "y": 272.94 },
+					{ "time": 0.8, "x": 172.21, "y": 46.15 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 1.34, "y": -23.48 },
+					{ "time": 0.1, "x": 53.25, "y": -28.43, "curve": "stepped" },
+					{ "time": 0.3333, "x": 53.25, "y": -28.43 },
+					{ "time": 0.8, "x": 1.34, "y": -23.48 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": -3.27 },
+					{ "time": 0.1, "value": 5.04, "curve": "stepped" },
+					{ "time": 0.3333, "value": 5.04 },
+					{ "time": 0.8, "value": -3.27 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{ "value": -11.54 },
+					{ "time": 0.1, "value": -6.22, "curve": "stepped" },
+					{ "time": 0.3333, "value": -6.22 },
+					{ "time": 0.8, "value": -11.54 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{ "value": 17.39 },
+					{ "time": 0.1, "value": 1.12, "curve": "stepped" },
+					{ "time": 0.3333, "value": 1.12 },
+					{ "time": 0.8, "value": 17.39 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{ "value": -6.38 },
+					{ "time": 0.1, "value": -18.52, "curve": "stepped" },
+					{ "time": 0.3333, "value": -18.52 },
+					{ "time": 0.8, "value": -6.38 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{ "value": -12.1 },
+					{ "time": 0.1, "value": 10.64, "curve": "stepped" },
+					{ "time": 0.3333, "value": 10.64 },
+					{ "time": 0.8, "value": -12.1 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{ "x": 29.85, "y": -62.1 }
+				]
+			},
+			"L_IK_hand": {
+				"translate": [
+					{},
+					{ "time": 0.1, "x": 14.53, "y": 3.26, "curve": "stepped" },
+					{ "time": 0.3333, "x": 14.53, "y": 3.26 },
+					{ "time": 0.8 }
+				]
+			}
+		}
+	},
+	"R_Punch_up_with_IKtarget": {
+		"slots": {
+			"right_hand": {
+				"attachment": [
+					{ "name": "Right Arm/right_hand_4" }
+				]
+			}
+		},
+		"bones": {
+			"R_IK_elbow": {
+				"translate": [
+					{ "x": 172.21, "y": 46.15 },
+					{ "time": 0.1, "x": -207.4, "y": 272.94, "curve": "stepped" },
+					{ "time": 0.3333, "x": -207.4, "y": 272.94 },
+					{ "time": 0.8, "x": 172.21, "y": 46.15 }
+				]
+			},
+			"L_IK_target": {
+				"translate": [
+					{ "x": 1.34, "y": -23.48 },
+					{ "time": 0.1, "x": 53.25, "y": -28.43, "curve": "stepped" },
+					{ "time": 0.3333, "x": 53.25, "y": -28.43 },
+					{ "time": 0.8, "x": 1.34, "y": -23.48 }
+				]
+			},
+			"R_Arm_target": {
+				"rotate": [
+					{ "value": -343.13, "curve": "stepped" },
+					{ "time": 0.3333, "value": -343.13 },
+					{ "time": 0.8, "value": -345.62 }
+				],
+				"translate": [
+					{ "x": 81.2, "y": 47.84 },
+					{ "time": 0.1, "x": -37.79, "y": 78.22, "curve": "stepped" },
+					{ "time": 0.3333, "x": -37.79, "y": 78.22 },
+					{ "time": 0.8, "x": 81.2, "y": 47.84 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": -3.27 },
+					{ "time": 0.1, "value": 5.04, "curve": "stepped" },
+					{ "time": 0.3333, "value": 5.04 },
+					{ "time": 0.8, "value": -3.27 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{ "value": -11.54 },
+					{ "time": 0.1, "value": -6.22, "curve": "stepped" },
+					{ "time": 0.3333, "value": -6.22 },
+					{ "time": 0.8, "value": -11.54 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{ "value": 17.39 },
+					{ "time": 0.1, "value": 1.12, "curve": "stepped" },
+					{ "time": 0.3333, "value": 1.12 },
+					{ "time": 0.8, "value": 17.39 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{ "value": -6.38 },
+					{ "time": 0.1, "value": -18.52, "curve": "stepped" },
+					{ "time": 0.3333, "value": -18.52 },
+					{ "time": 0.8, "value": -6.38 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{ "value": -12.1 },
+					{ "time": 0.1, "value": 10.64, "curve": "stepped" },
+					{ "time": 0.3333, "value": 10.64 },
+					{ "time": 0.8, "value": -12.1 }
+				]
+			},
+			"L_IK_elbow": {
+				"translate": [
+					{ "x": 29.85, "y": -62.1 }
+				]
+			},
+			"L_IK_hand": {
+				"translate": [
+					{},
+					{ "time": 0.1, "x": 14.53, "y": 3.26, "curve": "stepped" },
+					{ "time": 0.3333, "x": 14.53, "y": 3.26 },
+					{ "time": 0.8 }
+				]
+			}
+		}
+	},
+	"Slam ground": {
+		"bones": {
+			"R_IK_elbow": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "value": -40.83 },
+					{ "time": 0.7333 }
+				],
+				"translate": [
+					{ "x": 20.26, "y": -15.61 },
+					{ "time": 0.1667, "x": -74.42, "y": 21.33 },
+					{ "time": 0.3333, "x": -339.09, "y": 114.67 },
+					{ "time": 0.5, "x": -350.05, "y": 215.72, "curve": "stepped" },
+					{ "time": 0.6667, "x": -350.05, "y": 215.72 },
+					{ "time": 0.7333, "x": 20.26, "y": -15.61 },
+					{ "time": 0.8, "x": -199.02, "y": 261.41 }
+				]
+			},
+			"L_IK_target": {
+				"rotate": [
+					{ "time": 0.6667, "value": 54.01 }
+				],
+				"translate": [
+					{ "x": 5.19, "y": -19.03 },
+					{ "time": 0.3333, "x": 84.89, "y": -24.09 },
+					{ "time": 0.5, "x": 98.82, "y": -8.87, "curve": "stepped" },
+					{ "time": 0.6667, "x": 98.82, "y": -8.87 },
+					{ "time": 0.7333, "x": 5.19, "y": -19.03 },
+					{ "time": 0.8, "x": -28.92, "y": -8.04 },
+					{ "time": 0.9, "x": -56.87, "y": 111.36 }
+				]
+			},
+			"R_Arm_target": {
+				"rotate": [
+					{ "value": -345.62 },
+					{ "time": 0.6667, "value": -63.48 },
+					{ "time": 0.7333, "value": -345.62 }
+				],
+				"translate": [
+					{ "x": 12.06, "y": -6.61 },
+					{ "time": 0.3333, "x": 45.9, "y": 131.09 },
+					{ "time": 0.5, "x": 80.76, "y": 153.8, "curve": "stepped" },
+					{ "time": 0.6667, "x": 80.76, "y": 153.8 },
+					{ "time": 0.7333, "x": 12.06, "y": -6.61 },
+					{ "time": 0.8, "x": 22.71, "y": -11.42 }
+				]
+			},
+			"Chest": {
+				"rotate": [
+					{ "value": 4.65 },
+					{ "time": 0.3333, "value": 2.04 },
+					{ "time": 0.5, "value": -2.03, "curve": "stepped" },
+					{ "time": 0.6667, "value": -2.03 },
+					{ "time": 0.7333, "value": 4.65 }
+				]
+			},
+			"robot_neck": {
+				"rotate": [
+					{},
+					{ "time": 0.5, "value": -8.4, "curve": "stepped" },
+					{ "time": 0.6667, "value": -8.4 },
+					{ "time": 0.7333 }
+				]
+			},
+			"robot_head": {
+				"rotate": [
+					{},
+					{ "time": 0.5, "value": 19.48, "curve": "stepped" },
+					{ "time": 0.6667, "value": 19.48 },
+					{ "time": 0.7333 }
+				]
+			},
+			"Shoulder_controller": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -6.17 }
+				],
+				"translate": [
+					{ "x": -6.65, "y": 0.06 },
+					{ "time": 0.3333, "x": -4.68, "y": -2.31 },
+					{ "time": 0.6667, "x": -5.39, "y": -1.47 },
+					{ "time": 0.7333, "x": -6.65, "y": 0.06 }
+				]
+			},
+			"Abdomen": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -8.76, "curve": "stepped" },
+					{ "time": 0.6667, "value": -8.76 },
+					{ "time": 0.7333 }
+				]
+			},
+			"L_IK_elbow": {
+				"rotate": [
+					{ "time": 0.9, "value": -89.64 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.5, "x": 102.66, "y": 79.34, "curve": "stepped" },
+					{ "time": 0.6667, "x": 102.66, "y": 79.34 },
+					{ "time": 0.8, "x": 47.36, "y": -124.71 },
+					{ "time": 0.9, "x": -155.99, "y": -151.1 }
+				]
+			},
+			"R_IK_hand": {
+				"translate": [
+					{ "time": 0.8 },
+					{ "time": 0.9, "x": 220.09, "y": -3.15 }
+				]
+			},
+			"L_IK_hand": {
+				"rotate": [
+					{ "time": 0.9, "value": 9.38 }
+				],
+				"translate": [
+					{ "time": 0.8 },
+					{ "time": 0.9, "x": 1.09, "y": 3.07, "curve": "stepped" },
+					{ "time": 1.1667, "x": 1.09, "y": 3.07 }
+				]
+			},
+			"L_IK_shoulder": {
+				"rotate": [
+					{ "time": 0.6667, "value": 1.49 }
+				],
+				"translate": [
+					{ "time": 0.6667, "x": -4.6, "y": 0.89 }
+				]
+			},
+			"left_arm": {
+				"rotate": [
+					{ "time": 0.6667, "value": 64.09 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 1.067 }
+				]
+			},
+			"left_forearm_1": {
+				"rotate": [
+					{ "time": 0.6667, "value": -46.34 }
+				]
+			},
+			"R_IK_shoulder": {
+				"rotate": [
+					{ "time": 0.6667, "value": 1.49 }
+				],
+				"translate": [
+					{ "time": 0.6667, "x": -3.83, "y": 0.3 }
+				]
+			},
+			"R_arm_1": {
+				"rotate": [
+					{ "time": 0.6667, "value": -20.24 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 0.859 }
+				]
+			},
+			"R_forearm": {
+				"rotate": [
+					{ "time": 0.6667, "value": 13.56 }
+				]
+			},
+			"R_shoulder2": {
+				"rotate": [
+					{ "time": 0.6667, "value": -70.32 }
+				]
+			},
+			"R_shoulder3": {
+				"rotate": [
+					{ "time": 0.6667, "value": 17.65 }
+				],
+				"translate": [
+					{ "time": 0.6667, "y": -0.74 }
+				]
+			},
+			"Big_piston": {
+				"rotate": [
+					{ "time": 0.6667, "value": 92.99 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 0.011 }
+				]
+			},
+			"Big_piston2": {
+				"rotate": [
+					{ "time": 0.6667, "value": -173.57 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 0.089 }
+				]
+			},
+			"bone6": {
+				"rotate": [
+					{ "time": 0.6667, "value": 52.61 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 0.005 }
+				]
+			},
+			"L_shoulder2": {
+				"rotate": [
+					{ "time": 0.6667, "value": 125.62 }
+				]
+			},
+			"L_shoulder3": {
+				"rotate": [
+					{ "time": 0.6667, "value": -78.48 }
+				]
+			},
+			"Big_piston_L": {
+				"rotate": [
+					{ "time": 0.6667, "value": -61.89 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 0.019 }
+				]
+			},
+			"Small_piston_L": {
+				"rotate": [
+					{ "time": 0.6667, "value": -0.86 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 0.338 }
+				]
+			},
+			"L_hand_taget_bone": {
+				"rotate": [
+					{ "time": 0.6667, "value": -84.53 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 0.007 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0.6667, "value": 6.38 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{ "time": 0.6667, "value": 17.12 }
+				]
+			}
+		},
+		"ik": {
+			"Ik_R_arm_respaldo": [
+				{ "time": 0.3333, "stretch": true }
+			]
+		}
+	}
+}
+}

@@ -1,0 +1,54 @@
+export const meta = {
+	title: "Tabs API Guide"
+};
+
+# The Tabs API
+
+Welcome back, <PlayerName />! The **`"tabs"`** module lets a spell rearrange the game interface itself — opening, closing, moving, and resizing the UI panels (tabs) around your screen. Every member is **static**, so you call it directly on the import.
+
+## Importing the Module
+
+<ExampleCode>
+
+	```javascript
+	const Tabs = require("tabs");
+	Tabs.openTab("console");
+	```
+
+</ExampleCode>
+
+## Opening and Resizing a Panel
+
+`openTab` returns the new tab's id, which you can pass to the other functions:
+
+<ExampleCode>
+
+	```javascript
+	const Tabs = require("tabs");
+
+	const tabId = Tabs.openTab("docs");
+	Tabs.resize(tabId, 0.5); // give the tabset half the space of its siblings
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	The `weight` you pass to `resize` is relative to a tabset's siblings, ranging from `0` to `1` — `0.5` gives it about half the available room.
+
+</Callout>
+
+### Static methods
+
+- **`Tabs.openTab(componentName)`** — opens a UI panel by component name; `componentName` is a `string`, returns the new tab id (`string`).
+- **`Tabs.closeTab(nameOrId)`** — closes tabs by component name or a specific tab id; `nameOrId` is a `string`.
+- **`Tabs.populateEditor(tabId, contents)`** — sets the code of a code-editor tab; both are `string`.
+- **`Tabs.maximize(tabId)`** — toggles maximize on the tabset containing a tab; `tabId` is a `string`.
+- **`Tabs.resize(tabId, weight)`** — resizes a tab's tabset; `tabId` is a `string`, `weight` is a `number` from `0` to `1` relative to siblings.
+- **`Tabs.move(tabId, position)`** — moves a tab to a position; `tabId` is a `string`, `position` is a `string` (`"left"`, `"right"`, `"top"`, or `"bottom"`); returns the new tab id (`string`).
+
+<Callout type="important">
+
+	Moving a tab gives it a new id, so use the value returned by `Tabs.move` for any further calls on that tab.
+
+</Callout>

@@ -1,0 +1,260 @@
+robotbossv4.png
+size:1063,1032
+filter:Linear,Linear
+pma:true
+Body/hip1
+bounds:780,144,104,44
+rotate:90
+Body/robot_chest
+bounds:829,623,123,83
+rotate:90
+Body/robot_chest_broken
+bounds:607,102,123,83
+rotate:90
+Body/robot_facelight_1
+bounds:1021,905,41,33
+rotate:90
+Body/robot_facelight_2
+bounds:1025,861,40,31
+offsets:1,1,41,33
+rotate:90
+Body/robot_head
+bounds:554,4,74,86
+offsets:5,0,79,86
+Body/robot_head_broken
+bounds:471,4,79,86
+Body/robot_neck
+bounds:954,128,42,46
+offsets:0,0,42,47
+Body/robot_wires_1
+bounds:909,765,112,112
+offsets:3,2,115,114
+Body/robot_wires_2
+bounds:829,538,89,81
+offsets:0,33,115,114
+Body/robot_wires_3
+bounds:859,400,67,81
+offsets:22,33,115,114
+Body/robot_wires_4
+bounds:774,391,82,81
+offsets:30,31,115,114
+rotate:90
+Left arm/cable shoulder1
+bounds:636,229,11,42
+offsets:8,21,37,74
+rotate:90
+Left arm/cable shoulder2
+bounds:363,368,16,29
+offsets:0,0,37,74
+Left arm/front arm
+bounds:982,32,43,43
+Left arm/left hand
+bounds:774,529,54,51
+rotate:90
+Left arm/left_arm_1
+bounds:1016,675,86,43
+offsets:57,18,143,62
+rotate:90
+Left arm/left_arm_2
+bounds:938,257,76,44
+offsets:53,18,143,62
+rotate:90
+Left arm/left_arm_3
+bounds:987,362,69,47
+offsets:0,0,143,62
+Left arm/left_arm_4
+bounds:986,263,66,45
+Left arm/left_elbow
+bounds:780,117,21,23
+Left arm/left_forearm_1
+bounds:879,178,63,70
+offsets:63,22,126,92
+Left arm/left_forearm_2
+bounds:930,415,70,67
+offsets:42,21,126,92
+rotate:90
+Left arm/left_forearm_3
+bounds:828,171,47,77
+offsets:0,0,126,92
+Left arm/left_forearm_4
+bounds:831,485,84,49
+offsets:0,43,126,92
+Left arm/left_forearm_5
+bounds:1016,591,80,43
+offsets:25,21,126,92
+rotate:90
+Left arm/left_forearm_6
+bounds:1000,124,57,44
+offsets:48,20,126,92
+rotate:90
+Left arm/left_forearm_7
+bounds:879,87,55,43
+offsets:50,21,126,92
+Left arm/left_hand_1
+bounds:828,124,47,43
+offsets:26,2,74,47
+Left arm/left_hand_2
+bounds:1001,473,58,47
+offsets:16,0,74,47
+Left arm/left_hand_3
+bounds:936,337,74,47
+rotate:90
+Left arm/left_hand_4
+bounds:938,84,55,40
+offsets:19,0,74,47
+Left arm/left_hand_5
+bounds:991,185,74,40
+offsets:0,0,74,47
+rotate:90
+Left arm/left_shoulder
+bounds:866,322,74,66
+rotate:90
+Left arm/left_wrist
+bounds:994,594,15,43
+Left arm/lefthand2
+bounds:930,489,60,46
+Ray/raycircle
+bounds:868,252,66,66
+Ray/raylight
+bounds:1021,950,36,78
+Ray/raysphere
+bounds:805,128,12,12
+Right Arm/right_arm_1
+bounds:987,312,46,69
+rotate:90
+Right Arm/right_arm_2
+bounds:821,304,83,41
+rotate:90
+Right Arm/right_elbow
+bounds:806,723,23,19
+rotate:90
+Right Arm/right_forearm_1
+bounds:879,134,40,71
+offsets:3,0,75,71
+rotate:90
+Right Arm/right_forearm_2
+bounds:946,178,75,41
+offsets:0,30,75,71
+rotate:90
+Right Arm/right_forearm_3
+bounds:821,252,48,43
+offsets:0,28,75,71
+rotate:90
+Right Arm/right_hand_1
+bounds:997,79,50,41
+offsets:16,5,66,47
+Right Arm/right_hand_2
+bounds:812,71,59,49
+offsets:7,0,66,49
+Right Arm/right_hand_3
+bounds:761,477,66,48
+offsets:0,0,66,49
+Right Arm/right_hand_4
+bounds:932,38,46,42
+offsets:20,2,66,49
+Right Arm/right_light1
+bounds:1001,413,56,56
+Right Arm/right_light2
+bounds:812,11,52,56
+offsets:3,0,56,56
+Right Arm/right_shoulder
+bounds:875,40,43,53
+rotate:90
+Right Arm/right_wrist_front
+bounds:868,5,31,41
+rotate:90
+Right Arm/right_wrist_side
+bounds:1035,216,15,43
+Right Arm/smears1
+bounds:994,524,64,63
+offsets:79,41,172,106
+Right Arm/smears2
+bounds:922,539,98,68
+offsets:74,0,172,106
+rotate:90
+Right Arm/smears3
+bounds:756,10,52,103
+elbow_fx_1
+bounds:636,244,89,128
+offsets:0,0,122,140
+elbow_fx_2
+bounds:625,477,88,132
+offsets:34,8,122,140
+rotate:90
+handfx
+bounds:763,587,125,62
+offsets:1,14,126,92
+rotate:90
+hitfx17
+bounds:741,376,97,29
+offsets:0,0,137,65
+rotate:90
+hitfx18
+bounds:737,716,137,65
+rotate:90
+robot_falling_behind_1
+bounds:397,367,213,152
+offsets:0,91,239,243
+robot_falling_behind_2
+bounds:791,881,226,147
+offsets:13,96,239,243
+robot_falling_behind_3
+bounds:397,523,224,188
+offsets:15,55,239,243
+robot_falling_behind_4
+bounds:239,4,210,228
+offsets:29,1,239,243
+rotate:90
+robot_falling_behind_5
+bounds:4,4,210,231
+offsets:29,0,239,243
+rotate:90
+robot_falling_front_1
+bounds:4,218,355,179
+robot_falling_front_2
+bounds:398,715,335,138
+offsets:20,21,355,179
+robot_trunk_1
+bounds:4,751,390,277
+robot_trunk_2
+bounds:4,576,389,171
+offsets:0,106,390,277
+robot_trunk_3
+bounds:398,857,389,171
+offsets:0,106,390,277
+robot_trunk_4
+bounds:4,401,389,171
+offsets:0,106,390,277
+stuck1
+bounds:363,229,133,134
+offsets:10,0,160,134
+stuck10
+bounds:916,641,96,120
+offsets:46,9,160,134
+stuck11
+bounds:729,252,88,120
+offsets:54,9,160,134
+stuck12
+bounds:694,117,82,123
+offsets:78,11,160,134
+stuck2
+bounds:500,229,132,134
+offsets:10,0,160,134
+stuck3
+bounds:471,94,132,131
+offsets:10,3,160,134
+stuck6
+bounds:625,569,142,134
+offsets:0,0,160,134
+rotate:90
+stuck7
+bounds:614,376,97,123
+offsets:46,8,160,134
+rotate:90
+stuck8
+bounds:632,6,92,120
+offsets:50,9,160,134
+rotate:90
+stuck9
+bounds:806,750,99,127
+offsets:43,2,160,134

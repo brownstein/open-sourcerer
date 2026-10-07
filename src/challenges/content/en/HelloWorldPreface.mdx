@@ -1,0 +1,54 @@
+# Preface
+Greetings Sourcerer! Today we're going to learn to log output to the console,
+making your input appear on screen.
+
+This is important to your programming journey because console logging is
+the simplest way to undestand the state of larger programs - you'll be
+logging frequently to determine the values of variables and the state of your
+programs' control flow.
+
+<ExampleCode explanations={{
+  "//": "This is how you define comments.",
+  '"something"': "In this example, \"something\" is the value we want to log to the console.",
+}}>
+```javascript
+// This is how you log text to the console.
+console.log("something");
+
+// You can log arbitrary data as well.
+console.log(2);
+```
+</ExampleCode>
+
+## Quiz Time
+<Question randomize id="whatIs">
+  What is the console?
+  <Answer>
+    Not Sure.
+  </Answer>
+  <Answer correct>
+    A tool for logging text to the terminal.
+  </Answer>
+  <Answer>
+    An infeior gaming tool; I'm on a PC.
+  </Answer>
+</Question>
+
+<Question randomize id="howTo">
+  How do we log text to the console?
+  <Answer correct>
+    `console.log(something);`
+  </Answer>
+  <Answer>
+    `print(something)`
+  </Answer>
+  <Answer>
+    `cout << something;`
+  </Answer>
+  <Explanation>
+    Correct! The `cout << something` answer was C++, and the `print(something)` answer was Python.
+  </Explanation>
+</Question>
+
+{/* Export quiz IDs so we can mark them as complete. */}
+export const quizzes = ["whatIs", "howTo"];

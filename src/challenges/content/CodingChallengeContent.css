@@ -1,0 +1,19 @@
+.coding-challenge-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.coding-challenge-content h1:first-child {
+  margin-top: 0;
+}
+
+.coding-challenge-content-scroll-checker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}

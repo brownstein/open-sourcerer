@@ -1,0 +1,69 @@
+export const meta = {
+	title: "Air API Guide"
+};
+
+# The Air API
+
+Welcome back, <PlayerName />! The **`"air"`** spell is wind magic — it lets you shove entities around with a sudden **air burst**. Launch yourself across a gap, knock an enemy off a ledge, or break a fall, all with a single gust.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const Air = require("air");
+	Air.burst();
+	```
+
+</ExampleCode>
+
+Calling `Air.burst()` with no arguments gives the caster a little nudge.
+
+## Pushing the Caster
+
+Pass an **impulse** to control the direction and strength of the gust. Here we launch the caster up and forward:
+
+<ExampleCode>
+
+	```javascript
+	const Air = require("air");
+	Air.burst({ x: 5, y: 8 });
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	A strong positive `y` impulse gives you a wind-powered jump — great for reaching ledges your normal jump can't.
+
+</Callout>
+
+## Pushing Another Entity
+
+Give `burst` a target id as its second argument to shove someone else instead of yourself. You can get entity ids from the [Sensor](spell-api-guides/sensor-api-guide) or [Get Entities](spell-api-guides/get-entities-api-guide) APIs:
+
+<ExampleCode>
+
+	```javascript
+	const Air = require("air");
+	const Sensor = require("sensor");
+
+	const enemy = Sensor.nearestEnemy();
+	if (enemy) {
+		Air.burst({ x: 10, y: 4 }, enemy.id);
+	}
+	```
+
+</ExampleCode>
+
+### Methods
+
+- **`burst(impulse?, targetId?)`** — applies a wind impulse to a target, or to the caster if no target is given.
+	- **`impulse`** — `{ x, y }` — the direction and strength of the gust.
+	- **`targetId`** — `string | { entityId?, handleId? }` — who to push.
+
+<Callout type="important">
+
+	Wind is a force, not teleportation — the impulse adds momentum, so heavier entities move less than light ones for the same burst.
+
+</Callout>

@@ -1,0 +1,107 @@
+{ "frames": {
+   "(BG_Solid)": {
+    "frame": { "x": 2, "y": 2, "w": 571, "h": 311 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 87, "w": 571, "h": 311 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   },
+   "(BG_1)": {
+    "frame": { "x": 386, "y": 395, "w": 571, "h": 205 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 180, "w": 571, "h": 205 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   },
+   "(BG_2)": {
+    "frame": { "x": 386, "y": 604, "w": 571, "h": 204 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 186, "w": 571, "h": 204 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   },
+   "(BG_3)": {
+    "frame": { "x": 2, "y": 812, "w": 571, "h": 189 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 208, "w": 571, "h": 189 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   },
+   "(Tree_0)": {
+    "frame": { "x": 577, "y": 2, "w": 380, "h": 389 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 143, "y": 2, "w": 380, "h": 389 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   },
+   "(Tree_1)": {
+    "frame": { "x": 259, "y": 1005, "w": 284, "h": 242 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 16, "y": 107, "w": 284, "h": 242 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   },
+   "(Tree_2)": {
+    "frame": { "x": 577, "y": 812, "w": 253, "h": 288 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 307, "y": 63, "w": 253, "h": 288 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   },
+   "(Tree_3)": {
+    "frame": { "x": 2, "y": 1005, "w": 253, "h": 288 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 107, "y": 83, "w": 253, "h": 288 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   },
+   "(Tree_4)": {
+    "frame": { "x": 547, "y": 1104, "w": 284, "h": 242 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 270, "y": 132, "w": 284, "h": 242 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   },
+   "(Tree_5)": {
+    "frame": { "x": 2, "y": 317, "w": 380, "h": 389 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 9, "w": 380, "h": 389 },
+    "sourceSize": { "w": 571, "h": 400 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.10.1-arm64",
+  "image": "forest-1.png",
+  "format": "RGBA8888",
+  "size": { "w": 1024, "h": 1348 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "BG_Solid", "opacity": 255, "blendMode": "normal" },
+   { "name": "BG_1", "opacity": 255, "blendMode": "normal" },
+   { "name": "BG_2", "opacity": 255, "blendMode": "normal" },
+   { "name": "BG_3", "opacity": 255, "blendMode": "normal" },
+   { "name": "Tree_0", "opacity": 255, "blendMode": "normal" },
+   { "name": "Tree_1", "opacity": 255, "blendMode": "normal" },
+   { "name": "Tree_2", "opacity": 255, "blendMode": "normal" },
+   { "name": "Tree_3", "opacity": 255, "blendMode": "normal" },
+   { "name": "Tree_4", "opacity": 255, "blendMode": "normal" },
+   { "name": "Tree_5", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

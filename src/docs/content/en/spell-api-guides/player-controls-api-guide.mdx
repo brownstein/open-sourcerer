@@ -1,0 +1,58 @@
+export const meta = {
+	title: "Player Controls API Guide"
+};
+
+# The Player Controls API
+
+Welcome back, <PlayerName />! The **`"playerControls"`** spell module lets you drive your own character from inside a spell. Instead of pressing keys, you call functions that emit the same control events — making the player jump, move, attack, and swing a sword.
+
+## Importing the Module
+
+<ExampleCode>
+
+	```javascript
+	const PlayerControls = require("playerControls");
+	PlayerControls.jump();
+	```
+
+</ExampleCode>
+
+That single `jump()` call sends your character leaping into the air.
+
+## Moving and Acting
+
+The module is an object of functions, so call each action you need:
+
+<ExampleCode>
+
+	```javascript
+	const PlayerControls = require("playerControls");
+	const wait = require("wait");
+
+	PlayerControls.moveHorizontally(1); // run right
+	wait(500);                          // keep running for half a second
+	PlayerControls.moveHorizontally(0); // stop
+
+	PlayerControls.jump();
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Pair the controls with the [Wait API](spell-api-guides/wait-api-guide) to time your movements. `moveHorizontally` keeps the player moving until you call it again with `0` to stop.
+
+</Callout>
+
+### Methods
+
+- **`jump()`** — makes the player jump.
+- **`moveHorizontally(direction)`** — `direction` is a `number`: `-1` to move left, `1` to move right, `0` to stop.
+- **`secondaryAttack()`** — triggers the player's secondary attack.
+- **`swordSwing()`** — triggers a sword swing.
+
+<Callout type="important">
+
+	These functions control *your* character, so a runaway spell can move you around unexpectedly. Always remember to call `moveHorizontally(0)` to come to a stop.
+
+</Callout>

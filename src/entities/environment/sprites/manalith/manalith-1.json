@@ -1,0 +1,35 @@
+{ "frames": {
+   "(Glow) 0": {
+    "frame": { "x": 2, "y": 2, "w": 12, "h": 64 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 44, "y": 5, "w": 12, "h": 64 },
+    "sourceSize": { "w": 100, "h": 80 },
+    "duration": 100
+   },
+   "(Primary) 0": {
+    "frame": { "x": 18, "y": 2, "w": 85, "h": 75 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 2, "w": 85, "h": 75 },
+    "sourceSize": { "w": 100, "h": 80 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.7-arm64",
+  "image": "manalith-1.png",
+  "format": "RGBA8888",
+  "size": { "w": 128, "h": 79 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Glow", "opacity": 255, "blendMode": "normal" },
+   { "name": "Primary", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

@@ -1,0 +1,66 @@
+.controls-row-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 5;
+  padding: 2px;
+  right: 0;
+  bottom: 0;
+  margin: 16px;
+
+  .button-row {
+    flex: 1;
+    color: #fff;
+    width: calc(var(--ui-scale-px) * 1);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);;
+    
+    margin-right: 2px;
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    .button-empty {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	opacity: 0.8;
+	font-family: "Geo";
+	font-size: 30px;
+	color: #fff;
+	position: relative;
+	user-select: none;
+    }
+  }
+
+  .button-row:hover {
+      background: rgba(255, 255, 255, 0.2); 
+  }
+
+  .button-row:active {
+      background: rgba(100, 100, 100, 0.2); 
+  }
+
+  &.vertical {
+    flex-direction: column;
+
+    .button-row {
+      margin-right: 0;
+      margin-bottom: 2px;
+      &:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  } 
+}

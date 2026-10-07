@@ -1,0 +1,47 @@
+@keyframes appear-slowly {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.death-screen {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  user-select: none;
+
+  opacity: 1;
+  animation: appear-slowly 1000ms ease;
+
+  h1 {
+    font-family: "Troll";
+    font-size: 72px;
+    color: #ff4444;
+    margin: 0;
+    margin-bottom: 0.25em;
+    padding: 0;
+  }
+
+  & > div {
+    font-family: "Troll";
+    font-size: 24px;
+  }
+
+  .load-game-container {
+    margin-top: 20px;
+    color: #000000;
+  }
+}

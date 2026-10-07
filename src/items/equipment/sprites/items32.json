@@ -1,0 +1,36 @@
+{ "frames": {
+   "(Primary) 0": {
+    "frame": { "x": 2, "y": 2, "w": 36, "h": 36 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 2, "y": 3, "w": 36, "h": 36 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 100
+   },
+   "(Primary) 1": {
+    "frame": { "x": 42, "y": 2, "w": 34, "h": 34 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 2, "y": 4, "w": 34, "h": 34 },
+    "sourceSize": { "w": 40, "h": 40 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.7-arm64",
+  "image": "items32.png",
+  "format": "RGBA8888",
+  "size": { "w": 128, "h": 40 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Sword", "from": 0, "to": 0, "direction": "forward", "color": "#000000ff" },
+   { "name": "Bow", "from": 1, "to": 1, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "Primary", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

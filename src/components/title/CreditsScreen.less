@@ -1,0 +1,215 @@
+.credits-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  overflow-y: auto;
+
+  .credits-scroll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    min-height: min-content;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  h2 {
+    font-family: "Highbirth";
+    font-size: 24pt;
+    letter-spacing: 0.15em;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: "Highbirth";
+    font-size: 16pt;
+    letter-spacing: 0.1em;
+    color: #fa0;
+    margin: 0 0 0.75rem 0;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 11pt;
+    color: #888;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .credits-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .credits-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .credits-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .credits-entry {
+    font-size: 13pt;
+
+    a {
+      color: #fa0;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+
+    span {
+      color: #ccc;
+    }
+  }
+
+  .licenses-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .licenses-toggle {
+    font-family: "Highbirth";
+    padding: 8px 16px;
+    font-size: 14pt;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #fa0;
+    transition: background-color 0.2s, border-color 0.2s;
+
+    &:hover {
+      background-color: #1a1a1a;
+      border-color: #fa0;
+    }
+  }
+
+  .licenses-content {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .license-row {
+    border-bottom: 1px solid #222;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .license-row-toggle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 12px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 11pt;
+    text-align: left;
+    gap: 8px;
+    transition: background-color 0.15s;
+
+    &:hover {
+      background-color: #1a1a1a;
+    }
+  }
+
+  .license-row-arrow {
+    color: #666;
+    width: 1em;
+    flex-shrink: 0;
+  }
+
+  .license-row-name {
+    color: #6af;
+    flex: 1;
+  }
+
+  .license-row-count {
+    color: #666;
+    font-size: 10pt;
+    flex-shrink: 0;
+  }
+
+  .license-row-detail {
+    padding: 0 12px 12px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .license-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 9pt;
+    line-height: 1.5;
+    color: #aaa;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 0.75rem;
+  }
+
+  .package-names {
+    font-size: 9pt;
+    color: #888;
+    line-height: 1.6;
+    word-break: break-all;
+  }
+
+  .back-btn {
+    font-family: "Highbirth";
+    padding: 8px 16px;
+    font-size: 14pt;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+
+    &:hover {
+      background-color: #0056b3;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+    }
+
+    &:active {
+      background-color: #004088;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+export const meta = {
+	title: "Shapes API Guide"
+};
+
+# The Shapes API
+
+Let's get geometric, <PlayerName />! The **`"shapes"`** module builds polygon outlines — arrays of `Vector` points — that you can feed into shape-based spells like [Earth](spell-api-guides/earth-api-guide) and [Ice](spell-api-guides/ice-api-guide). Every member is static, so you call them straight off the import.
+
+## Importing Shapes
+
+<ExampleCode>
+
+	```javascript
+	const Shapes = require("shapes");
+
+	const outline = Shapes.circle(2);
+	console.log(outline.length);   // an array of Vector points
+	```
+
+</ExampleCode>
+
+## Building a Shape Spell
+
+Pass the points you build as the `shape` option of a shape-based spell:
+
+<ExampleCode>
+
+	```javascript
+	const Shapes = require("shapes");
+	const Ice = require("ice");
+
+	new Ice({ shape: Shapes.circle(2) });
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	[Earth](spell-api-guides/earth-api-guide) works the same way — hand it a `shape` from any of these helpers to conjure a custom-shaped block.
+
+</Callout>
+
+### Static methods
+
+- **`Shapes.rect(width, height)`** — returns `Vector[]`; both `width` and `height` are numbers.
+- **`Shapes.triangle(radius, angle?)`** — returns `Vector[]`; `radius` is a `number`, `angle` is an optional `number`.
+- **`Shapes.circle(radius, count?)`** — returns `Vector[]`; `radius` is a `number`, `count` is an optional `number` of points around the circle.

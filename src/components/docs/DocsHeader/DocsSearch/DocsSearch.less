@@ -1,0 +1,75 @@
+@search-expansion-transition-duration: 250ms;
+@search-expansion-transition-easing: ease;
+@search-results-margin-top: 4px;
+@search-results-max-height: 60vh;
+@search-input-trigger-spacing: 0.5rem;
+
+.docs-search-input-cell {
+	grid-column: header-start / search-icon-start;
+	grid-row: 1;
+	position: relative;
+	container-type: inline-size;
+	height: 100%;
+	pointer-events: none; // <-- important for clicsk to passthrogh
+}
+
+.docs-search-input-clipper,
+.docs-search-input-results {
+	pointer-events: auto;
+}
+
+.docs-search-input-clipper {
+	position: absolute;
+	top: 0.5rem;
+	right: 0;
+	bottom: 0.5rem;
+	width: 0;
+	overflow: hidden;
+	transition: width @search-expansion-transition-duration
+		@search-expansion-transition-easing;
+
+	.docs-search-input-cell[data-expanded="true"] & {
+		width: 100%;
+	}
+}
+
+.docs-search-input-content {
+	position: absolute;
+	top: 0;
+	right: @search-input-trigger-spacing;
+	bottom: 0;
+	width: calc(100cqw - @search-input-trigger-spacing);
+	display: flex;
+	align-items: center;
+}
+
+.docs-search-input-field {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.docs-search-input-results {
+	position: absolute;
+	top: calc(100% + @search-results-margin-top);
+	left: 0;
+	right: @search-input-trigger-spacing;
+	z-index: 10;
+	max-height: @search-results-max-height;
+	overflow-y: auto;
+}
+
+.docs-search-input-results-empty {
+	padding: 0.5rem 1rem;
+}
+
+.docs-search-trigger-cell {
+	grid-column: search-icon-start / search-icon-end;
+	grid-row: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.docs-search-trigger {
+	flex: 0 0 auto;
+}

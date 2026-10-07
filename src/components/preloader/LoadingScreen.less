@@ -1,0 +1,58 @@
+.loading-screen {
+  position: relative;
+  background: #444444;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  .loading-text {
+    font-family: "Geo";
+    font-size: 16pt;
+    position: relative;
+    z-index: 2;
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+.loading-sword {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 0;
+  background-image: url("../title/os-logo-white.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.25;
+}
+
+.loading-ring {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  opacity: 25%;
+  width: 128px;
+  height: 128px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

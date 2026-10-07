@@ -1,0 +1,14 @@
+{ "columns":74,
+ "image":"..\/..\/tilesets\/village\/village-exteriors-1.png",
+ "imageheight":768,
+ "imagewidth":1184,
+ "margin":0,
+ "name":"village-exteriors-1",
+ "spacing":0,
+ "tilecount":3552,
+ "tiledversion":"1.11.1",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.10"
+}

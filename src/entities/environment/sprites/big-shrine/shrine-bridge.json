@@ -1,0 +1,262 @@
+{ "frames": {
+   "shrine-bridge 0.aseprite": {
+    "frame": { "x": 1049, "y": 250, "w": 15, "h": 12 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 78, "y": 92, "w": 15, "h": 12 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 1.aseprite": {
+    "frame": { "x": 1049, "y": 237, "w": 15, "h": 13 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 78, "y": 91, "w": 15, "h": 13 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 2.aseprite": {
+    "frame": { "x": 1049, "y": 222, "w": 15, "h": 15 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 78, "y": 88, "w": 15, "h": 15 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 3.aseprite": {
+    "frame": { "x": 1043, "y": 327, "w": 22, "h": 17 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 73, "y": 87, "w": 22, "h": 17 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 4.aseprite": {
+    "frame": { "x": 206, "y": 432, "w": 182, "h": 51 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 53, "w": 182, "h": 51 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 5.aseprite": {
+    "frame": { "x": 804, "y": 431, "w": 182, "h": 58 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 46, "w": 182, "h": 58 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 6.aseprite": {
+    "frame": { "x": 622, "y": 431, "w": 182, "h": 60 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 44, "w": 182, "h": 60 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 7.aseprite": {
+    "frame": { "x": 182, "y": 483, "w": 182, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 55, "w": 182, "h": 49 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 8.aseprite": {
+    "frame": { "x": 0, "y": 482, "w": 182, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 55, "w": 182, "h": 49 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 9.aseprite": {
+    "frame": { "x": 0, "y": 433, "w": 182, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 55, "w": 182, "h": 49 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 10.aseprite": {
+    "frame": { "x": 422, "y": 431, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 8, "w": 200, "h": 96 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 11.aseprite": {
+    "frame": { "x": 0, "y": 333, "w": 206, "h": 100 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 2, "y": 5, "w": 206, "h": 100 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 12.aseprite": {
+    "frame": { "x": 836, "y": 327, "w": 207, "h": 104 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 3, "w": 207, "h": 104 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 13.aseprite": {
+    "frame": { "x": 629, "y": 327, "w": 207, "h": 104 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 3, "w": 207, "h": 104 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 14.aseprite": {
+    "frame": { "x": 422, "y": 327, "w": 207, "h": 104 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 3, "w": 207, "h": 104 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 15.aseprite": {
+    "frame": { "x": 213, "y": 222, "w": 209, "h": 105 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 3, "w": 209, "h": 105 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 16.aseprite": {
+    "frame": { "x": 213, "y": 327, "w": 209, "h": 105 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 3, "w": 209, "h": 105 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 17.aseprite": {
+    "frame": { "x": 840, "y": 222, "w": 209, "h": 105 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 3, "w": 209, "h": 105 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 18.aseprite": {
+    "frame": { "x": 631, "y": 222, "w": 209, "h": 105 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 3, "w": 209, "h": 105 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 19.aseprite": {
+    "frame": { "x": 422, "y": 222, "w": 209, "h": 105 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 3, "w": 209, "h": 105 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 20.aseprite": {
+    "frame": { "x": 0, "y": 222, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 21.aseprite": {
+    "frame": { "x": 852, "y": 111, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 22.aseprite": {
+    "frame": { "x": 639, "y": 111, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 23.aseprite": {
+    "frame": { "x": 426, "y": 111, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 24.aseprite": {
+    "frame": { "x": 213, "y": 111, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 25.aseprite": {
+    "frame": { "x": 0, "y": 111, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 26.aseprite": {
+    "frame": { "x": 852, "y": 0, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 27.aseprite": {
+    "frame": { "x": 639, "y": 0, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 28.aseprite": {
+    "frame": { "x": 426, "y": 0, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 29.aseprite": {
+    "frame": { "x": 213, "y": 0, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   },
+   "shrine-bridge 30.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 213, "h": 111 },
+    "sourceSize": { "w": 213, "h": 111 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.3.16.1-dev",
+  "image": "shrine-bridge.png",
+  "format": "RGBA8888",
+  "size": { "w": 1065, "h": 532 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Default", "from": 0, "to": 30, "direction": "forward" }
+  ]
+ }
+}

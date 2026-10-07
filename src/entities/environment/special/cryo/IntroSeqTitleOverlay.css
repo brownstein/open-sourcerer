@@ -1,0 +1,101 @@
+@property --intro-title-transition-duration {
+  syntax: "<time>";
+  inherits: true;
+  initial-value: 1.5s;
+}
+
+@keyframes intro-title-transition-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes intro-title-transition-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.intro-sequence-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.intro-sequence-overlay.appearing {
+  animation-name: intro-title-transition-fade-in;
+  animation-duration: var(--intro-title-transition-duration);
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.intro-sequence-overlay.disappearing {
+  animation-name: intro-title-transition-fade-out;
+  animation-duration: var(--intro-title-transition-duration);
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.intro-sequence-overlay.logo-appearing .logo-and-title {
+  animation-name: intro-title-transition-fade-in;
+  animation-duration: var(--intro-title-transition-duration);
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.intro-sequence-overlay.logo-disappearing .logo-and-title {
+  animation-name: intro-title-transition-fade-out;
+  animation-duration: var(--intro-title-transition-duration);
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.intro-sequence-overlay .logo-and-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.intro-sequence-overlay .logo-and-title h1 {
+  font-family: "Troll";
+  font-size: calc(var(--sr-width) * 0.05);
+}
+
+.intro-sequence-overlay .logo-and-title .gnarled-helix-logo {
+  mask-image: url("../../../../components/title/logo-gh.svg");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background: #ffffff;
+  flex-grow: 1;
+  aspect-ratio: 1;
+  height: calc(var(--sr-height) * 0.5);
+}
+
+.intro-sequence-overlay .logo-and-title .game-logo {
+  mask-image: url("../../../../components/title/logo-game.png");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background: #ffffff;
+  flex-grow: 1;
+  aspect-ratio: 1.25;
+  height: calc(var(--sr-height) * 0.5);
+}

@@ -1,0 +1,31 @@
+import React from "react";
+
+import { useGlossaryNavigator } from "./useGlossaryNavigator";
+
+type Props = {
+  term: string;
+  children?: React.ReactNode;
+  className?: string;
+};
+
+export const GlossaryLink: React.FC<Props> = ({
+  term,
+  children,
+  className
+}) => {
+  const { goToGlossaryTerm } = useGlossaryNavigator();
+  return (
+    <button
+      type="button"
+      className={className ?? "conversation-hyperlink"}
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToGlossaryTerm(term, { highlight: true });
+      }}
+      aria-label={`Open glossary entry for ${term}`}
+    >
+      {children ?? term}
+    </button>
+  );
+};

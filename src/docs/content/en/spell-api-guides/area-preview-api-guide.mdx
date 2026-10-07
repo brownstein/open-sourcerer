@@ -1,0 +1,88 @@
+export const meta = {
+	title: "Area Preview API Guide"
+};
+
+# The Area Preview API
+
+Welcome back, <PlayerName />! The **`"areaPreview"`** spell draws a translucent polygon overlay right in the world. It's perfect for previewing where a shape-based spell — like [Earth](spell-api-guides/earth-api-guide) or [Ice](spell-api-guides/ice-api-guide) — will land before you commit to the cast.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const AreaPreview = require("areaPreview");
+	const preview = new AreaPreview({
+		polygon: [
+			{ x: 0, y: 0 },
+			{ x: 4, y: 0 },
+			{ x: 4, y: 2 },
+			{ x: 0, y: 2 }
+		]
+	});
+	```
+
+</ExampleCode>
+
+That draws a translucent rectangle outline at the polygon you described.
+
+## Configuring the Preview
+
+The constructor takes a **configuration object**. You can attach the overlay to an entity so it follows along, and tint it any color you like:
+
+<ExampleCode>
+
+	```javascript
+	const AreaPreview = require("areaPreview");
+	const self = require("self");
+
+	const preview = new AreaPreview({
+		polygon: [[0, 0], [3, 0], [3, 3], [0, 3]],
+		attachToEntityId: self.id,
+		color: { r: 0, g: 1, b: 0 }
+	});
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Polygon points can be written as `{ x, y }` objects or as `[x, y]` pairs — use whichever is tidier for your shape.
+
+</Callout>
+
+### Constructor options
+
+- **`polygon`** — `({ x, y } | [number, number])[]` — the outline to draw.
+- **`attachToEntityId`** — `string` — attach the overlay to an entity so it follows it.
+- **`color`** — `{ r, g, b }` — the overlay color.
+
+## Recoloring and Removing
+
+The preview hands you back a handle you can recolor or fade away:
+
+<ExampleCode>
+
+	```javascript
+	const AreaPreview = require("areaPreview");
+	const preview = new AreaPreview({
+		polygon: [{ x: 0, y: 0 }, { x: 5, y: 0 }, { x: 5, y: 1 }, { x: 0, y: 1 }]
+	});
+
+	preview.recolor(1, 0, 0);
+	preview.destroy();
+	```
+
+</ExampleCode>
+
+### Properties and methods
+
+- **`id`** — `string` — the preview's handle id.
+- **`recolor(r, g, b)`** — recolor the preview (three numbers).
+- **`destroy()`** — fade the preview away (returns void).
+
+<Callout type="info">
+
+	An area preview is purely visual — it never affects the world. Use it to plan a cast, then fire your real spell once the shape looks right.
+
+</Callout>

@@ -1,0 +1,118 @@
+.match-hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 30;
+  font-family: inherit;
+
+  .match-hud-top {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .match-hud-score {
+    display: flex;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  }
+
+  .match-hud-opponents {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .match-hud-opponent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .match-hud-opponent-name {
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  .match-hud-opponent-bar {
+    width: 140px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .match-hud-opponent-bar-fill {
+    height: 100%;
+    background: #cc2222;
+    transition: width 150ms ease-out;
+  }
+
+  .match-hud-banner {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  }
+
+  .match-hud-countdown {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 64px;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+  }
+}
+
+.match-hud-end {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+
+  h1 {
+    color: #fff;
+    font-size: 48px;
+    margin: 0 0 8px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+  }
+
+  .match-hud-end-detail {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .match-hud-continue {
+    pointer-events: auto;
+    font-size: 18px;
+    padding: 10px 28px;
+    cursor: pointer;
+    background: #222;
+    color: #fff;
+    border: 1px solid #888;
+    border-radius: 4px;
+
+    &:hover {
+      background: #333;
+    }
+  }
+}

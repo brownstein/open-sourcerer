@@ -1,0 +1,65 @@
+# Loops in JavaScript
+Conditionals were pretty simple, huh? Good attitude, let's move on to loops.
+Loops are like if statements, but they execute a code block multiple times based
+on the computed value of a condition. Let's jump into an example:
+
+<ExampleCode>
+```javascript
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+```
+</ExampleCode>
+
+This example logs the numbers 0 through 9.
+
+The `i = 0` section is a precondition; the loop's setup.
+
+The `i < 10` section is the loop condition; the loop will run as long as `i` is less than `10`.
+
+The `i++` operator on the variable `i` increments it by one
+on every cycle of the loop.
+
+Loops can also interact with if statements. In this next example, we'll use the `%` modulo operator,
+which gets the remainder of dividing one number by another with simple division.
+
+<ExampleCode>
+```javascript
+for (var i = 0; i < 10; i++) {
+  if (i % 3 === 0) {
+    console.log(i + " is divisible by 3 with no remainder.");
+  } else {
+    console.log(i + " has a remainder when divided by 3, which is " + (i % 3) + ".");
+  }
+}
+```
+</ExampleCode>
+
+This will log the following output:
+```
+0 is divisible by 3 with no remainder.
+1 has a remainder when divided by 3, which is 1.
+2 has a remainder when divided by 3, which is 2.
+3 is divisible by 3 with no remainder.
+4 has a remainder when divided by 3, which is 1.
+5 has a remainder when divided by 3, which is 2.
+6 is divisible by 3 with no remainder.
+7 has a remainder when divided by 3, which is 1.
+8 has a remainder when divided by 3, which is 2.
+9 is divisible by 3 with no remainder.
+```
+
+Can you write a loop that counts forwards, with an embedded conditional, that logs `"fizz <N>"`
+for numbers divisible by 3, `"buzz <N>"` for numbers divisible by 5, and `"fizzbuzz <N>"` for numbers
+divisible by both, and runs from values of N from 1 to 30 (inclusive), such that the output matches the following pattern?
+
+```
+fizz 3
+buzz 5
+fizz 6
+fizz 9
+buzz 10
+fizz 12
+fizzbuzz 15
+...
+```

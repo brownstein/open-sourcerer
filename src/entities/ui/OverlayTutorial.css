@@ -1,0 +1,41 @@
+.overlay-tutorial-wrapper {
+  display: flex;
+}
+
+.overlay-tutorial-box {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--sr-width) * 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1em;
+  font-size: calc(var(--sr-width) * 0.02);
+  text-align: center;
+  color: #fff;
+  padding: 0.5em;
+
+  h1, h2, h3 {
+    font-family: "Troll";
+    font-size: 1em;
+    padding: 0;
+  }
+
+  .spell-edit-button {
+    padding: 0.5em;
+    font-size: 0.8em;
+    font-family: "Troll";
+    font-weight: bold;
+    flex-grow: 1;
+  }
+
+  .fire-icon {
+    display: block;
+    flex-basis: 1.4em;
+    flex-grow: 0;
+    aspect-ratio: 1;
+    background-color: #fa4;
+    height: 1.4em;
+  }
+}

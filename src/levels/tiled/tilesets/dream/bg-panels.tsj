@@ -1,0 +1,469 @@
+{
+ "columns": 17,
+ "image": "bg-panels.png",
+ "imageheight": 240,
+ "imagewidth": 272,
+ "margin": 0,
+ "name": "bg-panels",
+ "spacing": 0,
+ "tilecount": 255,
+ "tiledversion": "1.11.0",
+ "tileheight": 16,
+ "tiles": [
+  {
+   "id": 1,
+   "type": "decal"
+  },
+  {
+   "id": 2,
+   "type": "decal"
+  },
+  {
+   "id": 3,
+   "type": "decal"
+  },
+  {
+   "id": 5,
+   "type": "decal"
+  },
+  {
+   "id": 6,
+   "type": "decal"
+  },
+  {
+   "id": 18,
+   "type": "ground"
+  },
+  {
+   "id": 19,
+   "type": "ground"
+  },
+  {
+   "id": 20,
+   "type": "ground"
+  },
+  {
+   "id": 22,
+   "type": "ground"
+  },
+  {
+   "id": 23,
+   "type": "ground"
+  },
+  {
+   "id": 25,
+   "type": "ground"
+  },
+  {
+   "id": 26,
+   "type": "ground"
+  },
+  {
+   "id": 27,
+   "type": "ground"
+  },
+  {
+   "id": 30,
+   "type": "decal"
+  },
+  {
+   "id": 31,
+   "type": "decal"
+  },
+  {
+   "id": 32,
+   "type": "decal"
+  },
+  {
+   "id": 35,
+   "type": "decal"
+  },
+  {
+   "id": 36,
+   "type": "decal"
+  },
+  {
+   "id": 37,
+   "type": "decal"
+  },
+  {
+   "id": 39,
+   "type": "ground"
+  },
+  {
+   "id": 40,
+   "type": "ground"
+  },
+  {
+   "id": 52,
+   "type": "ground"
+  },
+  {
+   "id": 53,
+   "type": "ground"
+  },
+  {
+   "id": 54,
+   "type": "ground"
+  },
+  {
+   "id": 56,
+   "type": "ground"
+  },
+  {
+   "id": 57,
+   "type": "ground"
+  },
+  {
+   "id": 59,
+   "type": "ground"
+  },
+  {
+   "id": 60,
+   "type": "ground"
+  },
+  {
+   "id": 61,
+   "type": "ground"
+  },
+  {
+   "id": 63,
+   "type": "decal"
+  },
+  {
+   "id": 64,
+   "type": "decal"
+  },
+  {
+   "id": 65,
+   "type": "decal"
+  },
+  {
+   "id": 66,
+   "type": "decal"
+  },
+  {
+   "id": 67,
+   "type": "decal"
+  },
+  {
+   "id": 73,
+   "type": "ground"
+  },
+  {
+   "id": 74,
+   "type": "ground"
+  },
+  {
+   "id": 81,
+   "type": "decal"
+  },
+  {
+   "id": 82,
+   "type": "decal"
+  },
+  {
+   "id": 83,
+   "type": "decal"
+  },
+  {
+   "id": 86,
+   "type": "decal"
+  },
+  {
+   "id": 88,
+   "type": "decal"
+  },
+  {
+   "id": 90,
+   "type": "ground"
+  },
+  {
+   "id": 91,
+   "type": "ground"
+  },
+  {
+   "id": 93,
+   "type": "ground"
+  },
+  {
+   "id": 94,
+   "type": "ground"
+  },
+  {
+   "id": 98,
+   "type": "decal"
+  },
+  {
+   "id": 99,
+   "type": "decal"
+  },
+  {
+   "id": 100,
+   "type": "decal"
+  },
+  {
+   "id": 105,
+   "type": "platform"
+  },
+  {
+   "id": 107,
+   "type": "ground"
+  },
+  {
+   "id": 108,
+   "type": "ground"
+  },
+  {
+   "id": 110,
+   "type": "ground"
+  },
+  {
+   "id": 111,
+   "type": "ground"
+  },
+  {
+   "id": 115,
+   "type": "decal"
+  },
+  {
+   "id": 116,
+   "type": "decal"
+  },
+  {
+   "id": 117,
+   "type": "decal"
+  },
+  {
+   "id": 119,
+   "type": "decal"
+  },
+  {
+   "id": 120,
+   "type": "decal"
+  },
+  {
+   "id": 121,
+   "type": "decal"
+  },
+  {
+   "id": 122,
+   "type": "decal"
+  },
+  {
+   "id": 123,
+   "type": "decal"
+  },
+  {
+   "id": 124,
+   "type": "decal"
+  },
+  {
+   "id": 125,
+   "type": "decal"
+  },
+  {
+   "id": 126,
+   "type": "decal"
+  },
+  {
+   "id": 127,
+   "type": "decal"
+  },
+  {
+   "id": 128,
+   "type": "decal"
+  },
+  {
+   "id": 129,
+   "type": "decal"
+  },
+  {
+   "id": 130,
+   "type": "decal"
+  },
+  {
+   "id": 132,
+   "type": "decal"
+  },
+  {
+   "id": 133,
+   "type": "decal"
+  },
+  {
+   "id": 134,
+   "type": "decal"
+  },
+  {
+   "id": 136,
+   "type": "ground"
+  },
+  {
+   "id": 137,
+   "type": "ground"
+  },
+  {
+   "id": 138,
+   "type": "ground"
+  },
+  {
+   "id": 139,
+   "type": "ground"
+  },
+  {
+   "id": 140,
+   "type": "ground"
+  },
+  {
+   "id": 141,
+   "type": "ground"
+  },
+  {
+   "id": 142,
+   "type": "ground"
+  },
+  {
+   "id": 143,
+   "type": "ground"
+  },
+  {
+   "id": 144,
+   "type": "ground"
+  },
+  {
+   "id": 145,
+   "type": "ground"
+  },
+  {
+   "id": 146,
+   "type": "ground"
+  },
+  {
+   "id": 147,
+   "type": "ground"
+  },
+  {
+   "id": 153,
+   "type": "ground"
+  },
+  {
+   "id": 154,
+   "type": "ground"
+  },
+  {
+   "id": 155,
+   "type": "ground"
+  },
+  {
+   "id": 156,
+   "type": "ground"
+  },
+  {
+   "id": 157,
+   "type": "ground"
+  },
+  {
+   "id": 158,
+   "type": "ground"
+  },
+  {
+   "id": 159,
+   "type": "ground"
+  },
+  {
+   "id": 160,
+   "type": "ground"
+  },
+  {
+   "id": 161,
+   "type": "ground"
+  },
+  {
+   "id": 162,
+   "type": "ground"
+  },
+  {
+   "id": 163,
+   "type": "ground"
+  },
+  {
+   "id": 164,
+   "type": "ground"
+  },
+  {
+   "id": 190,
+   "type": "decal"
+  },
+  {
+   "id": 191,
+   "type": "decal"
+  },
+  {
+   "id": 192,
+   "type": "decal"
+  },
+  {
+   "id": 193,
+   "type": "decal"
+  },
+  {
+   "id": 194,
+   "type": "decal"
+  },
+  {
+   "id": 195,
+   "type": "decal"
+  },
+  {
+   "id": 207,
+   "type": "decal"
+  },
+  {
+   "id": 208,
+   "type": "decal"
+  },
+  {
+   "id": 209,
+   "type": "decal"
+  },
+  {
+   "id": 210,
+   "type": "decal"
+  },
+  {
+   "id": 211,
+   "type": "decal"
+  },
+  {
+   "id": 212,
+   "type": "decal"
+  },
+  {
+   "id": 224,
+   "type": "decal"
+  },
+  {
+   "id": 225,
+   "type": "decal"
+  },
+  {
+   "id": 226,
+   "type": "decal"
+  },
+  {
+   "id": 227,
+   "type": "decal"
+  },
+  {
+   "id": 228,
+   "type": "decal"
+  },
+  {
+   "id": 229,
+   "type": "decal"
+  }
+ ],
+ "tilewidth": 16,
+ "type": "tileset",
+ "version": "1.10"
+}

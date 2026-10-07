@@ -1,0 +1,15 @@
+{
+  "columns": 32,
+  "image": "lab_rooms_tiles_close_up.png",
+  "imageheight": 336,
+  "imagewidth": 512,
+  "margin": 0,
+  "name": "lab_tiles_close_up",
+  "spacing": 0,
+  "tilecount": 672,
+  "tiledversion": "1.11.0",
+  "tileheight": 16,
+  "tilewidth": 16,
+  "type": "tileset",
+  "version": "1.10"
+}

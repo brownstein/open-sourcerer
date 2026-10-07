@@ -1,0 +1,2 @@
+export type sprite_layers = "Base" | "Pivot" | "Plants_B" | "Head_B" | "Plants_A" | "Cable" | "Barrel" | "Head_A" | "Barrel_Plants" | "Top_Plants" | "FX" | "FX_Blast";
+export type sprite_animations = "activate" | "turn_up" | "shoot_up" | "shoot_forward";

@@ -1,0 +1,2 @@
+export type sprite_layers = "reference" | "Bottom arm" | "Legs back" | "Body" | "Body Copy" | "Arms" | "Head" | "Legs front" | "musk" | "Electricity" | "shoot" | "bullet";
+export type sprite_animations = "Walk4" | "Idle2" | "death" | "attack" | "bullet" | "loop" | "bulletcrash";

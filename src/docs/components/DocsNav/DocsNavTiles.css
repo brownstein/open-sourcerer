@@ -1,0 +1,124 @@
+.doc-nav-tile {
+  cursor: pointer;
+}
+
+.doc-nav-tile-icon-and-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12pt;
+  gap: 1em;
+}
+
+.doc-nav-tile-icon {
+  height: 72pt;
+  aspect-ratio: 1;
+  position: relative;
+  color: #53d6f5;
+  display: flex;
+}
+
+.doc-nav-tile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+
+.doc-nav-tile-content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.doc-nav-tile-new-content-count {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 1;
+  color: #53d6f5;
+  background: #07333d;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  width: 2em;
+}
+
+@property --nav-grid-item-border-width {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 3pt;
+}
+
+@property --nav-grid-item-border-radius {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 8pt;
+}
+
+.doc-nav-tile-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #53d6f5;
+  clip-path: polygon(
+    evenodd,
+    var(--nav-grid-item-border-radius) 0,
+    calc(100% - var(--nav-grid-item-border-radius)) 0,
+    100% var(--nav-grid-item-border-radius),
+    100% calc(100% - var(--nav-grid-item-border-radius)),
+    calc(100% - var(--nav-grid-item-border-radius)) 100%,
+    var(--nav-grid-item-border-radius) 100%,
+    0 calc(100% - var(--nav-grid-item-border-radius)),
+    0 var(--nav-grid-item-border-radius),
+    var(--nav-grid-item-border-radius) 0,
+    var(--nav-grid-item-border-radius) var(--nav-grid-item-border-width),
+    calc(100% - var(--nav-grid-item-border-radius)) var(--nav-grid-item-border-width),
+    calc(100% - var(--nav-grid-item-border-width)) var(--nav-grid-item-border-radius),
+    calc(100% - var(--nav-grid-item-border-width)) calc(100% - var(--nav-grid-item-border-radius)),
+    calc(100% - var(--nav-grid-item-border-radius)) calc(100% - var(--nav-grid-item-border-width)),
+    var(--nav-grid-item-border-radius) calc(100% - var(--nav-grid-item-border-width)),
+    var(--nav-grid-item-border-width) calc(100% - var(--nav-grid-item-border-radius)),
+    var(--nav-grid-item-border-width) var(--nav-grid-item-border-radius),
+    var(--nav-grid-item-border-radius) var(--nav-grid-item-border-width)
+  );
+}
+
+.low-opacity {
+  opacity: 0.3;
+}
+
+.doc-nav-tile-grid .doc-nav-tile-grid-tile {
+  position: relative;
+  padding: 0.25em
+}
+
+.doc-nav-tile-grid {
+  position: relative;
+  width: calc(100% - 3em);
+  margin-top: 1em;
+  padding: 0 1.5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250pt, 1fr));
+  gap: 0.8em;
+}
+
+.docs-entry > .doc-nav-tile-grid.doc-width-full {
+  margin-inline: unset;
+}
+
+.doc-nav-tile-grid .doc-nav-tile-grid-tile {
+  position: relative;
+}
+
+.doc-nav-list {
+  min-height: 100pt;
+}

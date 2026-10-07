@@ -1,0 +1,28 @@
+@property --timeout {
+  syntax: "<time>";
+  inherits: false;
+  initial-value: 1000ms;
+}
+
+@property --tAngle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.countdown-circle {
+  --timeout: 1000ms;
+  --tAngle: 0deg;
+  width: 100%;
+  max-width: 80px;
+  aspect-ratio: 1;
+  transition: --tAngle linear var(--timeout);
+  background: conic-gradient(transparent var(--tAngle), black 1deg, black 360deg);
+  mask: radial-gradient(
+    circle,
+    transparent 50%,
+    white 55%,
+    white 70%,
+    transparent 71%
+  );
+}

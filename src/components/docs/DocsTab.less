@@ -1,0 +1,62 @@
+.docs-tab {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.docs-entry-scroll {
+	flex: 1 1 auto;
+	min-height: 0;
+	overflow-y: auto;
+
+	// for container size queries
+	container-type: inline-size;
+
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+	&::-webkit-scrollbar-track {
+		background: linear-gradient(
+			90deg,
+			transparent 25%,
+			#2e2e2e 26%,
+			#2e2e2e 75%,
+			transparent 76%
+		);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: linear-gradient(#affcfc 0%, #68b5b1 100%);
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: #affcfc;
+		box-shadow: 0 0 10px rgba(77, 238, 234, 0.5);
+	}
+
+	body.light &::-webkit-scrollbar-track {
+		background: linear-gradient(
+			90deg,
+			transparent 25%,
+			#ccc 26%,
+			#ccc 75%,
+			transparent 76%
+		);
+	}
+	body.light &::-webkit-scrollbar-thumb {
+		background: linear-gradient(#4488bb 0%, #002244 100%);
+	}
+	body.light &::-webkit-scrollbar-thumb:hover {
+		background: #4488bb;
+		box-shadow: 0 0 10px rgba(68, 136, 187, 0.5);
+	}
+
+	@supports (-moz-appearance: none) {
+		scrollbar-width: thin;
+		scrollbar-color: #8ce7e3 #2e2e2e;
+		body.light & {
+			scrollbar-color: #4488bb #ccc;
+		}
+	}
+}

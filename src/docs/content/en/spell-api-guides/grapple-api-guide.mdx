@@ -1,0 +1,104 @@
+export const meta = {
+	title: "Grapple API Guide"
+};
+
+# The Grapple API
+
+Welcome back, <PlayerName />! The **`"grapple"`** spell conjures a grappling hook — a spring line that runs from your caster to a point or an entity. You can adjust its length and springiness on the fly, and it also exposes a handy `Grapple.castRay` for probing the world.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const Grapple = require("grapple");
+	new Grapple({ targetX: 10, targetY: 6 });
+	```
+
+</ExampleCode>
+
+That `new Grapple(...)` anchors a spring line from your caster to the target point.
+
+## Configuring the Grapple
+
+The constructor takes a **configuration object** describing where the line attaches and how it behaves:
+
+<ExampleCode>
+
+	```javascript
+	const Grapple = require("grapple");
+	const grapple = new Grapple({
+		targetX: 12,
+		targetY: 8,
+		length: 5,
+		springiness: 0.5
+	});
+
+	grapple.setLength(3, 250);
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Shortening the line with `setLength` reels you toward the anchor, while a higher `springiness` makes the line snap back more forcefully.
+
+</Callout>
+
+### Constructor options
+
+- **`targetX`** — `number` — the anchor's world x position.
+- **`targetY`** — `number` — the anchor's world y position.
+- **`targetEntityId`** — `string` — attach the line to an entity instead of a fixed point.
+- **`length`** — `number` — the resting length of the spring line.
+- **`springiness`** — `number` — how stiff the spring line is.
+
+## Controlling a Grapple
+
+`new Grapple(...)` hands you back a grapple you can keep commanding:
+
+<ExampleCode>
+
+	```javascript
+	const Grapple = require("grapple");
+	const grapple = new Grapple({ targetX: 10, targetY: 6 });
+
+	grapple.setSpringiness(0.8, 200);
+	grapple.detach();
+	```
+
+</ExampleCode>
+
+### Properties and methods
+
+- **`id`** — `string` — the grapple's handle id.
+- **`setLength(length, transitionMs?)`** — set the line length, optionally easing over `transitionMs` milliseconds.
+- **`setSpringiness(springiness, transitionMs?)`** — set the springiness, optionally easing over `transitionMs` milliseconds.
+- **`detach()`** — releases the grapple. Returns void.
+
+## Casting a Ray
+
+The `Grapple` import also exposes a static helper that casts a ray from your caster and reports the first terrain or enemy it hits:
+
+<ExampleCode>
+
+	```javascript
+	const Grapple = require("grapple");
+	const result = Grapple.castRay({ directionX: 1, directionY: 0 });
+
+	if (result.hit) {
+		new Grapple({ targetX: result.x, targetY: result.y });
+	}
+	```
+
+</ExampleCode>
+
+<Callout type="info">
+
+	`Grapple.castRay` returns `{ hit, x, y, distance, entityId? }`. Check `hit` first — if it's `true`, the `x`/`y` give you a ready-made anchor point, and `entityId` is set when the ray struck an entity.
+
+</Callout>
+
+### Static methods
+
+- **`Grapple.castRay(opts)`** — casts a ray from the caster, returning the first terrain or enemy hit. `opts` is `{ directionX, directionY, maxDistance? }`. Returns `{ hit, x, y, distance, entityId? }`.

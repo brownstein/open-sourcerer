@@ -1,0 +1,47 @@
+
+.adana-dialogue-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  margin: 32px;
+
+  &::before {
+    content: "";
+    z-index: -1;
+    border-width: 40px;
+    border-style: solid;
+    border-image: url("./box-template-1.png");
+    border-image-slice: 60;
+    position: absolute;
+    top: -32px;
+    bottom: -32px;
+    left: -32px;
+    right: -32px;
+  }
+
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: -24px;
+    top: -8px;
+    bottom: -8px;
+    width: 20px;
+    background: url("./box-symbols-1.png");
+    background-repeat: repeat-y;
+    background-position: top;
+  }
+
+  .adana-dialogue-next {
+    position: absolute;
+    right: -32px;
+    bottom: -32px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url("./box-bottom-right.png");
+  }
+}

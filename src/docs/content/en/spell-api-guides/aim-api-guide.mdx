@@ -1,0 +1,74 @@
+export const meta = {
+	title: "Aim API Guide"
+};
+
+# The Aim API
+
+Welcome back, <PlayerName />! The **`"aim"`** spell lets you point at a spot in the world with your cursor and turn that click into a position your spell can use. It's a perfect companion for targeting other spells like the [Projectile](spell-api-guides/projectile-api-guide) or [Fire](spell-api-guides/fire-api-guide) APIs.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const Aim = require("aim");
+	const target = Aim.world();
+	```
+
+</ExampleCode>
+
+`Aim` is an object of aim functions and click callbacks — there's nothing to construct.
+
+## Aiming a Point
+
+`Aim.world()` blocks the spell until the player clicks, then resolves to the clicked spot as a [Vector](spell-api-guides/vector-api-guide):
+
+<ExampleCode>
+
+	```javascript
+	const Aim = require("aim");
+	const Projectile = require("projectile");
+
+	const target = Aim.world();
+	new Projectile({ at: target });
+	```
+
+</ExampleCode>
+
+<Callout type="info">
+
+	`Aim.world()` and `Aim.relative()` pause the spell until the player clicks. Use `Aim.relative()` when you want the point measured from the caster instead of in absolute world space.
+
+</Callout>
+
+## Reacting to Clicks
+
+If you'd rather respond to every click without blocking, register a callback:
+
+<ExampleCode>
+
+	```javascript
+	const Aim = require("aim");
+
+	function handleClick(point) {
+		console.log("clicked at", point.x, point.y);
+	}
+
+	Aim.onClick(handleClick);
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Remember to call `Aim.offClick(handleClick)` with the same function when you're done, so old callbacks don't keep firing.
+
+</Callout>
+
+### Methods
+
+- **`world()`** — resolves to the clicked world position as a [Vector](spell-api-guides/vector-api-guide). Blocks the spell until the player clicks.
+- **`relative()`** — resolves to the clicked position relative to the caster, as a [Vector](spell-api-guides/vector-api-guide). Blocks the spell until the player clicks.
+- **`asyncRelative()`** — promise variant of `relative()`, for use inside an `async function`.
+- **`onClick(cb)`** — registers a callback (`cb` is a function) fired on each click.
+- **`offClick(cb)`** — removes a previously registered click callback.

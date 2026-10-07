@@ -1,0 +1,113 @@
+export const meta = {
+	title: "Spark API Guide"
+};
+
+# The Spark API
+
+Welcome back, <PlayerName />! The **`"spark"`** spell conjures a **ManaSpark** — a floating orb that orbits you and can cast spells from its own position. This is one of the most powerful tools in your kit: a spark can carry mana, drift out ahead of you, and fling spells from places you can't reach. Many other spells — [Fire](spell-api-guides/fire-api-guide), [Ice](spell-api-guides/ice-api-guide), [Earth](spell-api-guides/earth-api-guide), [Sensor](spell-api-guides/sensor-api-guide), and [Heal](spell-api-guides/heal-api-guide) — accept a `spark: { id }` option so they cast from a spark instead of from you.
+
+## Creating a Spark
+
+<ExampleCode>
+
+	```javascript
+	const Spark = require("spark");
+	const spark = new Spark();
+	```
+
+</ExampleCode>
+
+That single `new Spark()` summons an orb that orbits your caster.
+
+## Configuring a Spark
+
+The constructor takes an optional **configuration object** so you can position the spark and load it with mana up front:
+
+<ExampleCode>
+
+	```javascript
+	const Spark = require("spark");
+	const spark = new Spark({
+		mana: 50,
+		offset: { x: 2, y: 1 },
+		cameraFollow: true
+	});
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Set `cameraFollow: true` to let the camera ride along with a spark you send far away — handy for scouting ahead before you commit.
+
+</Callout>
+
+### Constructor options
+
+- **`mana`** — `number` — initial mana to transfer into the spark.
+- **`offset`** — `{ x, y }` — position offset relative to the caster.
+- **`cameraFollow`** — `boolean` — whether the camera should follow this spark.
+- **`casterId`** — `string` — id of the entity to cast from (defaults to the caster).
+
+## Casting From a Spark
+
+The most powerful trick is `spark.cast` — it casts a spell, or constructs a spell class, from the spark's position instead of your own. Pass the spell class and its options:
+
+<ExampleCode>
+
+	```javascript
+	const Spark = require("spark");
+	const Fire = require("fire");
+
+	const spark = new Spark({ mana: 30, offset: { x: 3, y: 0 } });
+	spark.cast(Fire, { strength: 20, gravity: false });
+	```
+
+</ExampleCode>
+
+That launches a [Fire](spell-api-guides/fire-api-guide) fireball from the spark, not from you — letting you attack around corners or from the air.
+
+## Moving a Spark Around
+
+A spark responds to movement commands so you can steer it through the level:
+
+<ExampleCode>
+
+	```javascript
+	const Spark = require("spark");
+	const spark = new Spark();
+
+	spark.moveRight(3);
+	spark.moveUp(2);
+	spark.setPosition({ x: 12, y: 6 });
+	```
+
+</ExampleCode>
+
+### Properties
+
+- **`id`** — `string` — the spark's persistent handle id.
+- **`type`** — `string` — the entity type string (`'ManaSpark'`).
+- **`mana`** — `number` — the current mana held by the spark.
+
+### Methods
+
+- **`cast(spell, arg?)`** — cast a spell or construct a class from the spark's position. `spell` is a class or function (e.g. the `Fire` class), and `arg` is the options object.
+- **`castAsync(spell, arg?)`** — async/promise variant of `cast`.
+- **`destroy()`** — destroy the spark (returns void).
+- **`setOffset(offset)`** — update the orbit offset (`{ x, y }`).
+- **`setPosition(position)`** — teleport the spark toward an absolute position (`{ x, y }`).
+- **`returnToCaster()`** — stream the spark's mana back to the caster and destroy it (returns void).
+- **`storeMana(amount)`** — transfer mana from the caster into the spark (`number`).
+- **`leech(fountainHandleId)`** — drain a nearby ManaFountain (within range and line of sight) to refill the spark (`string`).
+- **`passMana(targetSpark, amount)`** — stream mana from this spark to another spark (`ManaSpark`, `number`).
+- **`moveRight(n?)`** — move the spark right by `n` tiles (default 1).
+- **`moveLeft(n?)`** — move the spark left by `n` tiles (default 1).
+- **`moveUp(n?)`** — move the spark up by `n` tiles (default 1).
+- **`moveDown(n?)`** — move the spark down by `n` tiles (default 1).
+
+<Callout type="important">
+
+	A spark only carries the mana you give it. When you're done, call `returnToCaster()` to recover any unused mana instead of letting it `destroy()` away.
+
+</Callout>

@@ -1,0 +1,2024 @@
+[
+  {
+    "chunkId": "definitions/index#index",
+    "headerId": "index",
+    "docId": "definitions/index",
+    "docTitle": "All Definitions",
+    "heading": "Index",
+    "headingPath": [
+      "Index"
+    ],
+    "textContent": "JavaScript",
+    "codeContent": "",
+    "rawContent": "Index JavaScript"
+  },
+  {
+    "chunkId": "definitions/javascript#javascript",
+    "headerId": "javascript",
+    "docId": "definitions/javascript",
+    "docTitle": "JavaScript",
+    "heading": "JavaScript",
+    "headingPath": [
+      "JavaScript"
+    ],
+    "textContent": "JavaScript is a programming language. Warning JavaScript is VERY evil Each definition is an MDX file",
+    "codeContent": "",
+    "rawContent": "JavaScript JavaScript is a programming language. Warning JavaScript is VERY evil Each definition is an MDX file"
+  },
+  {
+    "chunkId": "lore/index#lore",
+    "headerId": "lore",
+    "docId": "lore/index",
+    "docTitle": "Missing Doc Title",
+    "heading": "Lore",
+    "headingPath": [
+      "Lore"
+    ],
+    "textContent": "",
+    "codeContent": "",
+    "rawContent": "Lore"
+  },
+  {
+    "chunkId": "spell-api-guides/aim-api-guide#the-aim-api",
+    "headerId": "the-aim-api",
+    "docId": "spell-api-guides/aim-api-guide",
+    "docTitle": "Aim API Guide",
+    "heading": "The Aim API",
+    "headingPath": [
+      "The Aim API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell lets you point at a spot in the world with your cursor and turn that click into a position your spell can use. It's a perfect companion for targeting other spells like the Projectile or Fire APIs.",
+    "codeContent": "\"aim\"",
+    "rawContent": "The Aim API Welcome back, Protag ! The \"aim\" spell lets you point at a spot in the world with your cursor and turn that click into a position your spell can use. It's a perfect companion for targeting other spells like the Projectile or Fire APIs."
+  },
+  {
+    "chunkId": "spell-api-guides/aim-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/aim-api-guide",
+    "docTitle": "Aim API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Aim API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor is an object of aim functions and click callbacks — there's nothing to construct.",
+    "codeContent": "const Aim = require(\"aim\"); const target = Aim.world(); Aim",
+    "rawContent": "Importing the Spell const Aim = require(\"aim\"); const target = Aim.world(); Explain Code Open in Code Editor Aim is an object of aim functions and click callbacks — there's nothing to construct."
+  },
+  {
+    "chunkId": "spell-api-guides/aim-api-guide#aiming-a-point",
+    "headerId": "aiming-a-point",
+    "docId": "spell-api-guides/aim-api-guide",
+    "docTitle": "Aim API Guide",
+    "heading": "Aiming a Point",
+    "headingPath": [
+      "The Aim API",
+      "Aiming a Point"
+    ],
+    "textContent": "blocks the spell until the player clicks, then resolves to the clicked spot as a Vector : Explain Code Open in Code Editor Info and pause the spell until the player clicks. Use when you want the point measured from the caster instead of in absolute world space.",
+    "codeContent": "Aim.world() const Aim = require(\"aim\"); const Projectile = require(\"projectile\"); const target = Aim.world(); new Projectile({ at: target }); Aim.world() Aim.relative() Aim.relative()",
+    "rawContent": "Aiming a Point Aim.world() blocks the spell until the player clicks, then resolves to the clicked spot as a Vector : const Aim = require(\"aim\"); const Projectile = require(\"projectile\"); const target = Aim.world(); new Projectile({ at: target }); Explain Code Open in Code Editor Info Aim.world() and Aim.relative() pause the spell until the player clicks. Use Aim.relative() when you want the point measured from the caster instead of in absolute world space."
+  },
+  {
+    "chunkId": "spell-api-guides/aim-api-guide#reacting-to-clicks",
+    "headerId": "reacting-to-clicks",
+    "docId": "spell-api-guides/aim-api-guide",
+    "docTitle": "Aim API Guide",
+    "heading": "Reacting to Clicks",
+    "headingPath": [
+      "The Aim API",
+      "Reacting to Clicks"
+    ],
+    "textContent": "If you'd rather respond to every click without blocking, register a callback: Explain Code Open in Code Editor Tip Remember to call with the same function when you're done, so old callbacks don't keep firing.",
+    "codeContent": "const Aim = require(\"aim\"); function handleClick(point) { console.log(\"clicked at\", point.x, point.y); } Aim.onClick(handleClick); Aim.offClick(handleClick)",
+    "rawContent": "Reacting to Clicks If you'd rather respond to every click without blocking, register a callback: const Aim = require(\"aim\"); function handleClick(point) { console.log(\"clicked at\", point.x, point.y); } Aim.onClick(handleClick); Explain Code Open in Code Editor Tip Remember to call Aim.offClick(handleClick) with the same function when you're done, so old callbacks don't keep firing."
+  },
+  {
+    "chunkId": "spell-api-guides/aim-api-guide#methods",
+    "headerId": "methods",
+    "docId": "spell-api-guides/aim-api-guide",
+    "docTitle": "Aim API Guide",
+    "heading": "Methods",
+    "headingPath": [
+      "The Aim API",
+      "Reacting to Clicks",
+      "Methods"
+    ],
+    "textContent": "— resolves to the clicked world position as a Vector . Blocks the spell until the player clicks. — resolves to the clicked position relative to the caster, as a Vector . Blocks the spell until the player clicks. — promise variant of , for use inside an . — registers a callback ( is a function) fired on each click. — removes a previously registered click callback.",
+    "codeContent": "world() relative() asyncRelative() relative() async function onClick(cb) cb offClick(cb)",
+    "rawContent": "Methods world() — resolves to the clicked world position as a Vector . Blocks the spell until the player clicks. relative() — resolves to the clicked position relative to the caster, as a Vector . Blocks the spell until the player clicks. asyncRelative() — promise variant of relative() , for use inside an async function . onClick(cb) — registers a callback ( cb is a function) fired on each click. offClick(cb) — removes a previously registered click callback."
+  },
+  {
+    "chunkId": "spell-api-guides/air-api-guide#the-air-api",
+    "headerId": "the-air-api",
+    "docId": "spell-api-guides/air-api-guide",
+    "docTitle": "Air API Guide",
+    "heading": "The Air API",
+    "headingPath": [
+      "The Air API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell is wind magic — it lets you shove entities around with a sudden air burst . Launch yourself across a gap, knock an enemy off a ledge, or break a fall, all with a single gust.",
+    "codeContent": "\"air\"",
+    "rawContent": "The Air API Welcome back, Protag ! The \"air\" spell is wind magic — it lets you shove entities around with a sudden air burst . Launch yourself across a gap, knock an enemy off a ledge, or break a fall, all with a single gust."
+  },
+  {
+    "chunkId": "spell-api-guides/air-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/air-api-guide",
+    "docTitle": "Air API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Air API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor Calling with no arguments gives the caster a little nudge.",
+    "codeContent": "const Air = require(\"air\"); Air.burst(); Air.burst()",
+    "rawContent": "Importing the Spell const Air = require(\"air\"); Air.burst(); Explain Code Open in Code Editor Calling Air.burst() with no arguments gives the caster a little nudge."
+  },
+  {
+    "chunkId": "spell-api-guides/air-api-guide#pushing-the-caster",
+    "headerId": "pushing-the-caster",
+    "docId": "spell-api-guides/air-api-guide",
+    "docTitle": "Air API Guide",
+    "heading": "Pushing the Caster",
+    "headingPath": [
+      "The Air API",
+      "Pushing the Caster"
+    ],
+    "textContent": "Pass an impulse to control the direction and strength of the gust. Here we launch the caster up and forward: Explain Code Open in Code Editor Tip A strong positive impulse gives you a wind-powered jump — great for reaching ledges your normal jump can't.",
+    "codeContent": "const Air = require(\"air\"); Air.burst({ x: 5, y: 8 }); y",
+    "rawContent": "Pushing the Caster Pass an impulse to control the direction and strength of the gust. Here we launch the caster up and forward: const Air = require(\"air\"); Air.burst({ x: 5, y: 8 }); Explain Code Open in Code Editor Tip A strong positive y impulse gives you a wind-powered jump — great for reaching ledges your normal jump can't."
+  },
+  {
+    "chunkId": "spell-api-guides/air-api-guide#pushing-another-entity",
+    "headerId": "pushing-another-entity",
+    "docId": "spell-api-guides/air-api-guide",
+    "docTitle": "Air API Guide",
+    "heading": "Pushing Another Entity",
+    "headingPath": [
+      "The Air API",
+      "Pushing Another Entity"
+    ],
+    "textContent": "Give a target id as its second argument to shove someone else instead of yourself. You can get entity ids from the Sensor or Get Entities APIs: Explain Code Open in Code Editor",
+    "codeContent": "burst const Air = require(\"air\"); const Sensor = require(\"sensor\"); const enemy = Sensor.nearestEnemy(); if (enemy) { Air.burst({ x: 10, y: 4 }, enemy.id); }",
+    "rawContent": "Pushing Another Entity Give burst a target id as its second argument to shove someone else instead of yourself. You can get entity ids from the Sensor or Get Entities APIs: const Air = require(\"air\"); const Sensor = require(\"sensor\"); const enemy = Sensor.nearestEnemy(); if (enemy) { Air.burst({ x: 10, y: 4 }, enemy.id); } Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/air-api-guide#methods",
+    "headerId": "methods",
+    "docId": "spell-api-guides/air-api-guide",
+    "docTitle": "Air API Guide",
+    "heading": "Methods",
+    "headingPath": [
+      "The Air API",
+      "Pushing Another Entity",
+      "Methods"
+    ],
+    "textContent": "— applies a wind impulse to a target, or to the caster if no target is given. — — the direction and strength of the gust. — — who to push. Important Wind is a force, not teleportation — the impulse adds momentum, so heavier entities move less than light ones for the same burst.",
+    "codeContent": "burst(impulse?, targetId?) impulse { x, y } targetId string | { entityId?, handleId? }",
+    "rawContent": "Methods burst(impulse?, targetId?) — applies a wind impulse to a target, or to the caster if no target is given. impulse — { x, y } — the direction and strength of the gust. targetId — string | { entityId?, handleId? } — who to push. Important Wind is a force, not teleportation — the impulse adds momentum, so heavier entities move less than light ones for the same burst."
+  },
+  {
+    "chunkId": "spell-api-guides/area-preview-api-guide#the-area-preview-api",
+    "headerId": "the-area-preview-api",
+    "docId": "spell-api-guides/area-preview-api-guide",
+    "docTitle": "Area Preview API Guide",
+    "heading": "The Area Preview API",
+    "headingPath": [
+      "The Area Preview API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell draws a translucent polygon overlay right in the world. It's perfect for previewing where a shape-based spell — like Earth or Ice — will land before you commit to the cast.",
+    "codeContent": "\"areaPreview\"",
+    "rawContent": "The Area Preview API Welcome back, Protag ! The \"areaPreview\" spell draws a translucent polygon overlay right in the world. It's perfect for previewing where a shape-based spell — like Earth or Ice — will land before you commit to the cast."
+  },
+  {
+    "chunkId": "spell-api-guides/area-preview-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/area-preview-api-guide",
+    "docTitle": "Area Preview API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Area Preview API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor That draws a translucent rectangle outline at the polygon you described.",
+    "codeContent": "const AreaPreview = require(\"areaPreview\"); const preview = new AreaPreview({ polygon: [ { x: 0, y: 0 }, { x: 4, y: 0 }, { x: 4, y: 2 }, { x: 0, y: 2 } ] });",
+    "rawContent": "Importing the Spell const AreaPreview = require(\"areaPreview\"); const preview = new AreaPreview({ polygon: [ { x: 0, y: 0 }, { x: 4, y: 0 }, { x: 4, y: 2 }, { x: 0, y: 2 } ] }); Explain Code Open in Code Editor That draws a translucent rectangle outline at the polygon you described."
+  },
+  {
+    "chunkId": "spell-api-guides/area-preview-api-guide#configuring-the-preview",
+    "headerId": "configuring-the-preview",
+    "docId": "spell-api-guides/area-preview-api-guide",
+    "docTitle": "Area Preview API Guide",
+    "heading": "Configuring the Preview",
+    "headingPath": [
+      "The Area Preview API",
+      "Configuring the Preview"
+    ],
+    "textContent": "The constructor takes a configuration object . You can attach the overlay to an entity so it follows along, and tint it any color you like: Explain Code Open in Code Editor Tip Polygon points can be written as objects or as pairs — use whichever is tidier for your shape.",
+    "codeContent": "const AreaPreview = require(\"areaPreview\"); const self = require(\"self\"); const preview = new AreaPreview({ polygon: [[0, 0], [3, 0], [3, 3], [0, 3]], attachToEntityId: self.id, color: { r: 0, g: 1, b: 0 } }); { x, y } [x, y]",
+    "rawContent": "Configuring the Preview The constructor takes a configuration object . You can attach the overlay to an entity so it follows along, and tint it any color you like: const AreaPreview = require(\"areaPreview\"); const self = require(\"self\"); const preview = new AreaPreview({ polygon: [[0, 0], [3, 0], [3, 3], [0, 3]], attachToEntityId: self.id, color: { r: 0, g: 1, b: 0 } }); Explain Code Open in Code Editor Tip Polygon points can be written as { x, y } objects or as [x, y] pairs — use whichever is tidier for your shape."
+  },
+  {
+    "chunkId": "spell-api-guides/area-preview-api-guide#constructor-options",
+    "headerId": "constructor-options",
+    "docId": "spell-api-guides/area-preview-api-guide",
+    "docTitle": "Area Preview API Guide",
+    "heading": "Constructor options",
+    "headingPath": [
+      "The Area Preview API",
+      "Configuring the Preview",
+      "Constructor options"
+    ],
+    "textContent": "— — the outline to draw. — — attach the overlay to an entity so it follows it. — — the overlay color.",
+    "codeContent": "polygon ({ x, y } | [number, number])[] attachToEntityId string color { r, g, b }",
+    "rawContent": "Constructor options polygon — ({ x, y } | [number, number])[] — the outline to draw. attachToEntityId — string — attach the overlay to an entity so it follows it. color — { r, g, b } — the overlay color."
+  },
+  {
+    "chunkId": "spell-api-guides/area-preview-api-guide#recoloring-and-removing",
+    "headerId": "recoloring-and-removing",
+    "docId": "spell-api-guides/area-preview-api-guide",
+    "docTitle": "Area Preview API Guide",
+    "heading": "Recoloring and Removing",
+    "headingPath": [
+      "The Area Preview API",
+      "Recoloring and Removing"
+    ],
+    "textContent": "The preview hands you back a handle you can recolor or fade away: Explain Code Open in Code Editor",
+    "codeContent": "const AreaPreview = require(\"areaPreview\"); const preview = new AreaPreview({ polygon: [{ x: 0, y: 0 }, { x: 5, y: 0 }, { x: 5, y: 1 }, { x: 0, y: 1 }] }); preview.recolor(1, 0, 0); preview.destroy();",
+    "rawContent": "Recoloring and Removing The preview hands you back a handle you can recolor or fade away: const AreaPreview = require(\"areaPreview\"); const preview = new AreaPreview({ polygon: [{ x: 0, y: 0 }, { x: 5, y: 0 }, { x: 5, y: 1 }, { x: 0, y: 1 }] }); preview.recolor(1, 0, 0); preview.destroy(); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/area-preview-api-guide#properties-and-methods",
+    "headerId": "properties-and-methods",
+    "docId": "spell-api-guides/area-preview-api-guide",
+    "docTitle": "Area Preview API Guide",
+    "heading": "Properties and methods",
+    "headingPath": [
+      "The Area Preview API",
+      "Recoloring and Removing",
+      "Properties and methods"
+    ],
+    "textContent": "— — the preview's handle id. — recolor the preview (three numbers). — fade the preview away (returns void). Info An area preview is purely visual — it never affects the world. Use it to plan a cast, then fire your real spell once the shape looks right.",
+    "codeContent": "id string recolor(r, g, b) destroy()",
+    "rawContent": "Properties and methods id — string — the preview's handle id. recolor(r, g, b) — recolor the preview (three numbers). destroy() — fade the preview away (returns void). Info An area preview is purely visual — it never affects the world. Use it to plan a cast, then fire your real spell once the shape looks right."
+  },
+  {
+    "chunkId": "spell-api-guides/earth-api-guide#the-earth-api",
+    "headerId": "the-earth-api",
+    "docId": "spell-api-guides/earth-api-guide",
+    "docTitle": "Earth API Guide",
+    "heading": "The Earth API",
+    "headingPath": [
+      "The Earth API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell conjures a solid stone block from a shape. Hand it a polygon, a rectangle, a circle, or let the player draw the outline by hand — the block springs into the world, ready to support, block, or bury. It pairs beautifully with the Shapes API for building reusable outlines.",
+    "codeContent": "\"earth\"",
+    "rawContent": "The Earth API Welcome back, Protag ! The \"earth\" spell conjures a solid stone block from a shape. Hand it a polygon, a rectangle, a circle, or let the player draw the outline by hand — the block springs into the world, ready to support, block, or bury. It pairs beautifully with the Shapes API for building reusable outlines."
+  },
+  {
+    "chunkId": "spell-api-guides/earth-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/earth-api-guide",
+    "docTitle": "Earth API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Earth API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor That single raises a default stone block in front of your caster.",
+    "codeContent": "const Earth = require(\"earth\"); new Earth(); new Earth()",
+    "rawContent": "Importing the Spell const Earth = require(\"earth\"); new Earth(); Explain Code Open in Code Editor That single new Earth() raises a default stone block in front of your caster."
+  },
+  {
+    "chunkId": "spell-api-guides/earth-api-guide#shaping-the-block",
+    "headerId": "shaping-the-block",
+    "docId": "spell-api-guides/earth-api-guide",
+    "docTitle": "Earth API Guide",
+    "heading": "Shaping the Block",
+    "headingPath": [
+      "The Earth API",
+      "Shaping the Block"
+    ],
+    "textContent": "The constructor takes an optional configuration object so you can decide exactly what gets conjured: Explain Code Open in Code Editor Tip Use to let the player sketch the block's outline with the cursor — perfect for improvising a bridge or a wall on the fly. You can also build a custom polygon, optionally with holes cut through it: Explain Code Open in Code Editor",
+    "codeContent": "const Earth = require(\"earth\"); new Earth({ rect: { width: 3, height: 1 }, angle: 0, offset: { x: 0, y: 2 } }); drawShape: true const Earth = require(\"earth\"); new Earth({ shape: [ { x: 0, y: 0 }, { x: 4, y: 0 }, { x: 4, y: 2 }, { x: 0, y: 2 } ], holes: [ [ { x: 1, y: 0.5 }, { x: 3, y: 0.5 }, { x: 3, y: 1.5 }, { x: 1, y: 1.5 } ] ] });",
+    "rawContent": "Shaping the Block The constructor takes an optional configuration object so you can decide exactly what gets conjured: const Earth = require(\"earth\"); new Earth({ rect: { width: 3, height: 1 }, angle: 0, offset: { x: 0, y: 2 } }); Explain Code Open in Code Editor Tip Use drawShape: true to let the player sketch the block's outline with the cursor — perfect for improvising a bridge or a wall on the fly. You can also build a custom polygon, optionally with holes cut through it: const Earth = require(\"earth\"); new Earth({ shape: [ { x: 0, y: 0 }, { x: 4, y: 0 }, { x: 4, y: 2 }, { x: 0, y: 2 } ], holes: [ [ { x: 1, y: 0.5 }, { x: 3, y: 0.5 }, { x: 3, y: 1.5 }, { x: 1, y: 1.5 } ] ] }); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/earth-api-guide#constructor-options",
+    "headerId": "constructor-options",
+    "docId": "spell-api-guides/earth-api-guide",
+    "docTitle": "Earth API Guide",
+    "heading": "Constructor options",
+    "headingPath": [
+      "The Earth API",
+      "Shaping the Block",
+      "Constructor options"
+    ],
+    "textContent": "— — a custom polygon outline. — — polygon holes cut out of the shape. — — build the block as a rectangle. — — build the block as a circle. — — rotation of the block. — — position offset from the caster. — — let the player draw the shape with the cursor. — — cast the block from a ManaSpark instead of the caster.",
+    "codeContent": "shape ({ x, y } | [number, number])[] holes ({ x, y } | [number, number])[][] rect { width, height } circle { radius } angle number offset { x, y } | [number, number] drawShape boolean spark { id }",
+    "rawContent": "Constructor options shape — ({ x, y } | [number, number])[] — a custom polygon outline. holes — ({ x, y } | [number, number])[][] — polygon holes cut out of the shape. rect — { width, height } — build the block as a rectangle. circle — { radius } — build the block as a circle. angle — number — rotation of the block. offset — { x, y } | [number, number] — position offset from the caster. drawShape — boolean — let the player draw the shape with the cursor. spark — { id } — cast the block from a ManaSpark instead of the caster."
+  },
+  {
+    "chunkId": "spell-api-guides/earth-api-guide#controlling-a-block",
+    "headerId": "controlling-a-block",
+    "docId": "spell-api-guides/earth-api-guide",
+    "docTitle": "Earth API Guide",
+    "heading": "Controlling a Block",
+    "headingPath": [
+      "The Earth API",
+      "Controlling a Block"
+    ],
+    "textContent": "hands you back the block so you can keep working with it: Explain Code Open in Code Editor",
+    "codeContent": "new Earth(...) const Earth = require(\"earth\"); const block = new Earth({ rect: { width: 2, height: 2 } }); block.detachFromTerrain(); block.destroy();",
+    "rawContent": "Controlling a Block new Earth(...) hands you back the block so you can keep working with it: const Earth = require(\"earth\"); const block = new Earth({ rect: { width: 2, height: 2 } }); block.detachFromTerrain(); block.destroy(); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/earth-api-guide#properties-and-methods",
+    "headerId": "properties-and-methods",
+    "docId": "spell-api-guides/earth-api-guide",
+    "docTitle": "Earth API Guide",
+    "heading": "Properties and methods",
+    "headingPath": [
+      "The Earth API",
+      "Controlling a Block",
+      "Properties and methods"
+    ],
+    "textContent": "— — the block's handle id. — — its current position. — — whether it has been destroyed. — shatters the earth block (returns void). — — detaches the block from the terrain so it can move freely. Important By default a conjured block locks into the terrain. Call first if you want to nudge it around or drop it on something below!",
+    "codeContent": "id string position { x, y } destroyed boolean destroy() detachFromTerrain() boolean detachFromTerrain()",
+    "rawContent": "Properties and methods id — string — the block's handle id. position — { x, y } — its current position. destroyed — boolean — whether it has been destroyed. destroy() — shatters the earth block (returns void). detachFromTerrain() — boolean — detaches the block from the terrain so it can move freely. Important By default a conjured block locks into the terrain. Call detachFromTerrain() first if you want to nudge it around or drop it on something below!"
+  },
+  {
+    "chunkId": "spell-api-guides/fire-api-guide#the-fire-api",
+    "headerId": "the-fire-api",
+    "docId": "spell-api-guides/fire-api-guide",
+    "docTitle": "Fire API Guide",
+    "heading": "The Fire API",
+    "headingPath": [
+      "The Fire API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell conjures a Fireball — a fire projectile you can aim, steer, and detonate at will. It also carries two extra spells, and , for close-range and ground-sweeping fire.",
+    "codeContent": "\"fire\" Fire.blast Fire.wave",
+    "rawContent": "The Fire API Welcome back, Protag ! The \"fire\" spell conjures a Fireball — a fire projectile you can aim, steer, and detonate at will. It also carries two extra spells, Fire.blast and Fire.wave , for close-range and ground-sweeping fire."
+  },
+  {
+    "chunkId": "spell-api-guides/fire-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/fire-api-guide",
+    "docTitle": "Fire API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Fire API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor That single launches a basic fireball away from your caster.",
+    "codeContent": "const Fire = require(\"fire\"); new Fire(); new Fire()",
+    "rawContent": "Importing the Spell const Fire = require(\"fire\"); new Fire(); Explain Code Open in Code Editor That single new Fire() launches a basic fireball away from your caster."
+  },
+  {
+    "chunkId": "spell-api-guides/fire-api-guide#configuring-the-fireball",
+    "headerId": "configuring-the-fireball",
+    "docId": "spell-api-guides/fire-api-guide",
+    "docTitle": "Fire API Guide",
+    "heading": "Configuring the Fireball",
+    "headingPath": [
+      "The Fire API",
+      "Configuring the Fireball"
+    ],
+    "textContent": "The constructor takes an optional configuration object so you can tailor the fireball to the situation: Explain Code Open in Code Editor Tip Setting lets you steer the fireball toward your cursor, and keeps it flying in a straight line instead of arcing toward the ground.",
+    "codeContent": "const Fire = require(\"fire\"); new Fire({ strength: 30, aim: true, gravity: false }); aim: true gravity: false",
+    "rawContent": "Configuring the Fireball The constructor takes an optional configuration object so you can tailor the fireball to the situation: const Fire = require(\"fire\"); new Fire({ strength: 30, aim: true, gravity: false }); Explain Code Open in Code Editor Tip Setting aim: true lets you steer the fireball toward your cursor, and gravity: false keeps it flying in a straight line instead of arcing toward the ground."
+  },
+  {
+    "chunkId": "spell-api-guides/fire-api-guide#constructor-options",
+    "headerId": "constructor-options",
+    "docId": "spell-api-guides/fire-api-guide",
+    "docTitle": "Fire API Guide",
+    "heading": "Constructor options",
+    "headingPath": [
+      "The Fire API",
+      "Configuring the Fireball",
+      "Constructor options"
+    ],
+    "textContent": "— — the fireball's initial velocity. — — fire toward an absolute world position. — — damage/mana strength. The mana cost is . — — whether gravity pulls the fireball down. — — aim the fireball with the cursor. — — how quickly the fireball turns while aiming. — — show a guide line while aiming. — — cast the fireball from a ManaSpark instead of the caster.",
+    "codeContent": "velocity { x, y } at { x, y } strength number 5 + strength gravity boolean aim boolean aimSpeed number aimGuide boolean spark { id }",
+    "rawContent": "Constructor options velocity — { x, y } — the fireball's initial velocity. at — { x, y } — fire toward an absolute world position. strength — number — damage/mana strength. The mana cost is 5 + strength . gravity — boolean — whether gravity pulls the fireball down. aim — boolean — aim the fireball with the cursor. aimSpeed — number — how quickly the fireball turns while aiming. aimGuide — boolean — show a guide line while aiming. spark — { id } — cast the fireball from a ManaSpark instead of the caster."
+  },
+  {
+    "chunkId": "spell-api-guides/fire-api-guide#controlling-a-fireball",
+    "headerId": "controlling-a-fireball",
+    "docId": "spell-api-guides/fire-api-guide",
+    "docTitle": "Fire API Guide",
+    "heading": "Controlling a Fireball",
+    "headingPath": [
+      "The Fire API",
+      "Controlling a Fireball"
+    ],
+    "textContent": "hands you back a fireball you can keep commanding: Explain Code Open in Code Editor",
+    "codeContent": "new Fire(...) const Fire = require(\"fire\"); const fireball = new Fire({ gravity: false }); fireball.moveTo({ x: 10, y: 4 }); fireball.explode();",
+    "rawContent": "Controlling a Fireball new Fire(...) hands you back a fireball you can keep commanding: const Fire = require(\"fire\"); const fireball = new Fire({ gravity: false }); fireball.moveTo({ x: 10, y: 4 }); fireball.explode(); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/fire-api-guide#properties-and-methods",
+    "headerId": "properties-and-methods",
+    "docId": "spell-api-guides/fire-api-guide",
+    "docTitle": "Fire API Guide",
+    "heading": "Properties and methods",
+    "headingPath": [
+      "The Fire API",
+      "Controlling a Fireball",
+      "Properties and methods"
+    ],
+    "textContent": "— — the fireball's handle id. — — its current position. — — whether it has been destroyed. — set the fireball's velocity. — move the fireball toward a point; resolves when it arrives. — async/promise variant of . — detonate the fireball into an explosion. — run a callback when the fireball hits something.",
+    "codeContent": "id string position { x, y } destroyed boolean setVelocity(velocity) moveTo({ x, y, speed }) moveToAsync({ x, y, speed }) moveTo explode() onImpact(cb)",
+    "rawContent": "Properties and methods id — string — the fireball's handle id. position — { x, y } — its current position. destroyed — boolean — whether it has been destroyed. setVelocity(velocity) — set the fireball's velocity. moveTo({ x, y, speed }) — move the fireball toward a point; resolves when it arrives. moveToAsync({ x, y, speed }) — async/promise variant of moveTo . explode() — detonate the fireball into an explosion. onImpact(cb) — run a callback when the fireball hits something."
+  },
+  {
+    "chunkId": "spell-api-guides/fire-api-guide#static-spells",
+    "headerId": "static-spells",
+    "docId": "spell-api-guides/fire-api-guide",
+    "docTitle": "Fire API Guide",
+    "heading": "Static spells",
+    "headingPath": [
+      "The Fire API",
+      "Static spells"
+    ],
+    "textContent": "The import also exposes two ready-made spells: — a short-range fire blast from the caster. — a travelling wave of fire blasts that rolls along the ground. Explain Code Open in Code Editor Important Every fireball costs mana to cast — remember the cost grows with . Keep an eye on your mana bar when chaining powerful casts!",
+    "codeContent": "Fire Fire.blast(arg?) Fire.wave(arg?) const Fire = require(\"fire\"); Fire.wave(); strength",
+    "rawContent": "Static spells The Fire import also exposes two ready-made spells: Fire.blast(arg?) — a short-range fire blast from the caster. Fire.wave(arg?) — a travelling wave of fire blasts that rolls along the ground. const Fire = require(\"fire\"); Fire.wave(); Explain Code Open in Code Editor Important Every fireball costs mana to cast — remember the cost grows with strength . Keep an eye on your mana bar when chaining powerful casts!"
+  },
+  {
+    "chunkId": "spell-api-guides/get-entities-api-guide#the-get-entities-api",
+    "headerId": "the-get-entities-api",
+    "docId": "spell-api-guides/get-entities-api-guide",
+    "docTitle": "Get Entities API Guide",
+    "heading": "The Get Entities API",
+    "headingPath": [
+      "The Get Entities API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell lists every entity currently in the level. Unlike most spells, the export is a function — call it directly to get an array describing everything around you.",
+    "codeContent": "\"getEntities\"",
+    "rawContent": "The Get Entities API Welcome back, Protag ! The \"getEntities\" spell lists every entity currently in the level. Unlike most spells, the export is a function — call it directly to get an array describing everything around you."
+  },
+  {
+    "chunkId": "spell-api-guides/get-entities-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/get-entities-api-guide",
+    "docTitle": "Get Entities API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Get Entities API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor returns an array of objects — one for every entity in the level, where is .",
+    "codeContent": "const getEntities = require(\"getEntities\"); const entities = getEntities(); getEntities() { id, type, position } position { x, y }",
+    "rawContent": "Importing the Spell const getEntities = require(\"getEntities\"); const entities = getEntities(); Explain Code Open in Code Editor getEntities() returns an array of { id, type, position } objects — one for every entity in the level, where position is { x, y } ."
+  },
+  {
+    "chunkId": "spell-api-guides/get-entities-api-guide#filtering-by-type",
+    "headerId": "filtering-by-type",
+    "docId": "spell-api-guides/get-entities-api-guide",
+    "docTitle": "Get Entities API Guide",
+    "heading": "Filtering by Type",
+    "headingPath": [
+      "The Get Entities API",
+      "Filtering by Type"
+    ],
+    "textContent": "Because it's just an array, you can use ordinary array methods to find what you care about: Explain Code Open in Code Editor Tip Read each entry's ( ) to decide where to aim a spell, or pass its to another spell that targets a specific entity.",
+    "codeContent": "const getEntities = require(\"getEntities\"); const slimes = getEntities().filter(e => e.type === \"Slime\"); for (const slime of slimes) { console.log(slime.id + \" is at \" + slime.position.x + \", \" + slime.position.y); } position { x, y } id",
+    "rawContent": "Filtering by Type Because it's just an array, you can use ordinary array methods to find what you care about: const getEntities = require(\"getEntities\"); const slimes = getEntities().filter(e => e.type === \"Slime\"); for (const slime of slimes) { console.log(slime.id + \" is at \" + slime.position.x + \", \" + slime.position.y); } Explain Code Open in Code Editor Tip Read each entry's position ( { x, y } ) to decide where to aim a spell, or pass its id to another spell that targets a specific entity."
+  },
+  {
+    "chunkId": "spell-api-guides/get-entities-api-guide#return-value",
+    "headerId": "return-value",
+    "docId": "spell-api-guides/get-entities-api-guide",
+    "docTitle": "Get Entities API Guide",
+    "heading": "Return value",
+    "headingPath": [
+      "The Get Entities API",
+      "Filtering by Type",
+      "Return value"
+    ],
+    "textContent": "— returns — one entry per entity in the level. — — the entity's handle id. — — the entity type string (e.g. ). — — the entity's current world position. Info lists everything at once. If you instead want radius-based detection around a point, reach for the Ping and Sensor APIs.",
+    "codeContent": "getEntities() { id, type, position }[] id string type string \"Slime\" position { x, y } getEntities",
+    "rawContent": "Return value getEntities() — returns { id, type, position }[] — one entry per entity in the level. id — string — the entity's handle id. type — string — the entity type string (e.g. \"Slime\" ). position — { x, y } — the entity's current world position. Info getEntities lists everything at once. If you instead want radius-based detection around a point, reach for the Ping and Sensor APIs."
+  },
+  {
+    "chunkId": "spell-api-guides/grapple-api-guide#the-grapple-api",
+    "headerId": "the-grapple-api",
+    "docId": "spell-api-guides/grapple-api-guide",
+    "docTitle": "Grapple API Guide",
+    "heading": "The Grapple API",
+    "headingPath": [
+      "The Grapple API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell conjures a grappling hook — a spring line that runs from your caster to a point or an entity. You can adjust its length and springiness on the fly, and it also exposes a handy for probing the world.",
+    "codeContent": "\"grapple\" Grapple.castRay",
+    "rawContent": "The Grapple API Welcome back, Protag ! The \"grapple\" spell conjures a grappling hook — a spring line that runs from your caster to a point or an entity. You can adjust its length and springiness on the fly, and it also exposes a handy Grapple.castRay for probing the world."
+  },
+  {
+    "chunkId": "spell-api-guides/grapple-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/grapple-api-guide",
+    "docTitle": "Grapple API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Grapple API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor That anchors a spring line from your caster to the target point.",
+    "codeContent": "const Grapple = require(\"grapple\"); new Grapple({ targetX: 10, targetY: 6 }); new Grapple(...)",
+    "rawContent": "Importing the Spell const Grapple = require(\"grapple\"); new Grapple({ targetX: 10, targetY: 6 }); Explain Code Open in Code Editor That new Grapple(...) anchors a spring line from your caster to the target point."
+  },
+  {
+    "chunkId": "spell-api-guides/grapple-api-guide#configuring-the-grapple",
+    "headerId": "configuring-the-grapple",
+    "docId": "spell-api-guides/grapple-api-guide",
+    "docTitle": "Grapple API Guide",
+    "heading": "Configuring the Grapple",
+    "headingPath": [
+      "The Grapple API",
+      "Configuring the Grapple"
+    ],
+    "textContent": "The constructor takes a configuration object describing where the line attaches and how it behaves: Explain Code Open in Code Editor Tip Shortening the line with reels you toward the anchor, while a higher makes the line snap back more forcefully.",
+    "codeContent": "const Grapple = require(\"grapple\"); const grapple = new Grapple({ targetX: 12, targetY: 8, length: 5, springiness: 0.5 }); grapple.setLength(3, 250); setLength springiness",
+    "rawContent": "Configuring the Grapple The constructor takes a configuration object describing where the line attaches and how it behaves: const Grapple = require(\"grapple\"); const grapple = new Grapple({ targetX: 12, targetY: 8, length: 5, springiness: 0.5 }); grapple.setLength(3, 250); Explain Code Open in Code Editor Tip Shortening the line with setLength reels you toward the anchor, while a higher springiness makes the line snap back more forcefully."
+  },
+  {
+    "chunkId": "spell-api-guides/grapple-api-guide#constructor-options",
+    "headerId": "constructor-options",
+    "docId": "spell-api-guides/grapple-api-guide",
+    "docTitle": "Grapple API Guide",
+    "heading": "Constructor options",
+    "headingPath": [
+      "The Grapple API",
+      "Configuring the Grapple",
+      "Constructor options"
+    ],
+    "textContent": "— — the anchor's world x position. — — the anchor's world y position. — — attach the line to an entity instead of a fixed point. — — the resting length of the spring line. — — how stiff the spring line is.",
+    "codeContent": "targetX number targetY number targetEntityId string length number springiness number",
+    "rawContent": "Constructor options targetX — number — the anchor's world x position. targetY — number — the anchor's world y position. targetEntityId — string — attach the line to an entity instead of a fixed point. length — number — the resting length of the spring line. springiness — number — how stiff the spring line is."
+  },
+  {
+    "chunkId": "spell-api-guides/grapple-api-guide#controlling-a-grapple",
+    "headerId": "controlling-a-grapple",
+    "docId": "spell-api-guides/grapple-api-guide",
+    "docTitle": "Grapple API Guide",
+    "heading": "Controlling a Grapple",
+    "headingPath": [
+      "The Grapple API",
+      "Controlling a Grapple"
+    ],
+    "textContent": "hands you back a grapple you can keep commanding: Explain Code Open in Code Editor",
+    "codeContent": "new Grapple(...) const Grapple = require(\"grapple\"); const grapple = new Grapple({ targetX: 10, targetY: 6 }); grapple.setSpringiness(0.8, 200); grapple.detach();",
+    "rawContent": "Controlling a Grapple new Grapple(...) hands you back a grapple you can keep commanding: const Grapple = require(\"grapple\"); const grapple = new Grapple({ targetX: 10, targetY: 6 }); grapple.setSpringiness(0.8, 200); grapple.detach(); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/grapple-api-guide#properties-and-methods",
+    "headerId": "properties-and-methods",
+    "docId": "spell-api-guides/grapple-api-guide",
+    "docTitle": "Grapple API Guide",
+    "heading": "Properties and methods",
+    "headingPath": [
+      "The Grapple API",
+      "Controlling a Grapple",
+      "Properties and methods"
+    ],
+    "textContent": "— — the grapple's handle id. — set the line length, optionally easing over milliseconds. — set the springiness, optionally easing over milliseconds. — releases the grapple. Returns void.",
+    "codeContent": "id string setLength(length, transitionMs?) transitionMs setSpringiness(springiness, transitionMs?) transitionMs detach()",
+    "rawContent": "Properties and methods id — string — the grapple's handle id. setLength(length, transitionMs?) — set the line length, optionally easing over transitionMs milliseconds. setSpringiness(springiness, transitionMs?) — set the springiness, optionally easing over transitionMs milliseconds. detach() — releases the grapple. Returns void."
+  },
+  {
+    "chunkId": "spell-api-guides/grapple-api-guide#casting-a-ray",
+    "headerId": "casting-a-ray",
+    "docId": "spell-api-guides/grapple-api-guide",
+    "docTitle": "Grapple API Guide",
+    "heading": "Casting a Ray",
+    "headingPath": [
+      "The Grapple API",
+      "Casting a Ray"
+    ],
+    "textContent": "The import also exposes a static helper that casts a ray from your caster and reports the first terrain or enemy it hits: Explain Code Open in Code Editor Info returns . Check first — if it's , the / give you a ready-made anchor point, and is set when the ray struck an entity.",
+    "codeContent": "Grapple const Grapple = require(\"grapple\"); const result = Grapple.castRay({ directionX: 1, directionY: 0 }); if (result.hit) { new Grapple({ targetX: result.x, targetY: result.y }); } Grapple.castRay { hit, x, y, distance, entityId? } hit true x y entityId",
+    "rawContent": "Casting a Ray The Grapple import also exposes a static helper that casts a ray from your caster and reports the first terrain or enemy it hits: const Grapple = require(\"grapple\"); const result = Grapple.castRay({ directionX: 1, directionY: 0 }); if (result.hit) { new Grapple({ targetX: result.x, targetY: result.y }); } Explain Code Open in Code Editor Info Grapple.castRay returns { hit, x, y, distance, entityId? } . Check hit first — if it's true , the x / y give you a ready-made anchor point, and entityId is set when the ray struck an entity."
+  },
+  {
+    "chunkId": "spell-api-guides/grapple-api-guide#static-methods",
+    "headerId": "static-methods",
+    "docId": "spell-api-guides/grapple-api-guide",
+    "docTitle": "Grapple API Guide",
+    "heading": "Static methods",
+    "headingPath": [
+      "The Grapple API",
+      "Casting a Ray",
+      "Static methods"
+    ],
+    "textContent": "— casts a ray from the caster, returning the first terrain or enemy hit. is . Returns .",
+    "codeContent": "Grapple.castRay(opts) opts { directionX, directionY, maxDistance? } { hit, x, y, distance, entityId? }",
+    "rawContent": "Static methods Grapple.castRay(opts) — casts a ray from the caster, returning the first terrain or enemy hit. opts is { directionX, directionY, maxDistance? } . Returns { hit, x, y, distance, entityId? } ."
+  },
+  {
+    "chunkId": "spell-api-guides/heal-api-guide#the-heal-api",
+    "headerId": "the-heal-api",
+    "docId": "spell-api-guides/heal-api-guide",
+    "docTitle": "Heal API Guide",
+    "heading": "The Heal API",
+    "headingPath": [
+      "The Heal API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell is nature magic — it restores health, either all at once or steadily over a few seconds. Patch yourself up mid-battle or keep a steady regeneration going while you focus on the fight.",
+    "codeContent": "\"heal\"",
+    "rawContent": "The Heal API Welcome back, Protag ! The \"heal\" spell is nature magic — it restores health, either all at once or steadily over a few seconds. Patch yourself up mid-battle or keep a steady regeneration going while you focus on the fight."
+  },
+  {
+    "chunkId": "spell-api-guides/heal-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/heal-api-guide",
+    "docTitle": "Heal API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Heal API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor The easiest way to heal is through the two static spells , and .",
+    "codeContent": "const Heal = require(\"heal\"); Heal.instant(); Heal.instant Heal.overTime",
+    "rawContent": "Importing the Spell const Heal = require(\"heal\"); Heal.instant(); Explain Code Open in Code Editor The easiest way to heal is through the two static spells , Heal.instant and Heal.overTime ."
+  },
+  {
+    "chunkId": "spell-api-guides/heal-api-guide#instant-healing",
+    "headerId": "instant-healing",
+    "docId": "spell-api-guides/heal-api-guide",
+    "docTitle": "Heal API Guide",
+    "heading": "Instant Healing",
+    "headingPath": [
+      "The Heal API",
+      "Instant Healing"
+    ],
+    "textContent": "restores health immediately. Pass a to control how much: Explain Code Open in Code Editor Tip Reach for when you're in a pinch and need health right now — like just before a big hit lands.",
+    "codeContent": "Heal.instant strength const Heal = require(\"heal\"); Heal.instant({ strength: 30 }); Heal.instant",
+    "rawContent": "Instant Healing Heal.instant restores health immediately. Pass a strength to control how much: const Heal = require(\"heal\"); Heal.instant({ strength: 30 }); Explain Code Open in Code Editor Tip Reach for Heal.instant when you're in a pinch and need health right now — like just before a big hit lands."
+  },
+  {
+    "chunkId": "spell-api-guides/heal-api-guide#healing-over-time",
+    "headerId": "healing-over-time",
+    "docId": "spell-api-guides/heal-api-guide",
+    "docTitle": "Heal API Guide",
+    "heading": "Healing Over Time",
+    "headingPath": [
+      "The Heal API",
+      "Healing Over Time"
+    ],
+    "textContent": "spreads the healing across several seconds, which is gentler on your mana and great for sustained fights: Explain Code Open in Code Editor You can also cast healing from a ManaSpark using its , letting the spark do the work for you.",
+    "codeContent": "Heal.overTime const Heal = require(\"heal\"); Heal.overTime({ strength: 50 }); spark.cast",
+    "rawContent": "Healing Over Time Heal.overTime spreads the healing across several seconds, which is gentler on your mana and great for sustained fights: const Heal = require(\"heal\"); Heal.overTime({ strength: 50 }); Explain Code Open in Code Editor You can also cast healing from a ManaSpark using its spark.cast , letting the spark do the work for you."
+  },
+  {
+    "chunkId": "spell-api-guides/heal-api-guide#static-methods",
+    "headerId": "static-methods",
+    "docId": "spell-api-guides/heal-api-guide",
+    "docTitle": "Heal API Guide",
+    "heading": "Static methods",
+    "headingPath": [
+      "The Heal API",
+      "Healing Over Time",
+      "Static methods"
+    ],
+    "textContent": "— instantly heals the target, or the caster if none is given. — — how much health to restore. — heals the target gradually over several seconds. — — the total amount of health to restore. Important A constructor exists with options , but it has no instance properties to work with. Stick to the static and spells — they're the friendly, supported way to heal.",
+    "codeContent": "Heal.instant(opts) strength number Heal.overTime(opts) strength number new Heal(...) { targetId, strength } Heal.instant Heal.overTime",
+    "rawContent": "Static methods Heal.instant(opts) — instantly heals the target, or the caster if none is given. strength — number — how much health to restore. Heal.overTime(opts) — heals the target gradually over several seconds. strength — number — the total amount of health to restore. Important A new Heal(...) constructor exists with options { targetId, strength } , but it has no instance properties to work with. Stick to the static Heal.instant and Heal.overTime spells — they're the friendly, supported way to heal."
+  },
+  {
+    "chunkId": "spell-api-guides/ice-api-guide#the-ice-api",
+    "headerId": "the-ice-api",
+    "docId": "spell-api-guides/ice-api-guide",
+    "docTitle": "Ice API Guide",
+    "heading": "The Ice API",
+    "headingPath": [
+      "The Ice API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell conjures a solid ice block from a shape, freezing it into existence right in front of your caster. Use it to block passages, build platforms, or freeze a hazard in place. It pairs nicely with the Shapes API for crafting reusable outlines.",
+    "codeContent": "\"ice\"",
+    "rawContent": "The Ice API Welcome back, Protag ! The \"ice\" spell conjures a solid ice block from a shape, freezing it into existence right in front of your caster. Use it to block passages, build platforms, or freeze a hazard in place. It pairs nicely with the Shapes API for crafting reusable outlines."
+  },
+  {
+    "chunkId": "spell-api-guides/ice-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/ice-api-guide",
+    "docTitle": "Ice API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Ice API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor That single freezes a default ice block in front of your caster.",
+    "codeContent": "const Ice = require(\"ice\"); new Ice(); new Ice()",
+    "rawContent": "Importing the Spell const Ice = require(\"ice\"); new Ice(); Explain Code Open in Code Editor That single new Ice() freezes a default ice block in front of your caster."
+  },
+  {
+    "chunkId": "spell-api-guides/ice-api-guide#shaping-the-block",
+    "headerId": "shaping-the-block",
+    "docId": "spell-api-guides/ice-api-guide",
+    "docTitle": "Ice API Guide",
+    "heading": "Shaping the Block",
+    "headingPath": [
+      "The Ice API",
+      "Shaping the Block"
+    ],
+    "textContent": "The constructor takes an optional configuration object so you can choose what gets conjured: Explain Code Open in Code Editor Tip A wide, thin makes a sturdy platform you can jump onto, while a rolls and tumbles once it lands. You can also build a custom polygon outline: Explain Code Open in Code Editor",
+    "codeContent": "const Ice = require(\"ice\"); new Ice({ rect: { width: 3, height: 1 }, angle: 0 }); rect circle const Ice = require(\"ice\"); new Ice({ shape: [ { x: 0, y: 0 }, { x: 2, y: 0 }, { x: 1, y: 2 } ] });",
+    "rawContent": "Shaping the Block The constructor takes an optional configuration object so you can choose what gets conjured: const Ice = require(\"ice\"); new Ice({ rect: { width: 3, height: 1 }, angle: 0 }); Explain Code Open in Code Editor Tip A wide, thin rect makes a sturdy platform you can jump onto, while a circle rolls and tumbles once it lands. You can also build a custom polygon outline: const Ice = require(\"ice\"); new Ice({ shape: [ { x: 0, y: 0 }, { x: 2, y: 0 }, { x: 1, y: 2 } ] }); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/ice-api-guide#constructor-options",
+    "headerId": "constructor-options",
+    "docId": "spell-api-guides/ice-api-guide",
+    "docTitle": "Ice API Guide",
+    "heading": "Constructor options",
+    "headingPath": [
+      "The Ice API",
+      "Shaping the Block",
+      "Constructor options"
+    ],
+    "textContent": "— — a custom polygon outline. — — build the block as a rectangle. — — build the block as a circle. — — rotation of the block. — — cast the block from a ManaSpark instead of the caster.",
+    "codeContent": "shape ({ x, y } | [number, number])[] rect { width, height } circle { radius } angle number spark { id }",
+    "rawContent": "Constructor options shape — ({ x, y } | [number, number])[] — a custom polygon outline. rect — { width, height } — build the block as a rectangle. circle — { radius } — build the block as a circle. angle — number — rotation of the block. spark — { id } — cast the block from a ManaSpark instead of the caster."
+  },
+  {
+    "chunkId": "spell-api-guides/ice-api-guide#controlling-a-block",
+    "headerId": "controlling-a-block",
+    "docId": "spell-api-guides/ice-api-guide",
+    "docTitle": "Ice API Guide",
+    "heading": "Controlling a Block",
+    "headingPath": [
+      "The Ice API",
+      "Controlling a Block"
+    ],
+    "textContent": "hands you back the block so you can keep working with it: Explain Code Open in Code Editor",
+    "codeContent": "new Ice(...) const Ice = require(\"ice\"); const block = new Ice({ rect: { width: 2, height: 2 } }); block.destroy();",
+    "rawContent": "Controlling a Block new Ice(...) hands you back the block so you can keep working with it: const Ice = require(\"ice\"); const block = new Ice({ rect: { width: 2, height: 2 } }); block.destroy(); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/ice-api-guide#properties-and-methods",
+    "headerId": "properties-and-methods",
+    "docId": "spell-api-guides/ice-api-guide",
+    "docTitle": "Ice API Guide",
+    "heading": "Properties and methods",
+    "headingPath": [
+      "The Ice API",
+      "Controlling a Block",
+      "Properties and methods"
+    ],
+    "textContent": "— — the block's handle id. — — its current position. — — whether it has been destroyed. — shrinks and removes the ice block (returns void). Important Ice is conjured in front of the caster, so face the direction you want the block before casting!",
+    "codeContent": "id string position { x, y } destroyed boolean destroy()",
+    "rawContent": "Properties and methods id — string — the block's handle id. position — { x, y } — its current position. destroyed — boolean — whether it has been destroyed. destroy() — shrinks and removes the ice block (returns void). Important Ice is conjured in front of the caster, so face the direction you want the block before casting!"
+  },
+  {
+    "chunkId": "spell-api-guides/index#spell-api-guides",
+    "headerId": "spell-api-guides",
+    "docId": "spell-api-guides/index",
+    "docTitle": "All Spell API Guides",
+    "heading": "Spell API Guides",
+    "headingPath": [
+      "Spell API Guides"
+    ],
+    "textContent": "Every spell you write pulls in one or more of these APIs with . Pick a guide below to learn what each spell can do, how to import it, and how to configure it.",
+    "codeContent": "require(...)",
+    "rawContent": "Spell API Guides Every spell you write pulls in one or more of these APIs with require(...) . Pick a guide below to learn what each spell can do, how to import it, and how to configure it."
+  },
+  {
+    "chunkId": "spell-api-guides/index#offensive-spells",
+    "headerId": "offensive-spells",
+    "docId": "spell-api-guides/index",
+    "docTitle": "All Spell API Guides",
+    "heading": "Offensive Spells",
+    "headingPath": [
+      "Spell API Guides",
+      "Offensive Spells"
+    ],
+    "textContent": "Projectile API Guide — a configurable projectile with optional homing and steering Fire API Guide — fireballs, fire blasts, and fire waves Air API Guide — shove entities with a burst of wind",
+    "codeContent": "",
+    "rawContent": "Offensive Spells Projectile API Guide — a configurable projectile with optional homing and steering Fire API Guide — fireballs, fire blasts, and fire waves Air API Guide — shove entities with a burst of wind"
+  },
+  {
+    "chunkId": "spell-api-guides/index#conjuring--defense",
+    "headerId": "conjuring--defense",
+    "docId": "spell-api-guides/index",
+    "docTitle": "All Spell API Guides",
+    "heading": "Conjuring & Defense",
+    "headingPath": [
+      "Spell API Guides",
+      "Conjuring & Defense"
+    ],
+    "textContent": "Earth API Guide — conjure a solid stone block from a shape Ice API Guide — conjure a solid ice block from a shape Heal API Guide — restore health, instantly or over time Grapple API Guide — a spring line to a point or entity Area Preview API Guide — draw a translucent overlay in the world",
+    "codeContent": "",
+    "rawContent": "Conjuring & Defense Earth API Guide — conjure a solid stone block from a shape Ice API Guide — conjure a solid ice block from a shape Heal API Guide — restore health, instantly or over time Grapple API Guide — a spring line to a point or entity Area Preview API Guide — draw a translucent overlay in the world"
+  },
+  {
+    "chunkId": "spell-api-guides/index#detection--the-world",
+    "headerId": "detection--the-world",
+    "docId": "spell-api-guides/index",
+    "docTitle": "All Spell API Guides",
+    "heading": "Detection & The World",
+    "headingPath": [
+      "Spell API Guides",
+      "Detection & The World"
+    ],
+    "textContent": "Sensor API Guide — continuously detect entities within a radius Ping API Guide — a one-shot detection ping Get Entities API Guide — list every entity in the level Terrain API Guide — line-of-sight checks and nav-grid sampling Aim API Guide — aim a point with the cursor",
+    "codeContent": "",
+    "rawContent": "Detection & The World Sensor API Guide — continuously detect entities within a radius Ping API Guide — a one-shot detection ping Get Entities API Guide — list every entity in the level Terrain API Guide — line-of-sight checks and nav-grid sampling Aim API Guide — aim a point with the cursor"
+  },
+  {
+    "chunkId": "spell-api-guides/index#mana--casting",
+    "headerId": "mana--casting",
+    "docId": "spell-api-guides/index",
+    "docTitle": "All Spell API Guides",
+    "heading": "Mana & Casting",
+    "headingPath": [
+      "Spell API Guides",
+      "Mana & Casting"
+    ],
+    "textContent": "Spark API Guide — a floating ManaSpark that casts spells Spells API Guide — inspect, save, and run other spells",
+    "codeContent": "",
+    "rawContent": "Mana & Casting Spark API Guide — a floating ManaSpark that casts spells Spells API Guide — inspect, save, and run other spells"
+  },
+  {
+    "chunkId": "spell-api-guides/index#player--interface",
+    "headerId": "player--interface",
+    "docId": "spell-api-guides/index",
+    "docTitle": "All Spell API Guides",
+    "heading": "Player & Interface",
+    "headingPath": [
+      "Spell API Guides",
+      "Player & Interface"
+    ],
+    "textContent": "Player Controls API Guide — drive the player's jump, movement, and attacks Player Inventory API Guide — read and manage inventory and hotkeys Tabs API Guide — open, close, move, and resize UI panels",
+    "codeContent": "",
+    "rawContent": "Player & Interface Player Controls API Guide — drive the player's jump, movement, and attacks Player Inventory API Guide — read and manage inventory and hotkeys Tabs API Guide — open, close, move, and resize UI panels"
+  },
+  {
+    "chunkId": "spell-api-guides/index#utilities",
+    "headerId": "utilities",
+    "docId": "spell-api-guides/index",
+    "docTitle": "All Spell API Guides",
+    "heading": "Utilities",
+    "headingPath": [
+      "Spell API Guides",
+      "Utilities"
+    ],
+    "textContent": "Self API Guide — the entity casting the spell Wait API Guide — pause execution without blocking the game Speed API Guide — control interpreter execution speed Vector API Guide — 2D vector math helpers Shapes API Guide — build polygon outlines for earth/ice Info API Guide — inspect any module or entity for discovery",
+    "codeContent": "",
+    "rawContent": "Utilities Self API Guide — the entity casting the spell Wait API Guide — pause execution without blocking the game Speed API Guide — control interpreter execution speed Vector API Guide — 2D vector math helpers Shapes API Guide — build polygon outlines for earth/ice Info API Guide — inspect any module or entity for discovery"
+  },
+  {
+    "chunkId": "spell-api-guides/info-api-guide#the-info-api",
+    "headerId": "the-info-api",
+    "docId": "spell-api-guides/info-api-guide",
+    "docTitle": "Info API Guide",
+    "heading": "The Info API",
+    "headingPath": [
+      "The Info API"
+    ],
+    "textContent": "Curious what an API can do, Protag ? The module is a discovery helper — hand it a module or entity and it lists out the properties and methods available, right inside the editor. The export is a function.",
+    "codeContent": "\"info\"",
+    "rawContent": "The Info API Curious what an API can do, Protag ? The \"info\" module is a discovery helper — hand it a module or entity and it lists out the properties and methods available, right inside the editor. The export is a function."
+  },
+  {
+    "chunkId": "spell-api-guides/info-api-guide#importing-info",
+    "headerId": "importing-info",
+    "docId": "spell-api-guides/info-api-guide",
+    "docTitle": "Info API Guide",
+    "heading": "Importing Info",
+    "headingPath": [
+      "The Info API",
+      "Importing Info"
+    ],
+    "textContent": "Explain Code Open in Code Editor",
+    "codeContent": "const info = require(\"info\"); // Discover everything the Fire API offers. console.log(info(require(\"fire\")));",
+    "rawContent": "Importing Info const info = require(\"info\"); // Discover everything the Fire API offers. console.log(info(require(\"fire\"))); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/info-api-guide#inspecting-the-caster",
+    "headerId": "inspecting-the-caster",
+    "docId": "spell-api-guides/info-api-guide",
+    "docTitle": "Info API Guide",
+    "heading": "Inspecting the Caster",
+    "headingPath": [
+      "The Info API",
+      "Inspecting the Caster"
+    ],
+    "textContent": "Point at any entity to see what it carries — including the caster from Self : Explain Code Open in Code Editor",
+    "codeContent": "info const info = require(\"info\"); console.log(info(require(\"self\")));",
+    "rawContent": "Inspecting the Caster Point info at any entity to see what it carries — including the caster from Self : const info = require(\"info\"); console.log(info(require(\"self\"))); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/info-api-guide#methods",
+    "headerId": "methods",
+    "docId": "spell-api-guides/info-api-guide",
+    "docTitle": "Info API Guide",
+    "heading": "Methods",
+    "headingPath": [
+      "The Info API",
+      "Inspecting the Caster",
+      "Methods"
+    ],
+    "textContent": "— returns a description object listing the 's properties and methods. can be anything — a required module, an entity, and so on. Tip is a great way to explore an unfamiliar API without leaving the editor — require a module, pass it to , and read what comes back.",
+    "codeContent": "info(target) target target info info",
+    "rawContent": "Methods info(target) — returns a description object listing the target 's properties and methods. target can be anything — a required module, an entity, and so on. Tip info is a great way to explore an unfamiliar API without leaving the editor — require a module, pass it to info , and read what comes back."
+  },
+  {
+    "chunkId": "spell-api-guides/ping-api-guide#the-ping-api",
+    "headerId": "the-ping-api",
+    "docId": "spell-api-guides/ping-api-guide",
+    "docTitle": "Ping API Guide",
+    "heading": "The Ping API",
+    "headingPath": [
+      "The Ping API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell sends out a single pulse from your caster and tells you which entities it found nearby. It's a quick, one-shot way to scan your surroundings before deciding what to do next.",
+    "codeContent": "\"ping\"",
+    "rawContent": "The Ping API Welcome back, Protag ! The \"ping\" spell sends out a single pulse from your caster and tells you which entities it found nearby. It's a quick, one-shot way to scan your surroundings before deciding what to do next."
+  },
+  {
+    "chunkId": "spell-api-guides/ping-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/ping-api-guide",
+    "docTitle": "Ping API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Ping API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor is a function , not a class — call it directly to emit a ping. It resolves to an array of the entities it detected ( ).",
+    "codeContent": "const ping = require(\"ping\"); const found = ping(); ping Entity[]",
+    "rawContent": "Importing the Spell const ping = require(\"ping\"); const found = ping(); Explain Code Open in Code Editor ping is a function , not a class — call it directly to emit a ping. It resolves to an array of the entities it detected ( Entity[] )."
+  },
+  {
+    "chunkId": "spell-api-guides/ping-api-guide#reading-the-results",
+    "headerId": "reading-the-results",
+    "docId": "spell-api-guides/ping-api-guide",
+    "docTitle": "Ping API Guide",
+    "heading": "Reading the Results",
+    "headingPath": [
+      "The Ping API",
+      "Reading the Results"
+    ],
+    "textContent": "Each detected entity carries its , , and , so you can loop over them and act: Explain Code Open in Code Editor Info is a one-shot detection: it captures whatever is around you at the moment you call it. If you need to keep watching an area over time, reach for the Sensor API instead, which continuously tracks entities and fires enter/leave callbacks.",
+    "codeContent": "id type position const ping = require(\"ping\"); const found = ping(); for (const entity of found) { console.log(entity.type, \"at\", entity.position.x, entity.position.y); } ping",
+    "rawContent": "Reading the Results Each detected entity carries its id , type , and position , so you can loop over them and act: const ping = require(\"ping\"); const found = ping(); for (const entity of found) { console.log(entity.type, \"at\", entity.position.x, entity.position.y); } Explain Code Open in Code Editor Info ping is a one-shot detection: it captures whatever is around you at the moment you call it. If you need to keep watching an area over time, reach for the Sensor API instead, which continuously tracks entities and fires enter/leave callbacks."
+  },
+  {
+    "chunkId": "spell-api-guides/ping-api-guide#return-value",
+    "headerId": "return-value",
+    "docId": "spell-api-guides/ping-api-guide",
+    "docTitle": "Ping API Guide",
+    "heading": "Return value",
+    "headingPath": [
+      "The Ping API",
+      "Reading the Results",
+      "Return value"
+    ],
+    "textContent": "— emits a ping from the caster and resolves to an of the entities it detected. Each entity has: — — the entity's id. — — the entity's type name. — — the entity's current position.",
+    "codeContent": "ping() Entity[] id string type string position { x, y }",
+    "rawContent": "Return value ping() — emits a ping from the caster and resolves to an Entity[] of the entities it detected. Each entity has: id — string — the entity's id. type — string — the entity's type name. position — { x, y } — the entity's current position."
+  },
+  {
+    "chunkId": "spell-api-guides/player-controls-api-guide#the-player-controls-api",
+    "headerId": "the-player-controls-api",
+    "docId": "spell-api-guides/player-controls-api-guide",
+    "docTitle": "Player Controls API Guide",
+    "heading": "The Player Controls API",
+    "headingPath": [
+      "The Player Controls API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell module lets you drive your own character from inside a spell. Instead of pressing keys, you call functions that emit the same control events — making the player jump, move, attack, and swing a sword.",
+    "codeContent": "\"playerControls\"",
+    "rawContent": "The Player Controls API Welcome back, Protag ! The \"playerControls\" spell module lets you drive your own character from inside a spell. Instead of pressing keys, you call functions that emit the same control events — making the player jump, move, attack, and swing a sword."
+  },
+  {
+    "chunkId": "spell-api-guides/player-controls-api-guide#importing-the-module",
+    "headerId": "importing-the-module",
+    "docId": "spell-api-guides/player-controls-api-guide",
+    "docTitle": "Player Controls API Guide",
+    "heading": "Importing the Module",
+    "headingPath": [
+      "The Player Controls API",
+      "Importing the Module"
+    ],
+    "textContent": "Explain Code Open in Code Editor That single call sends your character leaping into the air.",
+    "codeContent": "const PlayerControls = require(\"playerControls\"); PlayerControls.jump(); jump()",
+    "rawContent": "Importing the Module const PlayerControls = require(\"playerControls\"); PlayerControls.jump(); Explain Code Open in Code Editor That single jump() call sends your character leaping into the air."
+  },
+  {
+    "chunkId": "spell-api-guides/player-controls-api-guide#moving-and-acting",
+    "headerId": "moving-and-acting",
+    "docId": "spell-api-guides/player-controls-api-guide",
+    "docTitle": "Player Controls API Guide",
+    "heading": "Moving and Acting",
+    "headingPath": [
+      "The Player Controls API",
+      "Moving and Acting"
+    ],
+    "textContent": "The module is an object of functions, so call each action you need: Explain Code Open in Code Editor Tip Pair the controls with the Wait API to time your movements. keeps the player moving until you call it again with to stop.",
+    "codeContent": "const PlayerControls = require(\"playerControls\"); const wait = require(\"wait\"); PlayerControls.moveHorizontally(1); // run right wait(500); // keep running for half a second PlayerControls.moveHorizontally(0); // stop PlayerControls.jump(); moveHorizontally 0",
+    "rawContent": "Moving and Acting The module is an object of functions, so call each action you need: const PlayerControls = require(\"playerControls\"); const wait = require(\"wait\"); PlayerControls.moveHorizontally(1); // run right wait(500); // keep running for half a second PlayerControls.moveHorizontally(0); // stop PlayerControls.jump(); Explain Code Open in Code Editor Tip Pair the controls with the Wait API to time your movements. moveHorizontally keeps the player moving until you call it again with 0 to stop."
+  },
+  {
+    "chunkId": "spell-api-guides/player-controls-api-guide#methods",
+    "headerId": "methods",
+    "docId": "spell-api-guides/player-controls-api-guide",
+    "docTitle": "Player Controls API Guide",
+    "heading": "Methods",
+    "headingPath": [
+      "The Player Controls API",
+      "Moving and Acting",
+      "Methods"
+    ],
+    "textContent": "— makes the player jump. — is a : to move left, to move right, to stop. — triggers the player's secondary attack. — triggers a sword swing. Important These functions control your character, so a runaway spell can move you around unexpectedly. Always remember to call to come to a stop.",
+    "codeContent": "jump() moveHorizontally(direction) direction number -1 1 0 secondaryAttack() swordSwing() moveHorizontally(0)",
+    "rawContent": "Methods jump() — makes the player jump. moveHorizontally(direction) — direction is a number : -1 to move left, 1 to move right, 0 to stop. secondaryAttack() — triggers the player's secondary attack. swordSwing() — triggers a sword swing. Important These functions control your character, so a runaway spell can move you around unexpectedly. Always remember to call moveHorizontally(0) to come to a stop."
+  },
+  {
+    "chunkId": "spell-api-guides/player-inventory-api-guide#the-player-inventory-api",
+    "headerId": "the-player-inventory-api",
+    "docId": "spell-api-guides/player-inventory-api-guide",
+    "docTitle": "Player Inventory API Guide",
+    "heading": "The Player Inventory API",
+    "headingPath": [
+      "The Player Inventory API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell module lets a spell read and manipulate your inventory and hotkeys. You can check your equipped weapon, count your coins, inspect your consumables, switch hotkey rows, and trigger hotkeys — all from script.",
+    "codeContent": "\"playerInventory\"",
+    "rawContent": "The Player Inventory API Welcome back, Protag ! The \"playerInventory\" spell module lets a spell read and manipulate your inventory and hotkeys. You can check your equipped weapon, count your coins, inspect your consumables, switch hotkey rows, and trigger hotkeys — all from script."
+  },
+  {
+    "chunkId": "spell-api-guides/player-inventory-api-guide#importing-the-module",
+    "headerId": "importing-the-module",
+    "docId": "spell-api-guides/player-inventory-api-guide",
+    "docTitle": "Player Inventory API Guide",
+    "heading": "Importing the Module",
+    "headingPath": [
+      "The Player Inventory API",
+      "Importing the Module"
+    ],
+    "textContent": "Explain Code Open in Code Editor",
+    "codeContent": "const PlayerInventory = require(\"playerInventory\"); console.log(\"Coins:\", PlayerInventory.getCoins());",
+    "rawContent": "Importing the Module const PlayerInventory = require(\"playerInventory\"); console.log(\"Coins:\", PlayerInventory.getCoins()); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/player-inventory-api-guide#reading-the-inventory",
+    "headerId": "reading-the-inventory",
+    "docId": "spell-api-guides/player-inventory-api-guide",
+    "docTitle": "Player Inventory API Guide",
+    "heading": "Reading the Inventory",
+    "headingPath": [
+      "The Player Inventory API",
+      "Reading the Inventory"
+    ],
+    "textContent": "The query functions let your spell react to what you're carrying: Explain Code Open in Code Editor Tip returns when nothing is equipped, so check for that before using the result.",
+    "codeContent": "const PlayerInventory = require(\"playerInventory\"); if (PlayerInventory.hasSword()) { console.log(\"Sword ready! Coins: \" + PlayerInventory.getCoins()); } else { console.log(\"No sword equipped.\"); } getEquippedWeapon() null",
+    "rawContent": "Reading the Inventory The query functions let your spell react to what you're carrying: const PlayerInventory = require(\"playerInventory\"); if (PlayerInventory.hasSword()) { console.log(\"Sword ready! Coins: \" + PlayerInventory.getCoins()); } else { console.log(\"No sword equipped.\"); } Explain Code Open in Code Editor Tip getEquippedWeapon() returns null when nothing is equipped, so check for that before using the result."
+  },
+  {
+    "chunkId": "spell-api-guides/player-inventory-api-guide#commanding-the-inventory",
+    "headerId": "commanding-the-inventory",
+    "docId": "spell-api-guides/player-inventory-api-guide",
+    "docTitle": "Player Inventory API Guide",
+    "heading": "Commanding the Inventory",
+    "headingPath": [
+      "The Player Inventory API",
+      "Commanding the Inventory"
+    ],
+    "textContent": "You can also change hotkey rows and fire hotkeys from a spell: Explain Code Open in Code Editor",
+    "codeContent": "const PlayerInventory = require(\"playerInventory\"); PlayerInventory.setHotKeyCurrentRow(0); PlayerInventory.activateHotKey(\"1\");",
+    "rawContent": "Commanding the Inventory You can also change hotkey rows and fire hotkeys from a spell: const PlayerInventory = require(\"playerInventory\"); PlayerInventory.setHotKeyCurrentRow(0); PlayerInventory.activateHotKey(\"1\"); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/player-inventory-api-guide#query-methods",
+    "headerId": "query-methods",
+    "docId": "spell-api-guides/player-inventory-api-guide",
+    "docTitle": "Player Inventory API Guide",
+    "heading": "Query methods",
+    "headingPath": [
+      "The Player Inventory API",
+      "Commanding the Inventory",
+      "Query methods"
+    ],
+    "textContent": "— — the equipped weapon, or if none. — — the current hotkey assignments. — — the active hotkey row. — — your consumable items. — — your quest items. — — whether you have a sword. — — how many coins you have.",
+    "codeContent": "getEquippedWeapon() string | null null getHotKeyMap() object getHotKeyCurrentRow() number getConsumables() object getQuestItems() object hasSword() boolean getCoins() number",
+    "rawContent": "Query methods getEquippedWeapon() — string | null — the equipped weapon, or null if none. getHotKeyMap() — object — the current hotkey assignments. getHotKeyCurrentRow() — number — the active hotkey row. getConsumables() — object — your consumable items. getQuestItems() — object — your quest items. hasSword() — boolean — whether you have a sword. getCoins() — number — how many coins you have."
+  },
+  {
+    "chunkId": "spell-api-guides/player-inventory-api-guide#command-methods",
+    "headerId": "command-methods",
+    "docId": "spell-api-guides/player-inventory-api-guide",
+    "docTitle": "Player Inventory API Guide",
+    "heading": "Command methods",
+    "headingPath": [
+      "The Player Inventory API",
+      "Commanding the Inventory",
+      "Command methods"
+    ],
+    "textContent": "— is a — switch to the given hotkey row. — is a , is an or — assign (or clear) a hotkey. — is a — trigger the given hotkey. Important Passing as the to clears that hotkey slot.",
+    "codeContent": "setHotKeyCurrentRow(row) row number assignHotKey(hotKey, assignment) hotKey string assignment object null activateHotKey(hotKey) hotKey string null assignment assignHotKey",
+    "rawContent": "Command methods setHotKeyCurrentRow(row) — row is a number — switch to the given hotkey row. assignHotKey(hotKey, assignment) — hotKey is a string , assignment is an object or null — assign (or clear) a hotkey. activateHotKey(hotKey) — hotKey is a string — trigger the given hotkey. Important Passing null as the assignment to assignHotKey clears that hotkey slot."
+  },
+  {
+    "chunkId": "spell-api-guides/projectile-api-guide#casting-your-first-projectile",
+    "headerId": "casting-your-first-projectile",
+    "docId": "spell-api-guides/projectile-api-guide",
+    "docTitle": "Projectile API Guide",
+    "heading": "Casting Your First Projectile",
+    "headingPath": [
+      "Casting Your First Projectile"
+    ],
+    "textContent": "Tip If you have not done so already: start your journey into the world of JavaScript with JavaScript: Beginnings Welcome, Protag ! It is time to pick up the keyboard and dive into using your first JavaScript Spell API . We will learn specifically what we mean by \"API\" at a later point in time. For now, let's write a few lines of JavaScript to make your own offensive projectile spell from scratch. Creating The Projectile Explain Code Open in Code Editor Try executing the above code yourself! Congratulations! With just two lines of JavaScript, we have already casted a basic projectile. Try to familiarize yourself with this syntax, since you will almost always revisit this pattern as you continue to master spell writing throughout your journey! This is a key line that brings in the power of the spell for your use in spell writing. This basic is but one spell of many you will master throughout your journey, and they are all \" imported \" in via a similar statement: and more... Important We will delve into the inner workings of this line later in your journey. But, think of it as telling your code editor: \"I require the \"projectile\" spell, and store that spell in the variable.\" If you have not read about variables yet, you may learn about them and what they mean in code at JavaScript: Variables . In the previous line of code, we created the variable which stores a way for us to create instances of new projectiles. Using this variable, we create new projectiles literally by writing the word, \"new\" , followed by the variable name and a set of parenthesis \"()\" . This combination of words tells your code editor: \"I want to create a new projectile,\" which it fulfills the moment your code is executed . What is with the ending set of parenthesis, you may say? You will understand the answer to this question more deeply once we learn about JavaScript functions and classes , two very important topics. But for now, the point of these parenthesis is to give you a space to provide configurations to your created projectile .",
+    "codeContent": "const Projectile = require(\"projectile\"); new Projectile(); const Projectile = require(\"projectile\"); \"projectile\" \"projectile\" require const Fire = require(\"fire\"); const Ice = require(\"ice\"); Projectile Projectile",
+    "rawContent": "Casting Your First Projectile Tip If you have not done so already: start your journey into the world of JavaScript with JavaScript: Beginnings Welcome, Protag ! It is time to pick up the keyboard and dive into using your first JavaScript Spell API . We will learn specifically what we mean by \"API\" at a later point in time. For now, let's write a few lines of JavaScript to make your own offensive projectile spell from scratch. Creating The Projectile const Projectile = require(\"projectile\"); new Projectile(); Explain Code Open in Code Editor Try executing the above code yourself! Congratulations! With just two lines of JavaScript, we have already casted a basic projectile. Try to familiarize yourself with this syntax, since you will almost always revisit this pattern as you continue to master spell writing throughout your journey! const Projectile = require(\"projectile\"); This is a key line that brings in the power of the \"projectile\" spell for your use in spell writing. This basic \"projectile\" is but one spell of many you will master throughout your journey, and they are all \" imported \" in via a similar require statement: const Fire = require(\"fire\"); const Ice = require(\"ice\"); and more... Important We will delve into the inner workings of this line later in your journey. But, think of it as telling your code editor: \"I require the \"projectile\" spell, and store that spell in the Projectile variable.\" If you have not read about variables yet, you may learn about them and what they mean in code at JavaScript: Variables . In the previous line of code, we created the Projectile variable which stores a way for us to create instances of new projectiles. Using this variable, we create new projectiles literally by writing the word, \"new\" , followed by the variable name and a set of parenthesis \"()\" . This combination of words tells your code editor: \"I want to create a new projectile,\" which it fulfills the moment your code is executed . What is with the ending set of parenthesis, you may say? You will understand the answer to this question more deeply once we learn about JavaScript functions and classes , two very important topics. But for now, the point of these parenthesis is to give you a space to provide configurations to your created projectile ."
+  },
+  {
+    "chunkId": "spell-api-guides/projectile-api-guide#configuring-your-projectile",
+    "headerId": "configuring-your-projectile",
+    "docId": "spell-api-guides/projectile-api-guide",
+    "docTitle": "Projectile API Guide",
+    "heading": "Configuring Your Projectile",
+    "headingPath": [
+      "Casting Your First Projectile",
+      "Configuring Your Projectile"
+    ],
+    "textContent": "Previously, we created a new projectile with nothing between the parenthesis. This simply means the created projectile, the one seen in the above example, has a default configuration . To configure and tailor the parameters of the created projectile to your liking, we can make the following modification: Explain Code Open in Code Editor We have configured the parameter of the projectile, and set it to a value of . This augments your projectile spell to allow you to influence the trajectory of the projectile by aiming and clicking with your mouse . Previously under the default configuration , this parameter is set to . By setting your own configuration, you have now essentially overridden that default value. Important Take note that the aim configuration is between a set of curly brackets \"{}\" . You will later learn these curly brackets are apart of a very important JavaScript concept: Objects . The configuration possibilities do not stop there: The Projectile API offers a suite of parameters you can tune to your liking. For example, we can configure the of the projectile: Explain Code Open in Code Editor Weak projectile (default) Strong projectile (strength: 50) We have configured the parameter of the projectile to a value of 50 , which by default is set to a value of 15 . This allows us to eliminate a Wall Crawler with a single projectile, but at the expense of additional mana cost . The balance between power and mana cost can be tuned to your liking. As you can see, we have covered two possible configurations to our Projectile. But so far, we have only done those configurations in isolation. If you want to pass multiple configurations to the projectile, we can type up the following: A Strong, Aimed, Straight Line Projectile Explain Code Open in Code Editor Take note of the comma used to separate each configuration we add to our projectile. We will explain the new parameter below. Before we go any further, let's format our JavaScipt into something easier to read: Tip Spacing out your code on new lines is almost always valid JavaScript and can make your code easier to read! Tip As you can see, we are simply writing what appears to be a list of configuration options, each with their own \"key\" or name followed by the value to set. Think going through the settings menu of a program or application. We introduce the property of the projectile, which is a configuration option that determines how much gravity will pull down the projectile . By setting this property to a value of , we state that our created projectile should not be affected by gravity whatsoever , allowing it to travel in a direct, straight line. Data Types As shown above, some properties take in different types of values. Some properties, such as and , are configured with any number, while other properties like are configured with either or . This would be known as these properties having different expected data types , and can be read about more in JavaScript: Data Types . WRITE AN ENDING RECAP AND REDIRECT TO THE API SPECIFICATION PLUS OTHER JAVASCRIPT CONCEPTS.",
+    "codeContent": "() const Projectile = require(\"projectile\"); new Projectile({ aim: true }); aim true false aim: true strength const Projectile = require(\"projectile\"); new Projectile({ strength: 50 }); strength const Projectile = require(\"projectile\"); new Projectile({ strength: 50, aim: true, gravity: 0 }); , gravity new Projectile({ strength: 50, aim: true, gravity: 0 }); gravity 0 strength gravity aim false true",
+    "rawContent": "Configuring Your Projectile Previously, we created a new projectile with nothing between the () parenthesis. This simply means the created projectile, the one seen in the above example, has a default configuration . To configure and tailor the parameters of the created projectile to your liking, we can make the following modification: const Projectile = require(\"projectile\"); new Projectile({ aim: true }); Explain Code Open in Code Editor We have configured the aim parameter of the projectile, and set it to a value of true . This augments your projectile spell to allow you to influence the trajectory of the projectile by aiming and clicking with your mouse . Previously under the default configuration , this parameter is set to false . By setting your own aim: true configuration, you have now essentially overridden that default value. Important Take note that the aim configuration is between a set of curly brackets \"{}\" . You will later learn these curly brackets are apart of a very important JavaScript concept: Objects . The configuration possibilities do not stop there: The Projectile API offers a suite of parameters you can tune to your liking. For example, we can configure the strength of the projectile: const Projectile = require(\"projectile\"); new Projectile({ strength: 50 }); Explain Code Open in Code Editor Weak projectile (default) Strong projectile (strength: 50) We have configured the strength parameter of the projectile to a value of 50 , which by default is set to a value of 15 . This allows us to eliminate a Wall Crawler with a single projectile, but at the expense of additional mana cost . The balance between power and mana cost can be tuned to your liking. As you can see, we have covered two possible configurations to our Projectile. But so far, we have only done those configurations in isolation. If you want to pass multiple configurations to the projectile, we can type up the following: A Strong, Aimed, Straight Line Projectile const Projectile = require(\"projectile\"); new Projectile({ strength: 50, aim: true, gravity: 0 }); Explain Code Open in Code Editor Take note of the comma , used to separate each configuration we add to our projectile. We will explain the new parameter gravity below. Before we go any further, let's format our JavaScipt into something easier to read: new Projectile({ strength: 50, aim: true, gravity: 0 }); Tip Spacing out your code on new lines is almost always valid JavaScript and can make your code easier to read! Tip As you can see, we are simply writing what appears to be a list of configuration options, each with their own \"key\" or name followed by the value to set. Think going through the settings menu of a program or application. We introduce the gravity property of the projectile, which is a configuration option that determines how much gravity will pull down the projectile . By setting this property to a value of 0 , we state that our created projectile should not be affected by gravity whatsoever , allowing it to travel in a direct, straight line. Data Types As shown above, some properties take in different types of values. Some properties, such as strength and gravity , are configured with any number, while other properties like aim are configured with either false or true . This would be known as these properties having different expected data types , and can be read about more in JavaScript: Data Types . WRITE AN ENDING RECAP AND REDIRECT TO THE API SPECIFICATION PLUS OTHER JAVASCRIPT CONCEPTS."
+  },
+  {
+    "chunkId": "spell-api-guides/self-api-guide#the-self-api",
+    "headerId": "the-self-api",
+    "docId": "spell-api-guides/self-api-guide",
+    "docTitle": "Self API Guide",
+    "heading": "The Self API",
+    "headingPath": [
+      "The Self API"
+    ],
+    "textContent": "Hey there, Protag ! The module is simply the entity that is casting the current spell — that's usually you. Unlike most spell APIs, the export is a plain value (an ), not a function or class. Read its fields to find out where the caster is, what type it is, and more.",
+    "codeContent": "\"self\" Entity",
+    "rawContent": "The Self API Hey there, Protag ! The \"self\" module is simply the entity that is casting the current spell — that's usually you. Unlike most spell APIs, the export is a plain value (an Entity ), not a function or class. Read its fields to find out where the caster is, what type it is, and more."
+  },
+  {
+    "chunkId": "spell-api-guides/self-api-guide#importing-self",
+    "headerId": "importing-self",
+    "docId": "spell-api-guides/self-api-guide",
+    "docTitle": "Self API Guide",
+    "heading": "Importing Self",
+    "headingPath": [
+      "The Self API",
+      "Importing Self"
+    ],
+    "textContent": "Explain Code Open in Code Editor Because is already the entity, there's nothing to construct — just read from it.",
+    "codeContent": "const self = require(\"self\"); console.log(self.type); // e.g. \"Player\" console.log(self.id); // the caster's unique id console.log(self.position); // { x, y } self",
+    "rawContent": "Importing Self const self = require(\"self\"); console.log(self.type); // e.g. \"Player\" console.log(self.id); // the caster's unique id console.log(self.position); // { x, y } Explain Code Open in Code Editor Because self is already the entity, there's nothing to construct — just read from it."
+  },
+  {
+    "chunkId": "spell-api-guides/self-api-guide#using-self-with-other-entities",
+    "headerId": "using-self-with-other-entities",
+    "docId": "spell-api-guides/self-api-guide",
+    "docTitle": "Self API Guide",
+    "heading": "Using Self with Other Entities",
+    "headingPath": [
+      "The Self API",
+      "Using Self with Other Entities"
+    ],
+    "textContent": "is most useful when paired with the entity-finding APIs. The Sensor and Get Entities APIs hand you back lists of entities, and you'll often want to compare those against the caster — for example, to skip yourself when targeting: Explain Code Open in Code Editor",
+    "codeContent": "self const self = require(\"self\"); const sensor = require(\"sensor\"); const others = sensor.entities().filter((e) => e.id !== self.id); const myX = self.position.x;",
+    "rawContent": "Using Self with Other Entities self is most useful when paired with the entity-finding APIs. The Sensor and Get Entities APIs hand you back lists of entities, and you'll often want to compare those against the caster — for example, to skip yourself when targeting: const self = require(\"self\"); const sensor = require(\"sensor\"); const others = sensor.entities().filter((e) => e.id !== self.id); const myX = self.position.x; Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/self-api-guide#properties",
+    "headerId": "properties",
+    "docId": "spell-api-guides/self-api-guide",
+    "docTitle": "Self API Guide",
+    "heading": "Properties",
+    "headingPath": [
+      "The Self API",
+      "Using Self with Other Entities",
+      "Properties"
+    ],
+    "textContent": "— — the caster's unique entity id. — — the caster's entity type (for example, ). — — the caster's current world position. Info carries additional entity fields beyond these, but , , and are the ones you'll reach for most. Use the Info API to inspect everything it offers.",
+    "codeContent": "id string type string \"Player\" position { x, y } self id type position",
+    "rawContent": "Properties id — string — the caster's unique entity id. type — string — the caster's entity type (for example, \"Player\" ). position — { x, y } — the caster's current world position. Info self carries additional entity fields beyond these, but id , type , and position are the ones you'll reach for most. Use the Info API to inspect everything it offers."
+  },
+  {
+    "chunkId": "spell-api-guides/sensor-api-guide#the-sensor-api",
+    "headerId": "the-sensor-api",
+    "docId": "spell-api-guides/sensor-api-guide",
+    "docTitle": "Sensor API Guide",
+    "heading": "The Sensor API",
+    "headingPath": [
+      "The Sensor API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell creates a sensor that follows your caster and reports any entities within a radius. It can hand you the current list of nearby entities, and it can fire callbacks the moment something enters or leaves.",
+    "codeContent": "\"sensor\"",
+    "rawContent": "The Sensor API Welcome back, Protag ! The \"sensor\" spell creates a sensor that follows your caster and reports any entities within a radius. It can hand you the current list of nearby entities, and it can fire callbacks the moment something enters or leaves."
+  },
+  {
+    "chunkId": "spell-api-guides/sensor-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/sensor-api-guide",
+    "docTitle": "Sensor API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Sensor API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor That single builds a sensor centered on your caster.",
+    "codeContent": "const Sensor = require(\"sensor\"); const sensor = new Sensor(); new Sensor()",
+    "rawContent": "Importing the Spell const Sensor = require(\"sensor\"); const sensor = new Sensor(); Explain Code Open in Code Editor That single new Sensor() builds a sensor centered on your caster."
+  },
+  {
+    "chunkId": "spell-api-guides/sensor-api-guide#configuring-the-sensor",
+    "headerId": "configuring-the-sensor",
+    "docId": "spell-api-guides/sensor-api-guide",
+    "docTitle": "Sensor API Guide",
+    "heading": "Configuring the Sensor",
+    "headingPath": [
+      "The Sensor API",
+      "Configuring the Sensor"
+    ],
+    "textContent": "The constructor takes an optional configuration object so you can tune the detection radius or attach the sensor to a ManaSpark : Explain Code Open in Code Editor Tip Reading gives you a snapshot of everything currently inside the sensor — perfect for picking a target before casting another spell.",
+    "codeContent": "const Sensor = require(\"sensor\"); const sensor = new Sensor({ radius: 6 }); for (const entity of sensor.entities) { console.log(\"nearby:\", entity.type); } sensor.entities",
+    "rawContent": "Configuring the Sensor The constructor takes an optional configuration object so you can tune the detection radius or attach the sensor to a ManaSpark : const Sensor = require(\"sensor\"); const sensor = new Sensor({ radius: 6 }); for (const entity of sensor.entities) { console.log(\"nearby:\", entity.type); } Explain Code Open in Code Editor Tip Reading sensor.entities gives you a snapshot of everything currently inside the sensor — perfect for picking a target before casting another spell."
+  },
+  {
+    "chunkId": "spell-api-guides/sensor-api-guide#constructor-options",
+    "headerId": "constructor-options",
+    "docId": "spell-api-guides/sensor-api-guide",
+    "docTitle": "Sensor API Guide",
+    "heading": "Constructor options",
+    "headingPath": [
+      "The Sensor API",
+      "Configuring the Sensor",
+      "Constructor options"
+    ],
+    "textContent": "— — detection radius in world units. — — a ManaSpark to attach the sensor to instead of the caster.",
+    "codeContent": "radius number spark { id }",
+    "rawContent": "Constructor options radius — number — detection radius in world units. spark — { id } — a ManaSpark to attach the sensor to instead of the caster."
+  },
+  {
+    "chunkId": "spell-api-guides/sensor-api-guide#reacting-to-entities",
+    "headerId": "reacting-to-entities",
+    "docId": "spell-api-guides/sensor-api-guide",
+    "docTitle": "Sensor API Guide",
+    "heading": "Reacting to Entities",
+    "headingPath": [
+      "The Sensor API",
+      "Reacting to Entities"
+    ],
+    "textContent": "Instead of polling, you can react the instant an entity enters the sensor: Explain Code Open in Code Editor Info The sensor follows your caster, so its updates as you move. Check before relying on it, and to know when it's gone.",
+    "codeContent": "const Sensor = require(\"sensor\"); const sensor = new Sensor({ radius: 8 }); sensor.onEntityEnter(function (entity) { console.log(\"entered:\", entity.type); }); position sensor.ready sensor.destroyed",
+    "rawContent": "Reacting to Entities Instead of polling, you can react the instant an entity enters the sensor: const Sensor = require(\"sensor\"); const sensor = new Sensor({ radius: 8 }); sensor.onEntityEnter(function (entity) { console.log(\"entered:\", entity.type); }); Explain Code Open in Code Editor Info The sensor follows your caster, so its position updates as you move. Check sensor.ready before relying on it, and sensor.destroyed to know when it's gone."
+  },
+  {
+    "chunkId": "spell-api-guides/sensor-api-guide#properties-and-methods",
+    "headerId": "properties-and-methods",
+    "docId": "spell-api-guides/sensor-api-guide",
+    "docTitle": "Sensor API Guide",
+    "heading": "Properties and methods",
+    "headingPath": [
+      "The Sensor API",
+      "Reacting to Entities",
+      "Properties and methods"
+    ],
+    "textContent": "— — the sensor's handle id. — — whether the sensor is active and reporting. — — the sensor's current position. — — whether the sensor has been destroyed. — — the entities currently inside the sensor. — callback fired when an entity enters. — callback fired when an entity leaves.",
+    "codeContent": "id string ready boolean position { x, y } destroyed boolean entities Entity[] onEntityEnter(cb) onEntityLeave(cb)",
+    "rawContent": "Properties and methods id — string — the sensor's handle id. ready — boolean — whether the sensor is active and reporting. position — { x, y } — the sensor's current position. destroyed — boolean — whether the sensor has been destroyed. entities — Entity[] — the entities currently inside the sensor. onEntityEnter(cb) — callback fired when an entity enters. onEntityLeave(cb) — callback fired when an entity leaves."
+  },
+  {
+    "chunkId": "spell-api-guides/shapes-api-guide#the-shapes-api",
+    "headerId": "the-shapes-api",
+    "docId": "spell-api-guides/shapes-api-guide",
+    "docTitle": "Shapes API Guide",
+    "heading": "The Shapes API",
+    "headingPath": [
+      "The Shapes API"
+    ],
+    "textContent": "Let's get geometric, Protag ! The module builds polygon outlines — arrays of points — that you can feed into shape-based spells like Earth and Ice . Every member is static, so you call them straight off the import.",
+    "codeContent": "\"shapes\" Vector",
+    "rawContent": "The Shapes API Let's get geometric, Protag ! The \"shapes\" module builds polygon outlines — arrays of Vector points — that you can feed into shape-based spells like Earth and Ice . Every member is static, so you call them straight off the import."
+  },
+  {
+    "chunkId": "spell-api-guides/shapes-api-guide#importing-shapes",
+    "headerId": "importing-shapes",
+    "docId": "spell-api-guides/shapes-api-guide",
+    "docTitle": "Shapes API Guide",
+    "heading": "Importing Shapes",
+    "headingPath": [
+      "The Shapes API",
+      "Importing Shapes"
+    ],
+    "textContent": "Explain Code Open in Code Editor",
+    "codeContent": "const Shapes = require(\"shapes\"); const outline = Shapes.circle(2); console.log(outline.length); // an array of Vector points",
+    "rawContent": "Importing Shapes const Shapes = require(\"shapes\"); const outline = Shapes.circle(2); console.log(outline.length); // an array of Vector points Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/shapes-api-guide#building-a-shape-spell",
+    "headerId": "building-a-shape-spell",
+    "docId": "spell-api-guides/shapes-api-guide",
+    "docTitle": "Shapes API Guide",
+    "heading": "Building a Shape Spell",
+    "headingPath": [
+      "The Shapes API",
+      "Building a Shape Spell"
+    ],
+    "textContent": "Pass the points you build as the option of a shape-based spell: Explain Code Open in Code Editor Tip Earth works the same way — hand it a from any of these helpers to conjure a custom-shaped block.",
+    "codeContent": "shape const Shapes = require(\"shapes\"); const Ice = require(\"ice\"); new Ice({ shape: Shapes.circle(2) }); shape",
+    "rawContent": "Building a Shape Spell Pass the points you build as the shape option of a shape-based spell: const Shapes = require(\"shapes\"); const Ice = require(\"ice\"); new Ice({ shape: Shapes.circle(2) }); Explain Code Open in Code Editor Tip Earth works the same way — hand it a shape from any of these helpers to conjure a custom-shaped block."
+  },
+  {
+    "chunkId": "spell-api-guides/shapes-api-guide#static-methods",
+    "headerId": "static-methods",
+    "docId": "spell-api-guides/shapes-api-guide",
+    "docTitle": "Shapes API Guide",
+    "heading": "Static methods",
+    "headingPath": [
+      "The Shapes API",
+      "Building a Shape Spell",
+      "Static methods"
+    ],
+    "textContent": "— returns ; both and are numbers. — returns ; is a , is an optional . — returns ; is a , is an optional of points around the circle.",
+    "codeContent": "Shapes.rect(width, height) Vector[] width height Shapes.triangle(radius, angle?) Vector[] radius number angle number Shapes.circle(radius, count?) Vector[] radius number count number",
+    "rawContent": "Static methods Shapes.rect(width, height) — returns Vector[] ; both width and height are numbers. Shapes.triangle(radius, angle?) — returns Vector[] ; radius is a number , angle is an optional number . Shapes.circle(radius, count?) — returns Vector[] ; radius is a number , count is an optional number of points around the circle."
+  },
+  {
+    "chunkId": "spell-api-guides/spark-api-guide#the-spark-api",
+    "headerId": "the-spark-api",
+    "docId": "spell-api-guides/spark-api-guide",
+    "docTitle": "Spark API Guide",
+    "heading": "The Spark API",
+    "headingPath": [
+      "The Spark API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell conjures a ManaSpark — a floating orb that orbits you and can cast spells from its own position. This is one of the most powerful tools in your kit: a spark can carry mana, drift out ahead of you, and fling spells from places you can't reach. Many other spells — Fire , Ice , Earth , Sensor , and Heal — accept a option so they cast from a spark instead of from you.",
+    "codeContent": "\"spark\" spark: { id }",
+    "rawContent": "The Spark API Welcome back, Protag ! The \"spark\" spell conjures a ManaSpark — a floating orb that orbits you and can cast spells from its own position. This is one of the most powerful tools in your kit: a spark can carry mana, drift out ahead of you, and fling spells from places you can't reach. Many other spells — Fire , Ice , Earth , Sensor , and Heal — accept a spark: { id } option so they cast from a spark instead of from you."
+  },
+  {
+    "chunkId": "spell-api-guides/spark-api-guide#creating-a-spark",
+    "headerId": "creating-a-spark",
+    "docId": "spell-api-guides/spark-api-guide",
+    "docTitle": "Spark API Guide",
+    "heading": "Creating a Spark",
+    "headingPath": [
+      "The Spark API",
+      "Creating a Spark"
+    ],
+    "textContent": "Explain Code Open in Code Editor That single summons an orb that orbits your caster.",
+    "codeContent": "const Spark = require(\"spark\"); const spark = new Spark(); new Spark()",
+    "rawContent": "Creating a Spark const Spark = require(\"spark\"); const spark = new Spark(); Explain Code Open in Code Editor That single new Spark() summons an orb that orbits your caster."
+  },
+  {
+    "chunkId": "spell-api-guides/spark-api-guide#configuring-a-spark",
+    "headerId": "configuring-a-spark",
+    "docId": "spell-api-guides/spark-api-guide",
+    "docTitle": "Spark API Guide",
+    "heading": "Configuring a Spark",
+    "headingPath": [
+      "The Spark API",
+      "Configuring a Spark"
+    ],
+    "textContent": "The constructor takes an optional configuration object so you can position the spark and load it with mana up front: Explain Code Open in Code Editor Tip Set to let the camera ride along with a spark you send far away — handy for scouting ahead before you commit.",
+    "codeContent": "const Spark = require(\"spark\"); const spark = new Spark({ mana: 50, offset: { x: 2, y: 1 }, cameraFollow: true }); cameraFollow: true",
+    "rawContent": "Configuring a Spark The constructor takes an optional configuration object so you can position the spark and load it with mana up front: const Spark = require(\"spark\"); const spark = new Spark({ mana: 50, offset: { x: 2, y: 1 }, cameraFollow: true }); Explain Code Open in Code Editor Tip Set cameraFollow: true to let the camera ride along with a spark you send far away — handy for scouting ahead before you commit."
+  },
+  {
+    "chunkId": "spell-api-guides/spark-api-guide#constructor-options",
+    "headerId": "constructor-options",
+    "docId": "spell-api-guides/spark-api-guide",
+    "docTitle": "Spark API Guide",
+    "heading": "Constructor options",
+    "headingPath": [
+      "The Spark API",
+      "Configuring a Spark",
+      "Constructor options"
+    ],
+    "textContent": "— — initial mana to transfer into the spark. — — position offset relative to the caster. — — whether the camera should follow this spark. — — id of the entity to cast from (defaults to the caster).",
+    "codeContent": "mana number offset { x, y } cameraFollow boolean casterId string",
+    "rawContent": "Constructor options mana — number — initial mana to transfer into the spark. offset — { x, y } — position offset relative to the caster. cameraFollow — boolean — whether the camera should follow this spark. casterId — string — id of the entity to cast from (defaults to the caster)."
+  },
+  {
+    "chunkId": "spell-api-guides/spark-api-guide#casting-from-a-spark",
+    "headerId": "casting-from-a-spark",
+    "docId": "spell-api-guides/spark-api-guide",
+    "docTitle": "Spark API Guide",
+    "heading": "Casting From a Spark",
+    "headingPath": [
+      "The Spark API",
+      "Casting From a Spark"
+    ],
+    "textContent": "The most powerful trick is — it casts a spell, or constructs a spell class, from the spark's position instead of your own. Pass the spell class and its options: Explain Code Open in Code Editor That launches a Fire fireball from the spark, not from you — letting you attack around corners or from the air.",
+    "codeContent": "spark.cast const Spark = require(\"spark\"); const Fire = require(\"fire\"); const spark = new Spark({ mana: 30, offset: { x: 3, y: 0 } }); spark.cast(Fire, { strength: 20, gravity: false });",
+    "rawContent": "Casting From a Spark The most powerful trick is spark.cast — it casts a spell, or constructs a spell class, from the spark's position instead of your own. Pass the spell class and its options: const Spark = require(\"spark\"); const Fire = require(\"fire\"); const spark = new Spark({ mana: 30, offset: { x: 3, y: 0 } }); spark.cast(Fire, { strength: 20, gravity: false }); Explain Code Open in Code Editor That launches a Fire fireball from the spark, not from you — letting you attack around corners or from the air."
+  },
+  {
+    "chunkId": "spell-api-guides/spark-api-guide#moving-a-spark-around",
+    "headerId": "moving-a-spark-around",
+    "docId": "spell-api-guides/spark-api-guide",
+    "docTitle": "Spark API Guide",
+    "heading": "Moving a Spark Around",
+    "headingPath": [
+      "The Spark API",
+      "Moving a Spark Around"
+    ],
+    "textContent": "A spark responds to movement commands so you can steer it through the level: Explain Code Open in Code Editor",
+    "codeContent": "const Spark = require(\"spark\"); const spark = new Spark(); spark.moveRight(3); spark.moveUp(2); spark.setPosition({ x: 12, y: 6 });",
+    "rawContent": "Moving a Spark Around A spark responds to movement commands so you can steer it through the level: const Spark = require(\"spark\"); const spark = new Spark(); spark.moveRight(3); spark.moveUp(2); spark.setPosition({ x: 12, y: 6 }); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/spark-api-guide#properties",
+    "headerId": "properties",
+    "docId": "spell-api-guides/spark-api-guide",
+    "docTitle": "Spark API Guide",
+    "heading": "Properties",
+    "headingPath": [
+      "The Spark API",
+      "Moving a Spark Around",
+      "Properties"
+    ],
+    "textContent": "— — the spark's persistent handle id. — — the entity type string ( ). — — the current mana held by the spark.",
+    "codeContent": "id string type string 'ManaSpark' mana number",
+    "rawContent": "Properties id — string — the spark's persistent handle id. type — string — the entity type string ( 'ManaSpark' ). mana — number — the current mana held by the spark."
+  },
+  {
+    "chunkId": "spell-api-guides/spark-api-guide#methods",
+    "headerId": "methods",
+    "docId": "spell-api-guides/spark-api-guide",
+    "docTitle": "Spark API Guide",
+    "heading": "Methods",
+    "headingPath": [
+      "The Spark API",
+      "Moving a Spark Around",
+      "Methods"
+    ],
+    "textContent": "— cast a spell or construct a class from the spark's position. is a class or function (e.g. the class), and is the options object. — async/promise variant of . — destroy the spark (returns void). — update the orbit offset ( ). — teleport the spark toward an absolute position ( ). — stream the spark's mana back to the caster and destroy it (returns void). — transfer mana from the caster into the spark ( ). — drain a nearby ManaFountain (within range and line of sight) to refill the spark ( ). — stream mana from this spark to another spark ( , ). — move the spark right by tiles (default 1). — move the spark left by tiles (default 1). — move the spark up by tiles (default 1). — move the spark down by tiles (default 1). Important A spark only carries the mana you give it. When you're done, call to recover any unused mana instead of letting it away.",
+    "codeContent": "cast(spell, arg?) spell Fire arg castAsync(spell, arg?) cast destroy() setOffset(offset) { x, y } setPosition(position) { x, y } returnToCaster() storeMana(amount) number leech(fountainHandleId) string passMana(targetSpark, amount) ManaSpark number moveRight(n?) n moveLeft(n?) n moveUp(n?) n moveDown(n?) n returnToCaster() destroy()",
+    "rawContent": "Methods cast(spell, arg?) — cast a spell or construct a class from the spark's position. spell is a class or function (e.g. the Fire class), and arg is the options object. castAsync(spell, arg?) — async/promise variant of cast . destroy() — destroy the spark (returns void). setOffset(offset) — update the orbit offset ( { x, y } ). setPosition(position) — teleport the spark toward an absolute position ( { x, y } ). returnToCaster() — stream the spark's mana back to the caster and destroy it (returns void). storeMana(amount) — transfer mana from the caster into the spark ( number ). leech(fountainHandleId) — drain a nearby ManaFountain (within range and line of sight) to refill the spark ( string ). passMana(targetSpark, amount) — stream mana from this spark to another spark ( ManaSpark , number ). moveRight(n?) — move the spark right by n tiles (default 1). moveLeft(n?) — move the spark left by n tiles (default 1). moveUp(n?) — move the spark up by n tiles (default 1). moveDown(n?) — move the spark down by n tiles (default 1). Important A spark only carries the mana you give it. When you're done, call returnToCaster() to recover any unused mana instead of letting it destroy() away."
+  },
+  {
+    "chunkId": "spell-api-guides/speed-api-guide#the-speed-api",
+    "headerId": "the-speed-api",
+    "docId": "spell-api-guides/speed-api-guide",
+    "docTitle": "Speed API Guide",
+    "heading": "The Speed API",
+    "headingPath": [
+      "The Speed API"
+    ],
+    "textContent": "Need your spell to think faster, Protag ? The module controls how quickly the spell interpreter executes your code. The export is a function.",
+    "codeContent": "\"speed\"",
+    "rawContent": "The Speed API Need your spell to think faster, Protag ? The \"speed\" module controls how quickly the spell interpreter executes your code. The export is a function."
+  },
+  {
+    "chunkId": "spell-api-guides/speed-api-guide#importing-speed",
+    "headerId": "importing-speed",
+    "docId": "spell-api-guides/speed-api-guide",
+    "docTitle": "Speed API Guide",
+    "heading": "Importing Speed",
+    "headingPath": [
+      "The Speed API",
+      "Importing Speed"
+    ],
+    "textContent": "Explain Code Open in Code Editor Crank it up when you have a lot of code to chew through, or dial it down when you want to watch your spell unfold step by step.",
+    "codeContent": "const speed = require(\"speed\"); speed(10); // run the interpreter 10x faster",
+    "rawContent": "Importing Speed const speed = require(\"speed\"); speed(10); // run the interpreter 10x faster Explain Code Open in Code Editor Crank it up when you have a lot of code to chew through, or dial it down when you want to watch your spell unfold step by step."
+  },
+  {
+    "chunkId": "spell-api-guides/speed-api-guide#methods",
+    "headerId": "methods",
+    "docId": "spell-api-guides/speed-api-guide",
+    "docTitle": "Speed API Guide",
+    "heading": "Methods",
+    "headingPath": [
+      "The Speed API",
+      "Importing Speed",
+      "Methods"
+    ],
+    "textContent": "— sets the interpreter's execution speed. is a clamped between and ; higher values run faster. Tip Very high speeds can make a spell finish almost instantly, while very low speeds slow it to a crawl — handy for debugging when you want to follow each line as it runs.",
+    "codeContent": "speed(value) value number 0.001 100",
+    "rawContent": "Methods speed(value) — sets the interpreter's execution speed. value is a number clamped between 0.001 and 100 ; higher values run faster. Tip Very high speeds can make a spell finish almost instantly, while very low speeds slow it to a crawl — handy for debugging when you want to follow each line as it runs."
+  },
+  {
+    "chunkId": "spell-api-guides/spells-api-guide#the-spells-api",
+    "headerId": "the-spells-api",
+    "docId": "spell-api-guides/spells-api-guide",
+    "docTitle": "Spells API Guide",
+    "heading": "The Spells API",
+    "headingPath": [
+      "The Spells API"
+    ],
+    "textContent": "Welcome back, Protag ! The module is your spell library and sub-spell runner. With it a spell can inspect, edit, save, and run other spells — building combos, loading saved spells, and launching sub-spells that run inside your current cast. Every member is static , so you call it directly on the import.",
+    "codeContent": "\"spells\"",
+    "rawContent": "The Spells API Welcome back, Protag ! The \"spells\" module is your spell library and sub-spell runner. With it a spell can inspect, edit, save, and run other spells — building combos, loading saved spells, and launching sub-spells that run inside your current cast. Every member is static , so you call it directly on the import."
+  },
+  {
+    "chunkId": "spell-api-guides/spells-api-guide#importing-the-module",
+    "headerId": "importing-the-module",
+    "docId": "spell-api-guides/spells-api-guide",
+    "docTitle": "Spells API Guide",
+    "heading": "Importing the Module",
+    "headingPath": [
+      "The Spells API",
+      "Importing the Module"
+    ],
+    "textContent": "Explain Code Open in Code Editor",
+    "codeContent": "const Spells = require(\"spells\"); console.log(Spells.list());",
+    "rawContent": "Importing the Module const Spells = require(\"spells\"); console.log(Spells.list()); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/spells-api-guide#saving-and-running-a-spell",
+    "headerId": "saving-and-running-a-spell",
+    "docId": "spell-api-guides/spells-api-guide",
+    "docTitle": "Spells API Guide",
+    "heading": "Saving and Running a Spell",
+    "headingPath": [
+      "The Spells API",
+      "Saving and Running a Spell"
+    ],
+    "textContent": "You can save a snippet of code by name and then run it as a sub-spell: Explain Code Open in Code Editor Tip The blocking runners ( , , ) wait for the sub-spell to finish before your code continues. Use the async variants when you want a sub-spell to keep running alongside your spell.",
+    "codeContent": "const Spells = require(\"spells\"); Spells.save(\"greet\", 'console.log(\"Hello from a sub-spell!\");'); Spells.runSaved(\"greet\"); // blocks until the sub-spell finishes runCode runSaved runEditor",
+    "rawContent": "Saving and Running a Spell You can save a snippet of code by name and then run it as a sub-spell: const Spells = require(\"spells\"); Spells.save(\"greet\", 'console.log(\"Hello from a sub-spell!\");'); Spells.runSaved(\"greet\"); // blocks until the sub-spell finishes Explain Code Open in Code Editor Tip The blocking runners ( runCode , runSaved , runEditor ) wait for the sub-spell to finish before your code continues. Use the async variants when you want a sub-spell to keep running alongside your spell."
+  },
+  {
+    "chunkId": "spell-api-guides/spells-api-guide#running-several-sub-spells-at-once",
+    "headerId": "running-several-sub-spells-at-once",
+    "docId": "spell-api-guides/spells-api-guide",
+    "docTitle": "Spells API Guide",
+    "heading": "Running Several Sub-Spells at Once",
+    "headingPath": [
+      "The Spells API",
+      "Running Several Sub-Spells at Once"
+    ],
+    "textContent": "The async runners hand you back a handle so you can launch multiple sub-spells concurrently: Explain Code Open in Code Editor",
+    "codeContent": "RunningSpell const Spells = require(\"spells\"); const running = Spells.runSavedAsync(\"greet\"); // ...do other work... Spells.terminateAll();",
+    "rawContent": "Running Several Sub-Spells at Once The async runners hand you back a RunningSpell handle so you can launch multiple sub-spells concurrently: const Spells = require(\"spells\"); const running = Spells.runSavedAsync(\"greet\"); // ...do other work... Spells.terminateAll(); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/spells-api-guide#reading--saving",
+    "headerId": "reading--saving",
+    "docId": "spell-api-guides/spells-api-guide",
+    "docTitle": "Spells API Guide",
+    "heading": "Reading & saving",
+    "headingPath": [
+      "The Spells API",
+      "Running Several Sub-Spells at Once",
+      "Reading & saving"
+    ],
+    "textContent": "— lists saved spells; returns . — gets a saved spell's details; is a . — gets a saved spell's code; returns . — saves or updates a spell; both are . — sets a code editor tab's contents; is a , is an optional . — gets a code editor tab's contents; returns .",
+    "codeContent": "Spells.list() object[] Spells.get(name) name string Spells.getCode(name) string Spells.save(name, code) string Spells.setEditor(code, tabId?) code string tabId string Spells.getEditor(tabId?) string",
+    "rawContent": "Reading & saving Spells.list() — lists saved spells; returns object[] . Spells.get(name) — gets a saved spell's details; name is a string . Spells.getCode(name) — gets a saved spell's code; returns string . Spells.save(name, code) — saves or updates a spell; both are string . Spells.setEditor(code, tabId?) — sets a code editor tab's contents; code is a string , tabId is an optional string . Spells.getEditor(tabId?) — gets a code editor tab's contents; returns string ."
+  },
+  {
+    "chunkId": "spell-api-guides/spells-api-guide#running-blocking",
+    "headerId": "running-blocking",
+    "docId": "spell-api-guides/spells-api-guide",
+    "docTitle": "Spells API Guide",
+    "heading": "Running (blocking)",
+    "headingPath": [
+      "The Spells API",
+      "Running Several Sub-Spells at Once",
+      "Running (blocking)"
+    ],
+    "textContent": "— runs as a sub-spell and blocks until done; is a . — runs a saved spell and blocks until done; is a . — runs an editor tab's code and blocks until done. — stops a running sub-spell by its context id; is a . — terminates all running spells.",
+    "codeContent": "Spells.runCode(code) code code string Spells.runSaved(name) name string Spells.runEditor(tabId?) Spells.stop(contextId) contextId string Spells.terminateAll()",
+    "rawContent": "Running (blocking) Spells.runCode(code) — runs code as a sub-spell and blocks until done; code is a string . Spells.runSaved(name) — runs a saved spell and blocks until done; name is a string . Spells.runEditor(tabId?) — runs an editor tab's code and blocks until done. Spells.stop(contextId) — stops a running sub-spell by its context id; contextId is a string . Spells.terminateAll() — terminates all running spells."
+  },
+  {
+    "chunkId": "spell-api-guides/spells-api-guide#running-async",
+    "headerId": "running-async",
+    "docId": "spell-api-guides/spells-api-guide",
+    "docTitle": "Spells API Guide",
+    "heading": "Running (async)",
+    "headingPath": [
+      "The Spells API",
+      "Running Several Sub-Spells at Once",
+      "Running (async)"
+    ],
+    "textContent": "— runs as a sub-spell; returns a handle. — runs a saved spell; returns a handle. — runs an editor tab's code; returns a handle. Important Sub-spells keep running until they finish or you stop them. If you launch async sub-spells, remember or to clean them up.",
+    "codeContent": "Spells.runCodeAsync(code) code RunningSpell Spells.runSavedAsync(name) RunningSpell Spells.runEditorAsync(tabId?) RunningSpell Spells.stop(contextId) Spells.terminateAll()",
+    "rawContent": "Running (async) Spells.runCodeAsync(code) — runs code as a sub-spell; returns a RunningSpell handle. Spells.runSavedAsync(name) — runs a saved spell; returns a RunningSpell handle. Spells.runEditorAsync(tabId?) — runs an editor tab's code; returns a RunningSpell handle. Important Sub-spells keep running until they finish or you stop them. If you launch async sub-spells, remember Spells.stop(contextId) or Spells.terminateAll() to clean them up."
+  },
+  {
+    "chunkId": "spell-api-guides/tabs-api-guide#the-tabs-api",
+    "headerId": "the-tabs-api",
+    "docId": "spell-api-guides/tabs-api-guide",
+    "docTitle": "Tabs API Guide",
+    "heading": "The Tabs API",
+    "headingPath": [
+      "The Tabs API"
+    ],
+    "textContent": "Welcome back, Protag ! The module lets a spell rearrange the game interface itself — opening, closing, moving, and resizing the UI panels (tabs) around your screen. Every member is static , so you call it directly on the import.",
+    "codeContent": "\"tabs\"",
+    "rawContent": "The Tabs API Welcome back, Protag ! The \"tabs\" module lets a spell rearrange the game interface itself — opening, closing, moving, and resizing the UI panels (tabs) around your screen. Every member is static , so you call it directly on the import."
+  },
+  {
+    "chunkId": "spell-api-guides/tabs-api-guide#importing-the-module",
+    "headerId": "importing-the-module",
+    "docId": "spell-api-guides/tabs-api-guide",
+    "docTitle": "Tabs API Guide",
+    "heading": "Importing the Module",
+    "headingPath": [
+      "The Tabs API",
+      "Importing the Module"
+    ],
+    "textContent": "Explain Code Open in Code Editor",
+    "codeContent": "const Tabs = require(\"tabs\"); Tabs.openTab(\"console\");",
+    "rawContent": "Importing the Module const Tabs = require(\"tabs\"); Tabs.openTab(\"console\"); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/tabs-api-guide#opening-and-resizing-a-panel",
+    "headerId": "opening-and-resizing-a-panel",
+    "docId": "spell-api-guides/tabs-api-guide",
+    "docTitle": "Tabs API Guide",
+    "heading": "Opening and Resizing a Panel",
+    "headingPath": [
+      "The Tabs API",
+      "Opening and Resizing a Panel"
+    ],
+    "textContent": "returns the new tab's id, which you can pass to the other functions: Explain Code Open in Code Editor Tip The you pass to is relative to a tabset's siblings, ranging from to — gives it about half the available room.",
+    "codeContent": "openTab const Tabs = require(\"tabs\"); const tabId = Tabs.openTab(\"docs\"); Tabs.resize(tabId, 0.5); // give the tabset half the space of its siblings weight resize 0 1 0.5",
+    "rawContent": "Opening and Resizing a Panel openTab returns the new tab's id, which you can pass to the other functions: const Tabs = require(\"tabs\"); const tabId = Tabs.openTab(\"docs\"); Tabs.resize(tabId, 0.5); // give the tabset half the space of its siblings Explain Code Open in Code Editor Tip The weight you pass to resize is relative to a tabset's siblings, ranging from 0 to 1 — 0.5 gives it about half the available room."
+  },
+  {
+    "chunkId": "spell-api-guides/tabs-api-guide#static-methods",
+    "headerId": "static-methods",
+    "docId": "spell-api-guides/tabs-api-guide",
+    "docTitle": "Tabs API Guide",
+    "heading": "Static methods",
+    "headingPath": [
+      "The Tabs API",
+      "Opening and Resizing a Panel",
+      "Static methods"
+    ],
+    "textContent": "— opens a UI panel by component name; is a , returns the new tab id ( ). — closes tabs by component name or a specific tab id; is a . — sets the code of a code-editor tab; both are . — toggles maximize on the tabset containing a tab; is a . — resizes a tab's tabset; is a , is a from to relative to siblings. — moves a tab to a position; is a , is a ( , , , or ); returns the new tab id ( ). Important Moving a tab gives it a new id, so use the value returned by for any further calls on that tab.",
+    "codeContent": "Tabs.openTab(componentName) componentName string string Tabs.closeTab(nameOrId) nameOrId string Tabs.populateEditor(tabId, contents) string Tabs.maximize(tabId) tabId string Tabs.resize(tabId, weight) tabId string weight number 0 1 Tabs.move(tabId, position) tabId string position string \"left\" \"right\" \"top\" \"bottom\" string Tabs.move",
+    "rawContent": "Static methods Tabs.openTab(componentName) — opens a UI panel by component name; componentName is a string , returns the new tab id ( string ). Tabs.closeTab(nameOrId) — closes tabs by component name or a specific tab id; nameOrId is a string . Tabs.populateEditor(tabId, contents) — sets the code of a code-editor tab; both are string . Tabs.maximize(tabId) — toggles maximize on the tabset containing a tab; tabId is a string . Tabs.resize(tabId, weight) — resizes a tab's tabset; tabId is a string , weight is a number from 0 to 1 relative to siblings. Tabs.move(tabId, position) — moves a tab to a position; tabId is a string , position is a string ( \"left\" , \"right\" , \"top\" , or \"bottom\" ); returns the new tab id ( string ). Important Moving a tab gives it a new id, so use the value returned by Tabs.move for any further calls on that tab."
+  },
+  {
+    "chunkId": "spell-api-guides/terrain-api-guide#the-terrain-api",
+    "headerId": "the-terrain-api",
+    "docId": "spell-api-guides/terrain-api-guide",
+    "docTitle": "Terrain API Guide",
+    "heading": "The Terrain API",
+    "headingPath": [
+      "The Terrain API"
+    ],
+    "textContent": "Welcome back, Protag ! The spell lets you query the world around you — checking whether terrain blocks a line of sight, and sampling the navigation grid over a region. The export is an object of functions .",
+    "codeContent": "\"terrain\"",
+    "rawContent": "The Terrain API Welcome back, Protag ! The \"terrain\" spell lets you query the world around you — checking whether terrain blocks a line of sight, and sampling the navigation grid over a region. The export is an object of functions ."
+  },
+  {
+    "chunkId": "spell-api-guides/terrain-api-guide#importing-the-spell",
+    "headerId": "importing-the-spell",
+    "docId": "spell-api-guides/terrain-api-guide",
+    "docTitle": "Terrain API Guide",
+    "heading": "Importing the Spell",
+    "headingPath": [
+      "The Terrain API",
+      "Importing the Spell"
+    ],
+    "textContent": "Explain Code Open in Code Editor",
+    "codeContent": "const Terrain = require(\"terrain\");",
+    "rawContent": "Importing the Spell const Terrain = require(\"terrain\"); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/terrain-api-guide#checking-line-of-sight",
+    "headerId": "checking-line-of-sight",
+    "docId": "spell-api-guides/terrain-api-guide",
+    "docTitle": "Terrain API Guide",
+    "heading": "Checking Line of Sight",
+    "headingPath": [
+      "The Terrain API",
+      "Checking Line of Sight"
+    ],
+    "textContent": "tells you whether terrain blocks the straight line between two points — great for deciding if a target is exposed before you cast: Explain Code Open in Code Editor Tip Set to test only against solid terrain, ignoring other entities that might be standing in the way.",
+    "codeContent": "checkLineOfSight const Terrain = require(\"terrain\"); const self = require(\"self\"); const blocked = Terrain.checkLineOfSight({ from: self.position, to: { x: 14, y: 6 } }); if (!blocked) { console.log(\"Clear shot!\"); } ignoreEntities: true",
+    "rawContent": "Checking Line of Sight checkLineOfSight tells you whether terrain blocks the straight line between two points — great for deciding if a target is exposed before you cast: const Terrain = require(\"terrain\"); const self = require(\"self\"); const blocked = Terrain.checkLineOfSight({ from: self.position, to: { x: 14, y: 6 } }); if (!blocked) { console.log(\"Clear shot!\"); } Explain Code Open in Code Editor Tip Set ignoreEntities: true to test only against solid terrain, ignoring other entities that might be standing in the way."
+  },
+  {
+    "chunkId": "spell-api-guides/terrain-api-guide#sampling-the-nav-grid",
+    "headerId": "sampling-the-nav-grid",
+    "docId": "spell-api-guides/terrain-api-guide",
+    "docTitle": "Terrain API Guide",
+    "heading": "Sampling the Nav Grid",
+    "headingPath": [
+      "The Terrain API",
+      "Sampling the Nav Grid"
+    ],
+    "textContent": "samples the navigation grid over a region and returns a 2D grid of block values, along with the sample resolution: Explain Code Open in Code Editor",
+    "codeContent": "queryGrid const Terrain = require(\"terrain\"); const result = Terrain.queryGrid({ min: { x: 0, y: 0 }, max: { x: 10, y: 6 } }); console.log(\"Resolution: \" + result.resolution); console.log(result.grid);",
+    "rawContent": "Sampling the Nav Grid queryGrid samples the navigation grid over a region and returns a 2D grid of block values, along with the sample resolution: const Terrain = require(\"terrain\"); const result = Terrain.queryGrid({ min: { x: 0, y: 0 }, max: { x: 10, y: 6 } }); console.log(\"Resolution: \" + result.resolution); console.log(result.grid); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/terrain-api-guide#methods",
+    "headerId": "methods",
+    "docId": "spell-api-guides/terrain-api-guide",
+    "docTitle": "Terrain API Guide",
+    "heading": "Methods",
+    "headingPath": [
+      "The Terrain API",
+      "Sampling the Nav Grid",
+      "Methods"
+    ],
+    "textContent": "— returns whether terrain blocks the line between two points. is , where / are and is a . Returns . — samples the nav-grid over a region, returning a 2D block grid. is , where / are and is a . Returns — is and is a . Info Pass to to sample the region relative to your caster's position instead of in absolute world coordinates.",
+    "codeContent": "checkLineOfSight(opts) opts { from, to, ignoreEntities? } from to { x, y } ignoreEntities boolean boolean queryGrid(opts) opts { min, max, relative? } min max { x, y } relative boolean { grid, resolution } grid number[][] resolution number relative: true queryGrid",
+    "rawContent": "Methods checkLineOfSight(opts) — returns whether terrain blocks the line between two points. opts is { from, to, ignoreEntities? } , where from / to are { x, y } and ignoreEntities is a boolean . Returns boolean . queryGrid(opts) — samples the nav-grid over a region, returning a 2D block grid. opts is { min, max, relative? } , where min / max are { x, y } and relative is a boolean . Returns { grid, resolution } — grid is number[][] and resolution is a number . Info Pass relative: true to queryGrid to sample the region relative to your caster's position instead of in absolute world coordinates."
+  },
+  {
+    "chunkId": "spell-api-guides/vector-api-guide#the-vector-api",
+    "headerId": "the-vector-api",
+    "docId": "spell-api-guides/vector-api-guide",
+    "docTitle": "Vector API Guide",
+    "heading": "The Vector API",
+    "headingPath": [
+      "The Vector API"
+    ],
+    "textContent": "Math time, Protag ! The module gives you a 2D vector with a stack of chainable helpers. It's the workhorse behind positions, directions, and velocities all across the spell APIs.",
+    "codeContent": "\"vector\"",
+    "rawContent": "The Vector API Math time, Protag ! The \"vector\" module gives you a 2D vector with a stack of chainable helpers. It's the workhorse behind positions, directions, and velocities all across the spell APIs."
+  },
+  {
+    "chunkId": "spell-api-guides/vector-api-guide#importing-vector",
+    "headerId": "importing-vector",
+    "docId": "spell-api-guides/vector-api-guide",
+    "docTitle": "Vector API Guide",
+    "heading": "Importing Vector",
+    "headingPath": [
+      "The Vector API",
+      "Importing Vector"
+    ],
+    "textContent": "Explain Code Open in Code Editor The constructor is flexible — it accepts , an array, or a object.",
+    "codeContent": "const Vector = require(\"vector\"); const a = new Vector(3, 4); console.log(a.x, a.y); // 3 4 console.log(a.length()); // 5 (x, y) [x, y] { x, y }",
+    "rawContent": "Importing Vector const Vector = require(\"vector\"); const a = new Vector(3, 4); console.log(a.x, a.y); // 3 4 console.log(a.length()); // 5 Explain Code Open in Code Editor The constructor is flexible — it accepts (x, y) , an [x, y] array, or a { x, y } object."
+  },
+  {
+    "chunkId": "spell-api-guides/vector-api-guide#chaining-math",
+    "headerId": "chaining-math",
+    "docId": "spell-api-guides/vector-api-guide",
+    "docTitle": "Vector API Guide",
+    "heading": "Chaining Math",
+    "headingPath": [
+      "The Vector API",
+      "Chaining Math"
+    ],
+    "textContent": "Most methods return a new , so you can chain operations to build exactly the direction or velocity you need: Explain Code Open in Code Editor",
+    "codeContent": "Vector const Vector = require(\"vector\"); // Build a direction pointing up-right, normalize it, then scale to speed 8. const velocity = new Vector(1, 1).normalize().scale(8); console.log(velocity.x, velocity.y); console.log(velocity.length()); // 8",
+    "rawContent": "Chaining Math Most methods return a new Vector , so you can chain operations to build exactly the direction or velocity you need: const Vector = require(\"vector\"); // Build a direction pointing up-right, normalize it, then scale to speed 8. const velocity = new Vector(1, 1).normalize().scale(8); console.log(velocity.x, velocity.y); console.log(velocity.length()); // 8 Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/vector-api-guide#constructor",
+    "headerId": "constructor",
+    "docId": "spell-api-guides/vector-api-guide",
+    "docTitle": "Vector API Guide",
+    "heading": "Constructor",
+    "headingPath": [
+      "The Vector API",
+      "Chaining Math",
+      "Constructor"
+    ],
+    "textContent": "— accepts , an array, or a object.",
+    "codeContent": "new Vector(xOrObj?, y?) (x, y) [x, y] { x, y }",
+    "rawContent": "Constructor new Vector(xOrObj?, y?) — accepts (x, y) , an [x, y] array, or a { x, y } object."
+  },
+  {
+    "chunkId": "spell-api-guides/vector-api-guide#properties",
+    "headerId": "properties",
+    "docId": "spell-api-guides/vector-api-guide",
+    "docTitle": "Vector API Guide",
+    "heading": "Properties",
+    "headingPath": [
+      "The Vector API",
+      "Chaining Math",
+      "Properties"
+    ],
+    "textContent": "— — the horizontal component. — — the vertical component.",
+    "codeContent": "x number y number",
+    "rawContent": "Properties x — number — the horizontal component. y — number — the vertical component."
+  },
+  {
+    "chunkId": "spell-api-guides/vector-api-guide#methods",
+    "headerId": "methods",
+    "docId": "spell-api-guides/vector-api-guide",
+    "docTitle": "Vector API Guide",
+    "heading": "Methods",
+    "headingPath": [
+      "The Vector API",
+      "Chaining Math",
+      "Methods"
+    ],
+    "textContent": "— returns a copy. — returns a ; is . — returns a ; is . — returns a ; is a . — returns a ; is a in radians. — returns a unit-length . — returns a with rounded components. — returns a , the vector's magnitude. — returns a , the dot product; is . — returns a , the vector's angle in radians.",
+    "codeContent": "clone() Vector add(other) Vector other { x, y } sub(other) Vector other { x, y } scale(scale) Vector scale number rotate(rotation) Vector rotation number normalize() Vector round(radix?) Vector length() number dot(other) number other { x, y } angle() number",
+    "rawContent": "Methods clone() — returns a Vector copy. add(other) — returns a Vector ; other is { x, y } . sub(other) — returns a Vector ; other is { x, y } . scale(scale) — returns a Vector ; scale is a number . rotate(rotation) — returns a Vector ; rotation is a number in radians. normalize() — returns a unit-length Vector . round(radix?) — returns a Vector with rounded components. length() — returns a number , the vector's magnitude. dot(other) — returns a number , the dot product; other is { x, y } . angle() — returns a number , the vector's angle in radians."
+  },
+  {
+    "chunkId": "spell-api-guides/wait-api-guide#the-wait-api",
+    "headerId": "the-wait-api",
+    "docId": "spell-api-guides/wait-api-guide",
+    "docTitle": "Wait API Guide",
+    "heading": "The Wait API",
+    "headingPath": [
+      "The Wait API"
+    ],
+    "textContent": "Timing is everything, Protag ! The module pauses your spell for a moment without freezing the game loop around it. It's the key to pacing multi-step spells — fire something, pause, then fire something else. The export is a function.",
+    "codeContent": "\"wait\"",
+    "rawContent": "The Wait API Timing is everything, Protag ! The \"wait\" module pauses your spell for a moment without freezing the game loop around it. It's the key to pacing multi-step spells — fire something, pause, then fire something else. The export is a function."
+  },
+  {
+    "chunkId": "spell-api-guides/wait-api-guide#importing-wait",
+    "headerId": "importing-wait",
+    "docId": "spell-api-guides/wait-api-guide",
+    "docTitle": "Wait API Guide",
+    "heading": "Importing Wait",
+    "headingPath": [
+      "The Wait API",
+      "Importing Wait"
+    ],
+    "textContent": "Explain Code Open in Code Editor From your spell's point of view this is synchronous — no needed — but the rest of the game keeps running smoothly while you wait.",
+    "codeContent": "const wait = require(\"wait\"); console.log(\"step one\"); wait(500); // pause for half a second console.log(\"step two\"); await",
+    "rawContent": "Importing Wait const wait = require(\"wait\"); console.log(\"step one\"); wait(500); // pause for half a second console.log(\"step two\"); Explain Code Open in Code Editor From your spell's point of view this is synchronous — no await needed — but the rest of the game keeps running smoothly while you wait."
+  },
+  {
+    "chunkId": "spell-api-guides/wait-api-guide#sequencing-a-spell",
+    "headerId": "sequencing-a-spell",
+    "docId": "spell-api-guides/wait-api-guide",
+    "docTitle": "Wait API Guide",
+    "heading": "Sequencing a Spell",
+    "headingPath": [
+      "The Wait API",
+      "Sequencing a Spell"
+    ],
+    "textContent": "Use between actions to space them out: Explain Code Open in Code Editor",
+    "codeContent": "wait(ms) const wait = require(\"wait\"); const Fire = require(\"fire\"); new Fire(); wait(500); new Fire(); wait(500); new Fire();",
+    "rawContent": "Sequencing a Spell Use wait(ms) between actions to space them out: const wait = require(\"wait\"); const Fire = require(\"fire\"); new Fire(); wait(500); new Fire(); wait(500); new Fire(); Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "spell-api-guides/wait-api-guide#methods",
+    "headerId": "methods",
+    "docId": "spell-api-guides/wait-api-guide",
+    "docTitle": "Wait API Guide",
+    "heading": "Methods",
+    "headingPath": [
+      "The Wait API",
+      "Sequencing a Spell",
+      "Methods"
+    ],
+    "textContent": "— pauses the spell for milliseconds (defaults to ) before continuing. Synchronous from the spell's perspective. — a promise-based variant for use inside blocks when you need to coordinate concurrent work. Important Top-level is not supported in spells. For ordinary timing, prefer plain — only reach for inside an when juggling multiple things at once.",
+    "codeContent": "wait(ms) ms 1000 wait.async(ms) async function await wait(ms) wait.async(ms) async function",
+    "rawContent": "Methods wait(ms) — pauses the spell for ms milliseconds (defaults to 1000 ) before continuing. Synchronous from the spell's perspective. wait.async(ms) — a promise-based variant for use inside async function blocks when you need to coordinate concurrent work. Important Top-level await is not supported in spells. For ordinary timing, prefer plain wait(ms) — only reach for wait.async(ms) inside an async function when juggling multiple things at once."
+  },
+  {
+    "chunkId": "tutorials/data-types#data-types",
+    "headerId": "data-types",
+    "docId": "tutorials/data-types",
+    "docTitle": "Data Types",
+    "heading": "Data Types",
+    "headingPath": [
+      "Data Types"
+    ],
+    "textContent": "Not all information is created equal. A yes or no question demands a yes or a no, but a text field demands a response with multiple characters (letters / numbers). How does JavaScript represent these pieces of information? JavaScript supports the following types of data: boolean number string Objects Arrays null undefined In this tutorial, you will learn what each type of data is, how it's specified in JavaScript, and some core theory.",
+    "codeContent": "",
+    "rawContent": "Data Types Not all information is created equal. A yes or no question demands a yes or a no, but a text field demands a response with multiple characters (letters / numbers). How does JavaScript represent these pieces of information? JavaScript supports the following types of data: boolean number string Objects Arrays null undefined In this tutorial, you will learn what each type of data is, how it's specified in JavaScript, and some core theory."
+  },
+  {
+    "chunkId": "tutorials/data-types#boolean",
+    "headerId": "boolean",
+    "docId": "tutorials/data-types",
+    "docTitle": "Data Types",
+    "heading": "Boolean",
+    "headingPath": [
+      "Data Types",
+      "Boolean"
+    ],
+    "textContent": "\"Boolean\" , is another way of saying \"true or false\". Often thought of as 1 and 0, these are the simplest values that digital computers can represent - at a low level, all other computational data is built from combinations of these, which we call \"bits\". JavaScript allows you to specify boolean values with the words \"true\" and \"false\". Capitalized variants are not recognized. Explain Code Open in Code Editor",
+    "codeContent": "true",
+    "rawContent": "Boolean \"Boolean\" , is another way of saying \"true or false\". Often thought of as 1 and 0, these are the simplest values that digital computers can represent - at a low level, all other computational data is built from combinations of these, which we call \"bits\". JavaScript allows you to specify boolean values with the words \"true\" and \"false\". Capitalized variants are not recognized. true Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "tutorials/data-types#number",
+    "headerId": "number",
+    "docId": "tutorials/data-types",
+    "docTitle": "Data Types",
+    "heading": "Number",
+    "headingPath": [
+      "Data Types",
+      "Number"
+    ],
+    "textContent": "JavaScript allows you to specify numbers in base 10 (we count in powers of 10, but that's largely biased by the number of fingers we had to count on when we discovered math, not universal law) by typing out the number. Alternatively, you can use the prefix before your number to specify the number in base 8, or in base 2. Explain Code Open in Code Editor Internally, JavaScript represents numbers as 64-bit floating point values.",
+    "codeContent": "0x 0b 24601",
+    "rawContent": "Number JavaScript allows you to specify numbers in base 10 (we count in powers of 10, but that's largely biased by the number of fingers we had to count on when we discovered math, not universal law) by typing out the number. Alternatively, you can use the 0x prefix before your number to specify the number in base 8, or 0b in base 2. 24601 Explain Code Open in Code Editor Internally, JavaScript represents numbers as 64-bit floating point values."
+  },
+  {
+    "chunkId": "tutorials/data-types#string",
+    "headerId": "string",
+    "docId": "tutorials/data-types",
+    "docTitle": "Data Types",
+    "heading": "String",
+    "headingPath": [
+      "Data Types",
+      "String"
+    ],
+    "textContent": "\"String\" s are combinations of characters (letters, numbers, spaces, etc). For example, is a string, and so is this sentence. JavaScript deliniates strings using single quotes or double quotes - either works, just make sure you use the same one for both the opening and closing quotes. If you need a quotation mark within the string, you can either use single quotes outside of internal double quotes, double quotes outside of internal single quotes, or escape the quote character with a preceeding to avoid prematurely ending the string. Explain Code Open in Code Editor",
+    "codeContent": "\"string\" \\ \"This data is a string because there are quotes around it.\"",
+    "rawContent": "String \"String\" s are combinations of characters (letters, numbers, spaces, etc). For example, \"string\" is a string, and so is this sentence. JavaScript deliniates strings using single quotes or double quotes - either works, just make sure you use the same one for both the opening and closing quotes. If you need a quotation mark within the string, you can either use single quotes outside of internal double quotes, double quotes outside of internal single quotes, or escape the quote character with a preceeding \\ to avoid prematurely ending the string. \"This data is a string because there are quotes around it.\" Explain Code Open in Code Editor"
+  },
+  {
+    "chunkId": "tutorials/data-types#objects-arrays-null-and-undefined",
+    "headerId": "objects-arrays-null-and-undefined",
+    "docId": "tutorials/data-types",
+    "docTitle": "Data Types",
+    "heading": "Objects, arrays, null, and undefined",
+    "headingPath": [
+      "Data Types",
+      "Objects, arrays, null, and undefined"
+    ],
+    "textContent": "Google it for now, we're working on this.",
+    "codeContent": "",
+    "rawContent": "Objects, arrays, null, and undefined Google it for now, we're working on this."
+  },
+  {
+    "chunkId": "tutorials/index#tutorials",
+    "headerId": "tutorials",
+    "docId": "tutorials/index",
+    "docTitle": "Tutorials",
+    "heading": "Tutorials",
+    "headingPath": [
+      "Tutorials"
+    ],
+    "textContent": "A Preface by Adana Hello World 1 Data Types Learn how JavaScript represents information 1 Operators Learn how to perform math and logic on data 1 Control Flow Set up conditions, loops, and functions 1",
+    "codeContent": "",
+    "rawContent": "Tutorials A Preface by Adana Hello World 1 Data Types Learn how JavaScript represents information 1 Operators Learn how to perform math and logic on data 1 Control Flow Set up conditions, loops, and functions 1"
+  },
+  {
+    "chunkId": "tutorials/read-this-first#javascript-and-you",
+    "headerId": "javascript-and-you",
+    "docId": "tutorials/read-this-first",
+    "docTitle": "Read this First!",
+    "heading": "JavaScript and You",
+    "headingPath": [
+      "JavaScript and You"
+    ],
+    "textContent": "",
+    "codeContent": "",
+    "rawContent": "JavaScript and You"
+  },
+  {
+    "chunkId": "tutorials/read-this-first#a-preface-by-adana",
+    "headerId": "a-preface-by-adana",
+    "docId": "tutorials/read-this-first",
+    "docTitle": "Read this First!",
+    "heading": "A preface by Adana",
+    "headingPath": [
+      "JavaScript and You",
+      "A preface by Adana"
+    ],
+    "textContent": "Hello sourcerer. You've opened the Docs tab, which is great, because you're going to be spending a lot of time reading these. The ancient world produced a lot of concepts to understand - we called them \"Computer Science\" - that you'll need to learn to succeed in spellcraft. Let's get started. The scripting environment you've encountered uses a language called \"JavaScript\", which is an interpreted, object-oriented, programming language. Most programming languages, JavaScript included, are based on linear control flow; that means that, for each block of code in your program, the computer will execute the provided code in the provided order, line by line. But I digress. Let's awaken your power.",
+    "codeContent": "",
+    "rawContent": "A preface by Adana Hello sourcerer. You've opened the Docs tab, which is great, because you're going to be spending a lot of time reading these. The ancient world produced a lot of concepts to understand - we called them \"Computer Science\" - that you'll need to learn to succeed in spellcraft. Let's get started. The scripting environment you've encountered uses a language called \"JavaScript\", which is an interpreted, object-oriented, programming language. Most programming languages, JavaScript included, are based on linear control flow; that means that, for each block of code in your program, the computer will execute the provided code in the provided order, line by line. But I digress. Let's awaken your power."
+  },
+  {
+    "chunkId": "tutorials/read-this-first#hello-world",
+    "headerId": "hello-world",
+    "docId": "tutorials/read-this-first",
+    "docTitle": "Read this First!",
+    "heading": "Hello World",
+    "headingPath": [
+      "JavaScript and You",
+      "Hello World"
+    ],
+    "textContent": "First off, tradition! We're going to want to print things to the screen a lot to help understand how code executes. Take the following statement, a grand tradition of my people: Explain Code Open in Code Editor This causes the computer to display \"hello world\" in the program's console output.",
+    "codeContent": "console.log(\"hello world\");",
+    "rawContent": "Hello World First off, tradition! We're going to want to print things to the screen a lot to help understand how code executes. Take the following statement, a grand tradition of my people: console.log(\"hello world\"); Explain Code Open in Code Editor This causes the computer to display \"hello world\" in the program's console output."
+  },
+  {
+    "chunkId": "tutorials/read-this-first#breaking-down-what-we-just-did",
+    "headerId": "breaking-down-what-we-just-did",
+    "docId": "tutorials/read-this-first",
+    "docTitle": "Read this First!",
+    "heading": "Breaking down what we just did.",
+    "headingPath": [
+      "JavaScript and You",
+      "Breaking down what we just did."
+    ],
+    "textContent": "When the computer encounters this line of JavaScript, it is evaluated progressively. First, the computer sees the symbol. The JavaScript inerpreter looks that up from a table of known symbols, called a \"scope\" (in this case, the \"global scope\" - more on that later), and identifies as an Object. As such, when it sees the next character, , the language's logic dictates that we are requesting access to a property of the Object . Objects are basically little tables key-value pairs . Each key-value pair combines a key, typically a word (which we refer to more formally as a \"string\"), and a value, which is any kind of data you wish to associate with it. As for our object, its property is what is called a . A Function is a reusable block of code that performs - you guessed it - a function. Functions can accept input, which we call \"arguments\", and produce results, which we call \"returning\" a value. The function is a special function that accepts data and copies it into the program's output. Now that the computer knows it is calling a function, it needs to know what data is being passed in. In this case, it's going to be a String with the data \"hello world\". We know it's a string because it is in quotes - if we left the quotes off, we'd be telling the computer to look up the \"hello\" symbol in the current scope and we'd get an error. More on that later. For now, we provide \"hello world\", an acceptable string, and can observe the function acting upon it. Finally, we include a semicolon at the end of the line to tell the language the line is a discrete statement.",
+    "codeContent": "console console . console console log Function console.log",
+    "rawContent": "Breaking down what we just did. When the computer encounters this line of JavaScript, it is evaluated progressively. First, the computer sees the console symbol. The JavaScript inerpreter looks that up from a table of known symbols, called a \"scope\" (in this case, the \"global scope\" - more on that later), and identifies console as an Object. As such, when it sees the next character, . , the language's logic dictates that we are requesting access to a property of the console Object . Objects are basically little tables key-value pairs . Each key-value pair combines a key, typically a word (which we refer to more formally as a \"string\"), and a value, which is any kind of data you wish to associate with it. As for our console object, its log property is what is called a Function . A Function is a reusable block of code that performs - you guessed it - a function. Functions can accept input, which we call \"arguments\", and produce results, which we call \"returning\" a value. The console.log function is a special function that accepts data and copies it into the program's output. Now that the computer knows it is calling a function, it needs to know what data is being passed in. In this case, it's going to be a String with the data \"hello world\". We know it's a string because it is in quotes - if we left the quotes off, we'd be telling the computer to look up the \"hello\" symbol in the current scope and we'd get an error. More on that later. For now, we provide \"hello world\", an acceptable string, and can observe the function acting upon it. Finally, we include a semicolon at the end of the line to tell the language the line is a discrete statement."
+  },
+  {
+    "chunkId": "tutorials/read-this-first#why-log-to-the-console",
+    "headerId": "why-log-to-the-console",
+    "docId": "tutorials/read-this-first",
+    "docTitle": "Read this First!",
+    "heading": "Why log to the console?",
+    "headingPath": [
+      "JavaScript and You",
+      "Why log to the console?"
+    ],
+    "textContent": "Logging to the console achieves three central purposes: Gaining insight as to the current value of a piece of data. Gaining insight as to what part of a program is running at what time. Figuring our why your program crashed. Informing the user of anything you want.",
+    "codeContent": "",
+    "rawContent": "Why log to the console? Logging to the console achieves three central purposes: Gaining insight as to the current value of a piece of data. Gaining insight as to what part of a program is running at what time. Figuring our why your program crashed. Informing the user of anything you want."
+  }
+]

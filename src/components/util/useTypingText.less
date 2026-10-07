@@ -1,0 +1,13 @@
+.typing-char {
+  display: inline;
+  transition: opacity 60ms ease;
+  position: relative;
+  left: 0;
+  flex-shrink: 0;
+  &.untyped {
+    opacity: 0;
+  }
+  &.typed {
+    opacity: 1;
+  }
+}

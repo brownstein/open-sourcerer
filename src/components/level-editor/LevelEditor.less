@@ -1,0 +1,196 @@
+// Structural layout for the level editor. Visual styling lives in the MUI
+// components themselves; the few colors needed here come from the app
+// theme's exposed CSS variables.
+
+.level-editor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--mui-palette-action-disabled) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--mui-palette-action-disabled);
+    border-radius: 4px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--mui-palette-action-active);
+  }
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+.level-editor-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.level-editor-left-sidebar,
+.level-editor-right-sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.level-editor-right-sidebar {
+  overflow-y: auto;
+}
+
+.level-editor-center {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+
+// Resize handles sit flush against panel borders: invisible until hovered or
+// actively dragged, so they signal interactivity without adding visual noise.
+.resize-handle {
+  width: 5px;
+  margin: 0 -2px;
+  position: relative;
+  z-index: 1;
+  cursor: col-resize;
+  flex-shrink: 0;
+  background: transparent;
+  transition: background 150ms ease;
+
+  &:hover,
+  &.resizing {
+    background: var(--mui-palette-primary-main);
+  }
+}
+
+.resize-handle-vertical {
+  height: 5px;
+  margin: -2px 0;
+  position: relative;
+  z-index: 1;
+  cursor: row-resize;
+  flex-shrink: 0;
+  background: transparent;
+  transition: background 150ms ease;
+
+  &:hover,
+  &.resizing {
+    background: var(--mui-palette-primary-main);
+  }
+}
+
+// --- Canvas ---
+.level-editor-canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.level-editor-webgl-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tile-grid-canvas {
+  display: block;
+  image-rendering: pixelated;
+}
+
+// --- File drop overlay ---
+.drop-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  border: 2px dashed var(--mui-palette-primary-main);
+  pointer-events: none;
+}
+
+.drop-overlay-content {
+  font-size: 14px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--mui-palette-divider);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+// --- Toolbar tool groups ---
+// Corner mark on a tool button that opens a hover menu of grouped tools.
+.tool-group-mark {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid currentColor;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+// --- Layer panel drag-to-reorder ---
+// Invisible drop zones covering the top/bottom halves of a layer row while a
+// layer drag is in flight (react-dnd reorder targets). The hovered zone draws
+// an insertion line at the row boundary the drop would land on.
+.layer-item {
+  .layer-drag-above,
+  .layer-drag-below {
+    position: absolute;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+
+    &.over::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--mui-palette-primary-main);
+      box-shadow: 0 0 5px var(--mui-palette-primary-main);
+    }
+  }
+
+  .layer-drag-above {
+    top: 0;
+
+    &.over::after {
+      top: -2px;
+    }
+  }
+
+  .layer-drag-below {
+    bottom: 0;
+
+    &.over::after {
+      bottom: -2px;
+    }
+  }
+
+  &.dragging .layer-drag-above,
+  &.dragging .layer-drag-below {
+    pointer-events: auto;
+  }
+}

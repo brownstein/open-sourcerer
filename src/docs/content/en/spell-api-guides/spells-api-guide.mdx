@@ -1,0 +1,84 @@
+export const meta = {
+	title: "Spells API Guide"
+};
+
+# The Spells API
+
+Welcome back, <PlayerName />! The **`"spells"`** module is your spell library and sub-spell runner. With it a spell can inspect, edit, save, and run *other* spells — building combos, loading saved spells, and launching sub-spells that run inside your current cast. Every member is **static**, so you call it directly on the import.
+
+## Importing the Module
+
+<ExampleCode>
+
+	```javascript
+	const Spells = require("spells");
+	console.log(Spells.list());
+	```
+
+</ExampleCode>
+
+## Saving and Running a Spell
+
+You can save a snippet of code by name and then run it as a sub-spell:
+
+<ExampleCode>
+
+	```javascript
+	const Spells = require("spells");
+
+	Spells.save("greet", 'console.log("Hello from a sub-spell!");');
+	Spells.runSaved("greet"); // blocks until the sub-spell finishes
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	The blocking runners (`runCode`, `runSaved`, `runEditor`) wait for the sub-spell to finish before your code continues. Use the async variants when you want a sub-spell to keep running alongside your spell.
+
+</Callout>
+
+## Running Several Sub-Spells at Once
+
+The async runners hand you back a `RunningSpell` handle so you can launch multiple sub-spells concurrently:
+
+<ExampleCode>
+
+	```javascript
+	const Spells = require("spells");
+
+	const running = Spells.runSavedAsync("greet");
+	// ...do other work...
+	Spells.terminateAll();
+	```
+
+</ExampleCode>
+
+### Reading & saving
+
+- **`Spells.list()`** — lists saved spells; returns `object[]`.
+- **`Spells.get(name)`** — gets a saved spell's details; `name` is a `string`.
+- **`Spells.getCode(name)`** — gets a saved spell's code; returns `string`.
+- **`Spells.save(name, code)`** — saves or updates a spell; both are `string`.
+- **`Spells.setEditor(code, tabId?)`** — sets a code editor tab's contents; `code` is a `string`, `tabId` is an optional `string`.
+- **`Spells.getEditor(tabId?)`** — gets a code editor tab's contents; returns `string`.
+
+### Running (blocking)
+
+- **`Spells.runCode(code)`** — runs `code` as a sub-spell and blocks until done; `code` is a `string`.
+- **`Spells.runSaved(name)`** — runs a saved spell and blocks until done; `name` is a `string`.
+- **`Spells.runEditor(tabId?)`** — runs an editor tab's code and blocks until done.
+- **`Spells.stop(contextId)`** — stops a running sub-spell by its context id; `contextId` is a `string`.
+- **`Spells.terminateAll()`** — terminates all running spells.
+
+### Running (async)
+
+- **`Spells.runCodeAsync(code)`** — runs `code` as a sub-spell; returns a `RunningSpell` handle.
+- **`Spells.runSavedAsync(name)`** — runs a saved spell; returns a `RunningSpell` handle.
+- **`Spells.runEditorAsync(tabId?)`** — runs an editor tab's code; returns a `RunningSpell` handle.
+
+<Callout type="important">
+
+	Sub-spells keep running until they finish or you stop them. If you launch async sub-spells, remember `Spells.stop(contextId)` or `Spells.terminateAll()` to clean them up.
+
+</Callout>

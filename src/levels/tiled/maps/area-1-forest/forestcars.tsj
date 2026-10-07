@@ -1,0 +1,14 @@
+{ "columns":21,
+ "image":"..\/..\/tilesets\/forest\/zone1_forest_props_cars_v0.01.png",
+ "imageheight":256,
+ "imagewidth":336,
+ "margin":0,
+ "name":"forestcars",
+ "spacing":0,
+ "tilecount":336,
+ "tiledversion":"1.11.1",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.10"
+}

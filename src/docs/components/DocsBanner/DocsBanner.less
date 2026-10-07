@@ -1,0 +1,23 @@
+.docs-banner {
+	width: 100%;
+	height: clamp(140px, 25vh, 350px);
+	margin-bottom: -1.5rem;
+	overflow: hidden;
+	user-select: none;
+
+	.docs-banner-image {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		pointer-events: none;
+
+		mask-image: linear-gradient(
+			to bottom,
+			black 0%,
+			black 80%,
+			transparent 100%
+		);
+	}
+}

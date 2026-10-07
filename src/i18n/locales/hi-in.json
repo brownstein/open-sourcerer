@@ -1,0 +1,189 @@
+{
+  "gameTitle": "ओपन सोर्सरर",
+  "componentNames": {
+    "viewport": "गेम",
+    "editor": "कोड संपादक",
+    "console": "कंसोल",
+    "inventory": "भंडार",
+    "levelSelector": "स्तर चुनाव",
+    "debug": "डीबग",
+    "missingConfiguration": "कम्पोनेंट विन्यास गायब",
+    "missingComponent": "{{componentName}} कम्पोनेंट गायब",
+    "docs": "प्रलेखन",
+    "settings": "विकल्प",
+    "tutorials": "शिक्षाओं",
+    "demoMode": "प्रदर्शन स्थिति विकल्प",
+    "entityVisualizer":"",
+    "skillTree": "कौशल वृक्ष",
+    "skillDetails": "कौशल विवरण",
+    "codingChallenge": "प्रोग्रामिंग चुनौती",
+    "componentDebug": ""
+  },
+  "codeEditor": {
+    "newSpell": "नया जादू मंत्र"
+  },
+  "levelSelector": {
+    "selectLevel": "स्तर चुनें",
+    "go": "शुरू"
+  },
+  "mobile": {},
+  "modals": {
+    "saveSpell": {
+      "title": "बचाओ मंत्र",
+      "nameField": "मंत्र का नाम",
+      "saveButton": "बचाओ मंत्र"
+    },
+    "loadSpell": {
+      "title": "मंत्र तैयार",
+      "selectASpell": "(मंत्र तैयार करो)",
+      "loadButton": "मंत्र तैयार"
+    },
+    "editSpell": {
+      "title": "मंत्र बदलाव",
+      "nameField": "मंत्र का नाम",
+      "saveButton": "मंत्र बचाओ"
+    },
+    "inventory": {
+      "title": "भंडार"
+    }
+  },
+  "spellAspect": {
+    "Normal": "आम",
+    "Fire": "अग्नि"
+  },
+  "spellList": {
+    "search": "मंत्र खोज"
+  },
+  "tutorial": {
+    "Dream_0":{
+      "diag_01": "",
+      "diag_02": "",
+      "diag_03": "",
+      "diag_04": "",
+      "diag_05": "",
+      "diag_06": "",
+      "diag_07": "",
+      "diag_08": "",
+      "diag_09": "",
+      "diag_10": "",
+      "diag_11": "",
+      "diag_12": "",
+      "diag_13": "",
+      "diag_14": "",
+      "diag_15": "",
+      "diag_16": "",
+      "diag_17": "",
+      "diag_18": "",
+      "diag_19": "",
+      "editSpell": ""
+    }
+  },
+  "inventory": {
+    "spells": "",
+    "items": "",
+    "inventoryPopover": "",
+    "takeAll": ""
+  },
+  "docs": {
+    "indexTitle": "",
+    "index": "",
+    "showIndex": "",
+    "hideIndex": ""
+  },
+  "deathScreen": {
+    "title": "",
+    "flavorText1": "",
+    "flavorText2": "",
+    "loadSaveGame": "",
+    "restartLevel": ""
+  },
+  "settings": {
+    "fps": ""
+  },
+  "pauseScreen": {
+    "paused": ""
+  },
+  "focusLost": {
+    "tapText": ""
+  },
+  "toast": {
+    "gotItem_one": "",
+    "gotItem_other": ""
+  },
+  "tutorials": {
+    "tutorialPrefix": ""
+  },
+  "items": {
+    "Default": "",
+    "Spell": "",
+    "Potion__Health": "",
+    "Potion__Mana": "",
+    "Log": "",
+    "Book": "",
+    "Currency__BronzeCoin": "",
+    "Currency__SilverCoin": "",
+    "Currency__GoldCoin": "",
+    "Currency__EmeraldGem": "",
+    "Currency__SapphireGem": "",
+    "Currency__AmathystGem": "",
+    "Sword": "",
+    "Bow": ""
+  },
+  "skills":{
+    "skillName": "",
+    "skillDescription": "",
+    "name": {
+      "IceAuraSelf": ""
+    },
+    "desc": {
+      "IceAuraSelf": ""
+    }
+  },
+  "challenges":{
+    "c01": {
+      "diag_01": "",
+      "diag_02": "",
+      "diag_03": "",
+      "diag_04": "",
+      "diag_05": "",
+      "diag_06": "",
+      "diag_07": "",
+      "diag_08": "",
+      "diag_08_1": "",
+      "diag_08_2": "",
+      "diag_08_3": "",
+      "diag_09": "",
+      "diag_10": "",
+      "diag_11": "",
+      "diag_12": "",
+      "diag_13": "",
+      "diag_14": "",
+      "diag_15": "",
+      "diag_16": "",
+      "diag_17": "",
+      "diag_18": "",
+      "diag_19": "",
+      "name": ""
+    },
+    "c02": {
+      "diag_01": "",
+      "diag_02": "",
+      "diag_03": "",
+      "diag_04": "",
+      "diag_05": "",
+      "diag_06": "",
+      "diag_07": "",
+      "diag_08": "",
+      "diag_09": "",
+      "diag_10": "",
+      "diag_11": "",
+      "diag_12": "",
+      "diag_13": "",
+      "diag_14": "",
+      "name": ""
+    },
+    "c03": {
+      "name": ""
+    }
+  }
+}

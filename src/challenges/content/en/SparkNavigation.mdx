@@ -1,0 +1,32 @@
+# Sparks
+
+Sparks are concentrated mana balls that can cast spells on demand. They can be used
+to speed up casting, store mana, and cast from a remote position. In this challenge,
+we introduce the `spark` module to facilitate casting them, and teach you how to move
+them around the world.
+
+Let's look at some example code.
+
+<ExampleCode>
+```javascript
+const Spark = require("spark");
+const Projectile = require("projectile");
+
+// Create a Spark.
+const mySpark = new Spark({ mana: 25 });
+
+// Move the Spark.
+mySpark.moveRight();
+mySpark.moveUp();
+// There's also a moveDown and a moveLeft method.
+
+// Cast a magical projectile with the Spark aimed to the right.
+mySpark.cast(Projectile, {
+  velocity: { x: 10 }
+});
+```
+</ExampleCode>
+
+## The Challenge
+This challenge requires you to create a Spark, move it through the maze with the
+move methods, and cast a projectile to hit the provided switch.

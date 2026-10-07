@@ -1,0 +1,216 @@
+.spell-tester {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0b0c0f;
+  color: #ffffff;
+  font-family: monospace;
+  z-index: 100;
+
+  .spell-tester-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #333;
+    flex-shrink: 0;
+
+    h3 {
+      margin: 0;
+      font-size: 1em;
+    }
+
+    .spell-tester-back {
+      background: none;
+      border: 1px solid #666;
+      color: #ccc;
+      padding: 0.25em 0.75em;
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 0.85em;
+
+      &:hover {
+        border-color: #aaa;
+        color: #fff;
+      }
+    }
+  }
+
+  .spell-tester-body {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .spell-tester-viewport {
+    flex: 1;
+    position: relative;
+    min-width: 0;
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      image-rendering: pixelated;
+    }
+
+    .spell-tester-mana {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid #448;
+      border-radius: 4px;
+      padding: 0.5em 0.75em;
+      pointer-events: none;
+
+      .mana-label {
+        font-size: 0.7em;
+        color: #88aaff;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .mana-value {
+        font-size: 1.4em;
+        color: #aaccff;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .spell-tester-sidebar {
+    width: 450px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #333;
+    min-height: 0;
+  }
+
+  .spell-tester-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em;
+    border-bottom: 1px solid #333;
+    flex-shrink: 0;
+
+    select {
+      flex: 1;
+      background: #1a1a2e;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 0.35em 0.5em;
+      font-family: monospace;
+      font-size: 0.85em;
+    }
+
+    button {
+      background: none;
+      border: 1px solid #666;
+      color: #ccc;
+      padding: 0.35em 0.75em;
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 0.85em;
+      white-space: nowrap;
+
+      &:hover:not(:disabled) {
+        border-color: #aaa;
+        color: #fff;
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        cursor: default;
+      }
+
+      &.run-btn {
+        border-color: #4a4;
+        color: #6c6;
+
+        &:hover:not(:disabled) {
+          border-color: #6c6;
+          color: #8e8;
+        }
+      }
+
+      &.stop-btn {
+        border-color: #a44;
+        color: #c66;
+
+        &:hover:not(:disabled) {
+          border-color: #c66;
+          color: #e88;
+        }
+      }
+
+      &.loop-btn {
+        border-color: #668;
+        color: #99b;
+
+        &:hover:not(:disabled) {
+          border-color: #99b;
+          color: #bbf;
+        }
+
+        &.active {
+          border-color: #88f;
+          color: #aaf;
+          background: rgba(88, 88, 255, 0.15);
+        }
+      }
+    }
+  }
+
+  .spell-tester-editor {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+
+    .ace_editor {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .spell-tester-console {
+    height: 150px;
+    flex-shrink: 0;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+
+    .console-header {
+      padding: 0.25em 0.5em;
+      font-size: 0.75em;
+      color: #888;
+      border-bottom: 1px solid #222;
+      flex-shrink: 0;
+    }
+
+    .console-output {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0.25em 0.5em;
+      font-size: 0.8em;
+      line-height: 1.4;
+      background: #111;
+
+      .console-line {
+        white-space: pre-wrap;
+        word-break: break-all;
+        color: #ccc;
+
+        &.console-error {
+          color: #f66;
+        }
+      }
+    }
+  }
+}

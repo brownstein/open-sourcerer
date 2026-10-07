@@ -1,0 +1,30 @@
+.code-editor-local-text-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background: var(--theme-bg, #1D263D);
+  overflow-y: hidden;
+}
+
+.code-editor-local-text-editor .debug-config {
+  height: 64px;
+}
+
+.code-editor-local-text-editor .current-line {
+  background-color: fade(#4488ff, 20);
+  position: absolute;
+  z-index: 10;
+}
+
+.code-editor-local-text-editor .current-line.gutter-current-line::after {
+  content: ">";
+  font-weight: bold;
+  position: absolute;
+  left: 2px;
+  top: -1px;
+  color: #4488ff;
+}

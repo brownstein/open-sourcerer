@@ -1,0 +1,95 @@
+export const meta = {
+	title: "Ice API Guide"
+};
+
+# The Ice API
+
+Welcome back, <PlayerName />! The **`"ice"`** spell conjures a solid **ice block** from a shape, freezing it into existence right in front of your caster. Use it to block passages, build platforms, or freeze a hazard in place. It pairs nicely with the [Shapes](spell-api-guides/shapes-api-guide) API for crafting reusable outlines.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const Ice = require("ice");
+	new Ice();
+	```
+
+</ExampleCode>
+
+That single `new Ice()` freezes a default ice block in front of your caster.
+
+## Shaping the Block
+
+The constructor takes an optional **configuration object** so you can choose what gets conjured:
+
+<ExampleCode>
+
+	```javascript
+	const Ice = require("ice");
+	new Ice({
+		rect: { width: 3, height: 1 },
+		angle: 0
+	});
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	A wide, thin `rect` makes a sturdy platform you can jump onto, while a `circle` rolls and tumbles once it lands.
+
+</Callout>
+
+You can also build a custom polygon outline:
+
+<ExampleCode>
+
+	```javascript
+	const Ice = require("ice");
+	new Ice({
+		shape: [
+			{ x: 0, y: 0 },
+			{ x: 2, y: 0 },
+			{ x: 1, y: 2 }
+		]
+	});
+	```
+
+</ExampleCode>
+
+### Constructor options
+
+- **`shape`** — `({ x, y } | [number, number])[]` — a custom polygon outline.
+- **`rect`** — `{ width, height }` — build the block as a rectangle.
+- **`circle`** — `{ radius }` — build the block as a circle.
+- **`angle`** — `number` — rotation of the block.
+- **`spark`** — `{ id }` — cast the block from a [ManaSpark](spell-api-guides/spark-api-guide) instead of the caster.
+
+## Controlling a Block
+
+`new Ice(...)` hands you back the block so you can keep working with it:
+
+<ExampleCode>
+
+	```javascript
+	const Ice = require("ice");
+	const block = new Ice({ rect: { width: 2, height: 2 } });
+
+	block.destroy();
+	```
+
+</ExampleCode>
+
+### Properties and methods
+
+- **`id`** — `string` — the block's handle id.
+- **`position`** — `{ x, y }` — its current position.
+- **`destroyed`** — `boolean` — whether it has been destroyed.
+- **`destroy()`** — shrinks and removes the ice block (returns void).
+
+<Callout type="important">
+
+	Ice is conjured in front of the caster, so face the direction you want the block before casting!
+
+</Callout>

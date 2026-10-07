@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="129.60" height="129.60" viewBox="0.00 0.00 2160.00 2160.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g stroke-linecap="round" id="Terminal">
+<path d="M1170.06,1044.47" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1170.06,1045.57" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1170.06,1044.47 L576.85,269.66" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M576.85,269.66" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M1170.06,1045.57 L576.85,1820.38" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M576.85,1820.38" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M576.85,269.66 L18.36,269.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M18.36,269.10" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M576.85,1820.38 L18.36,1820.94" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M18.36,1820.94" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M18.36,269.10 L658.32,1044.57" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M658.32,1044.57" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M18.36,1820.94 L658.32,1045.47" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M658.32,1045.47" fill="none" stroke="rgb(0, 0, 0)" stroke-width="12.95" stroke-opacity="1.00" stroke-linejoin="round"/>
+<path d="M2113.88,1409.63 L2114.93,1820.17 L954.31,1823.15 L953.26,1412.61 L2113.88,1409.63 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3.66" stroke-opacity="1.00" stroke-linejoin="miter"/>
+</g>
+</svg>

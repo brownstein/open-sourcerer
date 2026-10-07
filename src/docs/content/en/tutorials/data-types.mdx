@@ -1,0 +1,61 @@
+export const meta = {
+  title: "Data Types"
+};
+
+# Data Types
+
+Not all information is created equal. A yes or no question demands a yes or a no, but a text field demands a response with multiple characters (letters / numbers). How does JavaScript represent these pieces of information?
+
+JavaScript supports the following types of data:
+
+- boolean
+- number
+- string
+- Objects
+- Arrays
+- null
+- undefined
+
+In this tutorial, you will learn what each type of data is, how it's specified in JavaScript, and some core theory.
+
+## Boolean
+
+<b>"Boolean"</b>, is another way of saying "true or false".
+
+Often thought of as 1 and 0, these are the simplest values that digital computers can represent - at a low level, all other computational data is built from combinations of these, which we call "bits".
+
+JavaScript allows you to specify boolean values with the words "true" and "false". Capitalized variants are not recognized.
+
+<ExampleCode>
+```javascript
+true
+```
+</ExampleCode>
+
+## Number
+
+JavaScript allows you to specify numbers in base 10 (we count in powers of 10, but that's largely biased by the number of fingers we had to count on when we discovered math, not universal law) by typing out the number. Alternatively, you can use the `0x` prefix before your number to specify the number in base 8, or `0b` in base 2.
+
+<ExampleCode>
+```javascript
+24601
+```
+</ExampleCode>
+
+Internally, JavaScript represents numbers as 64-bit floating point values.
+
+## String
+
+<b>"String"</b>s are combinations of characters (letters, numbers, spaces, etc). For example, `"string"` is a string, and so is this sentence.
+
+JavaScript deliniates strings using single quotes or double quotes - either works, just make sure you use the same one for both the opening and closing quotes. If you need a quotation mark within the string, you can either use single quotes outside of internal double quotes, double quotes outside of internal single quotes, or <b>escape</b> the quote character with a preceeding `\` to avoid prematurely ending the string.
+
+<ExampleCode>
+```javascript
+"This data is a string because there are quotes around it."
+```
+</ExampleCode>
+
+## Objects, arrays, null, and undefined
+
+Google it for now, we're working on this.

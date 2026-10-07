@@ -1,0 +1,103 @@
+export const meta = {
+	title: "Fire API Guide"
+};
+
+# The Fire API
+
+Welcome back, <PlayerName />! The **`"fire"`** spell conjures a **Fireball** — a fire projectile you can aim, steer, and detonate at will. It also carries two extra spells, **`Fire.blast`** and **`Fire.wave`**, for close-range and ground-sweeping fire.
+
+## Importing the Spell
+
+<ExampleCode>
+
+	```javascript
+	const Fire = require("fire");
+	new Fire();
+	```
+
+</ExampleCode>
+
+That single `new Fire()` launches a basic fireball away from your caster.
+
+## Configuring the Fireball
+
+The constructor takes an optional **configuration object** so you can tailor the fireball to the situation:
+
+<ExampleCode>
+
+	```javascript
+	const Fire = require("fire");
+	new Fire({
+		strength: 30,
+		aim: true,
+		gravity: false
+	});
+	```
+
+</ExampleCode>
+
+<Callout type="tip">
+
+	Setting `aim: true` lets you steer the fireball toward your cursor, and `gravity: false` keeps it flying in a straight line instead of arcing toward the ground.
+
+</Callout>
+
+### Constructor options
+
+- **`velocity`** — `{ x, y }` — the fireball's initial velocity.
+- **`at`** — `{ x, y }` — fire toward an absolute world position.
+- **`strength`** — `number` — damage/mana strength. The mana cost is `5 + strength`.
+- **`gravity`** — `boolean` — whether gravity pulls the fireball down.
+- **`aim`** — `boolean` — aim the fireball with the cursor.
+- **`aimSpeed`** — `number` — how quickly the fireball turns while aiming.
+- **`aimGuide`** — `boolean` — show a guide line while aiming.
+- **`spark`** — `{ id }` — cast the fireball from a [ManaSpark](spell-api-guides/spark-api-guide) instead of the caster.
+
+## Controlling a Fireball
+
+`new Fire(...)` hands you back a fireball you can keep commanding:
+
+<ExampleCode>
+
+	```javascript
+	const Fire = require("fire");
+	const fireball = new Fire({ gravity: false });
+
+	fireball.moveTo({ x: 10, y: 4 });
+	fireball.explode();
+	```
+
+</ExampleCode>
+
+### Properties and methods
+
+- **`id`** — `string` — the fireball's handle id.
+- **`position`** — `{ x, y }` — its current position.
+- **`destroyed`** — `boolean` — whether it has been destroyed.
+- **`setVelocity(velocity)`** — set the fireball's velocity.
+- **`moveTo({ x, y, speed })`** — move the fireball toward a point; resolves when it arrives.
+- **`moveToAsync({ x, y, speed })`** — async/promise variant of `moveTo`.
+- **`explode()`** — detonate the fireball into an explosion.
+- **`onImpact(cb)`** — run a callback when the fireball hits something.
+
+## Static spells
+
+The `Fire` import also exposes two ready-made spells:
+
+- **`Fire.blast(arg?)`** — a short-range fire blast from the caster.
+- **`Fire.wave(arg?)`** — a travelling wave of fire blasts that rolls along the ground.
+
+<ExampleCode>
+
+	```javascript
+	const Fire = require("fire");
+	Fire.wave();
+	```
+
+</ExampleCode>
+
+<Callout type="important">
+
+	Every fireball costs mana to cast — remember the cost grows with `strength`. Keep an eye on your mana bar when chaining powerful casts!
+
+</Callout>

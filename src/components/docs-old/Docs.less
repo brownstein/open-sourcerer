@@ -1,0 +1,168 @@
+// This *should* be synchronized with the code editor.
+@import "highlight.js/styles/base16/tomorrow";
+
+.docs-tab-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  box-sizing: border-box;
+  background: var(--theme-surface-alt, #aa8866);
+}
+
+.docs-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.docs-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+  position: absolute;
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 0 2em;
+  color: var(--theme-text, inherit);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    border: 32px solid transparent;
+    border-image: url("../ui/shared/ui-paper-bg.png") repeat;
+    border-image-slice: 16 fill;
+    z-index: -1;
+    image-rendering: pixelated;
+  }
+
+  body.dark &::before {
+    filter: brightness(0.25) saturate(0.3);
+  }
+
+  &.index-entering,
+  &.index-exiting {
+    transition:
+      height 300ms ease,
+      top 300ms ease;
+  }
+
+  .docs-content-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  // Reuse conversation link styling inside docs
+  .docs-link {
+    font-size: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Troll";
+    color: var(--theme-text-heading, #002244);
+  }
+
+  p {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  ul {
+    margin-top: 0;
+    li {
+      margin-bottom: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Markdown tables (enabled via remark-gfm)
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+  }
+  th,
+  td {
+    border: 1px solid var(--theme-border, #444);
+    padding: 8px 12px;
+    text-align: left;
+  }
+  th {
+    background-color: var(--theme-input-bg, rgba(255, 255, 255, 0.1));
+    font-weight: bold;
+  }
+}
+
+.docs-code-block {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: 1em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -16px;
+    right: -16px;
+    box-sizing: border-box;
+    border: 32px solid transparent;
+    border-image: url("../ui/shared/ui-code-bg.png") repeat;
+    border-image-slice: 16 fill;
+    z-index: -1;
+    image-rendering: pixelated;
+  }
+
+  body.dark &::before {
+    filter: brightness(0.3) saturate(0.3);
+  }
+
+  .hljs {
+    background: transparent;
+    color: var(--theme-text, inherit);
+    overflow-x: scroll;
+
+    .hljs-function.hljs-title {
+      color: #224488;
+    }
+  }
+
+  .open-code-editor-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+// Highlight class used when deep-linking to glossary anchors
+.glossary-hit {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  border-radius: 6px;
+}

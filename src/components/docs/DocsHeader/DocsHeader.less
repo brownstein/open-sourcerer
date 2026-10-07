@@ -1,0 +1,45 @@
+.docs-header-container {
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.docs-header {
+	display: grid;
+
+	grid-template-columns:
+		[header-start] minmax(0, 1fr) 
+		auto 
+		minmax(0, 1fr) 
+		[search-icon-start] auto 
+		[search-icon-end header-end];
+
+	align-items: center;
+	min-height: 3.5rem;
+	padding: 0 0.5rem;
+}
+
+.docs-header-cell {
+	display: flex;
+	align-items: center;
+	min-width: 0;
+	height: 100%;
+}
+
+.docs-header-cell-left {
+	grid-column: 1;
+	grid-row: 1;
+	justify-content: flex-start;
+	gap: 0.5rem;
+}
+
+.docs-header-cell-middle {
+	grid-column: 2;
+	grid-row: 1;
+	justify-content: center;
+}
+
+.docs-header-cell-balance {
+	grid-column: 3;
+	grid-row: 1;
+}

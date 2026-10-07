@@ -1,0 +1,46 @@
+@import (reference) "../../inventory/Inventory.less";
+
+.hotbar-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 0;
+
+  .row-switch {
+    display: flex;
+    flex-direction: column;
+    color: #8ce7e3;
+    background-color: #646464;
+    border: 2px solid #8a8b86;
+    height: 60px;
+    justify-content: center;
+    .inventory-glow-transition();
+
+    &:hover {
+      .inventory-glow-container-hover();
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      font-size: 16px;
+      height: 33%;
+      padding: 2px;
+      cursor: pointer;
+      .svg-icon {
+        display: block;
+        background: linear-gradient(0, white 5%, #8ce7e3 10%);
+        height: 100%;
+        aspect-ratio: 1;
+        .inventory-glow-icon-transition();
+      }
+      &:hover .svg-icon { .inventory-glow-icon-selected(); }
+    }
+    .number-display {
+      text-align: center;
+      background: transparent;
+    }
+  }
+}
