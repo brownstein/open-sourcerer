@@ -6,6 +6,7 @@
     "name": "Robert Brownstein",
     "email": "robert.brownstein@gmail.com"
   },
+  "license": "MIT",
   "type": "commonjs",
   "version": "0.3.0",
   "private": true,
