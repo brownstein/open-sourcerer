@@ -2,7 +2,7 @@
 
 ## Software Engineering
 Robert Brownstein
-Alvin21Bon
+Alvin Bontuyan
 Leonardo da Luz
 Michael Rigali
 Cristobal Cortés Gómez

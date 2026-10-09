@@ -16,14 +16,13 @@ interface CreditSection {
 }
 
 // Sorted by number of git contributions (combined across aliases)
-const softwareEngineering: Contributor[] = [
+const softwareEngineeringTeam: Contributor[] = [
   { name: "Robert Brownstein", github: "brownstein" },
-  { name: "Alvin21Bon", github: "Alvin21Bon" },
+  { name: "Alvin Bontuyan", github: "Alvin21Bon" },
   { name: "Leonardo da Luz", github: "LeonardoDaLuz" },
   { name: "Michael Rigali", github: "MichaelRigali" },
   { name: "Cristobal Cortés Gómez", github: "legocris" },
-  { name: "Volcanic Wolf", github: "volcwolf" },
-  { name: "Doxis1", github: "Doxis1" },
+  { name: "VolcWolf", github: "volcwolf" },
   { name: "Pegasussx", github: "pegasussx" },
   { name: "Andre Livsey", github: "alivsey87" },
   { name: "DataPlant", github: "DataPlant" },
@@ -32,31 +31,40 @@ const softwareEngineering: Contributor[] = [
   { name: "JustAnotherDevv", github: "JustAnotherDevv" },
   { name: "Anthony", github: "ZT2wo" },
   { name: "Jordan Ugalde", github: "jugalde" },
-  { name: "TempleSlug", github: "TempleSlug" },
   { name: "Patrick Carvalho", github: "syswaregames" },
+];
+
+const artTeam: (Contributor | string)[] = [
+  "Jan-Nikolay Jäckel (aka Hatwolf)",
+  "Bruno Gomez",
+  "Pablo Gonzalez",
+  "Santiago Lopera",
+  "Kerstin Schmidbauer",
+  "Eduardo Rizzo Studio",
+  "Anthony J Ravenda",
+  "Kaio Oliveira",
+  "Pedro Braga Vasconcelos",
+  "Cristina Carvalho Sena",
+  { name: "Braden Brown", github: "Doxis1" },
+  { name: "TempleSlug", github: "TempleSlug" }
 ];
 
 const creditsSections: CreditSection[] = [
   {
-    heading: "Software Engineering",
-    entries: softwareEngineering,
+    heading: "Engineering",
+    entries: softwareEngineeringTeam,
   },
   {
-    heading: "Concept Art",
-    entries: [
-      "Jan-nikolay Jäckel",
-      "Braden Brown",
-      "Eduardo Rizzo Studio",
-      "Anthony J Ravenda",
-      "Kaio Oliveira",
-      "Santiago Hertzan",
-      "Pedro Braga Vasconcelos",
-      "Cristina Carvalho Sena",
-    ],
+    heading: "Art",
+    entries: artTeam,
   },
   {
     heading: "Writing",
-    entries: ["Christian Kenneth Holzmann", "Enzo Crichi", "Whitney Gray Allen"],
+    entries: [
+      "Christian Kenneth Holzmann",
+      "Enzo Crichi",
+      "Whitney Gray Allen"
+    ],
   },
 ];
 
