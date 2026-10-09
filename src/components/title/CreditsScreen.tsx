@@ -1,13 +1,16 @@
 import { FC, useCallback, useState } from "react";
 
+import "./CreditsScreen.less";
 import { licenseData } from "./licenseData";
 import { licenseTexts } from "./licenseTexts";
 
-import "./CreditsScreen.less";
-
 interface Contributor {
   name: string;
+  title?: string;
+  isLeader?: boolean;
+  bio?: string;
   github?: string;
+  site?: string;
 }
 
 interface CreditSection {
@@ -17,7 +20,6 @@ interface CreditSection {
 
 // Sorted by number of git contributions (combined across aliases)
 const softwareEngineeringTeam: Contributor[] = [
-  { name: "Robert Brownstein", github: "brownstein" },
   { name: "Alvin Bontuyan", github: "Alvin21Bon" },
   { name: "Leonardo da Luz", github: "LeonardoDaLuz" },
   { name: "Michael Rigali", github: "MichaelRigali" },
@@ -31,12 +33,10 @@ const softwareEngineeringTeam: Contributor[] = [
   { name: "JustAnotherDevv", github: "JustAnotherDevv" },
   { name: "Anthony", github: "ZT2wo" },
   { name: "Jordan Ugalde", github: "jugalde" },
-  { name: "Patrick Carvalho", github: "syswaregames" },
+  { name: "Patrick Carvalho", github: "syswaregames" }
 ];
 
 const artTeam: (Contributor | string)[] = [
-  "Jan-Nikolay Jäckel (aka Hatwolf)",
-  "Bruno Gomez",
   "Pablo Gonzalez",
   "Santiago Lopera",
   "Kerstin Schmidbauer",
@@ -45,32 +45,52 @@ const artTeam: (Contributor | string)[] = [
   "Kaio Oliveira",
   "Pedro Braga Vasconcelos",
   "Cristina Carvalho Sena",
-  { name: "Braden Brown", github: "Doxis1" },
-  { name: "TempleSlug", github: "TempleSlug" }
+  { name: "Braden Brown", github: "Doxis1" }
+];
+
+const leadCredits: Contributor[] = [
+  {
+    name: "Robert Brownstein",
+    github: "brownstein",
+    title: "Founder / Lead Engineer",
+    bio: "Robert is a software engineer wit 15 years of fullstack experience.",
+    isLeader: true,
+    site: "https://brownstein.github.io/"
+  },
+  {
+    name: "Jan-Nikolay Jäckel (aka Hatwolf)",
+    title: "Art Director",
+    bio: "The only wolf with a hat. Professional Artist and Writer. Creator of After Silence.",
+    isLeader: true,
+    site: "https://linktr.ee/hatwolf"
+  },
+  {
+    name: "Bruno Gomez",
+    title: "Pixel Art Director",
+    bio: "I’ve spent 10+ years making pixels move. I lead the pixel art team at Gnarled Helix, where I set the visual direction and keep a whole team drawing as one hand. My work lives where art direction meets animation: modular character systems that stay animatable, sprite sets that read at a glance, and a world that feels alive because every piece in it moves. I've directed commercial work and run my own pixel art studio, and I care about one thing above all: that every asset looks like it belongs in the same game. If it needs to look cohesive, move well and ship on time, that's my job.",
+    isLeader: true,
+    site: "https://artbypix.com/"
+  }
 ];
 
 const creditsSections: CreditSection[] = [
   {
     heading: "Engineering",
-    entries: softwareEngineeringTeam,
+    entries: softwareEngineeringTeam
   },
   {
     heading: "Art",
-    entries: artTeam,
+    entries: artTeam
   },
   {
     heading: "Writing",
-    entries: [
-      "Christian Kenneth Holzmann",
-      "Enzo Crichi",
-      "Whitney Gray Allen"
-    ],
-  },
+    entries: ["Christian Kenneth Holzmann", "Enzo Crichi", "Whitney Gray Allen"]
+  }
 ];
 
 const contractedStudios = [
   "MLC Studios (multiple visual assets)",
-  "Peacox (multiple visual assets)",
+  "Peacox (multiple visual assets)"
 ];
 
 const thirdPartyAssets: CreditSection[] = [
@@ -80,16 +100,16 @@ const thirdPartyAssets: CreditSection[] = [
       "Deer asset by Calciumtrice, usable under Creative Commons Attribution 3.0 license.",
       "Fox asset by HDST",
       "Bandit asset by Jericho (C)",
-      "Forest asset by Leon Avendaño (C)",
-    ],
+      "Forest asset by Leon Avendaño (C)"
+    ]
   },
   {
     heading: "Sounds",
     entries: [
       "got item: @listener4me (opengameart)",
-      "keyboard prompts: Nicolae (Xelu) Berbece",
-    ],
-  },
+      "keyboard prompts: Nicolae (Xelu) Berbece"
+    ]
+  }
 ];
 
 function renderEntry(entry: string | Contributor, index: number) {
@@ -148,6 +168,27 @@ export const CreditsScreen: FC<CreditsScreenProps> = ({ onBack }) => {
       <div className="credits-scroll-container">
         <h2>Credits</h2>
 
+        <div className="credits-group leadership-section">
+          <h3>Studio Leadership</h3>
+          {leadCredits.map((contributor, i) => (
+            <div className="credits-entry box-with-bio">
+              <h4>{contributor.name}</h4>
+              <h5>{contributor.title}</h5>
+              <div>
+                <span>Personal Website: </span>
+                <span>
+                  <a href={contributor.site}>{contributor.site}</a>
+                </span>
+              </div>
+              {contributor.github && (
+                <div>
+                  <a href={contributor.github}>github link</a>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
         <div className="credits-group">
           <h3>Core Team</h3>
           {creditsSections.map((section) => (
@@ -205,9 +246,7 @@ export const CreditsScreen: FC<CreditsScreenProps> = ({ onBack }) => {
                       <span className="license-row-arrow">
                         {isExpanded ? "▾" : "▸"}
                       </span>
-                      <span className="license-row-name">
-                        {group.license}
-                      </span>
+                      <span className="license-row-name">{group.license}</span>
                       <span className="license-row-count">
                         {group.packages.length}{" "}
                         {group.packages.length === 1 ? "package" : "packages"}

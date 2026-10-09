@@ -16,7 +16,6 @@ Imai Jiro
 JustAnotherDevv
 Anthony
 Jordan Ugalde
-TempleSlug
 Patrick Carvalho
 
 ## Concept Art
