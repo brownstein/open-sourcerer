@@ -53,7 +53,7 @@ const leadCredits: Contributor[] = [
     name: "Robert Brownstein",
     github: "brownstein",
     title: "Founder / Lead Engineer",
-    bio: "Robert is a software engineer wit 15 years of fullstack experience.",
+    bio: "I'm a software engineer with 15 years of fullstack experience. I specialize in performant React + Three.js on the frontend.",
     isLeader: true,
     site: "https://brownstein.github.io/"
   },
@@ -174,6 +174,7 @@ export const CreditsScreen: FC<CreditsScreenProps> = ({ onBack }) => {
             <div className="credits-entry box-with-bio">
               <h4>{contributor.name}</h4>
               <h5>{contributor.title}</h5>
+              {contributor.bio && <p className="bio">{contributor.bio}</p>}
               <div>
                 <span>Personal Website: </span>
                 <span>
